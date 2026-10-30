@@ -1,0 +1,7 @@
+[
+  {"source": "recu/ouverture.png", "nom": "ouverture", "cadrage": [50, 45], "mobile": true},
+  {"source": "recu/salle-1.png", "nom": "grok/salle-1", "cadrage": [50, 40]},
+  {"source": "recu/salle-2.png", "nom": "grok/salle-2"},
+  {"source": "recu/salle-3.png", "nom": "grok/salle-3"},
+  {"source": "recu/salle-4.png", "nom": "grok/salle-4"}
+]

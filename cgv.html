@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="cgv" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Conditions générales de vente : Sequoia Studio</title>
+<meta name="description" content="Conditions générales de vente Sequoia Studio : commande, paiement, livraison, retours et garanties des œuvres encadrées.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/cgv">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Conditions générales de vente : Sequoia Studio">
+<meta property="og:description" content="Conditions générales de vente Sequoia Studio : commande, paiement, livraison, retours et garanties des œuvres encadrées.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/cgv">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/cgv-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Conditions générales de vente de Sequoia Studio">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Conditions de vente</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1" data-sans-action>
+<div data-barre-lecture aria-hidden="true"></div>
+<section class="legal-tete" id="debut" data-scene style="--nuit:#0e0d0c">
+  <div class="conteneur legal-tete-grille">
+    <div>
+      <h1 class="titre-hero titre-hero--moyen" data-anime="gsap">Conditions générales de vente</h1>
+      <p class="legal-maj" data-anime="gsap">Dernière mise à jour : 23 février 2026</p>
+      <nav class="legal-sommaire" data-sommaire aria-label="Sommaire" data-anime="gsap"><ul><li><a href="#vendeur" data-sans-transition>1. Identité du vendeur</a></li><li><a href="#champ" data-sans-transition>2. Champ d’application</a></li><li><a href="#nature" data-sans-transition>3. Nature des œuvres et caractéristiques</a></li><li><a href="#prix" data-sans-transition>4. Prix</a></li><li><a href="#commande" data-sans-transition>5. Commande</a></li><li><a href="#paiement" data-sans-transition>6. Paiement</a></li><li><a href="#livraison" data-sans-transition>7. Livraison des œuvres</a></li><li><a href="#retractation" data-sans-transition>8. Droit de rétractation</a></li><li><a href="#remboursement" data-sans-transition>9. Remboursement</a></li><li><a href="#garanties" data-sans-transition>10. Garanties légales</a></li><li><a href="#responsabilite" data-sans-transition>11. Responsabilité</a></li><li><a href="#propriete" data-sans-transition>12. Propriété intellectuelle</a></li><li><a href="#donnees" data-sans-transition>13. Données personnelles</a></li><li><a href="#droit" data-sans-transition>14. Droit applicable – compétence territoriale</a></li><li><a href="#acceptation" data-sans-transition>15. Acceptation des CGV</a></li></ul></nav>
+    </div>
+    <figure class="media media--provisoire legal-image" data-visuel data-provisoire="cgv-cartels" style="aspect-ratio:16 / 10" role="img" aria-label="Rangée de cartels de musée vierges sur un mur sombre"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp16" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+  <radialGradient id="fp16" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sp16" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
+  <radialGradient id="vp16" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp16)"/><path d="M782 0 L818 0 L1404.8000000000002 432 L195.19999999999993 432Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="800" cy="432" rx="672" ry="288" fill="url(#fp16)"/>
+  <rect y="846" width="1600" height="54.00000000000005" fill="url(#sp16)"/><rect y="846" width="1600" height="2" fill="#2a2219" opacity=".8"/>
+  <rect width="1600" height="900" fill="url(#vp16)"/><rect x="420" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.54"/><rect x="436" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="580" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.72"/><rect x="596" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="740" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.9"/><rect x="756" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="900" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.72"/><rect x="916" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="1060" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.54"/><rect x="1076" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/></svg></figure>
+  </div>
+</section>
+<div class="texte-long conteneur" data-sans-visuel>
+  <section id="vendeur" data-sans-visuel class="legal-section">
+    <h2>1. Identité du vendeur</h2>
+    <p>Les présentes Conditions Générales de Vente (ci-après les « CGV ») sont proposées par :</p><p>TOST Unlimited, Société par Actions Simplifiée (SAS) au capital de 1 000 €. Siège social : 4 Clos Henri Becquerel, 31170 Tournefeuille, France. RCS Toulouse : 985 352 103. TVA intracommunautaire : Non applicable (article 293B du CGI).</p><p>Contact : frederic@tostunlimited.com</p>
+  </section><section id="champ" data-sans-visuel class="legal-section">
+    <h2>2. Champ d’application</h2>
+    <p>Les présentes CGV régissent l’ensemble des ventes d’œuvres d’art proposées sur le site internet de TOST Unlimited (ci-après le « Site »), notamment : posters, tableaux, impressions artistiques, œuvres encadrées ou non.</p><p>Les ventes sont réalisées exclusivement à destination de consommateurs au sens du Code de la consommation.</p><p>Toute commande implique l’acceptation pleine, entière et sans réserve des présentes CGV.</p>
+  </section><section id="nature" data-sans-visuel class="legal-section">
+    <h2>3. Nature des œuvres et caractéristiques</h2>
+    <p>Les œuvres proposées sont des créations artistiques originales vendues en tirage standard ou limité selon les cas.</p><p>Les visuels présentés sur le Site sont fournis à titre indicatif. Des différences mineures peuvent apparaître, notamment concernant : les couleurs (selon écrans), le rendu des matières, les dimensions exactes (tolérance d’impression). Ces variations mineures, inhérentes aux procédés d’impression et d’affichage numérique, sont portées à la connaissance du client à titre informatif. Elles ne sauraient, à elles seules, justifier un retour, sauf si elles sont de nature à rendre l’œuvre impropre à l’usage auquel elle est destinée ou significativement non conforme à sa description.</p><p>Ces variations ne constituent pas un défaut de conformité.</p>
+  </section><section id="prix" data-sans-visuel class="legal-section">
+    <h2>4. Prix</h2>
+    <p>Les prix sont indiqués en euros (€), TVA non applicable (article 293 B du CGI), hors frais de livraison. Les frais de livraison sont calculés en fonction du format, du poids de l’œuvre et de la destination, et sont indiqués au client avant la validation définitive de la commande. Ils sont récapitulés dans le résumé de commande.</p><p>TOST Unlimited se réserve le droit de modifier ses prix à tout moment. Le prix applicable est celui affiché au moment de la validation de la commande.</p>
+    <p class="note-client"><strong>Note pour le client :</strong> Texte adapté pour la maquette : les CGV actuelles indiquent des prix « toutes taxes comprises », alors que la société n’applique pas la TVA (article 293 B du CGI). À valider par Sequoia Studio.</p>
+  </section><section id="commande" data-sans-visuel class="legal-section">
+    <h2>5. Commande</h2>
+    <p>Le client sélectionne l’œuvre de son choix, vérifie le récapitulatif de commande, puis valide définitivement sa commande après acceptation des CGV.</p><p>La vente est considérée comme ferme après : validation du paiement, envoi de la confirmation de commande par e-mail.</p><p>TOST Unlimited se réserve le droit de refuser toute commande en cas de litige antérieur ou de suspicion de fraude.</p>
+  </section><section id="paiement" data-sans-visuel class="legal-section">
+    <h2>6. Paiement</h2>
+    <p>Le paiement est exigible immédiatement lors de la commande.</p><p>Le moyen de paiement accepté est la Carte bancaire.</p><p>Les paiements sont sécurisés via un prestataire de paiement conforme aux normes en vigueur.</p>
+  </section><section id="livraison" data-sans-visuel class="legal-section">
+    <h2>7. Livraison des œuvres</h2>
+    <p>Les œuvres sont livrées à l’adresse indiquée par le client lors de la commande.</p><p>Les délais de livraison estimés sont indiqués sur la page produit et dans la confirmation de commande. À défaut d’indication, la livraison interviendra au plus tard dans un délai de 30 jours à compter de la validation de la commande, conformément à l’article L216-1 du Code de la consommation.</p><p>En cas de dépassement de ce délai, le client peut mettre en demeure TOST Unlimited de livrer dans un délai supplémentaire raisonnable. À défaut de livraison dans ce nouveau délai, le client pourra annuler sa commande par écrit et sera remboursé dans les 14 jours suivant la demande, conformément à l’article L216-2 du Code de la consommation.</p><p>TOST Unlimited s’engage à expédier les œuvres dans les délais indiqués. En cas de retard imputable au transporteur, TOST Unlimited s’engage à mettre en œuvre tous les moyens raisonnables pour en informer le client et trouver une solution adaptée. La responsabilité de TOST Unlimited ne pourra être engagée pour des retards résultant de circonstances extérieures à son contrôle, tels que des événements de force majeure, grèves ou défaillances du transporteur, sous réserve des droits légaux du client en cas de dépassement du délai maximal de livraison.</p><p>Le client est tenu de vérifier l’état du colis à réception. Toute anomalie (colis endommagé, œuvre détériorée) doit être signalée dans un délai de 48 heures à TOST Unlimited par e-mail à frederic@tostunlimited.com, en joignant des photographies du colis et de l’œuvre concernée. TOST Unlimited se réserve le droit de proposer un remplacement ou un remboursement selon les cas.</p>
+  </section><section id="retractation" data-sans-visuel class="legal-section">
+    <h2>8. Droit de rétractation</h2>
+    <p>8.1 Œuvres non personnalisées. Conformément aux articles L221-18 et suivants du Code de la consommation, le client dispose d’un délai de 14 jours calendaires à compter de la réception de l’œuvre pour exercer son droit de rétractation.</p><p>Les œuvres doivent être retournées : en parfait état, non utilisées, dans leur emballage d’origine.</p><p>Les frais de retour restent à la charge du client.</p><p>8.2 Œuvres personnalisées – Exclusion du droit de rétractation. Conformément à l’article L221-28 4° du Code de la consommation, le droit de rétractation ne s’applique pas aux œuvres clairement personnalisées selon les spécifications propres au client, notamment : choix d’un format sur mesure non proposé en catalogue, ajout d’un texte, d’un nom ou d’un message personnalisé, encadrement ou finition spécifique réalisé à la demande expresse du client.</p><p>En revanche, les œuvres produites en impression standard (format et visuel identiques pour tous les clients, sans modification spécifique) bénéficient du droit de rétractation de 14 jours prévu à l’article 8.1, même si elles sont fabriquées après réception de la commande.</p><p>Le caractère personnalisé ou non de chaque œuvre est précisé sur la page produit correspondante.</p>
+  </section><section id="remboursement" data-sans-visuel class="legal-section">
+    <h2>9. Remboursement</h2>
+    <p>En cas de rétractation valable, le remboursement est effectué dans un délai maximal de 14 jours à compter de la réception des œuvres retournées ou de la preuve d’expédition.</p><p>Le remboursement inclut le prix de l’œuvre ainsi que les frais de livraison initialement facturés au client, à l’exception des frais supplémentaires résultant du choix par le client d’un mode de livraison autre que la solution standard proposée par TOST Unlimited (article L221-24 du Code de la consommation).</p><p>Le remboursement est réalisé via le moyen de paiement utilisé lors de la commande.</p>
+  </section><section id="garanties" data-sans-visuel class="legal-section">
+    <h2>10. Garanties légales</h2>
+    <p>Les œuvres vendues bénéficient de la garantie légale de conformité (articles L217-3 à L217-20 du Code de la consommation) et de la garantie contre les vices cachés (articles 1641 à 1649 du Code civil).</p>
+  </section><section id="responsabilite" data-sans-visuel class="legal-section">
+    <h2>11. Responsabilité</h2>
+    <p>La responsabilité de TOST Unlimited ne saurait être engagée pour : une mauvaise utilisation ou manipulation des œuvres, des dommages indirects ou immatériels.</p><p>La responsabilité est limitée au montant de la commande concernée.</p>
+  </section><section id="propriete" data-sans-visuel class="legal-section">
+    <h2>12. Propriété intellectuelle</h2>
+    <p>Les œuvres vendues restent protégées par le droit d’auteur.</p><p>L’achat d’une œuvre n’emporte aucun transfert de droits de reproduction ou d’exploitation. Toute reproduction, diffusion ou utilisation commerciale est interdite sans autorisation écrite préalable.</p>
+  </section><section id="donnees" data-sans-visuel class="legal-section">
+    <h2>13. Données personnelles</h2>
+    <p>Responsable du traitement : TOST Unlimited, 4 Clos Henri Becquerel, 31170 Tournefeuille — frederic@tostunlimited.com</p><p>Données collectées : nom, prénom, adresse postale, adresse e-mail, informations de paiement (non conservées par TOST Unlimited).</p><p>Finalité et base légale : les données sont collectées sur la base de l’exécution du contrat (article 6.1.b du RGPD) pour la gestion des commandes, la livraison et le service après-vente.</p><p>Durée de conservation : les données sont conservées pendant la durée nécessaire à l’exécution de la commande, puis archivées pour une durée de 5 ans conformément aux obligations légales comptables et fiscales.</p><p>Destinataires : les données peuvent être transmises aux prestataires logistiques et de paiement strictement nécessaires à l’exécution de la commande.</p><p>Droits du client : conformément au RGPD, le client dispose d’un droit d’accès, de rectification, de suppression, de limitation, d’opposition et de portabilité de ses données. Ces droits peuvent être exercés en contactant : frederic@tostunlimited.com</p><p>Droit de réclamation : le client peut introduire une réclamation auprès de la CNIL (www.cnil.fr) s’il estime que ses droits ne sont pas respectés.</p>
+  </section><section id="droit" data-sans-visuel class="legal-section">
+    <h2>14. Droit applicable – compétence territoriale</h2>
+    <p>Les présentes CGV sont soumises au droit français.</p><p>En cas de litige, le client est invité à contacter TOST Unlimited afin de rechercher une solution amiable.</p><p>À défaut d’accord amiable, le client consommateur peut saisir la juridiction compétente conformément aux règles légales, ou recourir à un médiateur de la consommation conformément à l’article L612-1 du Code de la consommation.</p><p>Conformément aux articles L.611-1 et suivants du Code de la consommation, le consommateur peut recourir gratuitement à un médiateur de la consommation afin de résoudre à l’amiable tout litige pouvant survenir entre lui et le vendeur à l’occasion de l’achat d’un bien ou de la fourniture d’un service.</p><p>Le médiateur désigné est : le Médiateur de la consommation de la FEVAD (site internet : www.mediateurfevad.fr).</p><p>Ce recours ne remet pas en cause la possibilité pour le consommateur d’engager une procédure juridictionnelle. Le client peut y recourir gratuitement en cas d’échec de la réclamation amiable.</p>
+  </section><section id="acceptation" data-sans-visuel class="legal-section">
+    <h2>15. Acceptation des CGV</h2>
+    <p>Le fait de passer commande sur le Site implique l’acceptation pleine et entière des présentes Conditions Générales de Vente.</p>
+  </section>
+</div>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente" aria-current="page">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

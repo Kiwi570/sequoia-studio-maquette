@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="article" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>L’intelligence artificielle dans la photographie : retouche, génération et regard créatif : Sequoia Studio</title>
+<meta name="description" content="Découvrez comment l’intelligence artificielle transforme la photographie numérique, de la retouche assistée à la génération d’images, en prolongeant le regard du photographe.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/journal/intelligence-artificielle-photographie-regard-creatif">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="L’intelligence artificielle dans la photographie : retouche, génération et regard créatif : Sequoia Studio">
+<meta property="og:description" content="Découvrez comment l’intelligence artificielle transforme la photographie numérique, de la retouche assistée à la génération d’images, en prolongeant le regard du photographe.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/journal/intelligence-artificielle-photographie-regard-creatif">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/article-intelligence-artificielle-photographie-regard-creatif-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Écran de retouche photographique avec un paysage de montagne en cours de traitement">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"L’intelligence artificielle comme nouveau prolongement du regard photographique","datePublished":"2026-06-10","inLanguage":"fr","publisher":{"@type":"Organization","name":"Sequoia Studio"}}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>L’intelligence artificielle comme nouveau prolongement du regard photographique</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<div data-barre-lecture aria-hidden="true"></div>
+<section class="article-tete" id="debut" data-scene style="--nuit:#100c0a">
+  <div class="conteneur article-tete-grille">
+    <div class="article-tete-texte">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="/journal" data-libelle="Journal">Le journal</a> <span aria-hidden="true">/</span> <span>Intelligence artificielle</span></nav>
+      <h1 class="article-h1" data-anime="gsap">L’intelligence artificielle comme nouveau prolongement du regard photographique</h1>
+      <p class="article-meta" data-anime="gsap" data-info-cle><time datetime="2026-06-10">10 juin 2026</time> · 2 min de lecture</p>
+      <p class="article-chapo article-chapo--tete" data-anime="gsap">L’intelligence artificielle transforme profondément la photographie numérique, non pas en remplaçant le photographe, mais en élargissant son champ d’intervention créative.</p>
+      <p data-anime="gsap"><a class="bouton bouton--plein" href="#lecture" data-action-principale>Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+    <figure class="media article-couverture" style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/journal/ia-regard-1280.webp" srcset="/assets/images/journal/ia-regard-640.webp 640w, /assets/images/journal/ia-regard-1280.webp 1280w, /assets/images/journal/ia-regard-1672.webp 1672w" sizes="(max-width: 760px) 100vw, 50vw" alt="Écran de retouche photographique avec un paysage de montagne en cours de traitement" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+<article class="article-corps conteneur" id="lecture" data-sans-visuel>
+  <p>L’intelligence artificielle transforme profondément la photographie numérique, non pas en remplaçant le photographe, mais en élargissant son champ d’intervention créative. La prise de vue reste le point de départ essentiel : cadrage, lumière, focale, profondeur de champ, intention esthétique et direction du sujet demeurent des choix humains. L’IA intervient ensuite comme un accélérateur de variations visuelles, capable de proposer des interprétations, d’étendre une scène, de modifier une ambiance ou de générer des éléments impossibles à produire physiquement en studio. Cette hybridation entre capture réelle et génération algorithmique donne naissance à une photographie augmentée, située entre document, mise en scène et art numérique.</p><p>Sur le plan technique, les outils récents reposent principalement sur des modèles de diffusion, des réseaux neuronaux entraînés à reconstruire une image à partir de bruit, puis à guider cette reconstruction selon un texte, une image de référence ou un masque. Des plateformes comme Midjourney, Firefly, Stable Diffusion, Leonardo AI, Ideogram ou les modèles intégrés aux suites Adobe permettent de générer des visuels complets, mais aussi de travailler à partir d’une photographie originale. Les fonctions d’image-to-image, de ControlNet, de référence de style, de pose guidance ou de depth map permettent de conserver la composition, la posture, la perspective ou les volumes d’une photo source, tout en modifiant son univers esthétique. Le photographe peut ainsi utiliser son propre cliché comme structure de base, puis explorer différents registres : éditorial, pictural, cinématographique, surréaliste ou publicitaire.</p><p>La retouche photographique bénéficie également d’une mutation rapide. Les outils de masquage automatique, de sélection d’objet, de suppression intelligente, de remplissage génératif, de débruitage neuronal, d’upscaling et de color grading assisté permettent de réduire fortement le temps passé sur les opérations répétitives. Lightroom, Photoshop, Capture One, Topaz Photo AI, Luminar Neo ou DxO intègrent désormais des briques d’IA qui analysent la scène, isolent les sujets, corrigent les défauts optiques, améliorent la netteté ou rééquilibrent la dynamique d’image. La retouche devient moins linéaire : elle s’apparente davantage à un flux de décisions créatives, où le photographe choisit, affine, rejette ou combine les propositions générées par la machine.</p><p>L’enjeu artistique consiste donc à préserver une intention photographique identifiable. Une image issue de l’IA devient réellement intéressante lorsqu’elle ne se contente pas d’imiter un style, mais lorsqu’elle prolonge une photographie originale par une vision cohérente : une lumière pensée, une matière maîtrisée, une composition lisible et une direction esthétique assumée. Pour les photographes, l’IA ouvre un territoire nouveau : préparer des moodboards plus précis, tester des décors virtuels, enrichir des séries existantes, créer des œuvres hybrides ou transformer une prise de vue minimale en scène complexe. La valeur ne réside plus seulement dans le déclenchement ni dans le prompt, mais dans la capacité à articuler capture, sélection, retouche, génération et regard critique.</p>
+</article>
+<section class="article-autres" id="a-lire">
+  <div class="conteneur">
+    <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>À lire aussi</h2>
+</div>
+    <div class="journal-grille journal-grille--autres">
+      <article class="article-carte"><a class="article-lien" href="/journal/certificat-authenticite-photographie-art-oeuvre-numerique-imprimee" data-libelle="Journal">
+        <figure class="media article-image" style="--cadrage:45% 55%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/certificat/hologramme-gros-plan-1280.webp" srcset="/assets/images/certificat/hologramme-gros-plan-640.webp 640w, /assets/images/certificat/hologramme-gros-plan-1280.webp 1280w, /assets/images/certificat/hologramme-gros-plan-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 30vw" alt="Gros plan sur l’hologramme NFC d’un certificat Sequoia Studio" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <p class="article-meta"><span class="article-theme">Certificat d’authenticité</span> · <time datetime="2026-07-04">4 juillet 2026</time></p>
+        <h3 class="article-titre">Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique imprimée</h3>
+        <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a></article><article class="article-carte"><a class="article-lien" href="/journal/histoire-art-inventions-techniques-lascaux-ia" data-libelle="Journal">
+        <figure class="media media--provisoire article-image" data-visuel data-provisoire="journal-pigments" style="aspect-ratio:4 / 3" role="img" aria-label="Pigments naturels bruts dans des coupelles de pierre"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap10" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#3a342e"/><stop offset="1" stop-color="#0a0908"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap10)"/>
+    <ellipse cx="360" cy="560" rx="150" ry="58" fill="#4a4540"/><ellipse cx="360" cy="548" rx="128" ry="42" fill="#2a2724"/><path d="M250 548 q110 -110 220 0z" fill="#9e3a1f"/><ellipse cx="660" cy="600" rx="150" ry="58" fill="#4a4540"/><ellipse cx="660" cy="588" rx="128" ry="42" fill="#2a2724"/><path d="M550 588 q110 -110 220 0z" fill="#c99a3a"/><ellipse cx="960" cy="560" rx="150" ry="58" fill="#4a4540"/><ellipse cx="960" cy="548" rx="128" ry="42" fill="#2a2724"/><path d="M850 548 q110 -110 220 0z" fill="#151312"/><ellipse cx="1250" cy="600" rx="150" ry="58" fill="#4a4540"/><ellipse cx="1250" cy="588" rx="128" ry="42" fill="#2a2724"/><path d="M1140 588 q110 -110 220 0z" fill="#ece6da"/>
+    <rect x="420" y="700" width="560" height="14" rx="7" fill="#8a6a44" transform="rotate(-8 700 707)"/><path d="M980 668 q60 -10 90 20 q-50 30 -90 12z" fill="#c9b08a" transform="rotate(-8 700 707)"/></svg></figure>
+        <p class="article-meta"><span class="article-theme">Histoire de l’art</span> · <time datetime="2026-06-26">26 juin 2026</time></p>
+        <h3 class="article-titre">De Lascaux à l’intelligence artificielle : quand les inventions techniques enrichissent l’art</h3>
+        <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a></article><article class="article-carte"><a class="article-lien" href="/journal/supports-impression-art-photographique-digital" data-libelle="Journal">
+        <figure class="media article-image" style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/journal/supports-impression-1280.webp" srcset="/assets/images/journal/supports-impression-640.webp 640w, /assets/images/journal/supports-impression-1280.webp 1280w, /assets/images/journal/supports-impression-1448.webp 1448w" sizes="(max-width: 760px) 100vw, 30vw" alt="Tirage photographique fine art sur papier texturé, posé sur une table d’atelier" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <p class="article-meta"><span class="article-theme">Impression d’art</span> · <time datetime="2026-06-12">12 juin 2026</time></p>
+        <h3 class="article-titre">Supports d’impression d’art photographique et digital : papier fine art, aluminium Dibond et standard Hahnemühle</h3>
+        <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a></article>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+[
+ { "id": "salon-soir", "image": "grok/salon-soir", "largeurCm": 500, "hauteurCm": 281, "baseCm": 150, "centreCm": 250, "echelle": "echelleSalon" },
+ { "id": "bureau-soir", "image": "grok/bureau-soir", "largeurCm": 500, "hauteurCm": 281, "baseCm": 155, "centreCm": 250, "echelle": "echelleBureau" },
+ { "id": "chambre-soir", "image": "grok/chambre-soir", "largeurCm": 500, "hauteurCm": 281, "baseCm": 125, "centreCm": 250, "echelle": "echelleChambre" },
+ { "id": "salle-a-manger-soir", "image": "grok/salle-a-manger-soir", "largeurCm": 500, "hauteurCm": 281, "baseCm": 150, "centreCm": 250, "echelle": "echelleSalle" }
+]

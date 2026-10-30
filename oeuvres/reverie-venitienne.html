@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="oeuvre" data-curseur style="--fond-page:#1a1111">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Réverie Vénitienne par Darren Whitmore : œuvre encadrée en édition limitée</title>
+<meta name="description" content="Réverie Vénitienne, œuvre contemporaine signée Darren Whitmore, proposée encadrée avec finitions premium, certificat d’authenticité et livraison sécurisée.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/oeuvres/reverie-venitienne">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="product">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Réverie Vénitienne par Darren Whitmore : œuvre encadrée en édition limitée">
+<meta property="og:description" content="Réverie Vénitienne, œuvre contemporaine signée Darren Whitmore, proposée encadrée avec finitions premium, certificat d’authenticité et livraison sécurisée.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/oeuvres/reverie-venitienne">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/oeuvre-reverie-venitienne-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Réverie Vénitienne, œuvre de Darren Whitmore, encadrée sur fond nuit">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":["Product","VisualArtwork"],"name":"Réverie Vénitienne","description":"Capturant l'essence d'une Venise intemporelle, cette œuvre dépeint une femme assise à une terrasse, plongée dans ses pensées tout en contemplant l'horizon. Le mariage subtil des lignes épurées et des touches colorées offre une dimension sophistiquée. Derrière elle, la vue panoramique du Grand Canal se déploie, symbolisant le lien délicat entre modernité et tradition. Ce tableau fusionne l'intimité de la réflexion personnelle avec la majesté d'une ville emblématique, créant ainsi une expérience visuelle à la fois personnelle et universelle.","creator":{"@type":"Person","name":"Darren Whitmore"},"artEdition":30,"dateCreated":"2022","genre":"Illustration","brand":{"@type":"Brand","name":"Sequoia Studio"},"offers":{"@type":"AggregateOffer","priceCurrency":"EUR","lowPrice":120,"highPrice":540,"offerCount":11}}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Réverie Vénitienne</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<section class="fiche" id="debut" data-scene data-fiche style="--nuit:#1a1111;--scene-x:50%;--scene-y:46%">
+  <div class="fiche-scene">
+    <div class="scene-fond"><figure class="media media--provisoire scene-mur" data-visuel data-provisoire="mur-nuit" aria-hidden="true"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp65" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+  <radialGradient id="fp65" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sp65" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
+  <radialGradient id="vp65" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp65)"/><path d="M782 0 L818 0 L1174.4 378 L425.59999999999997 378Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="800" cy="378" rx="416" ry="270" fill="url(#fp65)"/>
+  <rect y="846" width="1600" height="54.00000000000005" fill="url(#sp65)"/><rect y="846" width="1600" height="2" fill="#2a2219" opacity=".8"/>
+  <rect width="1600" height="900" fill="url(#vp65)"/></svg></figure></div>
+    <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
+    <div class="fiche-zone zone-oeuvre" data-anime="gsap" data-scene-oeuvre>
+      <div class="cadre cadre--caisse-noire cadre--fiche" style="--r:1.8140589569160999" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre" data-loupe>
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 441">
+  <picture>
+    <img src="/assets/images/oeuvres/reverie-venitienne-800.webp" srcset="/assets/images/oeuvres/reverie-venitienne-640.webp 640w, /assets/images/oeuvres/reverie-venitienne-800.webp 800w" sizes="(max-width: 760px) 80vw, 46vw" alt="Réverie Vénitienne, Darren Whitmore" width="800" height="441" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div>
+    </div>
+    <button type="button" class="fiche-agrandir bouton-rond bouton-rond--texte" data-visionneuse-ouvrir aria-haspopup="dialog"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span>Agrandir l’œuvre</span></button>
+  </div>
+  <div class="fiche-panneau">
+    <nav class="fil" aria-label="Fil d’Ariane"><a href="/galerie" data-libelle="Galerie">Galerie</a> <span aria-hidden="true">/</span> <a href="/galerie?univers=portraits#oeuvres" data-libelle="Galerie">Portraits</a></nav>
+    <h1 class="fiche-titre" data-anime="gsap">Réverie Vénitienne</h1>
+    <p class="fiche-artiste" data-anime="gsap"><a href="/artistes#darren-whitmore" data-libelle="Artistes">Darren Whitmore</a></p>
+    <p class="fiche-meta" data-anime="gsap">Illustration · 2022 · Édition limitée de 30 exemplaires, numérotés et signés</p>
+    <div class="fiche-achat" data-anime="gsap">
+      <p class="fiche-prix" data-info-cle><strong data-prix data-config-prix>420 €</strong> <span class="fiche-des">dès 120 €</span><span class="mention-prix">TVA non applicable, art. 293 B du CGI</span></p>
+      <button type="button" class="bouton bouton--plein fiche-ajouter" data-action-principale data-config-ajouter data-magnetique><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-config-ajouter-texte>Ajouter au panier</span></button>
+    </div>
+    <form class="config" data-config-form aria-label="Votre sélection" data-anime="gsap">
+      <fieldset class="config-groupe"><legend>Format de l’œuvre <small>largeur × hauteur</small></legend><div class="config-choix">
+        <label class="choix"><input type="radio" name="format" value="16_9_80x45"><span>80 × 45 cm</span></label><label class="choix"><input type="radio" name="format" value="16_9_110x62" checked><span>110 × 62 cm</span></label><label class="choix"><input type="radio" name="format" value="16_9_120x70"><span>120 × 70 cm</span></label>
+      </div></fieldset>
+      <fieldset class="config-groupe"><legend>Finition</legend><div class="config-choix config-choix--finitions">
+        <label class="choix choix--finition"><input type="radio" name="finition" value="toile"><span><img src="/assets/images/finitions/toile-insonorisee-echantillon-512.webp" alt="" width="48" height="36" loading="lazy">Toile insonorisée</span></label><label class="choix choix--finition"><input type="radio" name="finition" value="caisse-noire" checked><span><img src="/assets/images/finitions/caisse-noire-echantillon-359.webp" alt="" width="48" height="36" loading="lazy">Caisse noire</span></label><label class="choix choix--finition"><input type="radio" name="finition" value="caisse-blanche"><span><img src="/assets/images/finitions/caisse-blanche-echantillon-359.webp" alt="" width="48" height="36" loading="lazy">Caisse blanche</span></label><label class="choix choix--finition"><input type="radio" name="finition" value="fineart"><span><img src="/assets/images/finitions/cadre-bois-echantillon-640.webp" alt="" width="48" height="36" loading="lazy">FineArt encadré</span></label>
+      </div></fieldset>
+      <p class="config-dims">Dimensions totales <small>(largeur × hauteur × profondeur)</small> <strong data-config-dims>113,6 × 65,6 × 3,7 cm</strong></p>
+      <p class="config-detail" data-config-detail>Impression directe sur Alu Dibond 3 mm, finition mat anti-reflet · Caisse américaine teinte noire</p>
+    </form>
+    <ul class="badges" role="list" data-anime="gsap"><li>Qualité premium</li><li>Prêt à poser</li><li>Livraison assurée</li><li>Support par mail 7j/7</li></ul>
+    <p class="fiche-liens" data-anime="gsap"><a href="/chez-vous?oeuvre=reverie-venitienne#outil" class="lien-fleche" data-libelle="Chez vous">Essayer sur mon mur</a></p>
+  </div>
+  <script type="application/json" data-config-donnees>{"slug":"reverie-venitienne","titre":"Réverie Vénitienne","artiste":"Darren Whitmore","image":"oeuvres/reverie-venitienne-640.webp","r":1.8140589569160999,"nuit":"#1a1111","url":"/oeuvres/reverie-venitienne","formats":[{"id":"16_9_80x45","l":80,"h":45,"prix":{"toile":120,"caisse-noire":280,"caisse-blanche":280,"fineart":400}},{"id":"16_9_110x62","l":110,"h":62,"prix":{"toile":210,"caisse-noire":420,"caisse-blanche":420,"fineart":540}},{"id":"16_9_120x70","l":120,"h":70,"prix":{"toile":230,"caisse-noire":450,"caisse-blanche":450}}],"finitions":[{"id":"toile","court":"Toile insonorisée","nom":"Toile insonorisée","marge":0,"epaisseur":4},{"id":"caisse-noire","court":"Caisse noire","nom":"Alu Dibond, caisse américaine noire","marge":1.8,"epaisseur":3.7},{"id":"caisse-blanche","court":"Caisse blanche","nom":"Alu Dibond, caisse américaine blanche","marge":1.8,"epaisseur":3.7},{"id":"fineart","court":"FineArt encadré","nom":"FineArt Hahnemühle, cadre bois noir","marge":8,"epaisseur":3}],"defaut":{"format":"16_9_110x62","finition":"caisse-noire"}}</script>
+</section>
+<section class="fiche-oeuvre" id="oeuvre">
+  <div class="conteneur fiche-oeuvre-grille">
+    <div>
+      <div class="tete-section  ">
+  <p class="surtitre" data-anime>Élégance contemplative</p>
+  <h2 class="titre-section" data-titre-anime>L’œuvre</h2>
+</div>
+      <p class="fiche-accroche" data-anime>Une élégance intemporelle au bord de l&#39;eau.</p>
+      <p data-anime>Capturant l&#39;essence d&#39;une Venise intemporelle, cette œuvre dépeint une femme assise à une terrasse, plongée dans ses pensées tout en contemplant l&#39;horizon. Le mariage subtil des lignes épurées et des touches colorées offre une dimension sophistiquée. Derrière elle, la vue panoramique du Grand Canal se déploie, symbolisant le lien délicat entre modernité et tradition. Ce tableau fusionne l&#39;intimité de la réflexion personnelle avec la majesté d&#39;une ville emblématique, créant ainsi une expérience visuelle à la fois personnelle et universelle.</p>
+      <p data-anime>Perfomante dans un salon ou un bureau raffiné.</p>
+      <dl class="fiche-dl" data-anime>
+        <div><dt>Artiste</dt><dd>Darren Whitmore</dd></div>
+        <div><dt>Style</dt><dd>Illustration</dd></div>
+        <div><dt>Année</dt><dd>2022</dd></div>
+        <div><dt>Édition</dt><dd>Édition de 30</dd></div>
+        <div><dt>Mots-clés</dt><dd>Femme, Venise, Canal</dd></div>
+      </dl>
+    </div>
+    <figure class="nuancier" data-anime>
+      <svg viewBox="0 0 500 300" class="nuancier-svg" role="img" aria-label="Couleurs dominantes : gris, blanc, noir, rouge">
+        <rect class="nuancier-bande" x="0" y="0" width="100" height="300" fill="#ecedf0" style="--i:0"/><rect class="nuancier-bande" x="100" y="0" width="100" height="300" fill="#bfc6c9" style="--i:1"/><rect class="nuancier-bande" x="200" y="0" width="100" height="300" fill="#eaeaeb" style="--i:2"/><rect class="nuancier-bande" x="300" y="0" width="100" height="300" fill="#ebecee" style="--i:3"/><rect class="nuancier-bande" x="400" y="0" width="100" height="300" fill="#959595" style="--i:4"/>
+      </svg>
+      <figcaption>Couleurs dominantes : gris, blanc, noir, rouge</figcaption>
+    </figure>
+  </div>
+</section>
+<section class="fiche-chez" id="chez-vous">
+  <div class="conteneur fiche-chez-grille">
+    <figure class="media fiche-mise" style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/mises/reverie-venitienne-848.webp" srcset="/assets/images/mises/reverie-venitienne-640.webp 640w, /assets/images/mises/reverie-venitienne-848.webp 848w" sizes="(max-width: 760px) 100vw, 50vw" alt="Réverie Vénitienne accrochée dans un intérieur, mise en situation Sequoia Studio" width="848" height="848" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Chez vous</h2>
+  <p class="tete-texte" data-anime>Mise en situation réalisée par Sequoia Studio, puis essayez l’œuvre sur votre propre mur, à l’échelle.</p>
+</div>
+      <p data-anime><a href="/chez-vous?oeuvre=reverie-venitienne#outil" class="bouton bouton--plein" data-libelle="Chez vous"><span>Essayer sur mon mur</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+  </div>
+</section>
+<section class="fiche-certificat" id="certificat">
+  <div class="conteneur fiche-certificat-grille">
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Son certificat d’authenticité</h2>
+  <p class="tete-texte" data-anime>Chaque exemplaire est numéroté et accompagné d’un certificat signé, avec hologramme et puce NFC. Deux étiquettes sont fournies : l’une sur le certificat, l’autre à poser sur l’œuvre.</p>
+</div>
+      <p data-anime><a href="/certificat" class="bouton bouton--contour" data-libelle="Certificat">Comprendre la vérification</a></p>
+    </div>
+    <div class="certificat-zone" data-visuel data-anime><div class="certificat " data-certificat role="img" aria-label="Spécimen du certificat d’authenticité de « Réverie Vénitienne », Darren Whitmore : titre, artiste, année, technique, format, numéro d’exemplaire, signature, hologramme et puce NFC" data-audit-ignorer>
+  <span class="certificat-reflet" aria-hidden="true"></span>
+  <p class="certificat-titre">Certificat d’authenticité</p>
+  <dl class="certificat-grille">
+    <div class="certificat-oeuvre"><dt>Titre de l’œuvre</dt><dd>Réverie Vénitienne</dd></div>
+    <div><dt>Artiste</dt><dd>Darren Whitmore</dd></div>
+    <div><dt>Année</dt><dd>2022</dd></div>
+    <div><dt>Technique</dt><dd>création numérique</dd></div>
+    <div><dt>Format</dt><dd>110 × 62 cm</dd></div>
+    <div><dt>Numéro</dt><dd>N° __ / 30</dd></div>
+    <div class="certificat-signature"><dt>Signature de l’artiste</dt><dd><span class="certificat-ligne"></span></dd></div>
+  </dl>
+  <div class="certificat-vignette"><img src="/assets/images/oeuvres/reverie-venitienne-640.webp" alt="" width="800" height="441" loading="lazy" decoding="async"></div>
+  <p class="certificat-texte">Exemplaire d’une édition limitée, numérotée, produite et sécurisée par un dispositif électronique garantissant son origine et sa traçabilité.</p>
+  <p class="certificat-pied"><span>Certifié par <strong>Sequoia Studio</strong></span><span class="certificat-holo" aria-hidden="true"><span>NFC</span></span></p>
+  <p class="certificat-specimen" aria-hidden="true">Spécimen</p>
+</div></div>
+  </div>
+</section>
+<section class="fiche-infos" id="fabrication">
+  <div class="conteneur fiche-infos-grille">
+    <div class="fiche-finition" data-config-finition-bloc>
+      <figure class="media fiche-echantillon" style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/finitions/caisse-noire-echantillon-359.webp" srcset="/assets/images/finitions/caisse-noire-echantillon-359.webp 359w" sizes="(max-width: 760px) 60vw, 22vw" alt="Alu Dibond, caisse américaine noire" width="359" height="252" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <h3>La finition choisie</h3>
+      <p><strong data-config-finition-nom>Alu Dibond, caisse américaine noire</strong></p>
+      <div class="fiche-finition-texte" data-finition-texte="toile" hidden><p>La toile insonorisée est réalisée dans le même matériau que notre toile photo classique, avec une épaisseur de 4 cm. L’impression est réalisée en très haute qualité. Le visuel est prolongé sur les quatre bords, et lors de la mise en tension sur le cadre, seule cette partie prolongée est repliée.</p><p>La toile insonorisée contient surtout une mousse acoustique de 40 mm d’épaisseur, appelée mousse de résine de mélamine. Cette mousse est reconnue pour sa capacité à absorber efficacement le son sur une large plage de fréquences, avec une performance particulièrement élevée dans les moyennes et hautes fréquences.</p><p>Coefficients d’absorption acoustique, mesurés selon la norme DIN EN ISO 10534-2 : 125 Hz : 0.29 / 250 Hz : 0.30 / 500 Hz : 0.45 / 1000 Hz : 0.80 / 2000 Hz : 0.98 / 4000 Hz : 0.94</p></div><div class="fiche-finition-texte" data-finition-texte="caisse-noire"><p>Cette finition associe une impression sur aluminium 3 mm mat à une caisse américaine noire. La caisse américaine crée un effet flottant très apprécié en studio, grâce à un espace visible de 8 mm entre l’image et le cadre. Le noir renforce le contraste et donne une présence graphique plus marquée. Caractéristiques de la caisse américaine : hauteur du cadre de 3,7 cm (vue latérale), épaisseur du cadre de 1 cm (vue frontale), profondeur du cadre au dos : 2,5 cm.</p></div><div class="fiche-finition-texte" data-finition-texte="caisse-blanche" hidden><p>Cette finition associe une impression sur aluminium 3 mm mat à une caisse américaine blanche. La caisse américaine crée un effet flottant très apprécié en studio, grâce à un espace visible de 8 mm entre l’image et le cadre. Le blanc apporte une lecture plus lumineuse et discrète, idéale pour des ambiances claires et contemporaines. Caractéristiques de la caisse américaine : hauteur du cadre de 3,7 cm (vue latérale), épaisseur du cadre de 1 cm (vue frontale), profondeur du cadre au dos : 2,5 cm.</p></div><div class="fiche-finition-texte" data-finition-texte="fineart" hidden><p>Vous souhaitez présenter vos photos préférées de manière traditionnelle, rehaussées de passe-partout raffinés et de cadres classiques. Une impression Papier Fine Art de type Hahnemühle Photo Rag Ultra Smooth qui est un papier artistique en coton particulièrement lisse, qui possède une structure très fine et une surface veloutée. Il se prête aussi bien aux photographies FineArt qu&#39;aux reproductions d&#39;art. Grammage : 305 g/m² | Blancheur : 94% | Dmax : 1,7 | Degré de brillance : mat | Surface : non texturé | Azurants optiques : oui | Matériau : 100% coton. Il est proposé avec un passe-partout en carton de musée d&#39;une épaisseur de 1,4 mm et couleur Blanc Naturel. Le carton musée reçoit une coupe diagonale précise et est placé juste à côté votre photo pour que celle-ci ne soit pas cachée.Sa largeur peut varier de 3 à 30 cm en fonction de la taille de l&#39;oeuvre, afin de créer un équilibre visuel harmonieux.</p></div>
+    </div>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Fabrication et livraison</h2>
+</div>
+      <h3 class="petit-titre" data-anime>Fabrication</h3><p data-anime>Nous ne sous-traitons jamais notre production et produisons à la demande, sans aucun surstock. Impression personnalisée à la commande, qualité studio, œuvres d’art numérotées sous licence officielle. Papier certifié FSC et encres pigmentaires sans solvant.</p>
+      <h3 class="petit-titre" data-anime>Durabilité</h3><p data-anime>Nos tableaux sur aluminium sont hautement résistants à l’eau, et nous n’utilisons que des encres UV sans COV (composés organiques volatils), garantissant un intérieur sain et des œuvres qui durent des décennies.</p>
+      <h3 class="petit-titre" data-anime>Emballage et livraison</h3><p data-anime>Nous produisons et expédions très souvent vos commandes en moins de 24 heures. Chaque tableau bénéficie d’une protection optimale : emballages sur mesure et cartons extrêmement solides pour protéger les coins et la surface de l’œuvre. En fonction du format ou pour les commandes de plusieurs cadres, la livraison est confiée à des transporteurs de confiance.</p>
+      <p class="note-a-completer" data-anime>Livraison en France métropolitaine. Frais de livraison : à compléter.</p>
+    </div>
+  </div>
+</section>
+<section class="fiche-suite" id="meme-univers">
+  <div class="conteneur">
+    <div class="tete-section  ">
+  <p class="surtitre" data-anime>Portraits</p>
+  <h2 class="titre-section" data-titre-anime>Dans le même univers</h2>
+</div>
+    <div class="mur-oeuvres mur-oeuvres--suite"><article class="carte-oeuvre" data-oeuvre="chic-industriel-surreel" data-univers="portraits" data-artiste="miyu-mori" data-orientation="portrait" data-familles="bleu orange-ocre jaune-or" data-des="80" data-ajout="2026-05-23" data-titre="Chic Industriel Surréel" data-recherche="chic industriel surreel miyu mori steampunk portraits bleu orange jaune brun steampunk femme parapluie eclat de style retro-futuriste." style="--nuit:#0c1d1f;--accent-oeuvre:#01b5ce">
+  <a class="carte-lien" href="/oeuvres/chic-industriel-surreel" data-libelle="Chic Industriel Surréel">
+    <div class="carte-scene">
+      <div class="cadre cadre--caisse-noire " style="--r:0.7485029940119761" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 668">
+  <picture>
+    <img src="/assets/images/oeuvres/chic-industriel-surreel-500.webp" srcset="/assets/images/oeuvres/chic-industriel-surreel-500.webp 500w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 22vw" alt="Chic Industriel Surréel, Miyu Mori" width="500" height="668" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div>
+      <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/chic-industriel-surreel-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="cartel ">
+  <h3 class="cartel-titre">Chic Industriel Surréel</h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Steampunk · 2026 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+  </a>
+</article><article class="carte-oeuvre" data-oeuvre="eclat-captivant" data-univers="portraits" data-artiste="darren-whitmore" data-orientation="portrait" data-familles="bleu orange-ocre noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Éclat Captivant" data-recherche="eclat captivant darren whitmore contemporain portraits bleu orange marron noir portrait regard feuillage une fusion de couleurs et de regards envoutants." style="--nuit:#1f110c;--accent-oeuvre:#d43e0f">
+  <a class="carte-lien" href="/oeuvres/eclat-captivant" data-libelle="Éclat Captivant">
+    <div class="carte-scene">
+      <div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 892">
+  <picture>
+    <img src="/assets/images/oeuvres/eclat-captivant-500.webp" srcset="/assets/images/oeuvres/eclat-captivant-500.webp 500w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 22vw" alt="Éclat Captivant, Darren Whitmore" width="500" height="892" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div>
+      <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/eclat-captivant-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="cartel ">
+  <h3 class="cartel-titre">Éclat Captivant</h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Contemporain · 2021 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+  </a>
+</article><article class="carte-oeuvre" data-oeuvre="eclat-du-japon" data-univers="portraits" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu rouge-rose noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Éclat du Japon" data-recherche="eclat du japon miyu mori contemporain portraits orange bleu rouge noir japonais kimono fleurs l&#39;art du contraste vibrant." style="--nuit:#1f120c;--accent-oeuvre:#f27a45">
+  <a class="carte-lien" href="/oeuvres/eclat-du-japon" data-libelle="Éclat du Japon">
+    <div class="carte-scene">
+      <div class="cadre cadre--caisse-noire " style="--r:0.5263157894736842" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 950">
+  <picture>
+    <img src="/assets/images/oeuvres/eclat-du-japon-500.webp" srcset="/assets/images/oeuvres/eclat-du-japon-500.webp 500w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 22vw" alt="Éclat du Japon, Miyu Mori" width="500" height="950" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div>
+      <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/eclat-du-japon-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="cartel ">
+  <h3 class="cartel-titre">Éclat du Japon</h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Contemporain · 2024 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+  </a>
+</article><article class="carte-oeuvre" data-oeuvre="l-esprit-flottant" data-univers="portraits" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu rouge-rose vert" data-des="80" data-ajout="2026-04-11" data-titre="L&#39;Esprit Flottant" data-recherche="l&#39;esprit flottant miyu mori illustration portraits orange bleu rouge vert portrait art contemporain illustration une symphonie de couleurs et de reves." style="--nuit:#1f160c;--accent-oeuvre:#e19a54">
+  <a class="carte-lien" href="/oeuvres/l-esprit-flottant" data-libelle="L&#39;Esprit Flottant">
+    <div class="carte-scene">
+      <div class="cadre cadre--caisse-noire " style="--r:0.7656967840735069" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 653">
+  <picture>
+    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 22vw" alt="L&#39;Esprit Flottant, Miyu Mori" width="500" height="653" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div>
+      <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/l-esprit-flottant-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="cartel ">
+  <h3 class="cartel-titre">L&#39;Esprit Flottant</h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Illustration · 2023 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+  </a>
+</article></div>
+    <nav class="fiche-voisines" aria-label="Œuvre précédente / Œuvre suivante">
+      <a class="voisine" href="/oeuvres/reverie-mediterraneenne" data-libelle="Rêverie Méditerranéenne"><span class="voisine-sens">Œuvre précédente</span><span class="voisine-titre">Rêverie Méditerranéenne</span></a>
+      <a class="voisine voisine--suivante" href="/oeuvres/serenite-mediterraneenne" data-libelle="Sérénité Méditerranéenne"><span class="voisine-sens">Œuvre suivante</span><span class="voisine-titre">Sérénité Méditerranéenne</span></a>
+    </nav>
+  </div>
+</section>
+<div class="visionneuse" data-visionneuse data-recouvrement role="dialog" aria-modal="true" aria-label="Visionneuse : Réverie Vénitienne" hidden>
+  <div class="visionneuse-barre">
+    <p class="visionneuse-titre">Réverie Vénitienne · Darren Whitmore</p>
+    <p class="visionneuse-aide"><span class="si-souris">Loupe : survolez l’œuvre</span><span class="si-tactile">Touchez l’œuvre et faites glisser pour la loupe</span></p>
+    <button type="button" class="bouton-rond" data-visionneuse-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
+  <div class="visionneuse-scene" data-visionneuse-scene>
+    <img src="/assets/images/oeuvres/reverie-venitienne-800.webp" alt="Réverie Vénitienne, Darren Whitmore" width="800" height="441" data-visionneuse-image decoding="async">
+    <span class="loupe" data-loupe-lentille aria-hidden="true"></span>
+  </div>
+</div>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe class="barre-oeuvre">
+  <p class="barre-total"><span class="barre-libelle">Total</span><strong data-prix data-config-prix-barre>420 €</strong><span class="barre-choix" data-config-choix-barre>110 × 62 cm · Caisse noire</span></p>
+  <button type="button" class="bouton bouton--plein" data-config-ajouter><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span data-config-ajouter-texte>Ajouter au panier</span></button>
+</div>
+</body>
+</html>

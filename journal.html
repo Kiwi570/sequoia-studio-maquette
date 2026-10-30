@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="journal" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Technique &amp; Culture : le journal de Sequoia Studio</title>
+<meta name="description" content="Technique &amp; Culture explore les liens entre les procédés de création, les outils contemporains et les grandes questions qui traversent le monde de l’art.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/journal">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Technique &amp; Culture : le journal de Sequoia Studio">
+<meta property="og:description" content="Technique &amp; Culture explore les liens entre les procédés de création, les outils contemporains et les grandes questions qui traversent le monde de l’art.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/journal">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/journal-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Technique &amp; Culture, le journal de Sequoia Studio">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Journal</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal" aria-current="page">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal" aria-current="page">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<section class="scene scene--journal ecran" id="debut" data-scene style="--nuit:#120d09">
+  <div class="scene-fond scene-fond--plein"><figure class="media media--provisoire " data-visuel data-provisoire="journal-table" role="img" aria-label="Bureau de noyer la nuit : carnet ouvert, loupe, échantillons de papier et pigments"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap25" cx=".5" cy=".5" r=".6"><stop offset="0" stop-color="#5a3c24"/><stop offset=".7" stop-color="#22160d"/><stop offset="1" stop-color="#090605"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap25)"/><path d="M0 40 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 90 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 140 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 190 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 240 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 290 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 340 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 390 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 440 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 490 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 540 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 590 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 640 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 690 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 740 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 790 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 840 q800 -18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/><path d="M0 890 q800 18 1600 0" stroke="#2e1d10" stroke-width="2" fill="none" opacity=".5"/>
+    <rect x="520" y="270" width="300" height="380" fill="#f2ede4" transform="rotate(-4 670 460)"/><rect x="820" y="270" width="300" height="380" fill="#ebe4d6" transform="rotate(-4 670 460)"/>
+    <circle cx="1270" cy="330" r="62" fill="none" stroke="#b89a5e" stroke-width="10"/><rect x="1310" y="372" width="110" height="18" rx="9" fill="#b89a5e" transform="rotate(42 1310 372)"/>
+    <circle cx="300" cy="700" r="46" fill="#1a1410"/><circle cx="300" cy="700" r="36" fill="#c26b2d"/><circle cx="410" cy="740" r="46" fill="#1a1410"/><circle cx="410" cy="740" r="36" fill="#2b54a5"/><circle cx="520" cy="700" r="46" fill="#1a1410"/><circle cx="520" cy="700" r="36" fill="#d8432c"/>
+    <rect x="1180" y="560" width="200" height="80" fill="#fbf8f1" transform="rotate(-30 1190 640)"/><rect x="1180" y="560" width="200" height="80" fill="#f1eadc" transform="rotate(-18 1190 640)"/><rect x="1180" y="560" width="200" height="80" fill="#e8dfcd" transform="rotate(-6 1190 640)"/><rect x="1180" y="560" width="200" height="80" fill="#ddd2bd" transform="rotate(6 1190 640)"/><rect x="1180" y="560" width="200" height="80" fill="#f6f1e6" transform="rotate(18 1190 640)"/>
+    <rect x="200" y="300" width="14" height="250" rx="7" fill="#111" transform="rotate(25 207 425)"/></svg></figure></div>
+  <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
+  <div class="scene-texte scene-texte--bas">
+    <p class="surtitre" data-anime="gsap">Le journal</p>
+    <h1 class="titre-hero titre-hero--moyen"><span class="ligne-masque"><span class="ligne" data-anime="gsap">Technique &amp; Culture</span></span></h1>
+    <p class="hero-sous hero-sous--texte hero-sous--long" data-anime="gsap">Technique &amp; Culture explore les liens entre les procédés de création, les outils contemporains et les grandes questions qui traversent le monde de l’art. Cette série d’articles aborde aussi bien les techniques utilisées par les artistes — photographie, impression, numérique, intelligence artificielle, matériaux — que les réflexions culturelles qu’elles soulèvent : le rôle de l’image, la place de l’artiste, l’évolution du regard et la fonction de l’art dans notre société.</p>
+    <p class="hero-actions" data-anime="gsap"><a href="/journal/certificat-authenticite-photographie-art-oeuvre-numerique-imprimee" class="bouton bouton--plein" data-libelle="Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique imprimée" data-action-principale data-magnetique><span>Lire l’article à la Une</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    <p class="hero-info" data-info-cle data-anime="gsap">4 articles, de juin à juillet 2026</p>
+  </div>
+</section>
+<section class="journal" id="articles" data-journal>
+  <div class="conteneur">
+    <div class="journal-tete">
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Les articles</h2>
+</div>
+      <form class="themes" data-themes aria-label="Thèmes">
+        <div class="puces">
+          <label class="puce"><input type="radio" name="theme" value="" checked><span>Tous les thèmes</span></label>
+          <label class="puce"><input type="radio" name="theme" value="certificat"><span>Certificat d’authenticité</span></label><label class="puce"><input type="radio" name="theme" value="histoire"><span>Histoire de l’art</span></label><label class="puce"><input type="radio" name="theme" value="impression"><span>Impression d’art</span></label><label class="puce"><input type="radio" name="theme" value="ia"><span>Intelligence artificielle</span></label>
+        </div>
+      </form>
+    </div>
+    <p class="surtitre journal-une-titre">À la Une</p>
+    <div class="journal-grille" data-journal-grille>
+      <article class="article-carte article-carte--une" data-article data-theme="certificat">
+  <a class="article-lien" href="/journal/certificat-authenticite-photographie-art-oeuvre-numerique-imprimee" data-libelle="Journal">
+    <figure class="media article-image" style="--cadrage:45% 55%;aspect-ratio:16 / 9">
+  <picture>
+    <img src="/assets/images/certificat/hologramme-gros-plan-1280.webp" srcset="/assets/images/certificat/hologramme-gros-plan-640.webp 640w, /assets/images/certificat/hologramme-gros-plan-1280.webp 1280w, /assets/images/certificat/hologramme-gros-plan-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 60vw" alt="Gros plan sur l’hologramme NFC d’un certificat Sequoia Studio" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <p class="article-meta"><span class="article-theme">Certificat d’authenticité</span> · <time datetime="2026-07-04">4 juillet 2026</time> · 8 min de lecture</p>
+    <h3 class="article-titre article-titre--une">Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique imprimée</h3>
+    <p class="article-chapo">Le certificat d’authenticité est un document essentiel dans la vente, la conservation et la transmission d’une œuvre d’art.</p>
+    <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+</article>
+      <article class="article-carte" data-article data-theme="histoire">
+  <a class="article-lien" href="/journal/histoire-art-inventions-techniques-lascaux-ia" data-libelle="Journal">
+    <figure class="media media--provisoire article-image" data-visuel data-provisoire="journal-pigments" style="aspect-ratio:4 / 3" role="img" aria-label="Pigments naturels bruts dans des coupelles de pierre"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap26" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#3a342e"/><stop offset="1" stop-color="#0a0908"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap26)"/>
+    <ellipse cx="360" cy="560" rx="150" ry="58" fill="#4a4540"/><ellipse cx="360" cy="548" rx="128" ry="42" fill="#2a2724"/><path d="M250 548 q110 -110 220 0z" fill="#9e3a1f"/><ellipse cx="660" cy="600" rx="150" ry="58" fill="#4a4540"/><ellipse cx="660" cy="588" rx="128" ry="42" fill="#2a2724"/><path d="M550 588 q110 -110 220 0z" fill="#c99a3a"/><ellipse cx="960" cy="560" rx="150" ry="58" fill="#4a4540"/><ellipse cx="960" cy="548" rx="128" ry="42" fill="#2a2724"/><path d="M850 548 q110 -110 220 0z" fill="#151312"/><ellipse cx="1250" cy="600" rx="150" ry="58" fill="#4a4540"/><ellipse cx="1250" cy="588" rx="128" ry="42" fill="#2a2724"/><path d="M1140 588 q110 -110 220 0z" fill="#ece6da"/>
+    <rect x="420" y="700" width="560" height="14" rx="7" fill="#8a6a44" transform="rotate(-8 700 707)"/><path d="M980 668 q60 -10 90 20 q-50 30 -90 12z" fill="#c9b08a" transform="rotate(-8 700 707)"/></svg></figure>
+    <p class="article-meta"><span class="article-theme">Histoire de l’art</span> · <time datetime="2026-06-26">26 juin 2026</time> · 2 min de lecture</p>
+    <h3 class="article-titre">De Lascaux à l’intelligence artificielle : quand les inventions techniques enrichissent l’art</h3>
+    <p class="article-chapo">Depuis les premiers pigments déposés sur les parois de Lascaux, l’art avance avec les inventions techniques.</p>
+    <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+</article><article class="article-carte" data-article data-theme="impression">
+  <a class="article-lien" href="/journal/supports-impression-art-photographique-digital" data-libelle="Journal">
+    <figure class="media article-image" style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/journal/supports-impression-1280.webp" srcset="/assets/images/journal/supports-impression-640.webp 640w, /assets/images/journal/supports-impression-1280.webp 1280w, /assets/images/journal/supports-impression-1448.webp 1448w" sizes="(max-width: 760px) 100vw, 30vw" alt="Tirage photographique fine art sur papier texturé, posé sur une table d’atelier" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <p class="article-meta"><span class="article-theme">Impression d’art</span> · <time datetime="2026-06-12">12 juin 2026</time> · 1 min de lecture</p>
+    <h3 class="article-titre">Supports d’impression d’art photographique et digital : papier fine art, aluminium Dibond et standard Hahnemühle</h3>
+    <p class="article-chapo">L’impression d’art photographique et digital ne se limite pas à la reproduction d’une image : elle participe pleinement à son interprétation.</p>
+    <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+</article><article class="article-carte" data-article data-theme="ia">
+  <a class="article-lien" href="/journal/intelligence-artificielle-photographie-regard-creatif" data-libelle="Journal">
+    <figure class="media article-image" style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/journal/ia-regard-1280.webp" srcset="/assets/images/journal/ia-regard-640.webp 640w, /assets/images/journal/ia-regard-1280.webp 1280w, /assets/images/journal/ia-regard-1672.webp 1672w" sizes="(max-width: 760px) 100vw, 30vw" alt="Écran de retouche photographique avec un paysage de montagne en cours de traitement" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <p class="article-meta"><span class="article-theme">Intelligence artificielle</span> · <time datetime="2026-06-10">10 juin 2026</time> · 2 min de lecture</p>
+    <h3 class="article-titre">L’intelligence artificielle comme nouveau prolongement du regard photographique</h3>
+    <p class="article-chapo">L’intelligence artificielle transforme profondément la photographie numérique, non pas en remplaçant le photographe, mais en élargissant son champ d’intervention créative.</p>
+    <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+</article>
+    </div>
+    <p class="journal-vide" data-journal-vide hidden>Aucun article dans ce thème pour le moment.</p>
+  </div>
+</section>
+<section class="fin-page" id="fin">
+  <div class="conteneur fin-grille">
+    <figure class="media " style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/journal/supports-alu-1280.webp" srcset="/assets/images/journal/supports-alu-640.webp 640w, /assets/images/journal/supports-alu-1280.webp 1280w, /assets/images/journal/supports-alu-1448.webp 1448w" sizes="(max-width: 760px) 100vw, 45vw" alt="Œuvre photographique contemporaine montée sur aluminium Dibond" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>De la technique à vos murs</h2>
+  <p class="tete-texte" data-anime>Les œuvres du catalogue sont imprimées sur les supports présentés dans le journal.</p>
+</div>
+      <p class="fin-actions" data-anime><a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie"><span>Découvrir la galerie</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal" aria-current="page">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

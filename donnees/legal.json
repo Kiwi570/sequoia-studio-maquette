@@ -1,0 +1,172 @@
+{
+ "mentions": {
+  "maj": "23 février 2026",
+  "sections": [
+   { "id": "fiche", "titre": "À compléter par le client", "fiche": [
+     "Numéro de TVA intracommunautaire : « Non applicable » (art. 293 B du CGI) à confirmer",
+     "Hébergeur du site définitif (aujourd’hui Alwaysdata pour sequoiastudio.fr)",
+     "Téléphones à publier ou non (ceux de la direction figurent sur le site actuel)",
+     "Médiateur de la consommation : adhésion à la FEVAD à confirmer",
+     "Exemplaires déjà vendus par œuvre (pour afficher les exemplaires restants)",
+     "Frais de livraison : offerts (fiche produit) ou calculés selon le format (CGV) ?",
+     "Moyens de paiement réellement acceptés (CGV : carte bancaire seule)",
+     "Fichiers des œuvres en haute définition (aujourd’hui 800 px au plus)",
+     "Confirmation de l’identité des trois artistes et de leurs portraits"
+   ] },
+   { "id": "editeur", "titre": "Éditeur du site", "lignes": [
+     "Dénomination sociale : TOST Unlimited (SAS)",
+     "Forme juridique : Société par Actions Simplifiée",
+     "Capital social : 1 000 €",
+     "Siège social : 4 Clos Henri Becquerel, 31170 Tournefeuille, France",
+     "RCS Toulouse : 985 352 103",
+     "Numéro de TVA intracommunautaire : Non Applicable"
+   ] },
+   { "id": "direction", "titre": "Direction & rédaction", "lignes": [
+     "Directeur de l’entreprise : Frédéric TOST, Président",
+     "frederic@tostunlimited.com · +33 6 32 45 94 39",
+     "Responsable de la rédaction : Gilles TOST, Directeur général",
+     "gilles@tostunlimited.com · +33 6 49 32 19 25"
+   ] },
+   { "id": "hebergement", "titre": "Hébergement", "lignes": [
+     "Maquette hébergée par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis.",
+     "Site actuel sequoiastudio.fr : ALWAYSDATA, SARL au capital de 200 000 €, RCS Paris 492 893 490, 91 rue du Faubourg Saint-Honoré, 75008 Paris."
+   ] },
+   { "id": "propriete", "titre": "Propriété intellectuelle", "texte": [
+     "Tous les contenus (textes, images, graphismes, logos, vidéos…) présents sur ce site sont la propriété exclusive de TOST Unlimited ou de leurs auteurs. Toute reproduction, représentation, adaptation ou exploitation, sans autorisation préalable, est interdite."
+   ] },
+   { "id": "credits", "titre": "Crédits", "texte": [
+     "Œuvres, photographies du showroom, des finitions et des certificats, mises en situation et logo : Sequoia Studio.",
+     "Certaines images d’ambiance (murs, intérieurs de nuit, atelier, matières) sont des illustrations générées par intelligence artificielle ; chacune porte la mention « Illustration générée », à conserver sur le site définitif. Elles ne montrent aucune œuvre du catalogue.",
+     "Polices Instrument Serif et Geist, sous licence SIL Open Font License, hébergées avec le site."
+   ] },
+   { "id": "donnees", "titre": "Données personnelles & cookies (RGPD)", "texte": [
+     "Les données collectées via les formulaires sont exclusivement utilisées pour répondre à vos demandes.",
+     "Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, et de suppression (contactez-nous par email).",
+     "Ce site utilise des cookies techniques pour améliorer votre navigation.",
+     "Maquette : aucun formulaire n’envoie de données ; le panier et vos préférences d’affichage sont seulement gardés dans votre navigateur."
+   ] },
+   { "id": "responsabilites", "titre": "Responsabilités & litiges", "texte": [
+     "Contenu : TOST Unlimited veille à la fiabilité des informations publiées, mais ne peut garantir leur exhaustivité.",
+     "Liens externes : TOST Unlimited décline toute responsabilité quant au contenu des liens externes.",
+     "Litiges : Le présent site est régi par la loi française. Tribunal compétent : siège social de l’entreprise."
+   ] }
+  ]
+ },
+ "cgv": {
+  "maj": "23 février 2026",
+  "sections": [
+   { "id": "vendeur", "titre": "1. Identité du vendeur", "texte": [
+     "Les présentes Conditions Générales de Vente (ci-après les « CGV ») sont proposées par :",
+     "TOST Unlimited, Société par Actions Simplifiée (SAS) au capital de 1 000 €. Siège social : 4 Clos Henri Becquerel, 31170 Tournefeuille, France. RCS Toulouse : 985 352 103. TVA intracommunautaire : Non applicable (article 293B du CGI).",
+     "Contact : frederic@tostunlimited.com"
+   ] },
+   { "id": "champ", "titre": "2. Champ d’application", "texte": [
+     "Les présentes CGV régissent l’ensemble des ventes d’œuvres d’art proposées sur le site internet de TOST Unlimited (ci-après le « Site »), notamment : posters, tableaux, impressions artistiques, œuvres encadrées ou non.",
+     "Les ventes sont réalisées exclusivement à destination de consommateurs au sens du Code de la consommation.",
+     "Toute commande implique l’acceptation pleine, entière et sans réserve des présentes CGV."
+   ] },
+   { "id": "nature", "titre": "3. Nature des œuvres et caractéristiques", "texte": [
+     "Les œuvres proposées sont des créations artistiques originales vendues en tirage standard ou limité selon les cas.",
+     "Les visuels présentés sur le Site sont fournis à titre indicatif. Des différences mineures peuvent apparaître, notamment concernant : les couleurs (selon écrans), le rendu des matières, les dimensions exactes (tolérance d’impression). Ces variations mineures, inhérentes aux procédés d’impression et d’affichage numérique, sont portées à la connaissance du client à titre informatif. Elles ne sauraient, à elles seules, justifier un retour, sauf si elles sont de nature à rendre l’œuvre impropre à l’usage auquel elle est destinée ou significativement non conforme à sa description.",
+     "Ces variations ne constituent pas un défaut de conformité."
+   ] },
+   { "id": "prix", "titre": "4. Prix", "texte": [
+     "Les prix sont indiqués en euros (€), TVA non applicable (article 293 B du CGI), hors frais de livraison. Les frais de livraison sont calculés en fonction du format, du poids de l’œuvre et de la destination, et sont indiqués au client avant la validation définitive de la commande. Ils sont récapitulés dans le résumé de commande.",
+     "TOST Unlimited se réserve le droit de modifier ses prix à tout moment. Le prix applicable est celui affiché au moment de la validation de la commande."
+   ], "note": "Texte adapté pour la maquette : les CGV actuelles indiquent des prix « toutes taxes comprises », alors que la société n’applique pas la TVA (article 293 B du CGI). À valider par Sequoia Studio." },
+   { "id": "commande", "titre": "5. Commande", "texte": [
+     "Le client sélectionne l’œuvre de son choix, vérifie le récapitulatif de commande, puis valide définitivement sa commande après acceptation des CGV.",
+     "La vente est considérée comme ferme après : validation du paiement, envoi de la confirmation de commande par e-mail.",
+     "TOST Unlimited se réserve le droit de refuser toute commande en cas de litige antérieur ou de suspicion de fraude."
+   ] },
+   { "id": "paiement", "titre": "6. Paiement", "texte": [
+     "Le paiement est exigible immédiatement lors de la commande.",
+     "Le moyen de paiement accepté est la Carte bancaire.",
+     "Les paiements sont sécurisés via un prestataire de paiement conforme aux normes en vigueur."
+   ] },
+   { "id": "livraison", "titre": "7. Livraison des œuvres", "texte": [
+     "Les œuvres sont livrées à l’adresse indiquée par le client lors de la commande.",
+     "Les délais de livraison estimés sont indiqués sur la page produit et dans la confirmation de commande. À défaut d’indication, la livraison interviendra au plus tard dans un délai de 30 jours à compter de la validation de la commande, conformément à l’article L216-1 du Code de la consommation.",
+     "En cas de dépassement de ce délai, le client peut mettre en demeure TOST Unlimited de livrer dans un délai supplémentaire raisonnable. À défaut de livraison dans ce nouveau délai, le client pourra annuler sa commande par écrit et sera remboursé dans les 14 jours suivant la demande, conformément à l’article L216-2 du Code de la consommation.",
+     "TOST Unlimited s’engage à expédier les œuvres dans les délais indiqués. En cas de retard imputable au transporteur, TOST Unlimited s’engage à mettre en œuvre tous les moyens raisonnables pour en informer le client et trouver une solution adaptée. La responsabilité de TOST Unlimited ne pourra être engagée pour des retards résultant de circonstances extérieures à son contrôle, tels que des événements de force majeure, grèves ou défaillances du transporteur, sous réserve des droits légaux du client en cas de dépassement du délai maximal de livraison.",
+     "Le client est tenu de vérifier l’état du colis à réception. Toute anomalie (colis endommagé, œuvre détériorée) doit être signalée dans un délai de 48 heures à TOST Unlimited par e-mail à frederic@tostunlimited.com, en joignant des photographies du colis et de l’œuvre concernée. TOST Unlimited se réserve le droit de proposer un remplacement ou un remboursement selon les cas."
+   ] },
+   { "id": "retractation", "titre": "8. Droit de rétractation", "texte": [
+     "8.1 Œuvres non personnalisées. Conformément aux articles L221-18 et suivants du Code de la consommation, le client dispose d’un délai de 14 jours calendaires à compter de la réception de l’œuvre pour exercer son droit de rétractation.",
+     "Les œuvres doivent être retournées : en parfait état, non utilisées, dans leur emballage d’origine.",
+     "Les frais de retour restent à la charge du client.",
+     "8.2 Œuvres personnalisées – Exclusion du droit de rétractation. Conformément à l’article L221-28 4° du Code de la consommation, le droit de rétractation ne s’applique pas aux œuvres clairement personnalisées selon les spécifications propres au client, notamment : choix d’un format sur mesure non proposé en catalogue, ajout d’un texte, d’un nom ou d’un message personnalisé, encadrement ou finition spécifique réalisé à la demande expresse du client.",
+     "En revanche, les œuvres produites en impression standard (format et visuel identiques pour tous les clients, sans modification spécifique) bénéficient du droit de rétractation de 14 jours prévu à l’article 8.1, même si elles sont fabriquées après réception de la commande.",
+     "Le caractère personnalisé ou non de chaque œuvre est précisé sur la page produit correspondante."
+   ] },
+   { "id": "remboursement", "titre": "9. Remboursement", "texte": [
+     "En cas de rétractation valable, le remboursement est effectué dans un délai maximal de 14 jours à compter de la réception des œuvres retournées ou de la preuve d’expédition.",
+     "Le remboursement inclut le prix de l’œuvre ainsi que les frais de livraison initialement facturés au client, à l’exception des frais supplémentaires résultant du choix par le client d’un mode de livraison autre que la solution standard proposée par TOST Unlimited (article L221-24 du Code de la consommation).",
+     "Le remboursement est réalisé via le moyen de paiement utilisé lors de la commande."
+   ] },
+   { "id": "garanties", "titre": "10. Garanties légales", "texte": [
+     "Les œuvres vendues bénéficient de la garantie légale de conformité (articles L217-3 à L217-20 du Code de la consommation) et de la garantie contre les vices cachés (articles 1641 à 1649 du Code civil)."
+   ] },
+   { "id": "responsabilite", "titre": "11. Responsabilité", "texte": [
+     "La responsabilité de TOST Unlimited ne saurait être engagée pour : une mauvaise utilisation ou manipulation des œuvres, des dommages indirects ou immatériels.",
+     "La responsabilité est limitée au montant de la commande concernée."
+   ] },
+   { "id": "propriete", "titre": "12. Propriété intellectuelle", "texte": [
+     "Les œuvres vendues restent protégées par le droit d’auteur.",
+     "L’achat d’une œuvre n’emporte aucun transfert de droits de reproduction ou d’exploitation. Toute reproduction, diffusion ou utilisation commerciale est interdite sans autorisation écrite préalable."
+   ] },
+   { "id": "donnees", "titre": "13. Données personnelles", "texte": [
+     "Responsable du traitement : TOST Unlimited, 4 Clos Henri Becquerel, 31170 Tournefeuille — frederic@tostunlimited.com",
+     "Données collectées : nom, prénom, adresse postale, adresse e-mail, informations de paiement (non conservées par TOST Unlimited).",
+     "Finalité et base légale : les données sont collectées sur la base de l’exécution du contrat (article 6.1.b du RGPD) pour la gestion des commandes, la livraison et le service après-vente.",
+     "Durée de conservation : les données sont conservées pendant la durée nécessaire à l’exécution de la commande, puis archivées pour une durée de 5 ans conformément aux obligations légales comptables et fiscales.",
+     "Destinataires : les données peuvent être transmises aux prestataires logistiques et de paiement strictement nécessaires à l’exécution de la commande.",
+     "Droits du client : conformément au RGPD, le client dispose d’un droit d’accès, de rectification, de suppression, de limitation, d’opposition et de portabilité de ses données. Ces droits peuvent être exercés en contactant : frederic@tostunlimited.com",
+     "Droit de réclamation : le client peut introduire une réclamation auprès de la CNIL (www.cnil.fr) s’il estime que ses droits ne sont pas respectés."
+   ] },
+   { "id": "droit", "titre": "14. Droit applicable – compétence territoriale", "texte": [
+     "Les présentes CGV sont soumises au droit français.",
+     "En cas de litige, le client est invité à contacter TOST Unlimited afin de rechercher une solution amiable.",
+     "À défaut d’accord amiable, le client consommateur peut saisir la juridiction compétente conformément aux règles légales, ou recourir à un médiateur de la consommation conformément à l’article L612-1 du Code de la consommation.",
+     "Conformément aux articles L.611-1 et suivants du Code de la consommation, le consommateur peut recourir gratuitement à un médiateur de la consommation afin de résoudre à l’amiable tout litige pouvant survenir entre lui et le vendeur à l’occasion de l’achat d’un bien ou de la fourniture d’un service.",
+     "Le médiateur désigné est : le Médiateur de la consommation de la FEVAD (site internet : www.mediateurfevad.fr).",
+     "Ce recours ne remet pas en cause la possibilité pour le consommateur d’engager une procédure juridictionnelle. Le client peut y recourir gratuitement en cas d’échec de la réclamation amiable."
+   ] },
+   { "id": "acceptation", "titre": "15. Acceptation des CGV", "texte": [
+     "Le fait de passer commande sur le Site implique l’acceptation pleine et entière des présentes Conditions Générales de Vente."
+   ] }
+  ]
+ },
+ "confidentialite": {
+  "maj": "23 février 2026",
+  "sections": [
+   { "id": "introduction", "titre": "Introduction", "texte": [
+     "Le présent site utilise des cookies afin d’améliorer l’expérience de navigation, mesurer l’audience du site et proposer des contenus adaptés."
+   ] },
+   { "id": "cookies", "titre": "Utilisation des cookies", "texte": [
+     "Un cookie est un petit fichier texte enregistré sur votre terminal lors de votre visite sur le site. Il permet notamment : de faciliter la navigation ; de mémoriser certaines préférences ; de réaliser des statistiques de fréquentation."
+   ] },
+   { "id": "utilises", "titre": "Cookies utilisés", "texte": [
+     "Ce site peut utiliser : des cookies techniques nécessaires au bon fonctionnement du site ; des cookies de mesure d’audience ; des cookies liés à des services tiers."
+   ] },
+   { "id": "consentement", "titre": "Consentement", "texte": [
+     "Lors de votre première visite, un bandeau vous permet d’accepter, de refuser ou de paramétrer l’utilisation des cookies.",
+     "Vous pouvez à tout moment modifier vos préférences via les paramètres de votre navigateur."
+   ] },
+   { "id": "donnees", "titre": "Données personnelles", "texte": [
+     "Les cookies ne permettent pas d’identifier directement un utilisateur.",
+     "Aucune donnée personnelle n’est vendue ni transmise à des tiers sans consentement."
+   ] },
+   { "id": "conservation", "titre": "Durée de conservation", "texte": [
+     "Les cookies sont conservés pour une durée maximale de 13 mois conformément aux recommandations applicables."
+   ] },
+   { "id": "maquette", "titre": "Ce que fait cette maquette", "texte": [
+     "La maquette ne dépose aucun cookie et n’envoie aucune donnée : le panier, le mode calme et l’outil « Voir chez vous » fonctionnent entièrement dans votre navigateur. Une photo de votre mur reste sur votre appareil.",
+     "Sur le site définitif, le traitement des commandes (données de livraison et de paiement) suivra l’article 13 des conditions générales de vente."
+   ], "note": "À compléter par le client : outil de mesure d’audience, services tiers et paramétrage du bandeau cookies du site définitif." },
+   { "id": "contact", "titre": "Contact", "texte": [
+     "Pour toute question relative à la confidentialité, vous pouvez contacter l’éditeur du site à l’adresse sequoia@tostunlimited.com."
+   ] }
+  ]
+ }
+}

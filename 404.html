@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="404" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Page introuvable : Sequoia Studio</title>
+<meta name="description" content="Cette page n’existe pas ou plus. Retrouvez les œuvres dans la galerie.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/404">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Page introuvable : Sequoia Studio">
+<meta property="og:description" content="Cette page n’existe pas ou plus. Retrouvez les œuvres dans la galerie.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/404">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/accueil-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Regard de Minuit, œuvre de Francesco Conte, sur un mur de galerie, avec le logo Sequoia Studio">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Page introuvable</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<section class="scene scene--introuvable ecran" id="debut" data-scene style="--nuit:#0e0d0c">
+  <div class="scene-fond scene-fond--plein"><figure class="media media--provisoire " data-visuel data-provisoire="mur-vide-404" role="img" aria-label="Mur de galerie vide : deux crochets et la trace d’un cadre"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+  <radialGradient id="fp1" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sp1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
+  <radialGradient id="vp1" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp1)"/><path d="M782 0 L818 0 L1145.6 378 L454.4 378Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="800" cy="378" rx="384" ry="270" fill="url(#fp1)"/>
+  <rect y="846" width="1600" height="54.00000000000005" fill="url(#sp1)"/><rect y="846" width="1600" height="2" fill="#2a2219" opacity=".8"/>
+  <rect width="1600" height="900" fill="url(#vp1)"/><rect x="660" y="250" width="280" height="190" fill="#f2ede4" opacity=".05"/><g fill="#b89a5e"><circle cx="725" cy="240" r="5"/><circle cx="875" cy="240" r="5"/></g></svg></figure></div>
+  <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
+  <div class="scene-texte scene-texte--centre">
+    <p class="surtitre" data-anime="gsap">404</p>
+    <h1 class="titre-hero titre-hero--moyen"><span class="ligne-masque"><span class="ligne" data-anime="gsap">Ce mur attend son œuvre</span></span></h1>
+    <p class="hero-sous hero-sous--texte" data-anime="gsap">La page demandée n’existe pas ou a été déplacée. Les œuvres, elles, sont toutes dans la galerie.</p>
+    <p class="hero-actions" data-anime="gsap"><a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie" data-action-principale><span>Retour à la galerie</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a href="/" class="bouton bouton--contour" data-libelle="Accueil">Accueil</a></p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

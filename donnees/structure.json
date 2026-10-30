@@ -1,0 +1,15 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ArtGallery",
+  "name": "Sequoia Studio",
+  "legalName": "TOST Unlimited",
+  "url": "https://sequoia-studio-maquette.vercel.app/",
+  "logo": "https://sequoia-studio-maquette.vercel.app/assets/images/logo-nuit-512.png",
+  "email": "sequoia@tostunlimited.com",
+  "description": "Galerie d'art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d'authenticité.",
+  "address": { "@type": "PostalAddress", "streetAddress": "4 Clos Henri Becquerel", "postalCode": "31170", "addressLocality": "Tournefeuille", "addressCountry": "FR" },
+  "founder": [{ "@type": "Person", "name": "Gilles TOST" }, { "@type": "Person", "name": "Frédéric TOST" }],
+  "sameAs": ["https://www.instagram.com/sequoiastudio.fr"],
+  "paymentAccepted": "Carte bancaire",
+  "currenciesAccepted": "EUR"
+}

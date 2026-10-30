@@ -1,0 +1,4074 @@
+[
+ {
+  "slug": "regard-de-minuit",
+  "titre": "Regard de Minuit",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Abstrait",
+  "annee": 2021,
+  "mois": 9,
+  "edition": 30,
+  "accroche": "Élégance sauvage transcendée par l'art.",
+  "ambiance": "Mystérieuse et élégante",
+  "texte": "Cette œuvre capture la puissance mystique d'un félin à travers un jeu raffiné de couleurs et de textures. Le regard perçant, accentué par une palette subtile où dominent les bleus profonds et les or métalliques, invite à une introspection silencieuse. L'usage de touches dorées évoque le luxe et la sophistication, tandis que l'arrière-plan organique texturé rappelle la connexion entre l'animal et son environnement naturel. Cette composition harmonieuse murmure des récits de force et de mystère, façonnant une esthétique à la fois moderne et intemporelle.",
+  "projection": "Cette pièce enrichit les espaces contemporains avec distinction.",
+  "univers": "nature",
+  "universLibelle": "Nature",
+  "couleursNommees": [
+   "bleu",
+   "or",
+   "noir",
+   "gris"
+  ],
+  "familles": [
+   "bleu",
+   "jaune-or",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Félin",
+   "Art",
+   "Luxueux"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#607982",
+   "accent": "#213844",
+   "nuit": "#0e181d",
+   "palette": [
+    "#607982",
+    "#959689",
+    "#213844",
+    "#335261",
+    "#b5af9b"
+   ]
+  },
+  "image": "oeuvres/regard-de-minuit",
+  "miseEnSituation": "mises/regard-de-minuit",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/regard-de-minuit-800.webp",
+  "petit": "oeuvres/regard-de-minuit-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "elan-sauvage",
+  "titre": "Élan Sauvage",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Photographie",
+  "annee": 2023,
+  "mois": 2,
+  "edition": 30,
+  "accroche": "La grâce du renard dans son élément naturel.",
+  "ambiance": "Vitalité naturelle",
+  "texte": "Cette œuvre capture un instant suspendu dans la nature, mettant en avant la beauté pure et la puissance d'un renard en mouvement dans la neige. La composition dynamique et l'éclat des couleurs créent une interaction saisissante entre l'animal et son environnement, nous plongeant dans une atmosphère de vitalité et de mystère glacé. L'approche de l'artiste sublime l'instantanéité de cette scène, évoquant une connexion profonde avec la faune sauvage. Cette pièce invite à la contemplation silencieuse, où chaque détail est un hommage à la nature libre.",
+  "projection": "Idéal pour un espace moderne et épuré.",
+  "univers": "animaux",
+  "universLibelle": "Animaux",
+  "couleursNommees": [
+   "Blanc",
+   "Orange",
+   "Marron",
+   "Bleu"
+  ],
+  "familles": [
+   "blanc-beige",
+   "orange-ocre",
+   "bleu"
+  ],
+  "motsCles": [
+   "Renard",
+   "Neige",
+   "Nature"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#011e2d",
+   "accent": "#163746",
+   "nuit": "#0c191f",
+   "palette": [
+    "#011e2d",
+    "#999fa8",
+    "#163746",
+    "#454742",
+    "#c6c5c7"
+   ]
+  },
+  "image": "oeuvres/elan-sauvage",
+  "miseEnSituation": "mises/elan-sauvage",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/elan-sauvage-800.webp",
+  "petit": "oeuvres/elan-sauvage-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "echos-de-serenite",
+  "titre": "Échos de Sérénité",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Surréaliste",
+  "annee": 2020,
+  "mois": 6,
+  "edition": 30,
+  "accroche": "Un univers miniature d'élégance intemporelle.",
+  "ambiance": "Apaisante chaleur",
+  "texte": "Dans cette œuvre captivante, un arbre en floraison est encapsulé dans un bocal de verre, évoquant une harmonie entre la nature et l'art. Positionné sur un fond de paysage montagnard, l'arbre évoque la beauté délicate et le passage du temps. L'équilibre subtil entre les éléments naturels et les couleurs vives crée un contraste inspirant, faisant de cette pièce une invitation à la contemplation. Le jeu de transparence et de lumière intensifie l'expérience visuelle, transformant l'œuvre en une exploration méditative.",
+  "projection": "Idéal pour un espace de détente sophistiqué.",
+  "univers": "nature",
+  "universLibelle": "Nature",
+  "couleursNommees": [
+   "rose",
+   "vert",
+   "orange",
+   "bleu"
+  ],
+  "familles": [
+   "rouge-rose",
+   "vert",
+   "orange-ocre",
+   "bleu"
+  ],
+  "motsCles": [
+   "Verre",
+   "Bocal",
+   "Printemps"
+  ],
+  "proportion": "1:1",
+  "orientation": "carre",
+  "formats": [
+   {
+    "id": "1_1_70x70",
+    "largeur": 70,
+    "hauteur": 70,
+    "base": 90,
+    "prix": {
+     "toile": 90,
+     "caisse-noire": 240,
+     "caisse-blanche": 240,
+     "fineart": 350
+    }
+   },
+   {
+    "id": "1_1_80x80",
+    "largeur": 80,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280
+    }
+   }
+  ],
+  "des": 90,
+  "couleur": {
+   "dominante": "#f4f2f1",
+   "accent": "#954a44",
+   "nuit": "#1e0f0e",
+   "palette": [
+    "#f4f2f1",
+    "#748592",
+    "#c9c5ce",
+    "#bc8f7f",
+    "#2c3d4d"
+   ]
+  },
+  "image": "oeuvres/echos-de-serenite",
+  "miseEnSituation": "mises/echos-de-serenite",
+  "px": {
+   "l": 800,
+   "h": 800
+  },
+  "grand": "oeuvres/echos-de-serenite-800.webp",
+  "petit": "oeuvres/echos-de-serenite-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "oasis-dans-les-nuages",
+  "titre": "Oasis dans les Nuages",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Illustration",
+  "annee": 2022,
+  "mois": 11,
+  "edition": 30,
+  "accroche": "Une rencontre artistique entre architecture et nature.",
+  "ambiance": "Onirique sereine",
+  "texte": "Cette œuvre dépeint un bâtiment moderne et audacieux qui semble flotter au milieu de nuages multicolores. L'architecture, marquée par des lignes épurées et des terrasses végétalisées, dialogue harmonieusement avec un ciel vibrant de teintes chaudes et envoûtantes. En contrebas, la base fusionne avec un environnement aquatique où des personnages se promènent paisiblement, ajoutant une dimension vivante au tableau. Cette composition incarne une symbiose entre le construit et le naturel, invitant le spectateur à se perdre dans un univers où utopie et réalité se rencontrent. L’utilisation des couleurs vives incite à la contemplation, soulignant l'idée d'un sanctuaire moderne.",
+  "projection": "Parfait pour un espace contemporain ou un studio.",
+  "univers": "architecture",
+  "universLibelle": "Architecture",
+  "couleursNommees": [
+   "jaune",
+   "rouge",
+   "bleu",
+   "blanc"
+  ],
+  "familles": [
+   "jaune-or",
+   "rouge-rose",
+   "bleu",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Architecture",
+   "Nature",
+   "Modernisme"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#334976",
+   "accent": "#d8c38a",
+   "nuit": "#1f1a0c",
+   "palette": [
+    "#334976",
+    "#ebe4d4",
+    "#c7986e",
+    "#50525d",
+    "#878477"
+   ]
+  },
+  "image": "oeuvres/oasis-dans-les-nuages",
+  "miseEnSituation": "mises/oasis-dans-les-nuages",
+  "px": {
+   "l": 500,
+   "h": 852
+  },
+  "grand": "oeuvres/oasis-dans-les-nuages-500.webp",
+  "petit": "oeuvres/oasis-dans-les-nuages-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "oasis-moderne",
+  "titre": "Oasis Moderne",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Moderne",
+  "annee": 2024,
+  "mois": 4,
+  "edition": 30,
+  "accroche": "L'évasion architecturale sublimée.",
+  "ambiance": "Évasion sereine",
+  "texte": "Créer une harmonie parfaite entre nature et structure, 'Oasis Moderne' transporte le spectateur dans un paysage architectural serein où lignes épurées et végétation luxuriantes se rencontrent. Le jeu de contraste entre les tons chauds et le ciel apaisant confère à cette œuvre une dynamique visuelle fascinante. Elle rappelle l'esthétique mid-century modern, tout en incitant à la contemplation par son minimalisme réfléchi. Le soleil, suspendu dans le ciel, apporte une chaleur poétique à cet ensemble architectural harmonieux, renforçant le sentiment d'une retraite idyllique.",
+  "projection": "Idéale pour un salon contemporain ou un espace de loisirs.",
+  "univers": "architecture",
+  "universLibelle": "Architecture",
+  "couleursNommees": [
+   "bleu-vert",
+   "orange",
+   "beige",
+   "vert"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "blanc-beige",
+   "vert"
+  ],
+  "motsCles": [
+   "Architecture",
+   "Oasis",
+   "Piscine"
+  ],
+  "proportion": "2:1",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "1_2_100x50",
+    "largeur": 100,
+    "hauteur": 50,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 380,
+     "caisse-blanche": 380,
+     "fineart": 510
+    }
+   },
+   {
+    "id": "2_1_110x55",
+    "largeur": 110,
+    "hauteur": 55,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 400,
+     "caisse-blanche": 400,
+     "fineart": 520
+    }
+   },
+   {
+    "id": "2_1_120x60",
+    "largeur": 120,
+    "hauteur": 60,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 190,
+  "couleur": {
+   "dominante": "#50a797",
+   "accent": "#ece2b6",
+   "nuit": "#1f1c0c",
+   "palette": [
+    "#50a797",
+    "#764e36",
+    "#ece2b6",
+    "#938b6a",
+    "#51a698"
+   ]
+  },
+  "image": "oeuvres/oasis-moderne",
+  "miseEnSituation": "mises/oasis-moderne",
+  "px": {
+   "l": 800,
+   "h": 400
+  },
+  "grand": "oeuvres/oasis-moderne-800.webp",
+  "petit": "oeuvres/oasis-moderne-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "lumieres-d-ete-mediterraneen",
+  "titre": "Lumières d'Été Méditerranéen",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Modernisme",
+  "annee": 2021,
+  "mois": 7,
+  "edition": 30,
+  "accroche": "Évasion architecturale vers un rêve ensoleillé.",
+  "ambiance": "Estivale et sereine",
+  "texte": "Cette œuvre capte l'essence et la tranquillité d'une villa méditerranéenne, baignée sous un soleil éclatant. Les géométries épurées et les teintes vives dessinent un monde à la fois serein et intensément vivant. L'architecture blanche contraste avec le ciel bleu azur et la végétation luxuriante. Elle invite à une évasion rafraîchissante, où chaque élément architectural contribue à une symphonie visuelle captivante. Idéale pour insuffler une ambiance estivale dans un intérieur, cette création évoque le calme et la beauté des côtes méditerranéennes.",
+  "projection": "Parfaite pour un salon lumineux.",
+  "univers": "architecture",
+  "universLibelle": "Architecture",
+  "couleursNommees": [
+   "Bleu",
+   "Blanc",
+   "Vert",
+   "Orange"
+  ],
+  "familles": [
+   "bleu",
+   "blanc-beige",
+   "vert",
+   "orange-ocre"
+  ],
+  "motsCles": [
+   "Architecture",
+   "Méditerranée",
+   "Villa"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#527db1",
+   "accent": "#e0a79b",
+   "nuit": "#1f0f0c",
+   "palette": [
+    "#527db1",
+    "#dfdad6",
+    "#355f7c",
+    "#e0a79b",
+    "#1f384a"
+   ]
+  },
+  "image": "oeuvres/lumieres-d-ete-mediterraneen",
+  "miseEnSituation": "mises/lumieres-d-ete-mediterraneen",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/lumieres-d-ete-mediterraneen-800.webp",
+  "petit": "oeuvres/lumieres-d-ete-mediterraneen-640.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "evasion-crepusculaire",
+  "titre": "Évasion Crépusculaire",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Minimaliste",
+  "annee": 2025,
+  "mois": 3,
+  "edition": 20,
+  "accroche": "Une exploration onirique entre terre et ciel.",
+  "ambiance": "Mystique et sereine",
+  "texte": "Évasion Crépusculaire capte un moment suspendu entre réalité et rêve. La composition invite à une balade spirituelle à travers des silhouettes élancées et un soleil d’un orange vibrant, semblant dominer un paysage éthéré. Les structures perchées comme des gardiens anciens mêlent mystère et élégance, évoquant une histoire non contée mais fortement ressentie. La finesse des détails et l’harmonie des contrastes créent une profondeur visuelle captivante, faisant de cette œuvre une pièce maîtresse pour un espace qui cherche à inspirer contemplation et sérénité.",
+  "projection": "Idéale pour un salon ou un bureau d'angle.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "Orange",
+   "Bleu",
+   "Noir",
+   "Blanc"
+  ],
+  "familles": [
+   "orange-ocre",
+   "bleu",
+   "noir-gris",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Crépusculaire",
+   "Mystique",
+   "Architecture"
+  ],
+  "proportion": "3:4",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "3_4_45x60",
+    "largeur": 45,
+    "hauteur": 60,
+    "base": 80,
+    "prix": {
+     "toile": 80,
+     "caisse-noire": 210,
+     "caisse-blanche": 210,
+     "fineart": 320
+    }
+   },
+   {
+    "id": "3_4_70x93",
+    "largeur": 70,
+    "hauteur": 93,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 370,
+     "caisse-blanche": 370,
+     "fineart": 490
+    }
+   },
+   {
+    "id": "3_4_82x110",
+    "largeur": 82,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {}
+   }
+  ],
+  "des": 80,
+  "couleur": {
+   "dominante": "#e6e8da",
+   "accent": "#e05b40",
+   "nuit": "#1f0f0c",
+   "palette": [
+    "#e6e8da",
+    "#3e606c",
+    "#83999a",
+    "#e05b40",
+    "#e3e4d8"
+   ]
+  },
+  "image": "oeuvres/evasion-crepusculaire",
+  "miseEnSituation": "mises/evasion-crepusculaire",
+  "px": {
+   "l": 500,
+   "h": 663
+  },
+  "grand": "oeuvres/evasion-crepusculaire-500.webp",
+  "petit": "oeuvres/evasion-crepusculaire-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "l-avenement-cosmique-du-taureau",
+  "titre": "L'Avènement Cosmique du Taureau",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Surréalisme",
+  "annee": 2020,
+  "mois": 12,
+  "edition": 30,
+  "accroche": "Entre terre et cosmos, un équilibre majestueux.",
+  "ambiance": "futurisme éthéré",
+  "texte": "Cette œuvre interpelle par sa fusion audacieuse du règne animal et des avancées technologiques spatiales. Au centre, un taureau majestueux semble défier une cité futuriste, surplombée par des planètes lointaines. L'artiste réussit à créer une tension entre la nature sauvage et l'évolution humaine, symbolisée par les tours spatiales et les fusées voguant vers l'infini. La composition génère une réflexion sur le progrès et les racines, dans une ambiance éthérée où chaque élément trouve sa place naturelle.",
+  "projection": "Idéale pour un espace moderne et épuré.",
+  "univers": "animaux",
+  "universLibelle": "Animaux",
+  "couleursNommees": [
+   "bleu",
+   "gris",
+   "beige",
+   "blanc"
+  ],
+  "familles": [
+   "bleu",
+   "noir-gris",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Taureau",
+   "Fusion",
+   "Cosmique"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#b39b83",
+   "accent": "#cfb193",
+   "nuit": "#1e160d",
+   "palette": [
+    "#b39b83",
+    "#89867e",
+    "#626c6f",
+    "#565856",
+    "#a78c75"
+   ]
+  },
+  "image": "oeuvres/l-avenement-cosmique-du-taureau",
+  "miseEnSituation": "mises/l-avenement-cosmique-du-taureau",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/l-avenement-cosmique-du-taureau-800.webp",
+  "petit": "oeuvres/l-avenement-cosmique-du-taureau-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "reverie-venitienne",
+  "titre": "Réverie Vénitienne",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Illustration",
+  "annee": 2022,
+  "mois": 8,
+  "edition": 30,
+  "accroche": "Une élégance intemporelle au bord de l'eau.",
+  "ambiance": "Élégance contemplative",
+  "texte": "Capturant l'essence d'une Venise intemporelle, cette œuvre dépeint une femme assise à une terrasse, plongée dans ses pensées tout en contemplant l'horizon. Le mariage subtil des lignes épurées et des touches colorées offre une dimension sophistiquée. Derrière elle, la vue panoramique du Grand Canal se déploie, symbolisant le lien délicat entre modernité et tradition. Ce tableau fusionne l'intimité de la réflexion personnelle avec la majesté d'une ville emblématique, créant ainsi une expérience visuelle à la fois personnelle et universelle.",
+  "projection": "Perfomante dans un salon ou un bureau raffiné.",
+  "univers": "portraits",
+  "universLibelle": "Portraits",
+  "couleursNommees": [
+   "gris",
+   "blanc",
+   "noir",
+   "rouge"
+  ],
+  "familles": [
+   "noir-gris",
+   "blanc-beige",
+   "rouge-rose"
+  ],
+  "motsCles": [
+   "Femme",
+   "Venise",
+   "Canal"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#ecedf0",
+   "accent": "#302020",
+   "nuit": "#1a1111",
+   "palette": [
+    "#ecedf0",
+    "#bfc6c9",
+    "#eaeaeb",
+    "#ebecee",
+    "#959595"
+   ]
+  },
+  "image": "oeuvres/reverie-venitienne",
+  "miseEnSituation": "mises/reverie-venitienne",
+  "px": {
+   "l": 800,
+   "h": 441
+  },
+  "grand": "oeuvres/reverie-venitienne-800.webp",
+  "petit": "oeuvres/reverie-venitienne-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "fusion-etheree",
+  "titre": "Fusion Éthérée",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Sculpture",
+  "annee": 2023,
+  "mois": 5,
+  "edition": 30,
+  "accroche": "La beauté de la matière en fusion pure.",
+  "ambiance": "Surnaturelle et contemporaine",
+  "texte": "'Fusion Éthérée' explore la transformation de la matière par le biais de l’interaction entre le métal et la pierre. Les lignes dorées, semblables à un réseau de veines lumineuses, captivent par leur éclat incandescent, évoquant les forces naturelles en jeu. L’œuvre reflète une métamorphose envoûtante, où la chaleur semble animer la structure minérale. Ce contraste entre la solidité de la roche et la fluidité du métal attire le spectateur dans une contemplation sur la dualité et l’harmonie présente dans la nature.",
+  "projection": "Idéal pour un espace moderne et épuré.",
+  "univers": "abstrait",
+  "universLibelle": "Abstrait",
+  "couleursNommees": [
+   "or",
+   "gris",
+   "bleu",
+   "noir"
+  ],
+  "familles": [
+   "jaune-or",
+   "noir-gris",
+   "bleu"
+  ],
+  "motsCles": [
+   "Lumière",
+   "Chaleur",
+   "Éclat"
+  ],
+  "proportion": "3:2",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "3_2_60x40",
+    "largeur": 60,
+    "hauteur": 40,
+    "base": 80,
+    "prix": {
+     "toile": 80,
+     "caisse-noire": 210,
+     "caisse-blanche": 210,
+     "fineart": 320
+    }
+   },
+   {
+    "id": "3_2_108x70",
+    "largeur": 108,
+    "hauteur": 70,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "3_2_120x80",
+    "largeur": 120,
+    "hauteur": 80,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 80,
+  "couleur": {
+   "dominante": "#526b83",
+   "accent": "#5e382e",
+   "nuit": "#1d110e",
+   "palette": [
+    "#526b83",
+    "#304254",
+    "#90898b",
+    "#1e1e25",
+    "#595559"
+   ]
+  },
+  "image": "oeuvres/fusion-etheree",
+  "miseEnSituation": "mises/fusion-etheree",
+  "px": {
+   "l": 800,
+   "h": 533
+  },
+  "grand": "oeuvres/fusion-etheree-800.webp",
+  "petit": "oeuvres/fusion-etheree-640.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "solitude-hivernale",
+  "titre": "Solitude Hivernale",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Aquarelle",
+  "annee": 2021,
+  "mois": 1,
+  "edition": 30,
+  "accroche": "Une harmonie glaciale et poétique.",
+  "ambiance": "Sérénité glaciale",
+  "texte": "Cette œuvre transporte le spectateur dans un paysage hivernal empreint de mélancolie et de sérénité. Un arbre solitaire, symbolisant la résilience dans un environnement gelé, se dresse au bord d'un lac paisible. La technique picturale, mélange d'aquarelle et de minimalisme, accentue la profondeur et la quiétude du lieu. Les nuances de bleu, gris et blanc se fondent harmonieusement, créant une atmosphère éthérée et contemplative. Chaque détail de l'image invite à une introspection douce et immersive.",
+  "projection": "Élégant dans un salon moderne.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "Bleu",
+   "Gris",
+   "Blanc",
+   "Noir"
+  ],
+  "familles": [
+   "bleu",
+   "noir-gris",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Paysage",
+   "Hiver",
+   "Arbre"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#94a6ac",
+   "accent": "#20414e",
+   "nuit": "#0d1a1f",
+   "palette": [
+    "#94a6ac",
+    "#416c7e",
+    "#c9dbe3",
+    "#8aa3aa",
+    "#5c8796"
+   ]
+  },
+  "image": "oeuvres/solitude-hivernale",
+  "miseEnSituation": "mises/solitude-hivernale",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/solitude-hivernale-800.webp",
+  "petit": "oeuvres/solitude-hivernale-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "reverie-mediterraneenne",
+  "titre": "Rêverie Méditerranéenne",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Surréaliste",
+  "annee": 2024,
+  "mois": 10,
+  "edition": 30,
+  "accroche": "Un voyage intemporel aux couleurs d'azur.",
+  "ambiance": "Sérénité colorée",
+  "texte": "Plongez dans une scène idyllique où le bleu azur coexiste harmonieusement avec des nuances pastel. Cette œuvre transporte le spectateur dans un univers méditerranéen où l’architecture onirique s’habille de couleurs vibrantes. Un bassin cristallin reflète la lumière éclatante du soleil, tandis que des escaliers sinueux et des arches élégantes invitent à l'évasion. La nature se mélange subtilement à cet ensemble architectural, ajoutant une touche de sérénité et d'évasion visuelle. Une allégorie moderne de la tranquillité, parfaite pour des espaces qui recherchent une énergie vivifiante et apaisante.",
+  "projection": "Idéal pour un salon lumineux.",
+  "univers": "architecture",
+  "universLibelle": "Architecture",
+  "couleursNommees": [
+   "bleu",
+   "rose",
+   "blanc",
+   "vert"
+  ],
+  "familles": [
+   "bleu",
+   "rouge-rose",
+   "blanc-beige",
+   "vert"
+  ],
+  "motsCles": [
+   "Architecture",
+   "Paysage",
+   "Méditerranée"
+  ],
+  "proportion": "3:2",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "3_2_60x40",
+    "largeur": 60,
+    "hauteur": 40,
+    "base": 80,
+    "prix": {
+     "toile": 80,
+     "caisse-noire": 210,
+     "caisse-blanche": 210,
+     "fineart": 320
+    }
+   },
+   {
+    "id": "3_2_108x70",
+    "largeur": 108,
+    "hauteur": 70,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "3_2_120x80",
+    "largeur": 120,
+    "hauteur": 80,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 80,
+  "couleur": {
+   "dominante": "#1887a8",
+   "accent": "#1887a8",
+   "nuit": "#0c1b1f",
+   "palette": [
+    "#1887a8",
+    "#bcaca3",
+    "#ad8686",
+    "#d1cece",
+    "#6cc3cd"
+   ]
+  },
+  "image": "oeuvres/reverie-mediterraneenne",
+  "miseEnSituation": "mises/reverie-mediterraneenne",
+  "px": {
+   "l": 800,
+   "h": 517
+  },
+  "grand": "oeuvres/reverie-mediterraneenne-800.webp",
+  "petit": "oeuvres/reverie-mediterraneenne-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "eclosion-etheree",
+  "titre": "Éclosion Éthérée",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Contemporain",
+  "annee": 2022,
+  "mois": 2,
+  "edition": 30,
+  "accroche": "L'élégance d'une floraison intemporelle.",
+  "ambiance": "Poétique et sereine",
+  "texte": "Éclosion Éthérée explore la délicatesse et la sophistication d'une fleur en pleine floraison. L'œuvre capture chaque détail avec une finesse remarquable, créant une harmonie entre les nuances de bleu et d'or. Ce tableau invite le spectateur à s'arrêter, à contempler la beauté complexe et fragile de la nature. Il évoque à la fois la tranquillité et la majesté, offrant une expérience visuelle sereine et poétique. Par ses lignes fluides et ses contrastes subtils, cette création incarne une approche contemporaine de l'art floral.",
+  "projection": "Idéal pour un salon raffiné.",
+  "univers": "floral",
+  "universLibelle": "Floral",
+  "couleursNommees": [
+   "Bleu",
+   "Or",
+   "Blanc",
+   "Gris"
+  ],
+  "familles": [
+   "bleu",
+   "jaune-or",
+   "blanc-beige",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Fleur",
+   "Nature",
+   "Élégance"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#d2dbd8",
+   "accent": "#d2dbd8",
+   "nuit": "#131816",
+   "palette": [
+    "#d2dbd8",
+    "#6f7a75",
+    "#b2bebd",
+    "#899696",
+    "#c4cbc5"
+   ]
+  },
+  "image": "oeuvres/eclosion-etheree",
+  "miseEnSituation": "mises/eclosion-etheree",
+  "px": {
+   "l": 500,
+   "h": 892
+  },
+  "grand": "oeuvres/eclosion-etheree-500.webp",
+  "petit": "oeuvres/eclosion-etheree-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "melange-d-or-et-de-mystere",
+  "titre": "Mélange d'Or et de Mystère",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Surréalisme",
+  "annee": 2025,
+  "mois": 9,
+  "edition": 30,
+  "accroche": "Lumière et énigme en symbiose",
+  "ambiance": "Mystérieuse et énigmatique",
+  "texte": "Cette œuvre sublime capte le regard par sa palette luxuriante de dorés et de bleu profond, évoquant une fusion intrigante entre l'humain et le mystique. Les textures richement détaillées et les reflets métalliques créent une sensation de profondeur et de mystère, entraînant le spectateur dans un monde où la réalité et l'imaginaire se rencontrent. Le regard captivant semble percer le voile de la matérialité, offrant une expérience visuelle presque transcendante. Idéale pour un espace qui cherche à évoquer élégance et introspection.",
+  "projection": "Parfaite dans un salon moderne et épuré.",
+  "univers": "portraits",
+  "universLibelle": "Portraits",
+  "couleursNommees": [
+   "doré",
+   "bleu",
+   "vert",
+   "jaune"
+  ],
+  "familles": [
+   "jaune-or",
+   "bleu",
+   "vert"
+  ],
+  "motsCles": [
+   "Portrait",
+   "Surréalisme",
+   "Doré"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#5a431a",
+   "accent": "#d0b54d",
+   "nuit": "#1f1b0c",
+   "palette": [
+    "#5a431a",
+    "#0f1817",
+    "#806629",
+    "#d0b54d",
+    "#486049"
+   ]
+  },
+  "image": "oeuvres/melange-d-or-et-de-mystere",
+  "miseEnSituation": "mises/melange-d-or-et-de-mystere",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/melange-d-or-et-de-mystere-800.webp",
+  "petit": "oeuvres/melange-d-or-et-de-mystere-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "serenite-turquoise",
+  "titre": "Sérénité turquoise",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Surréalisme",
+  "annee": 2026,
+  "mois": 3,
+  "edition": 30,
+  "accroche": "Un souffle de rêve et d'horizons intangibles.",
+  "ambiance": "Sérénité onirique",
+  "texte": "L'œuvre ‘Sérénité turquoise’ évoque une sérénité intemporelle où la nature s’épanouit dans un moment suspendu. Ce paysage onirique associe la délicatesse d'un arbre en fleur avec l'immensité d'une étendue aquatique cristalline. La juxtaposition des teintes pastel de rose, turquoise et blanc crée un équilibre harmonieux, transportant le spectateur dans une dimension éthérée. Les éléments naturels sont rehaussés par une lumière douce qui suggère une aube mystérieuse, favorisant la contemplation et l'évasion.",
+  "projection": "Idéal pour un espace de méditation ou une chambre paisible.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "Rose",
+   "Turquoise",
+   "Blanc",
+   "Rouge"
+  ],
+  "familles": [
+   "rouge-rose",
+   "bleu",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Évanescent",
+   "Tranquille",
+   "Nature"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#8ac4b8",
+   "accent": "#3ab0a9",
+   "nuit": "#0c1f1e",
+   "palette": [
+    "#8ac4b8",
+    "#3ab0a9",
+    "#e5dec2",
+    "#c3c4b1",
+    "#70c1b7"
+   ]
+  },
+  "image": "oeuvres/serenite-turquoise",
+  "miseEnSituation": "mises/serenite-turquoise",
+  "px": {
+   "l": 500,
+   "h": 892
+  },
+  "grand": "oeuvres/serenite-turquoise-500.webp",
+  "petit": "oeuvres/serenite-turquoise-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "eclat-du-japon",
+  "titre": "Éclat du Japon",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Contemporain",
+  "annee": 2024,
+  "mois": 6,
+  "edition": 20,
+  "accroche": "L'art du contraste vibrant.",
+  "ambiance": "Vibrante et culturelle",
+  "texte": "Cette œuvre captivante fusionne tradition japonaise et modernité avec une maîtrise des couleurs exceptionnelle. Représentant une figure traditionnelle en kimono, l’artiste joue avec des motifs floraux et géométriques, symbolisant l'harmonie entre le passé et le présent. La palette dynamique projette une intensité culturelle, tandis que les formes stylisées évoquent à la fois la délicatesse et la force. Cette pièce transcende sa simple beauté visuelle pour inviter à une réflexion sur l'identité et l'évolution culturelle.",
+  "projection": "Parfait pour rehausser un espace moderne avec une touche d'exotisme.",
+  "univers": "portraits",
+  "universLibelle": "Portraits",
+  "couleursNommees": [
+   "orange",
+   "bleu",
+   "rouge",
+   "noir"
+  ],
+  "familles": [
+   "orange-ocre",
+   "bleu",
+   "rouge-rose",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Japonais",
+   "Kimono",
+   "Fleurs"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#f27a45",
+   "accent": "#f27a45",
+   "nuit": "#1f120c",
+   "palette": [
+    "#f27a45",
+    "#ee5a3d",
+    "#0c1437",
+    "#5c8583",
+    "#293a59"
+   ]
+  },
+  "image": "oeuvres/eclat-du-japon",
+  "miseEnSituation": "mises/eclat-du-japon",
+  "px": {
+   "l": 500,
+   "h": 950
+  },
+  "grand": "oeuvres/eclat-du-japon-500.webp",
+  "petit": "oeuvres/eclat-du-japon-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "promenade-provencale",
+  "titre": "Promenade Provençale",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Surréalisme",
+  "annee": 2020,
+  "mois": 8,
+  "edition": 30,
+  "accroche": "Voyagez au cœur des paysages oniriques.",
+  "ambiance": "sérénité estivale",
+  "texte": "Cette œuvre transporte le spectateur dans un univers coloré et vibrant où la nature et l’architecture cohabitent harmonieusement. Les courbes sinueuses du chemin mènent l’œil à travers un paysage de collines et de champs aux teintes chatoyantes, évoquant la chaleur et la douceur du sud. Les cyprès élancés et les maisons au toit rouge ajoutent une touche de charme méditerranéen. L’artiste a su capturer l'essence d’un jour ensoleillé d’été, magnifié par le contraste entre le ciel bleu profond et le soleil éclatant.",
+  "projection": "Idéale pour un salon moderne ou une entrée lumineuse.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "bleu",
+   "orange",
+   "vert",
+   "jaune"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "vert",
+   "jaune-or"
+  ],
+  "motsCles": [
+   "Paysage",
+   "Méditerranéen",
+   "Été"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#377e96",
+   "accent": "#1c587a",
+   "nuit": "#0c181f",
+   "palette": [
+    "#377e96",
+    "#1c587a",
+    "#b3ab6d",
+    "#163239",
+    "#65a2a7"
+   ]
+  },
+  "image": "oeuvres/promenade-provencale",
+  "miseEnSituation": "mises/promenade-provencale",
+  "px": {
+   "l": 500,
+   "h": 892
+  },
+  "grand": "oeuvres/promenade-provencale-500.webp",
+  "petit": "oeuvres/promenade-provencale-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "felin-prisma",
+  "titre": "Félin Prisma",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Surréalisme",
+  "annee": 2023,
+  "mois": 12,
+  "edition": 30,
+  "accroche": "Un jeu de transparences polychromes.",
+  "ambiance": "Énergétique et moderne",
+  "texte": "Félin Prisma capture l'essence sauvage dans une sculpture aux multiples facettes. S'inspirant des nuances éclatantes de la lumière, l'œuvre se distingue par ses teintes chromatiques en dégradé, enveloppant la forme d'un félin prêt à bondir. La juxtaposition des couleurs vives sur un arrière-plan jaune vibrant amplifie le contraste saisissant entre la transparence du matériau et l'opacité des ombres projetées. Cet objet d'art transcendental navigue entre réalité et abstraction, offrant au spectateur une expérience sensorielle singulière.",
+  "projection": "Idéal pour des intérieurs modernes et lumineux.",
+  "univers": "animaux",
+  "universLibelle": "Animaux",
+  "couleursNommees": [
+   "orange",
+   "bleu",
+   "rose",
+   "violet"
+  ],
+  "familles": [
+   "orange-ocre",
+   "bleu",
+   "rouge-rose",
+   "violet"
+  ],
+  "motsCles": [
+   "Félin",
+   "Sculpture",
+   "Transparence"
+  ],
+  "proportion": "1:1",
+  "orientation": "carre",
+  "formats": [
+   {
+    "id": "1_1_70x70",
+    "largeur": 70,
+    "hauteur": 70,
+    "base": 90,
+    "prix": {
+     "toile": 90,
+     "caisse-noire": 240,
+     "caisse-blanche": 240,
+     "fineart": 350
+    }
+   },
+   {
+    "id": "1_1_80x80",
+    "largeur": 80,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280
+    }
+   }
+  ],
+  "des": 90,
+  "couleur": {
+   "dominante": "#e88947",
+   "accent": "#f8b727",
+   "nuit": "#1f190c",
+   "palette": [
+    "#e88947",
+    "#f2a72e",
+    "#f8b727",
+    "#f9c72d",
+    "#cf6667"
+   ]
+  },
+  "image": "oeuvres/felin-prisma",
+  "miseEnSituation": "mises/felin-prisma",
+  "px": {
+   "l": 800,
+   "h": 800
+  },
+  "grand": "oeuvres/felin-prisma-800.webp",
+  "petit": "oeuvres/felin-prisma-640.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "elegance-eternelle",
+  "titre": "Élégance Éternelle",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Minimalisme",
+  "annee": 2024,
+  "mois": 1,
+  "edition": 20,
+  "accroche": "Reflet poétique d'une danse silencieuse.",
+  "ambiance": "Sérénité envoutante",
+  "texte": "Dans cette œuvre, deux grues couronnées se tiennent dans une posture gracieuse, leurs reflets parfaits se mêlant à la surface de l'eau. Un champ de roseaux et des arbres en fleurs encadrent la scène, tandis qu'un soleil rougeoyant crée un point focal vibrant. Les nuances délicates de bleu et de gris instaurent une atmosphère paisible et méditative. L'ensemble invite à contempler l'harmonie et l'équilibre parfait du moment capturé, où nature et tranquillité s'allient pour évoquer une sérénité intemporelle.",
+  "projection": "Apaisement et harmonie pour un espace de détente.",
+  "univers": "animaux",
+  "universLibelle": "Animaux",
+  "couleursNommees": [
+   "bleu",
+   "gris",
+   "rouge",
+   "beige"
+  ],
+  "familles": [
+   "bleu",
+   "noir-gris",
+   "rouge-rose",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Grues",
+   "Nature",
+   "Réflexion"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#d6d1c5",
+   "accent": "#dedace",
+   "nuit": "#1a1811",
+   "palette": [
+    "#d6d1c5",
+    "#abb7b0",
+    "#aab6af",
+    "#b6bfb8",
+    "#dedace"
+   ]
+  },
+  "image": "oeuvres/elegance-eternelle",
+  "miseEnSituation": "mises/elegance-eternelle",
+  "px": {
+   "l": 500,
+   "h": 901
+  },
+  "grand": "oeuvres/elegance-eternelle-500.webp",
+  "petit": "oeuvres/elegance-eternelle-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "jardin-mediterraneen-au-crepuscule",
+  "titre": "Jardin Méditerranéen au Crépuscule",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Impressionnisme",
+  "annee": 2025,
+  "mois": 7,
+  "edition": 30,
+  "accroche": "Évasion au cœur de la verdure.",
+  "ambiance": "Sérénité estivale",
+  "texte": "Cette œuvre transporte le spectateur dans un jardin méditerranéen luxuriant, baigné par la douce lumière du crépuscule. Les cyprès élancés, les pins parasols et les frondaisons touffues y composent une scène riche en textures et contrastes. En arrière-plan, des villas colorées ajoutent une touche architecturale subtile. L’artiste réussit à capter l’atmosphère sereine et intemporelle de ce paysage, évoquant à la fois la chaleur estivale et la tranquillité de l’isolement.",
+  "projection": "Idéal pour un salon lumineux ou une véranda.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "vert",
+   "bleu",
+   "jaune",
+   "rose"
+  ],
+  "familles": [
+   "vert",
+   "bleu",
+   "jaune-or",
+   "rouge-rose"
+  ],
+  "motsCles": [
+   "Jardin",
+   "Méditerranée",
+   "Villages"
+  ],
+  "proportion": "2:1",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "1_2_100x50",
+    "largeur": 100,
+    "hauteur": 50,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 380,
+     "caisse-blanche": 380,
+     "fineart": 510
+    }
+   },
+   {
+    "id": "2_1_110x55",
+    "largeur": 110,
+    "hauteur": 55,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 400,
+     "caisse-blanche": 400,
+     "fineart": 520
+    }
+   },
+   {
+    "id": "2_1_120x60",
+    "largeur": 120,
+    "hauteur": 60,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 190,
+  "couleur": {
+   "dominante": "#6796a1",
+   "accent": "#144a57",
+   "nuit": "#0c1c1f",
+   "palette": [
+    "#6796a1",
+    "#2b544f",
+    "#0d2930",
+    "#858661",
+    "#4c604d"
+   ]
+  },
+  "image": "oeuvres/jardin-mediterraneen-au-crepuscule",
+  "miseEnSituation": "mises/jardin-mediterraneen-au-crepuscule",
+  "px": {
+   "l": 800,
+   "h": 400
+  },
+  "grand": "oeuvres/jardin-mediterraneen-au-crepuscule-800.webp",
+  "petit": "oeuvres/jardin-mediterraneen-au-crepuscule-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "danse-aquatique",
+  "titre": "Danse Aquatique",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Illustratif",
+  "annee": 2021,
+  "mois": 4,
+  "edition": 20,
+  "accroche": "Un voyage vibrant dans le monde aquatique.",
+  "ambiance": "Sérénité dynamique",
+  "texte": "Cette œuvre propose une interprétation vibrante du monde aquatique, mettant en scène une carpe koï dynamique qui semble émerger des profondeurs. L'entrelacement de couleurs vives évoque le mouvement fluide et gracieux de ce poisson sacré. Les nuances bleu turquoise et rouge carmin s’harmonisent pour produire une composition à la fois énergique et apaisante. Cet art saisissant capture à merveille les symboles de prospérité et de persévérance souvent attachés aux carpes koï dans la tradition asiatique.",
+  "projection": "Idéal pour un salon contemporain.",
+  "univers": "animaux",
+  "universLibelle": "Animaux",
+  "couleursNommees": [
+   "Turquoise",
+   "Rouge",
+   "Blanc",
+   "Jaune"
+  ],
+  "familles": [
+   "bleu",
+   "rouge-rose",
+   "blanc-beige",
+   "jaune-or"
+  ],
+  "motsCles": [
+   "Carpe",
+   "Aquatique",
+   "Mouvement"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#79c2a6",
+   "accent": "#9e2131",
+   "nuit": "#1f0c0e",
+   "palette": [
+    "#79c2a6",
+    "#ccd3af",
+    "#e3dfbf",
+    "#9e2131",
+    "#3e7562"
+   ]
+  },
+  "image": "oeuvres/danse-aquatique",
+  "miseEnSituation": "mises/danse-aquatique",
+  "px": {
+   "l": 500,
+   "h": 875
+  },
+  "grand": "oeuvres/danse-aquatique-500.webp",
+  "petit": "oeuvres/danse-aquatique-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "serenite-mediterraneenne",
+  "titre": "Sérénité Méditerranéenne",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Impressionnisme",
+  "annee": 2020,
+  "mois": 5,
+  "edition": 30,
+  "accroche": "Une évasion vers la quiétude du littoral.",
+  "ambiance": "Chaleur côtière",
+  "texte": "Plongez dans l'atmosphère intemporelle d'un village méditerranéen, où le bleu translucide de la mer rencontre la chaleur des façades en pierre. Ce tableau capture l'essence d'un lieu où le temps semble suspendu, et où chaque détail – des volets colorés aux bougainvilliers en fleur – raconte une histoire de simplicité et d'harmonie. Une scène baignée de lumière naturelle qui évoque à la fois la tranquillité et la splendeur brute de la côte, offrant un moment de paix à celui qui s'y attarde.",
+  "projection": "Idéal pour un salon lumineux ou un espace de détente.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "Bleu turquoise",
+   "Ocre",
+   "Vert",
+   "Terre cuite"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "vert",
+   "rouge-rose"
+  ],
+  "motsCles": [
+   "Village",
+   "Mer",
+   "Méditerranée"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#937c5a",
+   "accent": "#4bafb7",
+   "nuit": "#0c1e1f",
+   "palette": [
+    "#937c5a",
+    "#3d7c78",
+    "#4bafb7",
+    "#5b5d48",
+    "#4d96b6"
+   ]
+  },
+  "image": "oeuvres/serenite-mediterraneenne",
+  "miseEnSituation": "mises/serenite-mediterraneenne",
+  "px": {
+   "l": 800,
+   "h": 446
+  },
+  "grand": "oeuvres/serenite-mediterraneenne-800.webp",
+  "petit": "oeuvres/serenite-mediterraneenne-640.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "echos-du-silence-urbain",
+  "titre": "Échos du Silence Urbain",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Onirique",
+  "annee": 2025,
+  "mois": 11,
+  "edition": 20,
+  "accroche": "Harmonie entre tradition et modernité.",
+  "ambiance": "Rêverie méditative",
+  "texte": "Cette œuvre transporte le spectateur dans un monde où le passé et le présent se rencontrent avec une grâce sereine. Un paysage enneigé, sublimé par une architecture traditionnelle, s'ouvre sur une métropole en arrière-plan. La juxtaposition du temple et de la ville moderne évoque un dialogue silencieux entre l'héritage culturel et le rythme effréné de la vie contemporaine. L'œil est invité à voyager à travers le contraste visuel et temporel, suggérant une pause contemplative au cœur du mouvement incessant. Cette composition devient un lieu d'équilibrage, où l'ancien et le nouveau coexistent en parfaite harmonie.",
+  "projection": "Idéale pour un espace créant une transition apaisante.",
+  "univers": "architecture",
+  "universLibelle": "Architecture",
+  "couleursNommees": [
+   "Gris",
+   "Blanc",
+   "Bleu",
+   "Noir"
+  ],
+  "familles": [
+   "noir-gris",
+   "blanc-beige",
+   "bleu"
+  ],
+  "motsCles": [
+   "Temple",
+   "Pont",
+   "Neige"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#2d3138",
+   "accent": "#2d3138",
+   "nuit": "#131518",
+   "palette": [
+    "#2d3138",
+    "#44464e",
+    "#61626b",
+    "#7e7c84",
+    "#4f535c"
+   ]
+  },
+  "image": "oeuvres/echos-du-silence-urbain",
+  "miseEnSituation": "mises/echos-du-silence-urbain",
+  "px": {
+   "l": 800,
+   "h": 457
+  },
+  "grand": "oeuvres/echos-du-silence-urbain-800.webp",
+  "petit": "oeuvres/echos-du-silence-urbain-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "danse-etheree",
+  "titre": "Danse Éthérée",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Aquarelle",
+  "annee": 2022,
+  "mois": 3,
+  "edition": 30,
+  "accroche": "Légèreté aquatique sublimée.",
+  "ambiance": "Sérénité fluide",
+  "texte": "Dans cette œuvre délicate, les poissons évoluent avec grâce et subtilité, créant une impression de légèreté et de fluidité. Les couleurs pastel délicatement appliquées confèrent à la scène une atmosphère onirique et sereine. Un travail minutieux sur les détails des nageoires et des reflets de l'eau capte l'essence même de la vie sous-marine, transformant le quotidien en un spectacle hypnotique. La mise en avant de nuances aquatiques et de touches dorées évoque une luminosité douce et raffinée, invitant à l'évasion et à la contemplation.",
+  "projection": "Parfait pour un intérieur zen et contemporain.",
+  "univers": "animaux",
+  "universLibelle": "Animaux",
+  "couleursNommees": [
+   "Bleu",
+   "Violet",
+   "Rouge",
+   "Or"
+  ],
+  "familles": [
+   "bleu",
+   "violet",
+   "rouge-rose",
+   "jaune-or"
+  ],
+  "motsCles": [
+   "Poissons",
+   "Aquarelle",
+   "Sous-marin"
+  ],
+  "proportion": "4:3",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "4_3_60x45",
+    "largeur": 60,
+    "hauteur": 45,
+    "base": 80,
+    "prix": {
+     "toile": 80,
+     "caisse-noire": 210,
+     "caisse-blanche": 210,
+     "fineart": 320
+    }
+   },
+   {
+    "id": "4_3_93x70",
+    "largeur": 93,
+    "hauteur": 70,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 370,
+     "caisse-blanche": 370,
+     "fineart": 490
+    }
+   },
+   {
+    "id": "4_3_110x82",
+    "largeur": 110,
+    "hauteur": 82,
+    "base": 210,
+    "prix": {}
+   }
+  ],
+  "des": 80,
+  "couleur": {
+   "dominante": "#daedeb",
+   "accent": "#b6515e",
+   "nuit": "#1f0d0f",
+   "palette": [
+    "#daedeb",
+    "#b2cbc9",
+    "#c8d9d8",
+    "#b08893",
+    "#93afb0"
+   ]
+  },
+  "image": "oeuvres/danse-etheree",
+  "miseEnSituation": "mises/danse-etheree",
+  "px": {
+   "l": 800,
+   "h": 601
+  },
+  "grand": "oeuvres/danse-etheree-800.webp",
+  "petit": "oeuvres/danse-etheree-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "l-esprit-flottant",
+  "titre": "L'Esprit Flottant",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Illustration",
+  "annee": 2023,
+  "mois": 8,
+  "edition": 20,
+  "accroche": "Une symphonie de couleurs et de rêves.",
+  "ambiance": "Rêverie sereine",
+  "texte": "Dans un univers où le rêve s'entrelace avec la réalité, cette œuvre explore l'harmonie entre la délicatesse humaine et la nature. Le visage délicatement peint évoque un sentiment de calme et de curiosité, tandis que les poissons Koï symbolisent la fluidité et la persévérance. Les motifs floraux et organiques entourant le sujet rappellent que l'individu est à la fois un élément et un observateur d'un monde naturel vibrant. Les couleurs vives et la composition réfléchie donnent vie à une scène d'une beauté énigmatique, incitant le spectateur à une contemplation sereine.",
+  "projection": "Idéal pour un espace inspirant et contemplatif.",
+  "univers": "portraits",
+  "universLibelle": "Portraits",
+  "couleursNommees": [
+   "Orange",
+   "Bleu",
+   "Rouge",
+   "Vert"
+  ],
+  "familles": [
+   "orange-ocre",
+   "bleu",
+   "rouge-rose",
+   "vert"
+  ],
+  "motsCles": [
+   "Portrait",
+   "Art contemporain",
+   "Illustration"
+  ],
+  "proportion": "3:4",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "3_4_45x60",
+    "largeur": 45,
+    "hauteur": 60,
+    "base": 80,
+    "prix": {
+     "toile": 80,
+     "caisse-noire": 210,
+     "caisse-blanche": 210,
+     "fineart": 320
+    }
+   },
+   {
+    "id": "3_4_70x93",
+    "largeur": 70,
+    "hauteur": 93,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 370,
+     "caisse-blanche": 370,
+     "fineart": 490
+    }
+   },
+   {
+    "id": "3_4_82x110",
+    "largeur": 82,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {}
+   }
+  ],
+  "des": 80,
+  "couleur": {
+   "dominante": "#cda981",
+   "accent": "#e19a54",
+   "nuit": "#1f160c",
+   "palette": [
+    "#cda981",
+    "#c26745",
+    "#e3d4bc",
+    "#0e2238",
+    "#2d4f59"
+   ]
+  },
+  "image": "oeuvres/l-esprit-flottant",
+  "miseEnSituation": "mises/l-esprit-flottant",
+  "px": {
+   "l": 500,
+   "h": 653
+  },
+  "grand": "oeuvres/l-esprit-flottant-500.webp",
+  "petit": "oeuvres/l-esprit-flottant-500.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "eclat-captivant",
+  "titre": "Éclat Captivant",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Contemporain",
+  "annee": 2021,
+  "mois": 10,
+  "edition": 30,
+  "accroche": "Une fusion de couleurs et de regards envoûtants.",
+  "ambiance": "Intense et captivante",
+  "texte": "Cette œuvre saisissante attire l'observateur par son jeu subtil de contrastes et de regards. L'usage harmonieux des tons vibrants de bleu et d'orange crée une tension visuelle immersive, tandis que les yeux perçants au centre semblent raconter une histoire silencieuse. La composition met en lumière le lien intime entre humanité et nature, symbolisé par les feuilles qui encadrent le portrait. Évoquant à la fois la puissance et la sérénité, cette œuvre invite à une réflexion profonde sur la beauté des diversités culturelles.",
+  "projection": "Apportera une touche exotique et vibrante à un espace épuré.",
+  "univers": "portraits",
+  "universLibelle": "Portraits",
+  "couleursNommees": [
+   "Bleu",
+   "Orange",
+   "Marron",
+   "Noir"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Portrait",
+   "Regard",
+   "Feuillage"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#d43e0f",
+   "accent": "#d43e0f",
+   "nuit": "#1f110c",
+   "palette": [
+    "#d43e0f",
+    "#81140a",
+    "#451610",
+    "#4e3e58",
+    "#bd1c04"
+   ]
+  },
+  "image": "oeuvres/eclat-captivant",
+  "miseEnSituation": "mises/eclat-captivant",
+  "px": {
+   "l": 500,
+   "h": 892
+  },
+  "grand": "oeuvres/eclat-captivant-500.webp",
+  "petit": "oeuvres/eclat-captivant-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "rencontre-du-destin",
+  "titre": "Rencontre du Destin",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Ink-wash",
+  "annee": 2026,
+  "mois": 1,
+  "edition": 30,
+  "accroche": "Dialogue entre la force et la sérénité.",
+  "ambiance": "Tension élégante",
+  "texte": "Cette œuvre magistrale capture un instant suspendu dans le temps, où une jeune femme se tient face à un imposant taureau. L'artiste utilise une palette de couleurs limitée pour structurer une composition à la fois intense et élégante. Les éclaboussures d’encre ajoutent du mouvement et traduisent une tension palpable. Ce face-à-face symbolique peut être interprété comme une métaphore du courage face à l'adversité, invitant le spectateur à contempler l'équilibre entre puissance brute et calme intérieur.",
+  "projection": "Idéal pour un espace de réflexion ou un bureau moderne.",
+  "univers": "portraits",
+  "universLibelle": "Portraits",
+  "couleursNommees": [
+   "noir",
+   "blanc",
+   "gris",
+   "ivoire"
+  ],
+  "familles": [
+   "noir-gris",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Rencontre",
+   "Féminité",
+   "Force"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#d5d6d2",
+   "accent": "#d5d6d2",
+   "nuit": "#161715",
+   "palette": [
+    "#d5d6d2",
+    "#e4e5e3",
+    "#0a0c0a",
+    "#d8d9d6",
+    "#dcddda"
+   ]
+  },
+  "image": "oeuvres/rencontre-du-destin",
+  "miseEnSituation": "mises/rencontre-du-destin",
+  "px": {
+   "l": 800,
+   "h": 483
+  },
+  "grand": "oeuvres/rencontre-du-destin-800.webp",
+  "petit": "oeuvres/rencontre-du-destin-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "vitesse-chromatique",
+  "titre": "Vitesse Chromatique",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Abstrait",
+  "annee": 2022,
+  "mois": 6,
+  "edition": 30,
+  "accroche": "Quand le mouvement devient éclat.",
+  "ambiance": "Dynamisme électrisant",
+  "texte": "\"Vitesse Chromatique\" est une célébration du mouvement et de la couleur. L'œuvre capture une voiture classique en pleine accélération à travers un monde kaléidoscopique. Les teintes vives et dynamiques, mêlées à des lignes fuyantes, créent une sensation de vitesse vertigineuse. L'artiste parvient à distiller l'essence de la nostalgie automobile tout en l'inscrivant dans un univers contemporain et abstrait. Cette pièce évoque puissance et liberté, invitant le spectateur à une évasion sensorielle.",
+  "projection": "Idéale pour un espace moderne et dynamique.",
+  "univers": "objets",
+  "universLibelle": "Objets",
+  "couleursNommees": [
+   "rouge",
+   "bleu",
+   "jaune",
+   "rose"
+  ],
+  "familles": [
+   "rouge-rose",
+   "bleu",
+   "jaune-or"
+  ],
+  "motsCles": [
+   "Voiture",
+   "Mouvement",
+   "Couleur"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#20b4bc",
+   "accent": "#20b4bc",
+   "nuit": "#0c1e1f",
+   "palette": [
+    "#20b4bc",
+    "#2f6875",
+    "#b7646b",
+    "#3b2030",
+    "#e4e98d"
+   ]
+  },
+  "image": "oeuvres/vitesse-chromatique",
+  "miseEnSituation": "mises/vitesse-chromatique",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/vitesse-chromatique-800.webp",
+  "petit": "oeuvres/vitesse-chromatique-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-04-11"
+ },
+ {
+  "slug": "harmonie-etheree",
+  "titre": "Harmonie Éthérée",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Surréalisme",
+  "annee": 2026,
+  "mois": 2,
+  "edition": 30,
+  "accroche": "Un passage vibrant vers l'imaginaire.",
+  "ambiance": "Sérénité onirique",
+  "texte": "Cette œuvre transporte le spectateur dans un paysage imaginaire où la nature s'accorde avec une harmonie sublime. Les arbres aux feuilles d'automne surplombant des eaux cristallines créent une symphonie visuelle évoquant le calme et la sérénité. Les montagnes en arrière-plan rappellent la majesté et la grandeur d'un monde à la fois lointain et familier. Chaque élément de la composition est une invitation à une exploration contemplative, où les nuances vibrantes dialoguent avec la lumière dans un ballet d'émotions et de sensations.",
+  "projection": "Parfait pour une atmosphère sereine.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "bleu",
+   "rouge",
+   "vert",
+   "gris"
+  ],
+  "familles": [
+   "bleu",
+   "rouge-rose",
+   "vert",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Paysage",
+   "Surréalisme",
+   "Nature"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#164e60",
+   "accent": "#17788c",
+   "nuit": "#0c1c1f",
+   "palette": [
+    "#164e60",
+    "#60797b",
+    "#17788c",
+    "#18232b",
+    "#25a6b7"
+   ]
+  },
+  "image": "oeuvres/harmonie-etheree",
+  "miseEnSituation": "mises/harmonie-etheree",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/harmonie-etheree-800.webp",
+  "petit": "oeuvres/harmonie-etheree-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-04-25"
+ },
+ {
+  "slug": "reflexions-sylvestres",
+  "titre": "Réflexions Sylvestres",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Réaliste",
+  "annee": 2025,
+  "mois": 5,
+  "edition": 30,
+  "accroche": "Quand la nature dialogue avec l'eau.",
+  "ambiance": "Sérénité aquatique",
+  "texte": "L'œuvre \"Réflexions Sylvestres\" capture un paysage enchanteur où la nature et l'eau se mêlent dans une harmonieuse symphonie visuelle. Les arbres, se dressant fièrement dans une eau cristalline, forment des reflets d'une beauté paisible. Les teintes bleutées de l'eau contrastent délicatement avec le feuillage orangé, évoquant une saison de transition où l'automne embrasse l'hiver. Ces couleurs créent une atmosphère de calme et de sérénité, propice à la contemplation. En invitant le spectateur à un voyage introspectif, l'artiste joue avec la lumière et les reflets, offrant une évasion poétique hors du temps.",
+  "projection": "Parfait pour un espace dédié à la détente.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "bleu",
+   "orange",
+   "vert",
+   "brun"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "vert"
+  ],
+  "motsCles": [
+   "Paysage",
+   "Reflet",
+   "Nature"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#0e808f",
+   "accent": "#0e808f",
+   "nuit": "#0c1d1f",
+   "palette": [
+    "#0e808f",
+    "#73918d",
+    "#67807b",
+    "#1c8d9b",
+    "#2a9eab"
+   ]
+  },
+  "image": "oeuvres/reflexions-sylvestres",
+  "miseEnSituation": "mises/reflexions-sylvestres",
+  "px": {
+   "l": 800,
+   "h": 447
+  },
+  "grand": "oeuvres/reflexions-sylvestres-800.webp",
+  "petit": "oeuvres/reflexions-sylvestres-640.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-04-25"
+ },
+ {
+  "slug": "arbre-de-coeur-florissant",
+  "titre": "Arbre de Cœur Florissant",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Surréalisme",
+  "annee": 2020,
+  "mois": 9,
+  "edition": 30,
+  "accroche": "L'harmonie de la nature exprimée en poésie visuelle.",
+  "ambiance": "Poétique et sereine",
+  "texte": "Dans cette œuvre, un arbre se métamorphose en un symbole vibrant d'émotion, ses branches formant un cœur vivant au milieu d'une prairie de coquelicots. Cet art capte la convergence entre la nature et le sentiment, créant une scène onirique où chaque fleur semble raconter une histoire. L'utilisation magistrale des couleurs, couplée à la composition unique, invite à contempler l'intimité et la splendeur de la nature. Elle interroge le rapport entre nature et symbolisme, engageant le spectateur dans une réflexion profonde et esthétique.",
+  "projection": "Idéal pour un espace dédié à la contemplation et au bien-être.",
+  "univers": "nature",
+  "universLibelle": "Nature",
+  "couleursNommees": [
+   "rouge",
+   "bleu",
+   "blanc"
+  ],
+  "familles": [
+   "rouge-rose",
+   "bleu",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Nature",
+   "Coquelicots",
+   "Amour"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#378090",
+   "accent": "#ad342e",
+   "nuit": "#1f0d0c",
+   "palette": [
+    "#378090",
+    "#4d8e9c",
+    "#c6ccd0",
+    "#ad342e",
+    "#9e625f"
+   ]
+  },
+  "image": "oeuvres/arbre-de-coeur-florissant",
+  "miseEnSituation": "mises/arbre-de-coeur-florissant",
+  "px": {
+   "l": 800,
+   "h": 447
+  },
+  "grand": "oeuvres/arbre-de-coeur-florissant-800.webp",
+  "petit": "oeuvres/arbre-de-coeur-florissant-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-25"
+ },
+ {
+  "slug": "tranquillite-hivernale",
+  "titre": "Tranquillité Hivernale",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Paysage",
+  "annee": 2024,
+  "mois": 12,
+  "edition": 30,
+  "accroche": "Un voyage serein à travers un paysage glacé.",
+  "ambiance": "Sérénité glaciale",
+  "texte": "Cette œuvre évoque une paisible évasion au cœur d'un paysage hivernal enchanteur. Dominée par des teintes froides et apaisantes, elle capture une scène naturelle où l'harmonie règne entre la neige et l'eau cristalline. La composition est sublimée par une embarcation solitaire sur un lac gelé, ajoutant une touche de contemplation et de solitude apaisante. Le spectateur est invité à immerger dans cet univers où la nature semble suspendue dans le temps, offrant un moment de sérénité absolue. Idéale pour un espace qui recherche à la fois l'élégance et le repos.",
+  "projection": "Idéal pour un salon apaisant.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "bleu",
+   "blanc",
+   "orange",
+   "gris"
+  ],
+  "familles": [
+   "bleu",
+   "blanc-beige",
+   "orange-ocre",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Hiver",
+   "Nature",
+   "Eau"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#18698f",
+   "accent": "#18698f",
+   "nuit": "#0c191f",
+   "palette": [
+    "#18698f",
+    "#646f7a",
+    "#9f9a99",
+    "#bdd5e1",
+    "#205373"
+   ]
+  },
+  "image": "oeuvres/tranquillite-hivernale",
+  "miseEnSituation": "mises/tranquillite-hivernale",
+  "px": {
+   "l": 800,
+   "h": 447
+  },
+  "grand": "oeuvres/tranquillite-hivernale-800.webp",
+  "petit": "oeuvres/tranquillite-hivernale-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-04-25"
+ },
+ {
+  "slug": "reflets-serenes",
+  "titre": "Reflets Sérénes",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Réaliste",
+  "annee": 2021,
+  "mois": 3,
+  "edition": 30,
+  "accroche": "Une harmonie naturelle capturée.",
+  "ambiance": "Sérénité poétique",
+  "texte": "Cette œuvre transporte le spectateur dans un monde où l'eau cristalline renvoie le reflet envoûtant de la nature environnante. Les arbres, aux teintes automnales chaleureuses, se dressent avec élégance, accentuant le calme et la profondeur du paysage. L'ensemble évoque une scène sereine, presque mystique, qui invite à la contemplation et à l'évasion mentale. Parfait équilibre entre calme aquatique et vie végétale vibrante, l'œuvre offre une expérience sensorielle unique.",
+  "projection": "Idéale pour un espace de relaxation ou un bureau.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "bleu",
+   "orange",
+   "vert",
+   "gris"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "vert",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Nature",
+   "Eau",
+   "Reflet"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#1e6175",
+   "accent": "#1e6175",
+   "nuit": "#0c1b1f",
+   "palette": [
+    "#1e6175",
+    "#338191",
+    "#1d3a44",
+    "#7a8782",
+    "#abc7c8"
+   ]
+  },
+  "image": "oeuvres/reflets-serenes",
+  "miseEnSituation": "mises/reflets-serenes",
+  "px": {
+   "l": 800,
+   "h": 447
+  },
+  "grand": "oeuvres/reflets-serenes-800.webp",
+  "petit": "oeuvres/reflets-serenes-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-04-25"
+ },
+ {
+  "slug": "symbiose-sauvage",
+  "titre": "Symbiose Sauvage",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Double-exposition",
+  "annee": 2023,
+  "mois": 11,
+  "edition": 30,
+  "accroche": "Quand la nature s'unit à l'instinct sauvage.",
+  "ambiance": "Harmonie naturelle",
+  "texte": "Cette œuvre impressionnante fusionne la grandeur du loup avec la sérénité d'une forêt automnale, créant une vision où la faune et la flore coexistent harmonieusement. La superposition subtile des arbres reflétée sur un lac cristallin évoque un sentiment de paix et d'interconnexion naturelle. Véritable exploration de l'âme sauvage, l'œuvre interpelle par la profondeur de son regard. Ce dialogue visuel entre animal et paysage nous invite à repenser notre lien avec la nature.",
+  "projection": "Idéale pour un espace de méditation ou un bureau moderne.",
+  "univers": "animaux",
+  "universLibelle": "Animaux",
+  "couleursNommees": [
+   "orange",
+   "blanc",
+   "bleu",
+   "gris"
+  ],
+  "familles": [
+   "orange-ocre",
+   "blanc-beige",
+   "bleu",
+   "noir-gris"
+  ],
+  "motsCles": [
+   "Loup",
+   "Forêt",
+   "Automne"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#bcd1d2",
+   "accent": "#a86143",
+   "nuit": "#1f120c",
+   "palette": [
+    "#bcd1d2",
+    "#cdd1cc",
+    "#b68f6e",
+    "#a6cbcd",
+    "#c3b5a1"
+   ]
+  },
+  "image": "oeuvres/symbiose-sauvage",
+  "miseEnSituation": "mises/symbiose-sauvage",
+  "px": {
+   "l": 500,
+   "h": 893
+  },
+  "grand": "oeuvres/symbiose-sauvage-500.webp",
+  "petit": "oeuvres/symbiose-sauvage-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-04-27"
+ },
+ {
+  "slug": "oasis-chromatique",
+  "titre": "Oasis Chromatique",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Surréaliste",
+  "annee": 2024,
+  "mois": 2,
+  "edition": 30,
+  "accroche": "Lorsque la modernité rencontre l'irréel.",
+  "ambiance": "Futuriste et sereine",
+  "texte": "Cette œuvre transporte le spectateur dans un espace où l'architecture contemporaine s'imprègne de teintes vibrantes et surréalistes. Les lignes épurées contrastent harmonieusement avec la palette de couleurs saturées, créant un contraste visuel saisissant. L'atmosphère évoque un refuge futuriste empreint de tranquillité et de rêve éveillé, invitant à l'évasion et à la contemplation. Par son architecture innovante et son utilisation audacieuse des couleurs, cette création devient une célébration du design moderne et de l'art numérique.",
+  "projection": "Idéale pour un loft aux accents modernes.",
+  "univers": "architecture",
+  "universLibelle": "Architecture",
+  "couleursNommees": [
+   "bleu",
+   "rose",
+   "orange",
+   "blanc"
+  ],
+  "familles": [
+   "bleu",
+   "rouge-rose",
+   "orange-ocre",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Architecture",
+   "Design",
+   "Futuriste"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#25dbfb",
+   "accent": "#25dbfb",
+   "nuit": "#0c1d1f",
+   "palette": [
+    "#25dbfb",
+    "#f7b4b8",
+    "#51ddfc",
+    "#97edfc",
+    "#ea8b97"
+   ]
+  },
+  "image": "oeuvres/oasis-chromatique",
+  "miseEnSituation": "mises/oasis-chromatique",
+  "px": {
+   "l": 800,
+   "h": 447
+  },
+  "grand": "oeuvres/oasis-chromatique-800.webp",
+  "petit": "oeuvres/oasis-chromatique-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-05-08"
+ },
+ {
+  "slug": "fugue-en-musique",
+  "titre": "Fugue en musique",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Surréaliste",
+  "annee": 2022,
+  "mois": 1,
+  "edition": 20,
+  "accroche": "Une rencontre entre rêve et réalité.",
+  "ambiance": "Onirique et contemplative",
+  "texte": "Plongez dans un paysage onirique où l'éclat du rose s’entremêle avec l’austérité d’un sommet enneigé. Cette œuvre capture la quête intérieure et l'équilibre entre la fragilité et la force. La silhouette solitaire, tournée vers le sublime, incarne un voyage personnel à travers un tapis de pétales flottants. La rencontre de l'homme et de la nature est ici sublimée, offrant une réflexion sur l'harmonie et la contemplation.",
+  "projection": "Idéale pour un espace de méditation ou une bibliothèque.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "rose",
+   "gris",
+   "blanc",
+   "noir"
+  ],
+  "familles": [
+   "rouge-rose",
+   "noir-gris",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Onirique",
+   "Montagne",
+   "Surréalisme"
+  ],
+  "proportion": "9:16",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "9_16_45x80",
+    "largeur": 45,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "9_16_62x110",
+    "largeur": 62,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "9_16_70x120",
+    "largeur": 70,
+    "hauteur": 120,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#6e736d",
+   "accent": "#7b4355",
+   "nuit": "#1c0f13",
+   "palette": [
+    "#6e736d",
+    "#433839",
+    "#e1d8d8",
+    "#cdbec1",
+    "#f3efee"
+   ]
+  },
+  "image": "oeuvres/fugue-en-musique",
+  "miseEnSituation": "mises/fugue-en-musique",
+  "px": {
+   "l": 500,
+   "h": 892
+  },
+  "grand": "oeuvres/fugue-en-musique-500.webp",
+  "petit": "oeuvres/fugue-en-musique-500.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-05-08"
+ },
+ {
+  "slug": "chic-industriel-surreel",
+  "titre": "Chic Industriel Surréel",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Steampunk",
+  "annee": 2026,
+  "mois": 1,
+  "edition": 20,
+  "accroche": "Éclat de style rétro-futuriste.",
+  "ambiance": "Rétro-futuriste",
+  "texte": "Cette œuvre réunit une sophistication à la croisée des chemins entre histoire et innovation. La figure centrale, une femme au style steampunk distinctif, évoque un monde alternatif où technologie et mode s'entrelacent harmonieusement. Son parapluie bleu éclatant et son corset orange chaud apportent une dynamique visuelle intense. Les détails du fond, tels des schémas industriels, participent à l'élaboration d'une atmosphère vintage et contemporaine à la fois, soulignant la fusion de l'ancien et du moderne.",
+  "projection": "Idéal dans un salon moderne ou un bureau sophistiqué.",
+  "univers": "portraits",
+  "universLibelle": "Portraits",
+  "couleursNommees": [
+   "bleu",
+   "orange",
+   "jaune",
+   "brun"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "jaune-or"
+  ],
+  "motsCles": [
+   "Steampunk",
+   "Femme",
+   "Parapluie"
+  ],
+  "proportion": "3:4",
+  "orientation": "portrait",
+  "formats": [
+   {
+    "id": "3_4_45x60",
+    "largeur": 45,
+    "hauteur": 60,
+    "base": 80,
+    "prix": {
+     "toile": 80,
+     "caisse-noire": 210,
+     "caisse-blanche": 210,
+     "fineart": 320
+    }
+   },
+   {
+    "id": "3_4_70x93",
+    "largeur": 70,
+    "hauteur": 93,
+    "base": 190,
+    "prix": {
+     "toile": 190,
+     "caisse-noire": 370,
+     "caisse-blanche": 370,
+     "fineart": 490
+    }
+   },
+   {
+    "id": "3_4_82x110",
+    "largeur": 82,
+    "hauteur": 110,
+    "base": 210,
+    "prix": {}
+   }
+  ],
+  "des": 80,
+  "couleur": {
+   "dominante": "#01b5ce",
+   "accent": "#01b5ce",
+   "nuit": "#0c1d1f",
+   "palette": [
+    "#01b5ce",
+    "#029aac",
+    "#fbe165",
+    "#ebca58",
+    "#ad4e1a"
+   ]
+  },
+  "image": "oeuvres/chic-industriel-surreel",
+  "miseEnSituation": "mises/chic-industriel-surreel",
+  "px": {
+   "l": 500,
+   "h": 668
+  },
+  "grand": "oeuvres/chic-industriel-surreel-500.webp",
+  "petit": "oeuvres/chic-industriel-surreel-500.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-05-23"
+ },
+ {
+  "slug": "lueur-d-aurore-sur-l-ocean",
+  "titre": "Lueur d'Aurore sur l'Océan",
+  "artiste": "Darren Whitmore",
+  "artisteSlug": "darren-whitmore",
+  "style": "Impressionnisme",
+  "annee": 2026,
+  "mois": 4,
+  "edition": 30,
+  "accroche": "Harmonie évanescente et lumineuse.",
+  "ambiance": "Sérénité lumineuse",
+  "texte": "Cette œuvre capture avec subtilité le mouvement délicat des vagues sous l'éclat doré d'un lever de soleil. La mer, teintée de nuances émeraude et turquoise, se fond harmonieusement avec la palette douce du ciel matinal. L'effet de flou saisissant invite à la contemplation, évoquant une paix intérieure et une connexion sereine avec la nature. Chaque regard découvre de nouvelles nuances, rappelant l'éternité des cycles marins et l'impermanence des instants capturés.",
+  "projection": "Parfaite pour un espace de calme méditatif.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "turquoise",
+   "doré",
+   "émeraude",
+   "rose pâle"
+  ],
+  "familles": [
+   "bleu",
+   "jaune-or",
+   "vert",
+   "rouge-rose"
+  ],
+  "motsCles": [
+   "Lever de soleil",
+   "Océan",
+   "Sérénité"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#b6c5c2",
+   "accent": "#dccbb8",
+   "nuit": "#1d160e",
+   "palette": [
+    "#b6c5c2",
+    "#bbd0cf",
+    "#93b0a9",
+    "#dccbb8",
+    "#e2ded0"
+   ]
+  },
+  "image": "oeuvres/lueur-d-aurore-sur-l-ocean",
+  "miseEnSituation": "mises/lueur-d-aurore-sur-l-ocean",
+  "px": {
+   "l": 800,
+   "h": 447
+  },
+  "grand": "oeuvres/lueur-d-aurore-sur-l-ocean-800.webp",
+  "petit": "oeuvres/lueur-d-aurore-sur-l-ocean-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-moderne",
+  "ajout": "2026-06-12"
+ },
+ {
+  "slug": "l-indien-du-canyon",
+  "titre": "L'indien du canyon",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Photographie",
+  "annee": 2026,
+  "mois": 2,
+  "edition": 30,
+  "accroche": "Un horizon sculpté par le temps.",
+  "ambiance": "Immersion sereine",
+  "texte": "Cette œuvre invite à la contemplation d'un paysage majestueux où la nature révèle sa puissance et sa sérénité. Les nuances vibrantes d'ocre et de bleu tracent le chemin sinueux d'une rivière se faufilant entre les formations rocheuses monolithiques. Cette scène capture l'harmonie entre le ciel azur et les terres ondulantes, témoignage d'une beauté intemporelle. Le contraste des couleurs et la profondeur de la composition évoquent une sensation d'infini, transportant l'observateur dans un voyage intérieur.",
+  "projection": "Idéal pour apporter profondeur et évasion à un espace ouvert.",
+  "univers": "paysage",
+  "universLibelle": "Paysages",
+  "couleursNommees": [
+   "Ocre",
+   "Bleu",
+   "Vert",
+   "Orange"
+  ],
+  "familles": [
+   "orange-ocre",
+   "bleu",
+   "vert"
+  ],
+  "motsCles": [
+   "Paysage",
+   "Nature",
+   "Rivière"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#c26f48",
+   "accent": "#c26f48",
+   "nuit": "#1f120c",
+   "palette": [
+    "#c26f48",
+    "#214551",
+    "#222821",
+    "#53a0cc",
+    "#376f85"
+   ]
+  },
+  "image": "oeuvres/l-indien-du-canyon",
+  "miseEnSituation": "mises/l-indien-du-canyon",
+  "px": {
+   "l": 800,
+   "h": 447
+  },
+  "grand": "oeuvres/l-indien-du-canyon-800.webp",
+  "petit": "oeuvres/l-indien-du-canyon-640.webp",
+  "pxMise": {
+   "l": 848,
+   "h": 848
+  },
+  "interieurClient": "salon-haussmannien",
+  "ajout": "2026-06-13"
+ },
+ {
+  "slug": "reflexions-aquatiques",
+  "titre": "Réflexions Aquatiques",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Surréalisme",
+  "annee": 2026,
+  "mois": 1,
+  "edition": 30,
+  "accroche": "Ode à la fusion de l'humain et du rêve.",
+  "ambiance": "Rêverie onirique",
+  "texte": "Cette œuvre fascinante capture l'intersection de l'imaginaire et de la perception. À travers de larges lunettes, les reflets d'un monde aquatique viennent se superposer à l'identité de la figure centrale, tout en accentuant la vibrance des poissons et des flots environnants. Chaque élément de la composition joue avec la lumière et la couleur, évoquant une fluidité où l'esprit rêveur est magnifié. La symbiose entre l'élément humain et la nature s'y exprime avec élégance, offrant une vision poétique.",
+  "projection": "Parfait pour un espace inspiré de l'onirisme moderne.",
+  "univers": "contemporain",
+  "universLibelle": "Contemporain",
+  "couleursNommees": [
+   "bleu",
+   "orange",
+   "vert",
+   "rouge"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "vert",
+   "rouge-rose"
+  ],
+  "motsCles": [
+   "Femme",
+   "Poissons",
+   "Lunettes"
+  ],
+  "proportion": "1:1",
+  "orientation": "carre",
+  "formats": [
+   {
+    "id": "1_1_70x70",
+    "largeur": 70,
+    "hauteur": 70,
+    "base": 90,
+    "prix": {
+     "toile": 90,
+     "caisse-noire": 240,
+     "caisse-blanche": 240,
+     "fineart": 350
+    }
+   },
+   {
+    "id": "1_1_80x80",
+    "largeur": 80,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280
+    }
+   }
+  ],
+  "des": 90,
+  "couleur": {
+   "dominante": "#d87948",
+   "accent": "#e89c5c",
+   "nuit": "#1f150c",
+   "palette": [
+    "#d87948",
+    "#bbb0a6",
+    "#427483",
+    "#efdec9",
+    "#ce523e"
+   ]
+  },
+  "image": "oeuvres/reflexions-aquatiques",
+  "miseEnSituation": "mises/reflexions-aquatiques",
+  "px": {
+   "l": 800,
+   "h": 800
+  },
+  "grand": "oeuvres/reflexions-aquatiques-800.webp",
+  "petit": "oeuvres/reflexions-aquatiques-640.webp",
+  "pxMise": {
+   "l": 1315,
+   "h": 1315
+  },
+  "interieurClient": "mur-blanc",
+  "ajout": "2026-06-16"
+ },
+ {
+  "slug": "fleur-de-transparence",
+  "titre": "Fleur de transparence",
+  "artiste": "Miyu Mori",
+  "artisteSlug": "miyu-mori",
+  "style": "Éthéré",
+  "annee": 2026,
+  "mois": 7,
+  "edition": 30,
+  "accroche": "Un souffle de délicatesse céleste.",
+  "ambiance": "Poésie délicate",
+  "texte": "Fleur de transparence capture l'équilibre fragile entre la douceur et la complexité de la nature. Cette œuvre dévoile la beauté subtile des pétales à travers des nuances translucides et des lignes fines, créant une danse harmonieuse de couleurs et formes. Chaque détail révèle une maîtrise technique, où l'organique et l'abstrait se rencontrent. À la fois source de contemplation et d'inspiration, cette image invite à explorer la profondeur émotionnelle inhérente à la nature florale. Une invitation visuelle à s'évader dans une expérience sensorielle unique.",
+  "projection": "Idéale pour un salon moderne.",
+  "univers": "abstrait",
+  "universLibelle": "Abstrait",
+  "couleursNommees": [
+   "Bleu",
+   "Orange",
+   "Vert",
+   "Beige"
+  ],
+  "familles": [
+   "bleu",
+   "orange-ocre",
+   "vert",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Fleur",
+   "Translucide",
+   "Nature"
+  ],
+  "proportion": "1:1",
+  "orientation": "carre",
+  "formats": [
+   {
+    "id": "1_1_70x70",
+    "largeur": 70,
+    "hauteur": 70,
+    "base": 90,
+    "prix": {
+     "toile": 90,
+     "caisse-noire": 240,
+     "caisse-blanche": 240,
+     "fineart": 350
+    }
+   },
+   {
+    "id": "1_1_80x80",
+    "largeur": 80,
+    "hauteur": 80,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280
+    }
+   }
+  ],
+  "des": 90,
+  "couleur": {
+   "dominante": "#cfe9e7",
+   "accent": "#b7e1e0",
+   "nuit": "#0d1f1e",
+   "palette": [
+    "#cfe9e7",
+    "#c3cab6",
+    "#fdf2d2",
+    "#f1e4ca",
+    "#8cc7c0"
+   ]
+  },
+  "image": "oeuvres/fleur-de-transparence",
+  "miseEnSituation": "mises/fleur-de-transparence",
+  "px": {
+   "l": 800,
+   "h": 800
+  },
+  "grand": "oeuvres/fleur-de-transparence-800.webp",
+  "petit": "oeuvres/fleur-de-transparence-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-creme",
+  "ajout": "2026-07-18"
+ },
+ {
+  "slug": "l-ephemere-rencontre",
+  "titre": "L'éphémère rencontre",
+  "artiste": "Francesco Conte",
+  "artisteSlug": "francesco-conte",
+  "style": "Aérien",
+  "annee": 2026,
+  "mois": 6,
+  "edition": 30,
+  "accroche": "Fusion de l'eau et du sable, sublime harmonie.",
+  "ambiance": "Tranquillité dynamique",
+  "texte": "Cette œuvre capture la continuité et la fugacité d'une rencontre perpétuelle entre mer et terre. Les vagues viennent caresser le rivage avec une douce puissance, créant un dialogue sans fin de textures et de teintes. La vue aérienne, presque abstraite, offre une perspective nouvelle sur un spectacle naturel que nous oublions souvent d'observer. Les nuances vibrantes de l'eau se fondent dans la chaleur des tons sableux, évoquant un sentiment d'apaisement et de renouveau.",
+  "projection": "Parfaite pour des espaces dédiés à la relaxation et à la méditation.",
+  "univers": "nature",
+  "universLibelle": "Nature",
+  "couleursNommees": [
+   "turquoise",
+   "sable",
+   "blanc"
+  ],
+  "familles": [
+   "bleu",
+   "blanc-beige"
+  ],
+  "motsCles": [
+   "Plage",
+   "Vagues",
+   "Sable"
+  ],
+  "proportion": "16:9",
+  "orientation": "paysage",
+  "formats": [
+   {
+    "id": "16_9_80x45",
+    "largeur": 80,
+    "hauteur": 45,
+    "base": 120,
+    "prix": {
+     "toile": 120,
+     "caisse-noire": 280,
+     "caisse-blanche": 280,
+     "fineart": 400
+    }
+   },
+   {
+    "id": "16_9_110x62",
+    "largeur": 110,
+    "hauteur": 62,
+    "base": 210,
+    "prix": {
+     "toile": 210,
+     "caisse-noire": 420,
+     "caisse-blanche": 420,
+     "fineart": 540
+    }
+   },
+   {
+    "id": "16_9_120x70",
+    "largeur": 120,
+    "hauteur": 70,
+    "base": 230,
+    "prix": {
+     "toile": 230,
+     "caisse-noire": 450,
+     "caisse-blanche": 450
+    }
+   }
+  ],
+  "des": 120,
+  "couleur": {
+   "dominante": "#d57b49",
+   "accent": "#037273",
+   "nuit": "#0c1f1f",
+   "palette": [
+    "#d57b49",
+    "#037273",
+    "#a5c0c9",
+    "#e19a6e",
+    "#035851"
+   ]
+  },
+  "image": "oeuvres/l-ephemere-rencontre",
+  "miseEnSituation": "mises/l-ephemere-rencontre",
+  "px": {
+   "l": 800,
+   "h": 448
+  },
+  "grand": "oeuvres/l-ephemere-rencontre-800.webp",
+  "petit": "oeuvres/l-ephemere-rencontre-640.webp",
+  "pxMise": {
+   "l": 1024,
+   "h": 1024
+  },
+  "interieurClient": "salon-marocain",
+  "ajout": "2026-08-19"
+ }
+]

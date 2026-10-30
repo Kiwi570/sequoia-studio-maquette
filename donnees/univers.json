@@ -1,0 +1,59 @@
+{
+ "univers": [
+  {
+   "cle": "paysage",
+   "nom": "Paysages",
+   "nombre": 13
+  },
+  {
+   "cle": "portraits",
+   "nom": "Portraits",
+   "nombre": 7
+  },
+  {
+   "cle": "architecture",
+   "nom": "Architecture",
+   "nombre": 6
+  },
+  {
+   "cle": "nature",
+   "nom": "Nature",
+   "nombre": 4
+  },
+  {
+   "cle": "animaux",
+   "nom": "Animaux",
+   "nombre": 7
+  },
+  {
+   "cle": "abstrait",
+   "nom": "Abstrait",
+   "nombre": 2
+  },
+  {
+   "cle": "floral",
+   "nom": "Floral",
+   "nombre": 1
+  },
+  {
+   "cle": "objets",
+   "nom": "Objets",
+   "nombre": 1
+  },
+  {
+   "cle": "contemporain",
+   "nom": "Contemporain",
+   "nombre": 1
+  }
+ ],
+ "familles": [
+  "bleu",
+  "vert",
+  "rouge-rose",
+  "orange-ocre",
+  "jaune-or",
+  "blanc-beige",
+  "noir-gris",
+  "violet"
+ ]
+}

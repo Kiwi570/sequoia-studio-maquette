@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="article" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Certificat d’authenticité pour photographie d’art et œuvre numérique imprimée : Sequoia Studio</title>
+<meta name="description" content="Découvrez le rôle du certificat d’authenticité pour une photographie d’art ou une œuvre numérique imprimée : tirage papier, Dibond, édition limitée.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/journal/certificat-authenticite-photographie-art-oeuvre-numerique-imprimee">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Certificat d’authenticité pour photographie d’art et œuvre numérique imprimée : Sequoia Studio">
+<meta property="og:description" content="Découvrez le rôle du certificat d’authenticité pour une photographie d’art ou une œuvre numérique imprimée : tirage papier, Dibond, édition limitée.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/journal/certificat-authenticite-photographie-art-oeuvre-numerique-imprimee">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/article-certificat-authenticite-photographie-art-oeuvre-numerique-imprimee-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gros plan sur l’hologramme NFC d’un certificat Sequoia Studio">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique imprimée","datePublished":"2026-07-04","inLanguage":"fr","publisher":{"@type":"Organization","name":"Sequoia Studio"}}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique imprimée</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<div data-barre-lecture aria-hidden="true"></div>
+<section class="article-tete" id="debut" data-scene style="--nuit:#100c0a">
+  <div class="conteneur article-tete-grille">
+    <div class="article-tete-texte">
+      <nav class="fil" aria-label="Fil d’Ariane"><a href="/journal" data-libelle="Journal">Le journal</a> <span aria-hidden="true">/</span> <span>Certificat d’authenticité</span></nav>
+      <h1 class="article-h1" data-anime="gsap">Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique imprimée</h1>
+      <p class="article-meta" data-anime="gsap" data-info-cle><time datetime="2026-07-04">4 juillet 2026</time> · 8 min de lecture</p>
+      <p class="article-chapo article-chapo--tete" data-anime="gsap">Le certificat d’authenticité est un document essentiel dans la vente, la conservation et la transmission d’une œuvre d’art.</p>
+      <p data-anime="gsap"><a class="bouton bouton--plein" href="#lecture" data-action-principale>Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+    <figure class="media article-couverture" style="--cadrage:45% 55%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/certificat/hologramme-gros-plan-1280.webp" srcset="/assets/images/certificat/hologramme-gros-plan-640.webp 640w, /assets/images/certificat/hologramme-gros-plan-1280.webp 1280w, /assets/images/certificat/hologramme-gros-plan-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 50vw" alt="Gros plan sur l’hologramme NFC d’un certificat Sequoia Studio" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+<article class="article-corps conteneur" id="lecture" data-sans-visuel>
+  <p>Le certificat d’authenticité est un document essentiel dans la vente, la conservation et la transmission d’une œuvre d’art. Dans le cas d’une photographie d’art ou d’une œuvre d’art numérique imprimée, il joue un rôle particulièrement important, car l’œuvre existe souvent sous la forme d’un tirage : impression sur papier fine art, papier photographique, aluminium Dibond ou autre support d’exposition. Contrairement à une peinture unique sur toile, une image photographique ou numérique peut être reproduite techniquement à l’infini. Le certificat permet donc de fixer un cadre clair : qui est l’auteur, quelle est l’œuvre, quel est le support, combien d’exemplaires existent, sous quel contrôle le tirage a été réalisé et quelle place occupe l’exemplaire acquis dans l’édition.</p><h2 id="partie-1">Qu’est-ce qu’un certificat d’authenticité ?</h2><p>Un certificat d’authenticité est un document attaché à une œuvre, destiné à attester son origine, son auteur, ses caractéristiques matérielles et, le cas échéant, son appartenance à une édition limitée. Il ne s’agit pas simplement d’un document esthétique ou commercial : il constitue une pièce de traçabilité. Il accompagne l’œuvre au moment de la vente, puis idéalement lors des reventes, donations, expertises, assurances ou successions.</p><p>Dans le marché de l’art, la valeur d’un certificat dépend directement de la légitimité de la personne ou de l’entité qui l’émet. Il peut être délivré par l’artiste lui-même, par une galerie mandatée, par les ayants droit de l’artiste, par un expert reconnu ou par une maison de vente dans un contexte spécifique. Pour une photographie d’art ou une œuvre numérique imprimée, le certificat doit permettre de répondre à une question simple : cet objet imprimé correspond-il bien à l’œuvre annoncée, dans la version, le format, le support et le tirage indiqués ?</p><h2 id="partie-2">Pourquoi le certificat est-il indispensable pour une photographie d’art ?</h2><p>La photographie pose une difficulté spécifique : le fichier numérique ou le négatif peut donner lieu à plusieurs impressions. Sans certificat, il devient difficile de distinguer un tirage original, un tirage d’exposition, une reproduction décorative, une épreuve d’artiste ou une simple copie.</p><p>En France, une photographie considérée comme œuvre d’art doit répondre à des critères précis : elle doit être prise par l’artiste, tirée par lui ou sous son contrôle, signée et numérotée dans la limite de trente exemplaires, tous formats et supports confondus. Cette limite est importante : elle ne concerne pas uniquement un format donné, mais l’ensemble des formats et supports d’une même œuvre photographique.</p><p>Ainsi, si une photographie est éditée en 10 exemplaires sur papier 40 × 60 cm, 10 exemplaires sur papier 80 × 120 cm et 10 exemplaires sur Dibond, l’ensemble peut constituer une édition de 30 exemplaires. En revanche, multiplier les formats ou les supports sans tenir un registre clair peut créer de la confusion et affaiblir la valeur de l’œuvre.</p><figure class="media article-figure" style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/certificat/etiquette-dos-cadre-hologramme-1280.webp" srcset="/assets/images/certificat/etiquette-dos-cadre-hologramme-640.webp 640w, /assets/images/certificat/etiquette-dos-cadre-hologramme-1280.webp 1280w, /assets/images/certificat/etiquette-dos-cadre-hologramme-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 720px" alt="Étiquette NFC protégée par un hologramme, posée au dos d’un cadre" width="1280" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure><p>Le certificat sert donc à matérialiser la rareté. Il indique que le tirage acquis n’est pas une impression librement reproductible, mais un exemplaire identifié dans une édition définie.</p><h2 id="partie-3">Le cas des œuvres d’art numériques imprimées</h2><p>Une œuvre d’art numérique imprimée peut être créée à partir d’un dessin digital, d’une composition graphique, d’une photographie transformée, d’un montage, d’un rendu 3D, d’une création générative ou d’un processus impliquant des outils numériques. Elle peut ensuite être matérialisée sous forme de tirage papier, de tirage fine art, d’impression sur Dibond ou de tout autre support physique.</p><p>Le certificat est particulièrement important pour ce type d’œuvre, car il permet de distinguer le fichier source, le processus de création et l’objet imprimé vendu au collectionneur. L’œuvre numérique peut exister comme fichier, mais ce qui est acquis est généralement un exemplaire physique identifié, produit dans un format donné, sur un support donné et dans une édition limitée.</p><p>Il faut donc éviter toute ambiguïté entre l’image numérique originale, le tirage physique et les droits d’exploitation attachés à l’œuvre. Le certificat doit préciser la nature de l’œuvre : photographie numérique, création digitale, composition générative, photomontage, illustration numérique, impression pigmentaire, tirage sur papier fine art, impression directe ou contrecollage sur aluminium Dibond. Plus le processus est technique, plus le certificat doit être descriptif.</p><h2 id="partie-4">Comment sécuriser un certificat ?</h2><p>Un certificat d’authenticité doit être conçu pour durer. Il peut être imprimé sur un papier de qualité, signé à la main, tamponné, numéroté et associé à un registre interne. Il peut également inclure un QR code renvoyant vers une page d’authentification ou une base de données privée. C’est ce que réalise Sequoia Studio. Le certificat papier est protégé par une puce NFC infalsifiable protégée par un hologramme difficile à copier, l’association de ces deux éléments offre une preuve très solide d’authenticité. L’acheteur se verra également remettre pour l’œuvre en elle-même une puce NFC infalsifiable et un hologramme. Ces deux éléments seront apposés sur l’œuvre.</p><figure class="media article-figure" style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/certificat/etiquette-dos-cadre-1280.webp" srcset="/assets/images/certificat/etiquette-dos-cadre-640.webp 640w, /assets/images/certificat/etiquette-dos-cadre-1280.webp 1280w, /assets/images/certificat/etiquette-dos-cadre-1536.webp 1536w" sizes="(max-width: 760px) 100vw, 720px" alt="Puce NFC posée au dos du cadre d’une œuvre" width="1280" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure><p>Sequoia Studio permet de vérifier les certificats directement avec un smartphone, il suffit de passer le smartphone sur l’hologramme (sur le certificat papier ou sur l’œuvre).</p><h2 id="partie-5">Papier fine art, papier photographique ou Dibond : pourquoi le support compte</h2><p>Le support d’impression n’est pas un détail secondaire. Il fait partie de l’identité matérielle du tirage. Un tirage sur papier baryté, sur papier mat texturé, sur papier coton fine art ou sur aluminium Dibond ne produit pas la même perception, la même durabilité ni la même valeur de présentation.</p><p>Le certificat doit donc mentionner précisément le support utilisé. Pour un tirage papier, il peut indiquer le type de papier, son grammage, sa texture, sa marque ou sa famille technique : papier coton, papier baryté, papier mat, papier satiné, papier archive, etc. Pour un tirage sur Dibond, il est recommandé de préciser s’il s’agit d’une impression directe sur aluminium composite ou d’un tirage papier contrecollé sur Dibond. Ce ne sont pas exactement les mêmes procédés.</p><p>Dans le cas d’une œuvre destinée au marché de l’art, ces détails renforcent la transparence. Ils permettent aussi à un collectionneur, un assureur ou un futur acquéreur de comprendre ce qui a réellement été acheté.</p><p>Le certificat d’authenticité et la facture n’ont pas la même fonction. La facture prouve une transaction : elle mentionne un vendeur, un acheteur, une date, un prix, une TVA éventuelle et des conditions commerciales. Le certificat, lui, suit l’œuvre. Il doit pouvoir rester attaché à l’œuvre même si celle-ci change de propriétaire.</p><p>Il est donc préférable de ne pas indiquer le prix de vente sur le certificat. Le prix appartient à l’histoire commerciale de la transaction, pas nécessairement à l’identité permanente de l’œuvre. De même, le nom de l’acquéreur n’est pas toujours recommandé sur le certificat principal, sauf choix spécifique de l’artiste ou de la galerie. Un certificat doit rester valable lors des cessions futures.</p><h2 id="partie-6">Le certificat ne cède pas les droits d’auteur</h2><p>Acheter une photographie d’art ou une œuvre numérique imprimée ne signifie pas acheter les droits de reproduction de l’image. La propriété matérielle de l’objet est distincte de la propriété intellectuelle attachée à l’œuvre.</p><p>Autrement dit, l’acheteur peut posséder, exposer ou revendre le tirage physique, mais il ne peut pas automatiquement reproduire l’image, l’utiliser dans une publicité, l’imprimer sur d’autres supports ou l’exploiter commercialement. Si des droits d’usage sont accordés, ils doivent être formalisés séparément, dans un contrat de cession ou de licence.</p><p>Le certificat peut donc comporter une mention claire du type :</p><blockquote class="citation citation--article"><p>L’acquisition de cette œuvre porte sur le support physique identifié ci-dessus. Elle n’emporte aucune cession des droits de reproduction, de représentation, d’adaptation ou d’exploitation commerciale, sauf accord écrit distinct signé par l’artiste ou ses ayants droit.</p></blockquote><h3>Quelle valeur juridique ?</h3><p>Le certificat d’authenticité engage la responsabilité de celui qui l’émet. Une mention imprécise, exagérée ou fausse peut devenir problématique. Il faut donc éviter les formulations ambiguës. Écrire « œuvre originale » n’a pas la même portée que « reproduction », « tirage d’après », « édition ouverte » ou « impression décorative ». Le vocabulaire doit correspondre à la réalité du tirage.</p><p>Pour une photographie d’art, il est particulièrement important de ne pas annoncer une édition limitée si l’artiste continue ensuite à produire des exemplaires supplémentaires hors numérotation. La confiance du collectionneur repose sur la cohérence entre le certificat, le registre d’atelier et la pratique réelle de l’artiste.</p><p>Le certificat n’est pas seulement un document commercial. C’est un élément de preuve, de traçabilité et de confiance. Il permet d’établir un lien entre l’œuvre, son auteur, son support, son édition et son historique de vente.</p><h3>Tirage limité, tirage unique, édition ouverte : ne pas confondre</h3><p>Un certificat doit clarifier le statut de l’œuvre imprimée.</p><p>Un tirage unique signifie qu’un seul exemplaire physique de cette œuvre est produit dans ce format et sur ce support, avec engagement de ne pas en produire d’autre selon les conditions définies.</p><p>Un tirage limité signifie que l’artiste fixe un nombre maximal d’exemplaires. Chaque tirage reçoit un numéro : 1/10, 2/10, 3/10, etc. Pour la photographie d’art, la limite de référence généralement retenue est de trente exemplaires, tous formats et supports confondus.</p><p>Une édition ouverte signifie que l’image peut être reproduite sans limite prédéfinie. Elle peut avoir une valeur décorative ou éditoriale, mais elle ne présente pas la même rareté qu’un tirage limité.</p><p>Une épreuve d’artiste, souvent notée EA, est un exemplaire réservé à l’artiste, généralement hors commerce ou destiné à des usages spécifiques. Elle doit être clairement identifiée pour ne pas brouiller la numérotation principale.</p><h2 id="partie-7">Que faire en cas de perte du certificat ?</h2><p>La perte du certificat ne détruit pas nécessairement la valeur de l’œuvre, mais elle peut la fragiliser. La première démarche consiste à contacter l’artiste, la galerie ou l’organisme ayant émis le certificat initial. Si un registre existe, un duplicata peut parfois être établi. Il doit alors être clairement marqué comme duplicata, avec la date de réémission.</p><p>Il faut éviter de produire un nouveau certificat comme s’il s’agissait de l’original. La transparence est préférable : elle protège le vendeur, l’acheteur et l’artiste.</p><h2 id="partie-8">Conclusion</h2><p>Pour une photographie d’art ou une œuvre d’art numérique imprimée, le certificat d’authenticité n’est pas un simple accessoire administratif. Il est le document qui relie l’image à son auteur, l’objet à son édition, le tirage à son support et l’acquéreur à une provenance claire. Il protège le collectionneur, valorise le travail de l’artiste et facilite la circulation de l’œuvre sur le marché.</p><p>Dans un contexte où les images peuvent être copiées, modifiées, imprimées et diffusées très facilement, le certificat devient un outil de confiance. Plus il est précis, plus il renforce la valeur artistique, documentaire et patrimoniale du tirage. Sequoia Studio vous accompagne dans la sécurisation de l’œuvre, ses certificats d’authenticité contiennent notamment une puce NFC infalsifiable.</p>
+  <p class="article-suite"><a href="/certificat" class="bouton bouton--contour" data-libelle="Certificat">Comment Sequoia Studio gère les certificats d’authenticité</a></p>
+</article>
+<section class="article-autres" id="a-lire">
+  <div class="conteneur">
+    <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>À lire aussi</h2>
+</div>
+    <div class="journal-grille journal-grille--autres">
+      <article class="article-carte"><a class="article-lien" href="/journal/histoire-art-inventions-techniques-lascaux-ia" data-libelle="Journal">
+        <figure class="media media--provisoire article-image" data-visuel data-provisoire="journal-pigments" style="aspect-ratio:4 / 3" role="img" aria-label="Pigments naturels bruts dans des coupelles de pierre"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap7" cx=".5" cy=".45" r=".7"><stop offset="0" stop-color="#3a342e"/><stop offset="1" stop-color="#0a0908"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap7)"/>
+    <ellipse cx="360" cy="560" rx="150" ry="58" fill="#4a4540"/><ellipse cx="360" cy="548" rx="128" ry="42" fill="#2a2724"/><path d="M250 548 q110 -110 220 0z" fill="#9e3a1f"/><ellipse cx="660" cy="600" rx="150" ry="58" fill="#4a4540"/><ellipse cx="660" cy="588" rx="128" ry="42" fill="#2a2724"/><path d="M550 588 q110 -110 220 0z" fill="#c99a3a"/><ellipse cx="960" cy="560" rx="150" ry="58" fill="#4a4540"/><ellipse cx="960" cy="548" rx="128" ry="42" fill="#2a2724"/><path d="M850 548 q110 -110 220 0z" fill="#151312"/><ellipse cx="1250" cy="600" rx="150" ry="58" fill="#4a4540"/><ellipse cx="1250" cy="588" rx="128" ry="42" fill="#2a2724"/><path d="M1140 588 q110 -110 220 0z" fill="#ece6da"/>
+    <rect x="420" y="700" width="560" height="14" rx="7" fill="#8a6a44" transform="rotate(-8 700 707)"/><path d="M980 668 q60 -10 90 20 q-50 30 -90 12z" fill="#c9b08a" transform="rotate(-8 700 707)"/></svg></figure>
+        <p class="article-meta"><span class="article-theme">Histoire de l’art</span> · <time datetime="2026-06-26">26 juin 2026</time></p>
+        <h3 class="article-titre">De Lascaux à l’intelligence artificielle : quand les inventions techniques enrichissent l’art</h3>
+        <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a></article><article class="article-carte"><a class="article-lien" href="/journal/supports-impression-art-photographique-digital" data-libelle="Journal">
+        <figure class="media article-image" style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/journal/supports-impression-1280.webp" srcset="/assets/images/journal/supports-impression-640.webp 640w, /assets/images/journal/supports-impression-1280.webp 1280w, /assets/images/journal/supports-impression-1448.webp 1448w" sizes="(max-width: 760px) 100vw, 30vw" alt="Tirage photographique fine art sur papier texturé, posé sur une table d’atelier" width="1280" height="960" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <p class="article-meta"><span class="article-theme">Impression d’art</span> · <time datetime="2026-06-12">12 juin 2026</time></p>
+        <h3 class="article-titre">Supports d’impression d’art photographique et digital : papier fine art, aluminium Dibond et standard Hahnemühle</h3>
+        <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a></article><article class="article-carte"><a class="article-lien" href="/journal/intelligence-artificielle-photographie-regard-creatif" data-libelle="Journal">
+        <figure class="media article-image" style="--cadrage:50% 50%;aspect-ratio:4 / 3">
+  <picture>
+    <img src="/assets/images/journal/ia-regard-1280.webp" srcset="/assets/images/journal/ia-regard-640.webp 640w, /assets/images/journal/ia-regard-1280.webp 1280w, /assets/images/journal/ia-regard-1672.webp 1672w" sizes="(max-width: 760px) 100vw, 30vw" alt="Écran de retouche photographique avec un paysage de montagne en cours de traitement" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <p class="article-meta"><span class="article-theme">Intelligence artificielle</span> · <time datetime="2026-06-10">10 juin 2026</time></p>
+        <h3 class="article-titre">L’intelligence artificielle comme nouveau prolongement du regard photographique</h3>
+        <span class="lien-fleche">Lire l’article<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a></article>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

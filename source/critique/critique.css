@@ -1,0 +1,42 @@
+/* Style critique : copié en ligne dans le head de chaque page par outils/generer.mjs.
+   Les couleurs --fond, --texte et --voile-fond sont ajoutées devant, depuis donnees/site.json. */
+:root { --entete-h: 72px; --barres-h: 0px; }
+html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; }
+body { margin: 0; background: var(--fond); }
+
+/* Ce qui sera animé reste caché jusqu'à son animation (jamais visible avant).
+   Au retour arrière ou avant, rien n'est caché : la page revient dans son état final. */
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; }
+html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; }
+
+/* Voile de transition : couvre l'écran dès la première image à l'arrivée par un lien interne. */
+[data-voile] {
+  position: fixed; inset: 0; z-index: 900; background: var(--voile-fond);
+  transform: translateY(100%); visibility: hidden; pointer-events: none;
+}
+html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] {
+  transform: none; visibility: visible;
+}
+html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; }
+
+/* Intro : panneau d'ouverture visible dès la première image, seulement en mode intro.
+   Le défilement est bloqué pendant qu'elle se joue. */
+.ouverture-panneau {
+  position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center;
+  background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center;
+}
+html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; }
+
+/* Défilement bloqué pendant l'intro et tant que le voile d'arrivée couvre l'écran. */
+html.defilement-bloque, html.defilement-bloque body,
+html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie),
+html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body,
+html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours),
+html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; }
+
+/* Bande de la barre de défilement (scrollbar-gutter: stable, environ 15 px à droite sur Windows et sur Mac
+   avec une souris) : le défilement bloqué, le navigateur la peint avec le fond de html, qu'aucun panneau fixe
+   ne peut recouvrir. Tant que l'intro ou le voile couvre l'écran, html prend donc leur couleur
+   (dès la première image) ; assets/js/socle/gouttiere.js suit ensuite leur mouvement. */
+html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); }
+html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }

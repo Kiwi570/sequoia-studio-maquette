@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="qui-sommes-nous" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Qui sommes-nous : Sequoia Studio, galerie d’art en ligne premium</title>
+<meta name="description" content="Sequoia Studio sélectionne et édite des œuvres contemporaines encadrées, pensées pour les intérieurs élégants et les collectionneurs exigeants.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/qui-sommes-nous">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Qui sommes-nous : Sequoia Studio, galerie d’art en ligne premium">
+<meta property="og:description" content="Sequoia Studio sélectionne et édite des œuvres contemporaines encadrées, pensées pour les intérieurs élégants et les collectionneurs exigeants.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/qui-sommes-nous">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/qui-sommes-nous-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gilles et Frédéric TOST dans le showroom Sequoia Studio">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Le studio</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio" aria-current="page">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio" aria-current="page">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<section class="scene scene--studio ecran" id="debut" data-scene style="--nuit:#110f0d">
+  <div class="studio-ouverture">
+    <div class="studio-photo" data-anime="gsap" data-scene-oeuvre><figure class="media " style="--cadrage:50% 35%;aspect-ratio:1023 / 1537;--cadrage-mobile:50% 30%">
+  <picture>
+    <img src="/assets/images/equipe/freres-tost-showroom-1023.webp" srcset="/assets/images/equipe/freres-tost-showroom-640.webp 640w, /assets/images/equipe/freres-tost-showroom-1023.webp 1023w" sizes="(max-width: 760px) 100vw, 42vw" alt="Gilles et Frédéric TOST dans le showroom Sequoia Studio, entourés d’œuvres" width="1023" height="1537" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure></div>
+  </div>
+  <div class="scene-texte scene-texte--studio">
+    <p class="surtitre" data-anime="gsap">Qui sommes-nous</p>
+    <h1 class="titre-hero titre-hero--moyen"><span class="ligne-masque"><span class="ligne" data-anime="gsap">Notre histoire</span></span></h1>
+    <p class="hero-sous hero-sous--texte" data-anime="gsap">Né de la complémentarité de Gilles et Frédéric TOST, frères jumeaux aux sensibilités distinctes, Sequoia Studio propose une sélection d’œuvres contemporaines choisies pour transcender vos espaces.</p>
+    <p class="hero-actions" data-anime="gsap"><a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie" data-action-principale data-magnetique><span>Découvrir la sélection</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    <p class="hero-info" data-info-cle data-anime="gsap">Fondé par Gilles et Frédéric TOST</p>
+  </div>
+</section>
+<section class="studio-bloc" id="ambition">
+  <div class="conteneur studio-grille">
+    <div>
+      <p class="studio-lettrine" data-anime>Leur ambition est de sélectionner, éditer et présenter des créations fortes, puis de les associer aux cadres parfaitement adaptés et aux finitions premium qui révèlent chaque pièce. Des œuvres pensées pour sublimer vos espaces, avec exigence, simplicité et qualité.</p>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Une galerie d’art mural</h2>
+</div>
+      <p data-anime>Sequoia Studio est une maison d’édition en ligne consacrée aux œuvres contemporaines encadrées. Nous sélectionnons des images capables d’apporter une présence à vos murs : paysages imaginaires, architectures graphiques, abstractions lumineuses et compositions pensées pour la décoration intérieure.</p>
+    </div>
+    <figure class="media " style="--cadrage:50% 50%;aspect-ratio:889 / 913">
+  <picture>
+    <img src="/assets/images/ambiances/salon-deux-oeuvres-889.webp" srcset="/assets/images/ambiances/salon-deux-oeuvres-640.webp 640w, /assets/images/ambiances/salon-deux-oeuvres-889.webp 889w" sizes="(max-width: 760px) 100vw, 45vw" alt="Deux œuvres Sequoia Studio dans un salon aux poutres apparentes" width="889" height="913" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+<section class="studio-bloc studio-bloc--inverse" id="selection">
+  <div class="conteneur studio-grille">
+    <figure class="media " style="--cadrage:50% 40%;aspect-ratio:1086 / 1448">
+  <picture>
+    <img src="/assets/images/equipe/gilles-tost-showroom-1086.webp" srcset="/assets/images/equipe/gilles-tost-showroom-640.webp 640w, /assets/images/equipe/gilles-tost-showroom-1086.webp 1086w" sizes="(max-width: 760px) 100vw, 40vw" alt="Gilles TOST présentant une œuvre encadrée dans le showroom" width="1086" height="1448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Une sélection pensée pour vos espaces</h2>
+</div>
+      <p data-anime>Chaque œuvre est choisie pour son équilibre visuel, sa force décorative et sa capacité à dialoguer avec une pièce. Notre rôle est de vous faire découvrir ce travail, puis de vous aider à trouver l’association juste entre image, format et encadrement.</p>
+      <p data-anime>Les deux frères jumeaux réunissent ainsi deux regards complémentaires : l’exploration artistique de Gilles et l’exigence digitale de Frédéric, au service d’une galerie claire, sélective et facile à parcourir.</p>
+    </div>
+  </div>
+</section>
+<section class="studio-bloc" id="atelier">
+  <div class="conteneur studio-grille">
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Un atelier de fabrication premium</h2>
+</div>
+      <p data-anime>Nos tableaux sont produits à la commande avec des supports et finitions choisis pour durer : impression fine art, aluminium, toile ou caisse américaine selon l’effet recherché. Le cadre n’est pas un simple accessoire, il prolonge l’œuvre et l’adapte à votre intérieur.</p>
+      <p data-anime>Du choix du format à la finition finale, notre ambition reste la même : proposer des œuvres prêtes à accrocher, élégantes, soignées, et capables de sublimer vos pièces avec une qualité galerie.</p>
+      <p data-anime><a href="/cadres-et-finitions" class="lien-fleche" data-libelle="Finitions">Finitions<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+    <figure class="media media--provisoire " data-visuel data-provisoire="atelier-nuit" style="aspect-ratio:16 / 10" role="img" aria-label="Atelier d’édition d’art la nuit : table de travail, papiers vierges, baguettes d’encadrement"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap70" cx=".35" cy=".45" r=".6"><stop offset="0" stop-color="#3b3128"/><stop offset="1" stop-color="#070606"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap70)"/><circle cx="560" cy="420" r="260" fill="#ffd99a" opacity=".08"/>
+    <rect x="160" y="560" width="900" height="26" fill="#6b4a2c"/><rect x="190" y="586" width="18" height="260" fill="#3d2a19"/><rect x="1010" y="586" width="18" height="260" fill="#3d2a19"/>
+    <rect x="260" y="524" width="300" height="10" fill="#f2ede4" opacity="0.9"/><rect x="274" y="514" width="300" height="10" fill="#f2ede4" opacity="0.78"/><rect x="288" y="504" width="300" height="10" fill="#f2ede4" opacity="0.66"/>
+    <circle cx="760" cy="540" r="26" fill="none" stroke="#b89a5e" stroke-width="5"/><rect x="782" y="556" width="40" height="7" rx="3" fill="#b89a5e" transform="rotate(35 782 556)"/>
+    <path d="M520 360 L560 520" stroke="#2a2420" stroke-width="8"/><path d="M490 340 h80 l-12 -40 h-56z" fill="#c9a66a"/>
+    <rect x="1200" y="260" width="22" height="560" fill="#0f0f0f" transform="rotate(-6 1210 820)"/><rect x="1246" y="290" width="22" height="530" fill="#d8d1c4" transform="rotate(-4 1256 820)"/><rect x="1292" y="260" width="22" height="560" fill="#8a6a44" transform="rotate(-2 1302 820)"/><rect x="1338" y="290" width="22" height="530" fill="#111" transform="rotate(0 1348 820)"/><rect x="1384" y="260" width="22" height="560" fill="#a07c52" transform="rotate(2 1394 820)"/>
+    <rect x="0" y="846" width="1600" height="54" fill="#060505"/></svg></figure>
+  </div>
+</section>
+<section class="createurs" id="createurs">
+  <div class="conteneur">
+    <div class="tete-section tete-section--centre ">
+  <h2 class="titre-section" data-titre-anime>Les créateurs de Sequoia Studio</h2>
+</div>
+    <div class="createurs-grille">
+      <figure class="createur" data-anime>
+        <figure class="media createur-photo" style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/equipe/gilles-tost-646.webp" srcset="/assets/images/equipe/gilles-tost-640.webp 640w, /assets/images/equipe/gilles-tost-646.webp 646w" sizes="(max-width: 760px) 50vw, 18vw" alt="Portrait de Gilles TOST" width="646" height="646" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <blockquote class="citation"><p>L’Art Digital me permet de traverser des univers multiples, de changer de registre, d’époque ou d’atmosphère, sans contrainte. Architecture, abstraction, paysages imaginaires ou compositions graphiques : chaque création est une invitation à ouvrir un nouveau dialogue avec l’espace qui l’accueille.</p></blockquote>
+        <figcaption><strong>Gilles TOST</strong><span>Créateur artistique</span></figcaption>
+      </figure><figure class="createur" data-anime>
+        <figure class="media createur-photo" style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/equipe/frederic-tost-692.webp" srcset="/assets/images/equipe/frederic-tost-640.webp 640w, /assets/images/equipe/frederic-tost-692.webp 692w" sizes="(max-width: 760px) 50vw, 18vw" alt="Portrait de Frédéric TOST" width="692" height="692" loading="lazy" decoding="async">
+  </picture>
+</figure>
+        <blockquote class="citation"><p>Après plusieurs mois de réflexion et de création, Sequoia Studio est né d’une volonté claire : valoriser pleinement le travail d’artistes contemporains du numérique, aux horizons et aux styles différents. Nous avons imaginé une plateforme à la fois minimaliste et innovante, pensée pour vous permettre de découvrir des signatures visuelles affirmées, de la photographie architecturale aux paysages réinventés, capables de sublimer vos espaces. Chaque création est originale et fait l’objet d’une fabrication premium, sans compromis sur la qualité ni sur l’exigence esthétique.</p></blockquote>
+        <figcaption><strong>Frédéric TOST</strong><span>Responsable des développements</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+<section class="fin-page" id="fin">
+  <div class="conteneur fin-grille">
+    <figure class="media " style="--cadrage:45% 50%;aspect-ratio:16 / 9">
+  <picture>
+    <img src="/assets/images/ambiances/console-trois-oeuvres-1280.webp" srcset="/assets/images/ambiances/console-trois-oeuvres-640.webp 640w, /assets/images/ambiances/console-trois-oeuvres-1280.webp 1280w, /assets/images/ambiances/console-trois-oeuvres-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 50vw" alt="Trois œuvres Sequoia Studio accrochées au-dessus d’une console" width="1280" height="476" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Une question, un conseil ?</h2>
+  <p class="tete-texte" data-anime>Écrivez-nous : le support répond par mail 7j/7.</p>
+</div>
+      <p class="fin-actions" data-anime><a class="bouton bouton--plein" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire à Sequoia Studio</span></a> <a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Voir la galerie</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio" aria-current="page">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

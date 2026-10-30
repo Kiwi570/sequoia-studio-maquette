@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="mentions-legales" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mentions légales : Sequoia Studio</title>
+<meta name="description" content="Mentions légales de Sequoia Studio, galerie d’art en ligne spécialisée dans les œuvres contemporaines encadrées.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/mentions-legales">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Mentions légales : Sequoia Studio">
+<meta property="og:description" content="Mentions légales de Sequoia Studio, galerie d’art en ligne spécialisée dans les œuvres contemporaines encadrées.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/mentions-legales">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/mentions-legales-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mentions légales de Sequoia Studio">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Mentions légales</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1" data-sans-action>
+<div data-barre-lecture aria-hidden="true"></div>
+<section class="legal-tete" id="debut" data-scene style="--nuit:#0e0d0c">
+  <div class="conteneur legal-tete-grille">
+    <div>
+      <h1 class="titre-hero titre-hero--moyen" data-anime="gsap">Mentions légales</h1>
+      <p class="legal-maj" data-anime="gsap">Dernière mise à jour : 23 février 2026</p>
+      <nav class="legal-sommaire" data-sommaire aria-label="Sommaire" data-anime="gsap"><ul><li><a href="#fiche" data-sans-transition>À compléter par le client</a></li><li><a href="#editeur" data-sans-transition>Éditeur du site</a></li><li><a href="#direction" data-sans-transition>Direction &amp; rédaction</a></li><li><a href="#hebergement" data-sans-transition>Hébergement</a></li><li><a href="#propriete" data-sans-transition>Propriété intellectuelle</a></li><li><a href="#credits" data-sans-transition>Crédits</a></li><li><a href="#donnees" data-sans-transition>Données personnelles &amp; cookies (RGPD)</a></li><li><a href="#responsabilites" data-sans-transition>Responsabilités &amp; litiges</a></li></ul></nav>
+    </div>
+    <figure class="media media--provisoire legal-image" data-visuel data-provisoire="mentions-archives" style="aspect-ratio:16 / 10" role="img" aria-label="Salle d’archives dans la pénombre, rayonnages de boîtes noires"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="1600" height="900" fill="#080807"/><rect x="140" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="158" y="160" width="20" height="8" fill="#6f5a36"/><rect x="210" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="228" y="160" width="20" height="8" fill="#6f5a36"/><rect x="280" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="298" y="160" width="20" height="8" fill="#6f5a36"/><rect x="350" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="368" y="160" width="20" height="8" fill="#6f5a36"/><rect x="420" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="438" y="160" width="20" height="8" fill="#6f5a36"/><rect x="490" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="508" y="160" width="20" height="8" fill="#6f5a36"/><rect x="560" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="578" y="160" width="20" height="8" fill="#6f5a36"/><rect x="630" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="648" y="160" width="20" height="8" fill="#6f5a36"/><rect x="700" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="718" y="160" width="20" height="8" fill="#6f5a36"/><rect x="770" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="788" y="160" width="20" height="8" fill="#6f5a36"/><rect x="134" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="152" y="290" width="20" height="8" fill="#6f5a36"/><rect x="204" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="222" y="290" width="20" height="8" fill="#6f5a36"/><rect x="274" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="292" y="290" width="20" height="8" fill="#6f5a36"/><rect x="344" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="362" y="290" width="20" height="8" fill="#6f5a36"/><rect x="414" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="432" y="290" width="20" height="8" fill="#6f5a36"/><rect x="484" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="502" y="290" width="20" height="8" fill="#6f5a36"/><rect x="554" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="572" y="290" width="20" height="8" fill="#6f5a36"/><rect x="624" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="642" y="290" width="20" height="8" fill="#6f5a36"/><rect x="694" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="712" y="290" width="20" height="8" fill="#6f5a36"/><rect x="764" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="782" y="290" width="20" height="8" fill="#6f5a36"/><rect x="128" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="146" y="420" width="20" height="8" fill="#6f5a36"/><rect x="198" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="216" y="420" width="20" height="8" fill="#6f5a36"/><rect x="268" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="286" y="420" width="20" height="8" fill="#6f5a36"/><rect x="338" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="356" y="420" width="20" height="8" fill="#6f5a36"/><rect x="408" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="426" y="420" width="20" height="8" fill="#6f5a36"/><rect x="478" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="496" y="420" width="20" height="8" fill="#6f5a36"/><rect x="548" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="566" y="420" width="20" height="8" fill="#6f5a36"/><rect x="618" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="636" y="420" width="20" height="8" fill="#6f5a36"/><rect x="688" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="706" y="420" width="20" height="8" fill="#6f5a36"/><rect x="758" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="776" y="420" width="20" height="8" fill="#6f5a36"/><rect x="122" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="140" y="550" width="20" height="8" fill="#6f5a36"/><rect x="192" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="210" y="550" width="20" height="8" fill="#6f5a36"/><rect x="262" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="280" y="550" width="20" height="8" fill="#6f5a36"/><rect x="332" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="350" y="550" width="20" height="8" fill="#6f5a36"/><rect x="402" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="420" y="550" width="20" height="8" fill="#6f5a36"/><rect x="472" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="490" y="550" width="20" height="8" fill="#6f5a36"/><rect x="542" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="560" y="550" width="20" height="8" fill="#6f5a36"/><rect x="612" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="630" y="550" width="20" height="8" fill="#6f5a36"/><rect x="682" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="700" y="550" width="20" height="8" fill="#6f5a36"/><rect x="752" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="770" y="550" width="20" height="8" fill="#6f5a36"/><rect x="116" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="134" y="680" width="20" height="8" fill="#6f5a36"/><rect x="186" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="204" y="680" width="20" height="8" fill="#6f5a36"/><rect x="256" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="274" y="680" width="20" height="8" fill="#6f5a36"/><rect x="326" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="344" y="680" width="20" height="8" fill="#6f5a36"/><rect x="396" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="414" y="680" width="20" height="8" fill="#6f5a36"/><rect x="466" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="484" y="680" width="20" height="8" fill="#6f5a36"/><rect x="536" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="554" y="680" width="20" height="8" fill="#6f5a36"/><rect x="606" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="624" y="680" width="20" height="8" fill="#6f5a36"/><rect x="676" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="694" y="680" width="20" height="8" fill="#6f5a36"/><rect x="746" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="764" y="680" width="20" height="8" fill="#6f5a36"/>
+    <rect x="860" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="878" y="160" width="20" height="8" fill="#6f5a36"/><rect x="930" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="948" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1000" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1018" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1070" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1088" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1140" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1158" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1210" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1228" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1280" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1298" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1350" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1368" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1420" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1438" y="160" width="20" height="8" fill="#6f5a36"/><rect x="1490" y="130" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1508" y="160" width="20" height="8" fill="#6f5a36"/><rect x="866" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="884" y="290" width="20" height="8" fill="#6f5a36"/><rect x="936" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="954" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1006" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1024" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1076" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1094" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1146" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1164" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1216" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1234" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1286" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1304" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1356" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1374" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1426" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1444" y="290" width="20" height="8" fill="#6f5a36"/><rect x="1496" y="260" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1514" y="290" width="20" height="8" fill="#6f5a36"/><rect x="872" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="890" y="420" width="20" height="8" fill="#6f5a36"/><rect x="942" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="960" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1012" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1030" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1082" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1100" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1152" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1170" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1222" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1240" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1292" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1310" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1362" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1380" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1432" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1450" y="420" width="20" height="8" fill="#6f5a36"/><rect x="1502" y="390" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1520" y="420" width="20" height="8" fill="#6f5a36"/><rect x="878" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="896" y="550" width="20" height="8" fill="#6f5a36"/><rect x="948" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="966" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1018" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1036" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1088" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1106" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1158" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1176" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1228" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1246" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1298" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1316" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1368" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1386" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1438" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1456" y="550" width="20" height="8" fill="#6f5a36"/><rect x="1508" y="520" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1526" y="550" width="20" height="8" fill="#6f5a36"/><rect x="884" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="902" y="680" width="20" height="8" fill="#6f5a36"/><rect x="954" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="972" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1024" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1042" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1094" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1112" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1164" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1182" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1234" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1252" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1304" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1322" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1374" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1392" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1444" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1462" y="680" width="20" height="8" fill="#6f5a36"/><rect x="1514" y="650" width="56" height="100" fill="#141312" stroke="#1d1b19"/><rect x="1532" y="680" width="20" height="8" fill="#6f5a36"/>
+    <ellipse cx="800" cy="820" rx="200" ry="50" fill="#f3d9a6" opacity=".12"/></svg></figure>
+  </div>
+</section>
+<div class="texte-long conteneur" data-sans-visuel>
+  <section id="fiche" data-sans-visuel class="legal-section legal-fiche">
+    <h2>À compléter par le client</h2>
+    <p>Informations à fournir ou à confirmer avant la mise en ligne définitive :</p><ul class="fiche-a-completer"><li>Numéro de TVA intracommunautaire : « Non applicable » (art. 293 B du CGI) à confirmer <span class="a-completer">à compléter</span></li><li>Hébergeur du site définitif (aujourd’hui Alwaysdata pour sequoiastudio.fr) <span class="a-completer">à compléter</span></li><li>Téléphones à publier ou non (ceux de la direction figurent sur le site actuel) <span class="a-completer">à compléter</span></li><li>Médiateur de la consommation : adhésion à la FEVAD à confirmer <span class="a-completer">à compléter</span></li><li>Exemplaires déjà vendus par œuvre (pour afficher les exemplaires restants) <span class="a-completer">à compléter</span></li><li>Frais de livraison : offerts (fiche produit) ou calculés selon le format (CGV) ? <span class="a-completer">à compléter</span></li><li>Moyens de paiement réellement acceptés (CGV : carte bancaire seule) <span class="a-completer">à compléter</span></li><li>Fichiers des œuvres en haute définition (aujourd’hui 800 px au plus) <span class="a-completer">à compléter</span></li><li>Confirmation de l’identité des trois artistes et de leurs portraits <span class="a-completer">à compléter</span></li></ul>
+  </section><section id="editeur" data-sans-visuel class="legal-section">
+    <h2>Éditeur du site</h2>
+    <p class="legal-lignes">Dénomination sociale : TOST Unlimited (SAS)<br>Forme juridique : Société par Actions Simplifiée<br>Capital social : 1 000 €<br>Siège social : 4 Clos Henri Becquerel, 31170 Tournefeuille, France<br>RCS Toulouse : 985 352 103<br>Numéro de TVA intracommunautaire : Non Applicable</p>
+  </section><section id="direction" data-sans-visuel class="legal-section">
+    <h2>Direction &amp; rédaction</h2>
+    <p class="legal-lignes">Directeur de l’entreprise : Frédéric TOST, Président<br>frederic@tostunlimited.com · +33 6 32 45 94 39<br>Responsable de la rédaction : Gilles TOST, Directeur général<br>gilles@tostunlimited.com · +33 6 49 32 19 25</p>
+  </section><section id="hebergement" data-sans-visuel class="legal-section">
+    <h2>Hébergement</h2>
+    <p class="legal-lignes">Maquette hébergée par Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis.<br>Site actuel sequoiastudio.fr : ALWAYSDATA, SARL au capital de 200 000 €, RCS Paris 492 893 490, 91 rue du Faubourg Saint-Honoré, 75008 Paris.</p>
+  </section><section id="propriete" data-sans-visuel class="legal-section">
+    <h2>Propriété intellectuelle</h2>
+    <p>Tous les contenus (textes, images, graphismes, logos, vidéos…) présents sur ce site sont la propriété exclusive de TOST Unlimited ou de leurs auteurs. Toute reproduction, représentation, adaptation ou exploitation, sans autorisation préalable, est interdite.</p>
+  </section><section id="credits" data-sans-visuel class="legal-section">
+    <h2>Crédits</h2>
+    <p>Œuvres, photographies du showroom, des finitions et des certificats, mises en situation et logo : Sequoia Studio.</p><p>Certaines images d’ambiance (murs, intérieurs de nuit, atelier, matières) sont des illustrations générées par intelligence artificielle ; chacune porte la mention « Illustration générée », à conserver sur le site définitif. Elles ne montrent aucune œuvre du catalogue.</p><p>Polices Instrument Serif et Geist, sous licence SIL Open Font License, hébergées avec le site.</p>
+  </section><section id="donnees" data-sans-visuel class="legal-section">
+    <h2>Données personnelles &amp; cookies (RGPD)</h2>
+    <p>Les données collectées via les formulaires sont exclusivement utilisées pour répondre à vos demandes.</p><p>Conformément au RGPD, vous disposez d’un droit d’accès, de rectification, et de suppression (contactez-nous par email).</p><p>Ce site utilise des cookies techniques pour améliorer votre navigation.</p><p>Maquette : aucun formulaire n’envoie de données ; le panier et vos préférences d’affichage sont seulement gardés dans votre navigateur.</p>
+  </section><section id="responsabilites" data-sans-visuel class="legal-section">
+    <h2>Responsabilités &amp; litiges</h2>
+    <p>Contenu : TOST Unlimited veille à la fiabilité des informations publiées, mais ne peut garantir leur exhaustivité.</p><p>Liens externes : TOST Unlimited décline toute responsabilité quant au contenu des liens externes.</p><p>Litiges : Le présent site est régi par la loi française. Tribunal compétent : siège social de l’entreprise.</p>
+  </section>
+</div>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales" aria-current="page">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

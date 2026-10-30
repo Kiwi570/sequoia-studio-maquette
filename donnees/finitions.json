@@ -1,0 +1,80 @@
+[
+ {
+  "id": "toile",
+  "nom": "Toile insonorisée",
+  "court": "Toile insonorisée",
+  "support": "Photo sur toile avec absorbeur acoustique",
+  "cadre": "Le cadre en bois sert de support à la toile",
+  "echantillon": "finitions/toile-insonorisee-echantillon",
+  "matiere": "toile",
+  "source": "toile_insonorisee",
+  "supplement": 0,
+  "parCm": 0,
+  "marge": 0,
+  "epaisseur": 4,
+  "maxLong": 120,
+  "maxCourt": 80,
+  "texte": [
+   "La toile insonorisée est réalisée dans le même matériau que notre toile photo classique, avec une épaisseur de 4 cm. L’impression est réalisée en très haute qualité. Le visuel est prolongé sur les quatre bords, et lors de la mise en tension sur le cadre, seule cette partie prolongée est repliée.",
+   "La toile insonorisée contient surtout une mousse acoustique de 40 mm d’épaisseur, appelée mousse de résine de mélamine. Cette mousse est reconnue pour sa capacité à absorber efficacement le son sur une large plage de fréquences, avec une performance particulièrement élevée dans les moyennes et hautes fréquences.",
+   "Coefficients d’absorption acoustique, mesurés selon la norme DIN EN ISO 10534-2 : 125 Hz: 0.29 / 250 Hz: 0.30 / 500 Hz: 0.45 / 1000 Hz: 0.80 / 2000 Hz: 0.98 / 4000 Hz: 0.94"
+  ]
+ },
+ {
+  "id": "caisse-noire",
+  "nom": "Alu Dibond, caisse américaine noire",
+  "court": "Caisse noire",
+  "support": "Impression directe sur Alu Dibond 3 mm, finition mat anti-reflet",
+  "cadre": "Caisse américaine teinte noire",
+  "echantillon": "finitions/caisse-noire-echantillon",
+  "matiere": "alu",
+  "source": "caisse_americaine_black",
+  "supplement": 130,
+  "parCm": 1.5,
+  "marge": 1.8,
+  "epaisseur": 3.7,
+  "maxLong": 120,
+  "maxCourt": 80,
+  "texte": [
+   "Cette finition associe une impression sur aluminium 3 mm mat à une caisse américaine noire. La caisse américaine crée un effet flottant très apprécié en studio, grâce à un espace visible de 8 mm entre l’image et le cadre. Le noir renforce le contraste et donne une présence graphique plus marquée. Caractéristiques de la caisse américaine : hauteur du cadre de 3,7 cm (vue latérale), épaisseur du cadre de 1 cm (vue frontale), profondeur du cadre au dos : 2,5 cm."
+  ]
+ },
+ {
+  "id": "caisse-blanche",
+  "nom": "Alu Dibond, caisse américaine blanche",
+  "court": "Caisse blanche",
+  "support": "Impression directe sur Alu Dibond 3 mm, finition mat anti-reflet",
+  "cadre": "Caisse américaine teinte blanche",
+  "echantillon": "finitions/caisse-blanche-echantillon",
+  "matiere": "alu",
+  "source": "caisse_americaine_white",
+  "supplement": 130,
+  "parCm": 1.5,
+  "marge": 1.8,
+  "epaisseur": 3.7,
+  "maxLong": 120,
+  "maxCourt": 80,
+  "texte": [
+   "Cette finition associe une impression sur aluminium 3 mm mat à une caisse américaine blanche. La caisse américaine crée un effet flottant très apprécié en studio, grâce à un espace visible de 8 mm entre l’image et le cadre. Le blanc apporte une lecture plus lumineuse et discrète, idéale pour des ambiances claires et contemporaines. Caractéristiques de la caisse américaine : hauteur du cadre de 3,7 cm (vue latérale), épaisseur du cadre de 1 cm (vue frontale), profondeur du cadre au dos : 2,5 cm."
+  ]
+ },
+ {
+  "id": "fineart",
+  "nom": "FineArt Hahnemühle, cadre bois noir",
+  "court": "FineArt encadré",
+  "support": "Papier photo FineArt Hahnemühle",
+  "cadre": "Cadre bois noir mat avec passe-partout blanc et vitre anti-reflet",
+  "echantillon": "finitions/cadre-bois-echantillon",
+  "matiere": "papier",
+  "source": "wood_black_passe-partout_white",
+  "supplement": 240,
+  "parCm": 1.8,
+  "marge": 8,
+  "epaisseur": 3,
+  "maxLong": 110,
+  "maxCourt": 70,
+  "texte": [
+   "Vous souhaitez présenter vos photos préférées de manière traditionnelle, rehaussées de passe-partout raffinés et de cadres classiques. Une impression Papier Fine Art de type Hahnemühle Photo Rag Ultra Smooth qui est un papier artistique en coton particulièrement lisse, qui possède une structure très fine et une surface veloutée. Il se prête aussi bien aux photographies FineArt qu'aux reproductions d'art. Grammage: 305 g/m² | Blancheur: 94% | Dmax: 1,7 | Degré de brillance: mat | Surface: non texturé | Azurants optiques: oui | Matériau: 100% coton. Il est proposé avec un passe-partout en carton de musée d'une épaisseur de 1,4 mm et couleur Blanc Naturel. Le carton musée reçoit une coupe diagonale précise et est placé juste à côté votre photo pour que celle-ci ne soit pas cachée.Sa largeur peut varier de 3 à 30 cm en fonction de la taille de l'oeuvre, afin de créer un équilibre visuel harmonieux."
+  ]
+ }
+]

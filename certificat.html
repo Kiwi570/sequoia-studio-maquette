@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="certificat" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Certificat d’authenticité pour œuvre d’art : Sequoia Studio</title>
+<meta name="description" content="Chaque œuvre Sequoia Studio est accompagnée d’un certificat d’authenticité signé, sécurisé par hologramme et technologie NFC.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/certificat">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Certificat d’authenticité pour œuvre d’art : Sequoia Studio">
+<meta property="og:description" content="Chaque œuvre Sequoia Studio est accompagnée d’un certificat d’authenticité signé, sécurisé par hologramme et technologie NFC.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/certificat">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/certificat-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Certificat d’authenticité Sequoia Studio avec hologramme et puce NFC">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Certificat</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat" aria-current="page">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat" aria-current="page">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<section class="scene scene--certificat ecran" id="debut" data-scene style="--nuit:#100d14">
+  <div class="scene-fond scene-fond--plein"><figure class="media media--provisoire " data-visuel data-provisoire="texture-hologramme" role="img" aria-label="Feuille holographique irisée, vue de très près"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="ap14" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2a1f4a"/><stop offset=".25" stop-color="#3fb7a8"/><stop offset=".45" stop-color="#e9c46a"/><stop offset=".62" stop-color="#e98bb8"/><stop offset=".8" stop-color="#6a5acd"/><stop offset="1" stop-color="#0b0b0c"/></linearGradient>
+    <radialGradient id="vp14" cx=".5" cy=".5" r=".7"><stop offset=".3" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".85"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="#0b0b0c"/><path d="M-100 700 C300 200 900 1000 1700 200 L1700 900 L-100 900Z" fill="url(#ap14)" opacity=".55"/>
+    <path d="M-200 900 L300 0" stroke="#fff" stroke-opacity=".05"/><path d="M-168 900 L332 0" stroke="#fff" stroke-opacity=".05"/><path d="M-136 900 L364 0" stroke="#fff" stroke-opacity=".05"/><path d="M-104 900 L396 0" stroke="#fff" stroke-opacity=".05"/><path d="M-72 900 L428 0" stroke="#fff" stroke-opacity=".05"/><path d="M-40 900 L460 0" stroke="#fff" stroke-opacity=".05"/><path d="M-8 900 L492 0" stroke="#fff" stroke-opacity=".05"/><path d="M24 900 L524 0" stroke="#fff" stroke-opacity=".05"/><path d="M56 900 L556 0" stroke="#fff" stroke-opacity=".05"/><path d="M88 900 L588 0" stroke="#fff" stroke-opacity=".05"/><path d="M120 900 L620 0" stroke="#fff" stroke-opacity=".05"/><path d="M152 900 L652 0" stroke="#fff" stroke-opacity=".05"/><path d="M184 900 L684 0" stroke="#fff" stroke-opacity=".05"/><path d="M216 900 L716 0" stroke="#fff" stroke-opacity=".05"/><path d="M248 900 L748 0" stroke="#fff" stroke-opacity=".05"/><path d="M280 900 L780 0" stroke="#fff" stroke-opacity=".05"/><path d="M312 900 L812 0" stroke="#fff" stroke-opacity=".05"/><path d="M344 900 L844 0" stroke="#fff" stroke-opacity=".05"/><path d="M376 900 L876 0" stroke="#fff" stroke-opacity=".05"/><path d="M408 900 L908 0" stroke="#fff" stroke-opacity=".05"/><path d="M440 900 L940 0" stroke="#fff" stroke-opacity=".05"/><path d="M472 900 L972 0" stroke="#fff" stroke-opacity=".05"/><path d="M504 900 L1004 0" stroke="#fff" stroke-opacity=".05"/><path d="M536 900 L1036 0" stroke="#fff" stroke-opacity=".05"/><path d="M568 900 L1068 0" stroke="#fff" stroke-opacity=".05"/><path d="M600 900 L1100 0" stroke="#fff" stroke-opacity=".05"/><path d="M632 900 L1132 0" stroke="#fff" stroke-opacity=".05"/><path d="M664 900 L1164 0" stroke="#fff" stroke-opacity=".05"/><path d="M696 900 L1196 0" stroke="#fff" stroke-opacity=".05"/><path d="M728 900 L1228 0" stroke="#fff" stroke-opacity=".05"/><path d="M760 900 L1260 0" stroke="#fff" stroke-opacity=".05"/><path d="M792 900 L1292 0" stroke="#fff" stroke-opacity=".05"/><path d="M824 900 L1324 0" stroke="#fff" stroke-opacity=".05"/><path d="M856 900 L1356 0" stroke="#fff" stroke-opacity=".05"/><path d="M888 900 L1388 0" stroke="#fff" stroke-opacity=".05"/><path d="M920 900 L1420 0" stroke="#fff" stroke-opacity=".05"/><path d="M952 900 L1452 0" stroke="#fff" stroke-opacity=".05"/><path d="M984 900 L1484 0" stroke="#fff" stroke-opacity=".05"/><path d="M1016 900 L1516 0" stroke="#fff" stroke-opacity=".05"/><path d="M1048 900 L1548 0" stroke="#fff" stroke-opacity=".05"/><path d="M1080 900 L1580 0" stroke="#fff" stroke-opacity=".05"/><path d="M1112 900 L1612 0" stroke="#fff" stroke-opacity=".05"/><path d="M1144 900 L1644 0" stroke="#fff" stroke-opacity=".05"/><path d="M1176 900 L1676 0" stroke="#fff" stroke-opacity=".05"/><path d="M1208 900 L1708 0" stroke="#fff" stroke-opacity=".05"/><path d="M1240 900 L1740 0" stroke="#fff" stroke-opacity=".05"/><path d="M1272 900 L1772 0" stroke="#fff" stroke-opacity=".05"/><path d="M1304 900 L1804 0" stroke="#fff" stroke-opacity=".05"/><path d="M1336 900 L1836 0" stroke="#fff" stroke-opacity=".05"/><path d="M1368 900 L1868 0" stroke="#fff" stroke-opacity=".05"/><path d="M1400 900 L1900 0" stroke="#fff" stroke-opacity=".05"/><path d="M1432 900 L1932 0" stroke="#fff" stroke-opacity=".05"/><path d="M1464 900 L1964 0" stroke="#fff" stroke-opacity=".05"/><path d="M1496 900 L1996 0" stroke="#fff" stroke-opacity=".05"/><path d="M1528 900 L2028 0" stroke="#fff" stroke-opacity=".05"/><path d="M1560 900 L2060 0" stroke="#fff" stroke-opacity=".05"/><path d="M1592 900 L2092 0" stroke="#fff" stroke-opacity=".05"/><path d="M1624 900 L2124 0" stroke="#fff" stroke-opacity=".05"/><path d="M1656 900 L2156 0" stroke="#fff" stroke-opacity=".05"/><path d="M1688 900 L2188 0" stroke="#fff" stroke-opacity=".05"/>
+    <rect width="1600" height="900" fill="url(#vp14)"/></svg></figure></div>
+  <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
+  <div class="certificat-ouverture" data-anime="gsap" data-scene-oeuvre data-visuel><div class="certificat certificat--ouverture" data-certificat role="img" aria-label="Spécimen du certificat d’authenticité de « Solitude Hivernale », Darren Whitmore : titre, artiste, année, technique, format, numéro d’exemplaire, signature, hologramme et puce NFC" data-audit-ignorer>
+  <span class="certificat-reflet" aria-hidden="true"></span>
+  <p class="certificat-titre">Certificat d’authenticité</p>
+  <dl class="certificat-grille">
+    <div class="certificat-oeuvre"><dt>Titre de l’œuvre</dt><dd>Solitude Hivernale</dd></div>
+    <div><dt>Artiste</dt><dd>Darren Whitmore</dd></div>
+    <div><dt>Année</dt><dd>2021</dd></div>
+    <div><dt>Technique</dt><dd>création numérique</dd></div>
+    <div><dt>Format</dt><dd>120 × 70 cm</dd></div>
+    <div><dt>Numéro</dt><dd>N° __ / 30</dd></div>
+    <div class="certificat-signature"><dt>Signature de l’artiste</dt><dd><span class="certificat-ligne"></span></dd></div>
+  </dl>
+  <div class="certificat-vignette"><img src="/assets/images/oeuvres/solitude-hivernale-640.webp" alt="" width="800" height="448" loading="lazy" decoding="async"></div>
+  <p class="certificat-texte">Exemplaire d’une édition limitée, numérotée, produite et sécurisée par un dispositif électronique garantissant son origine et sa traçabilité.</p>
+  <p class="certificat-pied"><span>Certifié par <strong>Sequoia Studio</strong></span><span class="certificat-holo" aria-hidden="true"><span>NFC</span></span></p>
+  <p class="certificat-specimen" aria-hidden="true">Spécimen</p>
+</div></div>
+  <div class="scene-texte scene-texte--certificat">
+    <p class="surtitre" data-anime="gsap">Sécurisation de l’œuvre &amp; traçabilité pour la transmission</p>
+    <h1 class="titre-hero titre-hero--moyen"><span class="ligne-masque"><span class="ligne" data-anime="gsap">Certificat d’authenticité</span></span></h1>
+    <p class="hero-sous hero-sous--texte" data-anime="gsap">Chaque œuvre est accompagnée d’un certificat d’authenticité signé, sécurisé par un hologramme et une puce NFC.</p>
+    <p class="hero-actions" data-anime="gsap"><a class="bouton bouton--plein" href="#verification" data-action-principale data-magnetique><span>Voir la vérification</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    <p class="hero-info" data-info-cle data-anime="gsap">Hologramme et puce NFC, sur le certificat et sur l’œuvre</p>
+  </div>
+</section>
+<section class="techno" id="technologies">
+  <div class="conteneur techno-grille">
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Les nouvelles technologies pour assurer l’authenticité</h2>
+</div>
+      <p data-anime>Pour renforcer la fiabilité du certificat d’authenticité, Sequoia Studio intègre des technologies de sécurisation inspirées des standards utilisés dans les domaines de la protection documentaire et de la lutte des contrefaçons. Chaque certificat est équipé d’un hologramme de sécurité associé à une puce NFC (Near Field Communication) disposant d’un identifiant unique et non copiable.</p>
+      <p data-anime>Cette technologie permet de créer une identité numérique propre à chaque œuvre. Lorsqu’une étiquette est scannée avec un smartphone (Android ou iPhone), une vérification cryptographique est automatiquement réalisée afin de confirmer l’authenticité de l’identifiant embarqué. Cette couche de sécurité rend la reproduction ou la falsification particulièrement complexe.</p>
+      <p data-anime>Pour préserver l’efficacité du système, certains détails techniques ne sont volontairement pas rendus publics. Cette confidentialité participe directement à la robustesse de la protection. Une application compatible Android et iPhone permet de vérifier facilement l’authenticité du certificat via une simple lecture NFC.</p>
+    </div>
+    <figure class="media " style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/certificat/hologramme-nfc-1280.webp" srcset="/assets/images/certificat/hologramme-nfc-640.webp 640w, /assets/images/certificat/hologramme-nfc-1280.webp 1280w, /assets/images/certificat/hologramme-nfc-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 45vw" alt="Hologramme et étiquette NFC Sequoia Studio devant une œuvre encadrée" width="1280" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+</section>
+<section class="double" id="double-securisation" data-double>
+  <div class="conteneur">
+    <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>La double sécurisation Certificat &amp; Œuvre</h2>
+  <p class="tete-texte" data-anime>Le principe de la double protection repose sur une idée simple : sécuriser à la fois le certificat papier et l’œuvre elle-même. Deux étiquettes distinctes sont fournies pour chaque acquisition d’une œuvre.</p>
+</div>
+  </div>
+  <div class="conteneur double-grille">
+    <figure class="double-cote" data-anime>
+      <div class="double-certificat"><div class="certificat certificat--petit" data-certificat role="img" aria-label="Spécimen du certificat d’authenticité de « Solitude Hivernale », Darren Whitmore : titre, artiste, année, technique, format, numéro d’exemplaire, signature, hologramme et puce NFC" data-audit-ignorer>
+  <span class="certificat-reflet" aria-hidden="true"></span>
+  <p class="certificat-titre">Certificat d’authenticité</p>
+  <dl class="certificat-grille">
+    <div class="certificat-oeuvre"><dt>Titre de l’œuvre</dt><dd>Solitude Hivernale</dd></div>
+    <div><dt>Artiste</dt><dd>Darren Whitmore</dd></div>
+    <div><dt>Année</dt><dd>2021</dd></div>
+    <div><dt>Technique</dt><dd>création numérique</dd></div>
+    <div><dt>Format</dt><dd>120 × 70 cm</dd></div>
+    <div><dt>Numéro</dt><dd>N° __ / 30</dd></div>
+    <div class="certificat-signature"><dt>Signature de l’artiste</dt><dd><span class="certificat-ligne"></span></dd></div>
+  </dl>
+  <div class="certificat-vignette"><img src="/assets/images/oeuvres/solitude-hivernale-640.webp" alt="" width="800" height="448" loading="lazy" decoding="async"></div>
+  <p class="certificat-texte">Exemplaire d’une édition limitée, numérotée, produite et sécurisée par un dispositif électronique garantissant son origine et sa traçabilité.</p>
+  <p class="certificat-pied"><span>Certifié par <strong>Sequoia Studio</strong></span><span class="certificat-holo" aria-hidden="true"><span>NFC</span></span></p>
+  <p class="certificat-specimen" aria-hidden="true">Spécimen</p>
+</div></div>
+      <figcaption><span class="eclate-puce" aria-hidden="true">1</span>Étiquette 1 : sur le certificat</figcaption>
+    </figure>
+    <svg class="double-fil" viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true" data-double-fil><path d="M0 50 C60 0 140 100 200 50" pathLength="1"/></svg>
+    <figure class="double-cote" data-anime>
+      <figure class="media " style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/certificat/etiquette-dos-cadre-hologramme-1280.webp" srcset="/assets/images/certificat/etiquette-dos-cadre-hologramme-640.webp 640w, /assets/images/certificat/etiquette-dos-cadre-hologramme-1280.webp 1280w, /assets/images/certificat/etiquette-dos-cadre-hologramme-1920.webp 1920w" sizes="(max-width: 760px) 80vw, 30vw" alt="Étiquette NFC et hologramme posés au dos du cadre d’une œuvre" width="1280" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <figcaption><span class="eclate-puce" aria-hidden="true">2</span>Étiquette 2 : au dos de l’œuvre</figcaption>
+    </figure>
+  </div>
+  <div class="conteneur double-texte">
+    <p data-anime>La première étiquette est apposée directement sur le certificat papier d’authenticité. La seconde est destinée à être placée sur l’œuvre, généralement au dos du cadre ou dans une zone discrète choisie par l’acquéreur. Cette approche permet de créer un lien direct entre le certificat et l’œuvre, tout en renforçant la traçabilité globale.</p>
+    <p data-anime>Une notice explicative accompagne chaque œuvre afin de guider l’acheteur dans la pose et l’utilisation des étiquettes.</p>
+  </div>
+</section>
+<section class="verification" id="verification" data-verification>
+  <div class="conteneur verification-grille">
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Vérification par smartphone</h2>
+</div>
+      <p data-anime>La vérification de l’authenticité a été pensée pour être simple et accessible. Un smartphone compatible NFC — aujourd’hui disponible sur la grande majorité des appareils Android et iPhone — suffit pour contrôler une étiquette.</p>
+      <p data-anime>En approchant simplement le téléphone de l’étiquette, le système lance automatiquement une vérification sécurisée. Une fois la lecture effectuée, une page de confirmation s’affiche avec les informations correspondant à l’élément scanné.</p>
+      <p data-anime>Selon l’étiquette utilisée, le smartphone affichera soit l’image associée au certificat d’authenticité, soit celle correspondant directement à l’œuvre. Grâce à cette expérience fluide, la vérification devient un geste simple, rapide et rassurant, aussi bien pour le propriétaire actuel que pour un futur acquéreur.</p>
+    </div>
+    <div class="demo-nfc" data-demo-nfc>
+      <p class="petit-titre">Essayez le geste</p>
+      <div class="demo-nfc-scene">
+        <div class="demo-nfc-etiquette" aria-hidden="true"><span class="certificat-holo"><span>NFC</span></span></div>
+        <svg class="demo-nfc-ondes" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="30"/><circle cx="100" cy="100" r="30"/></svg>
+        <div class="demo-nfc-telephone" data-demo-nfc-telephone>
+          <div class="demo-nfc-ecran">
+            <img src="/assets/images/logo-nuit-256.webp" alt="" width="64" height="64">
+            <p class="demo-nfc-etat" data-demo-nfc-etat role="status" aria-live="polite">Approcher le téléphone</p>
+            <ul class="demo-nfc-etapes" data-demo-nfc-etapes>
+              <li>Lecture de la signature NFC…</li><li>Contrôle cryptographique…</li><li>Votre certificat d’authenticité est valide.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p><button type="button" class="bouton bouton--contour" data-demo-nfc-bouton data-libelle-recommencer="Recommencer">Approcher le téléphone</button></p>
+      <p class="outil-note">Démonstration illustrative : aucune puce n’est lue.</p>
+    </div>
+  </div>
+  <div class="conteneur"><figure class="media verification-photo" style="--cadrage:50% 50%;aspect-ratio:16 / 9">
+  <picture>
+    <img src="/assets/images/certificat/verification-smartphone-1280.webp" srcset="/assets/images/certificat/verification-smartphone-640.webp 640w, /assets/images/certificat/verification-smartphone-1280.webp 1280w, /assets/images/certificat/verification-smartphone-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 50vw" alt="Smartphone affichant la validation d’un certificat d’authenticité" width="1280" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure></div>
+</section>
+<section class="transmission" id="transmission">
+  <div class="conteneur transmission-grille">
+    <figure class="media media--provisoire " data-visuel data-provisoire="atelier-gants" style="aspect-ratio:4 / 3" role="img" aria-label="Gants d’archiviste, enveloppe et sticker holographique sur une table de noyer"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap15" cx=".5" cy=".45" r=".65"><stop offset="0" stop-color="#4a3322"/><stop offset="1" stop-color="#0b0807"/></radialGradient>
+    <linearGradient id="hp15" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9a7ff"/><stop offset=".33" stop-color="#7fe0d2"/><stop offset=".66" stop-color="#f3d27a"/><stop offset="1" stop-color="#f29bc5"/></linearGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap15)"/>
+    <rect x="620" y="330" width="420" height="270" rx="6" fill="#efe6d4" transform="rotate(-6 830 465)"/><path d="M620 330 L830 470 L1040 330" fill="none" stroke="#d6cbb4" stroke-width="3" transform="rotate(-6 830 465)"/>
+    <circle cx="1130" cy="560" r="44" fill="url(#hp15)"/><circle cx="1130" cy="560" r="44" fill="none" stroke="#fff" stroke-opacity=".5"/>
+    <path d="M300 600 q-30 -140 20 -200 q30 -20 40 30 l10 -90 q20 -30 40 0 l4 100 l14 -110 q22 -26 40 4 l-6 120 l26 -90 q24 -16 34 10 l-30 140 q-10 90 -110 110z" fill="#f4f1ea" opacity=".92"/></svg></figure>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Revente, perte ou vol</h2>
+</div>
+      <p data-anime>Cette double sécurisation apporte également une valeur supplémentaire lors d’une revente ou d’une transmission. Le propriétaire peut signaler une cession à Sequoia Studio afin de maintenir un historique de traçabilité et de renforcer la confiance entre vendeur et futur acquéreur.</p>
+      <p data-anime>Pour des raisons de sécurité et dans l’intérêt de l’acheteur, le certificat d’authenticité est expédié séparément. En cas de perte, de vol ou de toute situation compromettant son intégrité, en accord avec l’acheteur, Sequoia Studio pourra prononcer la radiation, afin de préserver la traçabilité de l’œuvre, puis peut en assurer la réémission selon ses procédures.</p>
+    </div>
+  </div>
+</section>
+<section class="fin-page" id="fin">
+  <div class="conteneur fin-grille">
+    <figure class="media " style="--cadrage:45% 55%;aspect-ratio:16 / 9">
+  <picture>
+    <img src="/assets/images/certificat/hologramme-gros-plan-1280.webp" srcset="/assets/images/certificat/hologramme-gros-plan-640.webp 640w, /assets/images/certificat/hologramme-gros-plan-1280.webp 1280w, /assets/images/certificat/hologramme-gros-plan-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 45vw" alt="Gros plan sur l’hologramme NFC d’un certificat Sequoia Studio" width="1280" height="720" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Pour aller plus loin</h2>
+  <p class="tete-texte" data-anime>Lisez notre article sur les certificats d’authenticité, ou choisissez une œuvre : son certificat l’accompagne.</p>
+</div>
+      <p class="fin-actions" data-anime><a href="/journal/certificat-authenticite-photographie-art-oeuvre-numerique-imprimee" class="bouton bouton--contour" data-libelle="Le certificat d’authenticité pour une photographie d’art ou une œuvre d’art numérique imprimée">Lire l’article</a> <a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie"><span>Choisir une œuvre</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat" aria-current="page">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

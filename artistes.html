@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="artistes" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Artistes contemporains : Sequoia Studio</title>
+<meta name="description" content="Découvrez les artistes et signatures visuelles de Sequoia Studio : photographie d’art, compositions numériques et univers contemporains.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/artistes">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Artistes contemporains : Sequoia Studio">
+<meta property="og:description" content="Découvrez les artistes et signatures visuelles de Sequoia Studio : photographie d’art, compositions numériques et univers contemporains.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/artistes">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/artistes-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Les trois artistes de Sequoia Studio et leurs œuvres">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Artistes</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes" aria-current="page">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes" aria-current="page">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<section class="scene scene--artistes ecran" id="debut" data-scene style="--nuit:#120e10">
+  <div class="scene-fond scene-fond--plein"><figure class="media media--provisoire " data-visuel data-provisoire="salle-nuit" role="img" aria-label="Salle de galerie dans la pénombre, trois flaques de lumière"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+  <radialGradient id="fp11" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sp11" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
+  <radialGradient id="vp11" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp11)"/><path d="M382 0 L418 0 L587.2 405 L212.79999999999998 405Z" fill="#f3d9a6" opacity=".035"/><path d="M782 0 L818 0 L987.2 405 L612.8 405Z" fill="#f3d9a6" opacity=".035"/><path d="M1182 0 L1218 0 L1387.2 405 L1012.8 405Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="400" cy="405" rx="208" ry="234" fill="url(#fp11)"/><ellipse cx="800" cy="405" rx="208" ry="234" fill="url(#fp11)"/><ellipse cx="1200" cy="405" rx="208" ry="234" fill="url(#fp11)"/>
+  <rect y="828" width="1600" height="71.99999999999996" fill="url(#sp11)"/><rect y="828" width="1600" height="2" fill="#2a2219" opacity=".8"/>
+  <rect width="1600" height="900" fill="url(#vp11)"/></svg></figure></div>
+  <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
+  <div class="triptyque" data-anime="gsap" data-scene-oeuvre>
+    <a class="triptyque-case zone-oeuvre" href="#darren-whitmore" data-sans-transition aria-label="Darren Whitmore"><div class="cadre cadre--caisse-noire " style="--r:2" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 400">
+  <picture>
+    <img src="/assets/images/oeuvres/oasis-moderne-800.webp" srcset="/assets/images/oeuvres/oasis-moderne-640.webp 640w, /assets/images/oeuvres/oasis-moderne-800.webp 800w" sizes="(max-width: 760px) 30vw, 22vw" alt="Oasis Moderne, Darren Whitmore" width="800" height="400" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div><span class="triptyque-nom">Darren Whitmore</span></a><a class="triptyque-case zone-oeuvre" href="#francesco-conte" data-sans-transition aria-label="Francesco Conte"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/l-ephemere-rencontre-800.webp" srcset="/assets/images/oeuvres/l-ephemere-rencontre-640.webp 640w, /assets/images/oeuvres/l-ephemere-rencontre-800.webp 800w" sizes="(max-width: 760px) 30vw, 22vw" alt="L&#39;éphémère rencontre, Francesco Conte" width="800" height="448" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div><span class="triptyque-nom">Francesco Conte</span></a><a class="triptyque-case zone-oeuvre" href="#miyu-mori" data-sans-transition aria-label="Miyu Mori"><div class="cadre cadre--caisse-noire " style="--r:0.7656967840735069" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 653">
+  <picture>
+    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 760px) 30vw, 22vw" alt="L&#39;Esprit Flottant, Miyu Mori" width="500" height="653" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div><span class="triptyque-nom">Miyu Mori</span></a>
+  </div>
+  <div class="scene-texte scene-texte--artistes">
+    <p class="surtitre" data-anime="gsap">Regards contemporains</p>
+    <h1 class="titre-hero titre-hero--moyen"><span class="ligne-masque"><span class="ligne" data-anime="gsap">Une sélection de signatures visuelles aux univers affirmés</span></span></h1>
+    <p class="hero-actions" data-anime="gsap"><a class="bouton bouton--plein" href="#darren-whitmore" data-action-principale data-magnetique><span>Découvrir les artistes</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    <p class="hero-info" data-info-cle data-anime="gsap">3 artistes · 42 œuvres</p>
+  </div>
+</section>
+<section class="artiste" id="darren-whitmore" style="--nuit:#1f1c0c" data-artiste>
+  <div class="conteneur artiste-tete">
+    <p class="artiste-numero" aria-hidden="true">01</p>
+    <div>
+      <p class="surtitre" data-anime>Photographe &amp; Créateur visuel</p>
+      <h2 class="titre-section" data-titre-anime>Darren Whitmore</h2>
+      <p class="artiste-nombre" data-anime>19 œuvres au catalogue</p>
+    </div>
+    <p class="artiste-bio" data-anime>Darren Whitmore est un photographe américain contemporain dont le travail mêle photographie architecturale et composition numérique artistique. Inspiré par les lignes modernes, les jardins paysagers et la nature méditerranéenne, il transforme ses clichés en univers visuels minimalistes et immersifs. Ses créations se distinguent par des ambiances calmes et géométriques auxquelles viennent s’ajouter des éléments iconoclastes aux couleurs vives — soleils rouges, aplats graphiques, contrastes chromatiques puissants ou détails inattendus — créant une tension visuelle immédiatement reconnaissable. Son style associe précision photographique et réinterprétation artistique contemporaine. À travers ses œuvres, Darren Whitmore cherche à révéler une vision idéalisée et presque irréelle de l’architecture et du paysage, où modernisme, nature et imagination graphique coexistent dans un équilibre esthétique fort. Chaque composition devient ainsi une scène intemporelle, à la fois élégante, lumineuse et profondément singulière.</p>
+  </div>
+  <div class="artiste-salle ecran epingle" data-artiste-salle data-plein-ecran>
+    <div class="piste artiste-piste" data-galerie tabindex="0" role="region" aria-label="Œuvres de Darren Whitmore">
+      <article class="artiste-oeuvre" style="--nuit:#1d160e">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/lueur-d-aurore-sur-l-ocean" data-libelle="Lueur d&#39;Aurore sur l&#39;Océan" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
+  <picture>
+    <img src="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-800.webp" srcset="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-640.webp 640w, /assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Lueur d&#39;Aurore sur l&#39;Océan, Darren Whitmore" width="800" height="447" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/lueur-d-aurore-sur-l-ocean" data-libelle="Lueur d&#39;Aurore sur l&#39;Océan">Lueur d&#39;Aurore sur l&#39;Océan</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Impressionnisme · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1d1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/oasis-chromatique" data-libelle="Oasis Chromatique" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
+  <picture>
+    <img src="/assets/images/oeuvres/oasis-chromatique-800.webp" srcset="/assets/images/oeuvres/oasis-chromatique-640.webp 640w, /assets/images/oeuvres/oasis-chromatique-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Oasis Chromatique, Darren Whitmore" width="800" height="447" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/oasis-chromatique" data-libelle="Oasis Chromatique">Oasis Chromatique</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Surréaliste · 2024 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1c1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/harmonie-etheree" data-libelle="Harmonie Éthérée" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/harmonie-etheree-800.webp" srcset="/assets/images/oeuvres/harmonie-etheree-640.webp 640w, /assets/images/oeuvres/harmonie-etheree-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Harmonie Éthérée, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/harmonie-etheree" data-libelle="Harmonie Éthérée">Harmonie Éthérée</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Surréalisme · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1d1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/reflexions-sylvestres" data-libelle="Réflexions Sylvestres" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
+  <picture>
+    <img src="/assets/images/oeuvres/reflexions-sylvestres-800.webp" srcset="/assets/images/oeuvres/reflexions-sylvestres-640.webp 640w, /assets/images/oeuvres/reflexions-sylvestres-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Réflexions Sylvestres, Darren Whitmore" width="800" height="447" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/reflexions-sylvestres" data-libelle="Réflexions Sylvestres">Réflexions Sylvestres</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Réaliste · 2025 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c191f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/tranquillite-hivernale" data-libelle="Tranquillité Hivernale" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
+  <picture>
+    <img src="/assets/images/oeuvres/tranquillite-hivernale-800.webp" srcset="/assets/images/oeuvres/tranquillite-hivernale-640.webp 640w, /assets/images/oeuvres/tranquillite-hivernale-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Tranquillité Hivernale, Darren Whitmore" width="800" height="447" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/tranquillite-hivernale" data-libelle="Tranquillité Hivernale">Tranquillité Hivernale</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Paysage · 2024 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1b1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/reflets-serenes" data-libelle="Reflets Sérénes" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
+  <picture>
+    <img src="/assets/images/oeuvres/reflets-serenes-800.webp" srcset="/assets/images/oeuvres/reflets-serenes-640.webp 640w, /assets/images/oeuvres/reflets-serenes-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Reflets Sérénes, Darren Whitmore" width="800" height="447" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/reflets-serenes" data-libelle="Reflets Sérénes">Reflets Sérénes</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Réaliste · 2021 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f1a0c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/oasis-dans-les-nuages" data-libelle="Oasis dans les Nuages" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5868544600938967" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 852">
+  <picture>
+    <img src="/assets/images/oeuvres/oasis-dans-les-nuages-500.webp" srcset="/assets/images/oeuvres/oasis-dans-les-nuages-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Oasis dans les Nuages, Darren Whitmore" width="500" height="852" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/oasis-dans-les-nuages" data-libelle="Oasis dans les Nuages">Oasis dans les Nuages</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Illustration · 2022 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f1c0c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/oasis-moderne" data-libelle="Oasis Moderne" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:2" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 400">
+  <picture>
+    <img src="/assets/images/oeuvres/oasis-moderne-800.webp" srcset="/assets/images/oeuvres/oasis-moderne-640.webp 640w, /assets/images/oeuvres/oasis-moderne-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Oasis Moderne, Darren Whitmore" width="800" height="400" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/oasis-moderne" data-libelle="Oasis Moderne">Oasis Moderne</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Moderne · 2024 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>190 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f0f0c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/lumieres-d-ete-mediterraneen" data-libelle="Lumières d&#39;Été Méditerranéen" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp" srcset="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-640.webp 640w, /assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Lumières d&#39;Été Méditerranéen, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/lumieres-d-ete-mediterraneen" data-libelle="Lumières d&#39;Été Méditerranéen">Lumières d&#39;Été Méditerranéen</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Modernisme · 2021 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1a1111">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/reverie-venitienne" data-libelle="Réverie Vénitienne" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.8140589569160999" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 441">
+  <picture>
+    <img src="/assets/images/oeuvres/reverie-venitienne-800.webp" srcset="/assets/images/oeuvres/reverie-venitienne-640.webp 640w, /assets/images/oeuvres/reverie-venitienne-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Réverie Vénitienne, Darren Whitmore" width="800" height="441" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/reverie-venitienne" data-libelle="Réverie Vénitienne">Réverie Vénitienne</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Illustration · 2022 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0d1a1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/solitude-hivernale" data-libelle="Solitude Hivernale" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/solitude-hivernale-800.webp" srcset="/assets/images/oeuvres/solitude-hivernale-640.webp 640w, /assets/images/oeuvres/solitude-hivernale-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Solitude Hivernale, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/solitude-hivernale" data-libelle="Solitude Hivernale">Solitude Hivernale</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Aquarelle · 2021 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1b1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/reverie-mediterraneenne" data-libelle="Rêverie Méditerranéenne" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.5473887814313345" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 517">
+  <picture>
+    <img src="/assets/images/oeuvres/reverie-mediterraneenne-800.webp" srcset="/assets/images/oeuvres/reverie-mediterraneenne-640.webp 640w, /assets/images/oeuvres/reverie-mediterraneenne-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Rêverie Méditerranéenne, Darren Whitmore" width="800" height="517" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/reverie-mediterraneenne" data-libelle="Rêverie Méditerranéenne">Rêverie Méditerranéenne</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Surréaliste · 2024 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f1b0c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/melange-d-or-et-de-mystere" data-libelle="Mélange d&#39;Or et de Mystère" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/melange-d-or-et-de-mystere-800.webp" srcset="/assets/images/oeuvres/melange-d-or-et-de-mystere-640.webp 640w, /assets/images/oeuvres/melange-d-or-et-de-mystere-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Mélange d&#39;Or et de Mystère, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/melange-d-or-et-de-mystere" data-libelle="Mélange d&#39;Or et de Mystère">Mélange d&#39;Or et de Mystère</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Surréalisme · 2025 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1f1e">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/serenite-turquoise" data-libelle="Sérénité turquoise" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 892">
+  <picture>
+    <img src="/assets/images/oeuvres/serenite-turquoise-500.webp" srcset="/assets/images/oeuvres/serenite-turquoise-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Sérénité turquoise, Darren Whitmore" width="500" height="892" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/serenite-turquoise" data-libelle="Sérénité turquoise">Sérénité turquoise</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Surréalisme · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c181f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/promenade-provencale" data-libelle="Promenade Provençale" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 892">
+  <picture>
+    <img src="/assets/images/oeuvres/promenade-provencale-500.webp" srcset="/assets/images/oeuvres/promenade-provencale-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Promenade Provençale, Darren Whitmore" width="500" height="892" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/promenade-provencale" data-libelle="Promenade Provençale">Promenade Provençale</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Surréalisme · 2020 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1c1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/jardin-mediterraneen-au-crepuscule" data-libelle="Jardin Méditerranéen au Crépuscule" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:2" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 400">
+  <picture>
+    <img src="/assets/images/oeuvres/jardin-mediterraneen-au-crepuscule-800.webp" srcset="/assets/images/oeuvres/jardin-mediterraneen-au-crepuscule-640.webp 640w, /assets/images/oeuvres/jardin-mediterraneen-au-crepuscule-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Jardin Méditerranéen au Crépuscule, Darren Whitmore" width="800" height="400" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/jardin-mediterraneen-au-crepuscule" data-libelle="Jardin Méditerranéen au Crépuscule">Jardin Méditerranéen au Crépuscule</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Impressionnisme · 2025 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>190 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1e1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/serenite-mediterraneenne" data-libelle="Sérénité Méditerranéenne" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7937219730941705" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 446">
+  <picture>
+    <img src="/assets/images/oeuvres/serenite-mediterraneenne-800.webp" srcset="/assets/images/oeuvres/serenite-mediterraneenne-640.webp 640w, /assets/images/oeuvres/serenite-mediterraneenne-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Sérénité Méditerranéenne, Darren Whitmore" width="800" height="446" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/serenite-mediterraneenne" data-libelle="Sérénité Méditerranéenne">Sérénité Méditerranéenne</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Impressionnisme · 2020 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f110c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/eclat-captivant" data-libelle="Éclat Captivant" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 892">
+  <picture>
+    <img src="/assets/images/oeuvres/eclat-captivant-500.webp" srcset="/assets/images/oeuvres/eclat-captivant-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Éclat Captivant, Darren Whitmore" width="500" height="892" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/eclat-captivant" data-libelle="Éclat Captivant">Éclat Captivant</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Contemporain · 2021 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1e1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/vitesse-chromatique" data-libelle="Vitesse Chromatique" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/vitesse-chromatique-800.webp" srcset="/assets/images/oeuvres/vitesse-chromatique-640.webp 640w, /assets/images/oeuvres/vitesse-chromatique-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Vitesse Chromatique, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/vitesse-chromatique" data-libelle="Vitesse Chromatique">Vitesse Chromatique</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Abstrait · 2022 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article>
+    </div>
+    <div class="salle-progres" aria-hidden="true"><span class="salle-progres-barre"><span></span></span><span class="salle-aide"><span class="si-souris">Faites défiler pour parcourir la salle</span><span class="si-tactile">Faites glisser pour parcourir la salle</span></span></div>
+  </div>
+  <p class="conteneur artiste-lien" data-anime><a href="/galerie?artiste=darren-whitmore#oeuvres" class="bouton bouton--contour" data-libelle="Galerie">Voir ses œuvres dans la galerie</a></p>
+</section><section class="artiste" id="francesco-conte" style="--nuit:#0c1f1f" data-artiste>
+  <div class="conteneur artiste-tete">
+    <p class="artiste-numero" aria-hidden="true">02</p>
+    <div>
+      <p class="surtitre" data-anime>Artiste contemporain de la nature</p>
+      <h2 class="titre-section" data-titre-anime>Francesco Conte</h2>
+      <p class="artiste-nombre" data-anime>13 œuvres au catalogue</p>
+    </div>
+    <p class="artiste-bio" data-anime>Francesco Conte est un photographe et artiste numérique italien dont le travail explore la beauté émotionnelle de la nature à travers des compositions visuelles poétiques et surréalistes. Inspiré par les paysages méditerranéens, les animaux sauvages et les grands espaces, il transforme ses photographies en scènes oniriques où les couleurs deviennent irréelles et les éléments naturels semblent suspendus hors du temps. Ses créations se distinguent par des palettes lumineuses et inattendues — eaux turquoise éclatantes, ciels pastel, soleils rosés ou végétations aux teintes vibrantes — qui donnent à chaque œuvre une atmosphère immersive et contemplative. À travers ses compositions, Francesco Conte cherche à magnifier la nature en révélant une version réinventée et presque rêveuse du monde vivant. Son style associe photographie contemporaine, retouche artistique et imagination graphique afin de créer des paysages silencieux, élégants et profondément apaisants. Qu’il travaille sur des animaux, des horizons marins ou des décors naturels minimalistes, chacune de ses œuvres invite à une expérience visuelle où réalité et imaginaire se mélangent avec harmonie.</p>
+  </div>
+  <div class="artiste-salle ecran epingle" data-artiste-salle data-plein-ecran>
+    <div class="piste artiste-piste" data-galerie tabindex="0" role="region" aria-label="Œuvres de Francesco Conte">
+      <article class="artiste-oeuvre" style="--nuit:#0c1f1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/l-ephemere-rencontre" data-libelle="L&#39;éphémère rencontre" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/l-ephemere-rencontre-800.webp" srcset="/assets/images/oeuvres/l-ephemere-rencontre-640.webp 640w, /assets/images/oeuvres/l-ephemere-rencontre-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="L&#39;éphémère rencontre, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/l-ephemere-rencontre" data-libelle="L&#39;éphémère rencontre">L&#39;éphémère rencontre</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Aérien · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f120c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/l-indien-du-canyon" data-libelle="L&#39;indien du canyon" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
+  <picture>
+    <img src="/assets/images/oeuvres/l-indien-du-canyon-800.webp" srcset="/assets/images/oeuvres/l-indien-du-canyon-640.webp 640w, /assets/images/oeuvres/l-indien-du-canyon-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="L&#39;indien du canyon, Francesco Conte" width="800" height="447" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/l-indien-du-canyon" data-libelle="L&#39;indien du canyon">L&#39;indien du canyon</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Photographie · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f120c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/symbiose-sauvage" data-libelle="Symbiose Sauvage" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5599104143337066" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 893">
+  <picture>
+    <img src="/assets/images/oeuvres/symbiose-sauvage-500.webp" srcset="/assets/images/oeuvres/symbiose-sauvage-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Symbiose Sauvage, Francesco Conte" width="500" height="893" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/symbiose-sauvage" data-libelle="Symbiose Sauvage">Symbiose Sauvage</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Double-exposition · 2023 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f0d0c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/arbre-de-coeur-florissant" data-libelle="Arbre de Cœur Florissant" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
+  <picture>
+    <img src="/assets/images/oeuvres/arbre-de-coeur-florissant-800.webp" srcset="/assets/images/oeuvres/arbre-de-coeur-florissant-640.webp 640w, /assets/images/oeuvres/arbre-de-coeur-florissant-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Arbre de Cœur Florissant, Francesco Conte" width="800" height="447" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/arbre-de-coeur-florissant" data-libelle="Arbre de Cœur Florissant">Arbre de Cœur Florissant</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Surréalisme · 2020 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0e181d">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/regard-de-minuit" data-libelle="Regard de Minuit" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/regard-de-minuit-800.webp" srcset="/assets/images/oeuvres/regard-de-minuit-640.webp 640w, /assets/images/oeuvres/regard-de-minuit-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Regard de Minuit, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/regard-de-minuit" data-libelle="Regard de Minuit">Regard de Minuit</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Abstrait · 2021 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c191f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/elan-sauvage" data-libelle="Élan Sauvage" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/elan-sauvage-800.webp" srcset="/assets/images/oeuvres/elan-sauvage-640.webp 640w, /assets/images/oeuvres/elan-sauvage-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Élan Sauvage, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/elan-sauvage" data-libelle="Élan Sauvage">Élan Sauvage</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Photographie · 2023 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1e0f0e">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/echos-de-serenite" data-libelle="Échos de Sérénité" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 800">
+  <picture>
+    <img src="/assets/images/oeuvres/echos-de-serenite-800.webp" srcset="/assets/images/oeuvres/echos-de-serenite-640.webp 640w, /assets/images/oeuvres/echos-de-serenite-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Échos de Sérénité, Francesco Conte" width="800" height="800" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/echos-de-serenite" data-libelle="Échos de Sérénité">Échos de Sérénité</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Surréaliste · 2020 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>90 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1e160d">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/l-avenement-cosmique-du-taureau" data-libelle="L&#39;Avènement Cosmique du Taureau" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/l-avenement-cosmique-du-taureau-800.webp" srcset="/assets/images/oeuvres/l-avenement-cosmique-du-taureau-640.webp 640w, /assets/images/oeuvres/l-avenement-cosmique-du-taureau-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="L&#39;Avènement Cosmique du Taureau, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/l-avenement-cosmique-du-taureau" data-libelle="L&#39;Avènement Cosmique du Taureau">L&#39;Avènement Cosmique du Taureau</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Surréalisme · 2020 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1d110e">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/fusion-etheree" data-libelle="Fusion Éthérée" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.5009380863039399" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 533">
+  <picture>
+    <img src="/assets/images/oeuvres/fusion-etheree-800.webp" srcset="/assets/images/oeuvres/fusion-etheree-640.webp 640w, /assets/images/oeuvres/fusion-etheree-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Fusion Éthérée, Francesco Conte" width="800" height="533" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/fusion-etheree" data-libelle="Fusion Éthérée">Fusion Éthérée</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Sculpture · 2023 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#131816">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/eclosion-etheree" data-libelle="Éclosion Éthérée" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 892">
+  <picture>
+    <img src="/assets/images/oeuvres/eclosion-etheree-500.webp" srcset="/assets/images/oeuvres/eclosion-etheree-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Éclosion Éthérée, Francesco Conte" width="500" height="892" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/eclosion-etheree" data-libelle="Éclosion Éthérée">Éclosion Éthérée</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Contemporain · 2022 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f190c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/felin-prisma" data-libelle="Félin Prisma" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 800">
+  <picture>
+    <img src="/assets/images/oeuvres/felin-prisma-800.webp" srcset="/assets/images/oeuvres/felin-prisma-640.webp 640w, /assets/images/oeuvres/felin-prisma-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Félin Prisma, Francesco Conte" width="800" height="800" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/felin-prisma" data-libelle="Félin Prisma">Félin Prisma</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Surréalisme · 2023 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>90 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f0d0f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/danse-etheree" data-libelle="Danse Éthérée" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.3311148086522462" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 601">
+  <picture>
+    <img src="/assets/images/oeuvres/danse-etheree-800.webp" srcset="/assets/images/oeuvres/danse-etheree-640.webp 640w, /assets/images/oeuvres/danse-etheree-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Danse Éthérée, Francesco Conte" width="800" height="601" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/danse-etheree" data-libelle="Danse Éthérée">Danse Éthérée</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Aquarelle · 2022 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#161715">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/rencontre-du-destin" data-libelle="Rencontre du Destin" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.6563146997929608" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 483">
+  <picture>
+    <img src="/assets/images/oeuvres/rencontre-du-destin-800.webp" srcset="/assets/images/oeuvres/rencontre-du-destin-640.webp 640w, /assets/images/oeuvres/rencontre-du-destin-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Rencontre du Destin, Francesco Conte" width="800" height="483" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/rencontre-du-destin" data-libelle="Rencontre du Destin">Rencontre du Destin</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Ink-wash · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article>
+    </div>
+    <div class="salle-progres" aria-hidden="true"><span class="salle-progres-barre"><span></span></span><span class="salle-aide"><span class="si-souris">Faites défiler pour parcourir la salle</span><span class="si-tactile">Faites glisser pour parcourir la salle</span></span></div>
+  </div>
+  <p class="conteneur artiste-lien" data-anime><a href="/galerie?artiste=francesco-conte#oeuvres" class="bouton bouton--contour" data-libelle="Galerie">Voir ses œuvres dans la galerie</a></p>
+</section><section class="artiste" id="miyu-mori" style="--nuit:#1f160c" data-artiste>
+  <div class="conteneur artiste-tete">
+    <p class="artiste-numero" aria-hidden="true">03</p>
+    <div>
+      <p class="surtitre" data-anime>Artiste de l’image contemporaine</p>
+      <h2 class="titre-section" data-titre-anime>Miyu Mori</h2>
+      <p class="artiste-nombre" data-anime>10 œuvres au catalogue</p>
+    </div>
+    <p class="artiste-bio" data-anime>Miyu Mori est une photographe contemporaine japonaise dont les créations mêlent photographie artistique, composition numérique et inspirations profondes de la culture japonaise. Son univers se caractérise par des couleurs vives, des scènes oniriques et une richesse visuelle inspirée des carpes koï, du soleil levant, de la nature et des écritures traditionnelles japonaises. Son style associe esthétique japonaise traditionnelle et création numérique contemporaine afin de produire des œuvres immersives et expressives. À travers ses compositions, Miyu Mori explore un Japon poétique et imaginaire, où les textures, les couleurs et les symboles naturels créent une atmosphère à la fois moderne, apaisante et profondément artistique.</p>
+  </div>
+  <div class="artiste-salle ecran epingle" data-artiste-salle data-plein-ecran>
+    <div class="piste artiste-piste" data-galerie tabindex="0" role="region" aria-label="Œuvres de Miyu Mori">
+      <article class="artiste-oeuvre" style="--nuit:#0d1f1e">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/fleur-de-transparence" data-libelle="Fleur de transparence" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 800">
+  <picture>
+    <img src="/assets/images/oeuvres/fleur-de-transparence-800.webp" srcset="/assets/images/oeuvres/fleur-de-transparence-640.webp 640w, /assets/images/oeuvres/fleur-de-transparence-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Fleur de transparence, Miyu Mori" width="800" height="800" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/fleur-de-transparence" data-libelle="Fleur de transparence">Fleur de transparence</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Éthéré · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>90 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f150c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/reflexions-aquatiques" data-libelle="Réflexions Aquatiques" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 800">
+  <picture>
+    <img src="/assets/images/oeuvres/reflexions-aquatiques-800.webp" srcset="/assets/images/oeuvres/reflexions-aquatiques-640.webp 640w, /assets/images/oeuvres/reflexions-aquatiques-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Réflexions Aquatiques, Miyu Mori" width="800" height="800" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/reflexions-aquatiques" data-libelle="Réflexions Aquatiques">Réflexions Aquatiques</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Surréalisme · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>90 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#0c1d1f">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/chic-industriel-surreel" data-libelle="Chic Industriel Surréel" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.7485029940119761" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 668">
+  <picture>
+    <img src="/assets/images/oeuvres/chic-industriel-surreel-500.webp" srcset="/assets/images/oeuvres/chic-industriel-surreel-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Chic Industriel Surréel, Miyu Mori" width="500" height="668" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/chic-industriel-surreel" data-libelle="Chic Industriel Surréel">Chic Industriel Surréel</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Steampunk · 2026 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1c0f13">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/fugue-en-musique" data-libelle="Fugue en musique" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 892">
+  <picture>
+    <img src="/assets/images/oeuvres/fugue-en-musique-500.webp" srcset="/assets/images/oeuvres/fugue-en-musique-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Fugue en musique, Miyu Mori" width="500" height="892" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/fugue-en-musique" data-libelle="Fugue en musique">Fugue en musique</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Surréaliste · 2022 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f0f0c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/evasion-crepusculaire" data-libelle="Évasion Crépusculaire" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.7541478129713424" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 663">
+  <picture>
+    <img src="/assets/images/oeuvres/evasion-crepusculaire-500.webp" srcset="/assets/images/oeuvres/evasion-crepusculaire-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Évasion Crépusculaire, Miyu Mori" width="500" height="663" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/evasion-crepusculaire" data-libelle="Évasion Crépusculaire">Évasion Crépusculaire</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Minimaliste · 2025 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f120c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/eclat-du-japon" data-libelle="Éclat du Japon" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5263157894736842" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 950">
+  <picture>
+    <img src="/assets/images/oeuvres/eclat-du-japon-500.webp" srcset="/assets/images/oeuvres/eclat-du-japon-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Éclat du Japon, Miyu Mori" width="500" height="950" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/eclat-du-japon" data-libelle="Éclat du Japon">Éclat du Japon</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Contemporain · 2024 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1a1811">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/elegance-eternelle" data-libelle="Élégance Éternelle" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5549389567147613" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 901">
+  <picture>
+    <img src="/assets/images/oeuvres/elegance-eternelle-500.webp" srcset="/assets/images/oeuvres/elegance-eternelle-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Élégance Éternelle, Miyu Mori" width="500" height="901" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/elegance-eternelle" data-libelle="Élégance Éternelle">Élégance Éternelle</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Minimalisme · 2024 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f0c0e">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/danse-aquatique" data-libelle="Danse Aquatique" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5714285714285714" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 875">
+  <picture>
+    <img src="/assets/images/oeuvres/danse-aquatique-500.webp" srcset="/assets/images/oeuvres/danse-aquatique-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="Danse Aquatique, Miyu Mori" width="500" height="875" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/danse-aquatique" data-libelle="Danse Aquatique">Danse Aquatique</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Illustratif · 2021 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#131518">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/echos-du-silence-urbain" data-libelle="Échos du Silence Urbain" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.75054704595186" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 457">
+  <picture>
+    <img src="/assets/images/oeuvres/echos-du-silence-urbain-800.webp" srcset="/assets/images/oeuvres/echos-du-silence-urbain-640.webp 640w, /assets/images/oeuvres/echos-du-silence-urbain-800.webp 800w" sizes="(max-width: 760px) 70vw, 30vw" alt="Échos du Silence Urbain, Miyu Mori" width="800" height="457" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/echos-du-silence-urbain" data-libelle="Échos du Silence Urbain">Échos du Silence Urbain</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Onirique · 2025 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+      </article><article class="artiste-oeuvre" style="--nuit:#1f160c">
+        <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/l-esprit-flottant" data-libelle="L&#39;Esprit Flottant" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.7656967840735069" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 653">
+  <picture>
+    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 760px) 70vw, 30vw" alt="L&#39;Esprit Flottant, Miyu Mori" width="500" height="653" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/l-esprit-flottant" data-libelle="L&#39;Esprit Flottant">L&#39;Esprit Flottant</a></h3>
+  <p class="cartel-artiste">Miyu Mori</p>
+  <p class="cartel-meta">Illustration · 2023 · Édition de 20</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
+</div>
+      </article>
+    </div>
+    <div class="salle-progres" aria-hidden="true"><span class="salle-progres-barre"><span></span></span><span class="salle-aide"><span class="si-souris">Faites défiler pour parcourir la salle</span><span class="si-tactile">Faites glisser pour parcourir la salle</span></span></div>
+  </div>
+  <p class="conteneur artiste-lien" data-anime><a href="/galerie?artiste=miyu-mori#oeuvres" class="bouton bouton--contour" data-libelle="Galerie">Voir ses œuvres dans la galerie</a></p>
+</section>
+<section class="fin-page" id="fin">
+  <div class="conteneur fin-grille">
+    <figure class="media " style="--cadrage:50% 50%;aspect-ratio:2021 / 778">
+  <picture>
+    <img src="/assets/images/ambiances/salon-quatre-oeuvres-1280.webp" srcset="/assets/images/ambiances/salon-quatre-oeuvres-640.webp 640w, /assets/images/ambiances/salon-quatre-oeuvres-1280.webp 1280w, /assets/images/ambiances/salon-quatre-oeuvres-1920.webp 1920w" sizes="(max-width: 760px) 100vw, 50vw" alt="Quatre œuvres accrochées dans un salon lumineux" width="1280" height="493" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div>
+      <div class="tete-section  ">
+  <h2 class="titre-section" data-titre-anime>Trouver l’œuvre qui vous ressemble</h2>
+  <p class="tete-texte" data-anime>Filtrez la galerie par artiste, univers, format ou couleur.</p>
+</div>
+      <p class="fin-actions" data-anime><a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie"><span>Ouvrir la galerie</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes" aria-current="page">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>

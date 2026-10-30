@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-page="accueil" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sequoia Studio : galerie d’art en ligne et œuvres encadrées premium</title>
+<meta name="description" content="Galerie d’art en ligne, œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité signé par l’artiste.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/">
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#0b0b0c">
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sequoia Studio">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Sequoia Studio : galerie d’art en ligne et œuvres encadrées premium">
+<meta property="og:description" content="Galerie d’art en ligne, œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité signé par l’artiste.">
+<meta property="og:url" content="https://sequoia-studio-maquette.vercel.app/">
+<meta property="og:image" content="https://sequoia-studio-maquette.vercel.app/assets/partage/accueil-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Regard de Minuit, œuvre de Francesco Conte, sur un mur de galerie, avec le logo Sequoia Studio">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ArtGallery","name":"Sequoia Studio","legalName":"TOST Unlimited","url":"https://sequoia-studio-maquette.vercel.app/","logo":"https://sequoia-studio-maquette.vercel.app/assets/images/logo-nuit-512.png","email":"sequoia@tostunlimited.com","description":"Galerie d'art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d'authenticité.","address":{"@type":"PostalAddress","streetAddress":"4 Clos Henri Becquerel","postalCode":"31170","addressLocality":"Tournefeuille","addressCountry":"FR"},"founder":[{"@type":"Person","name":"Gilles TOST"},{"@type":"Person","name":"Frédéric TOST"}],"sameAs":["https://www.instagram.com/sequoiastudio.fr"],"paymentAccepted":"Carte bancaire","currenciesAccepted":"EUR"}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair.svg" alt="" width="72" height="72"><span class="voile-trait"></span><span data-voile-libelle>Accueil</span></div></div>
+<div class="ouverture-panneau" data-ouverture aria-hidden="true">
+  <img class="ouverture-logo" src="/assets/images/logo-clair.svg" alt="" width="120" height="120">
+  <p class="ouverture-nom">Sequoia Studio</p>
+  <p class="ouverture-ligne">Galerie d’art en ligne</p>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil" aria-current="page">
+      <img src="/assets/images/logo.svg" alt="" width="36" height="36"><span>Sequoia Studio</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/galerie" class="nav-lien" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" class="nav-lien" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" class="nav-lien" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" class="nav-lien" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" class="nav-lien" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" class="nav-lien" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" class="nav-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="entete-icone" href="/galerie#recherche" data-recherche-bouton data-libelle="Galerie" aria-label="Rechercher une œuvre"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><span class="entete-icone-texte">Rechercher</span></a>
+      <a class="bouton bouton--entete" href="/commande" data-panier-bouton data-libelle="Panier" aria-label="Ouvrir le panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
+      <button type="button" class="bouton-menu" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span class="bouton-menu-traits" aria-hidden="true"></span><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="menu-grille">
+    <ul class="menu-liste"><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil" aria-current="page">Accueil</a></li><li style="--i:1"><a href="/galerie" class="menu-lien" data-libelle="Galerie">Galerie</a></li><li style="--i:2"><a href="/artistes" class="menu-lien" data-libelle="Artistes">Artistes</a></li><li style="--i:3"><a href="/chez-vous" class="menu-lien" data-libelle="Chez vous">Chez vous</a></li><li style="--i:4"><a href="/cadres-et-finitions" class="menu-lien" data-libelle="Finitions">Finitions</a></li><li style="--i:5"><a href="/certificat" class="menu-lien" data-libelle="Certificat">Certificat</a></li><li style="--i:6"><a href="/journal" class="menu-lien" data-libelle="Journal">Journal</a></li><li style="--i:7"><a href="/qui-sommes-nous" class="menu-lien" data-libelle="Le studio">Le studio</a></li></ul>
+    <div class="menu-cote">
+      <p><a class="bouton" href="/commande" data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a></p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+    </div>
+  </div>
+</div>
+<div class="recherche" id="recherche-fenetre" data-recherche data-recouvrement role="dialog" aria-modal="true" aria-labelledby="recherche-titre" hidden>
+  <div class="recherche-boite">
+    <div class="recherche-tete">
+      <h2 id="recherche-titre" class="recherche-titre">Rechercher une œuvre</h2>
+      <button type="button" class="bouton-rond" data-recherche-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <form class="recherche-form" action="/galerie" method="get" role="search">
+      <label class="visuellement-cache" for="recherche-champ">Rechercher une œuvre</label>
+      <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="recherche-champ" name="q" type="search" autocomplete="off" placeholder="Titre, artiste, sujet, couleur…">
+    </form>
+    <p class="recherche-statut" data-recherche-statut aria-live="polite" data-resultats="{n} œuvres trouvées" data-aucun="Aucune œuvre ne correspond. Essayez « paysage », « Miyu Mori » ou « bleu »." data-tout="Voir tous les résultats dans la galerie" data-galerie="Galerie" data-des="dès"></p>
+    <ul class="recherche-resultats" data-recherche-resultats></ul>
+  </div>
+</div>
+<aside class="tiroir" id="panier" data-tiroir data-recouvrement role="dialog" aria-modal="true" aria-labelledby="panier-titre" hidden>
+  <div class="tiroir-voile" data-tiroir-fermer></div>
+  <div class="tiroir-boite">
+    <div class="tiroir-tete">
+      <h2 id="panier-titre">Votre panier</h2>
+      <button type="button" class="bouton-rond" data-tiroir-fermer aria-label="Fermer"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+    </div>
+    <div class="tiroir-corps"><ul class="tiroir-liste" data-panier-liste></ul><div class="tiroir-vide" data-panier-vide><p>Votre panier est vide.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Découvrir la galerie</a></p></div></div>
+    <div class="tiroir-pied">
+      <p class="tiroir-total"><span>Total</span><strong data-panier-total data-prix>0 €</strong></p>
+      <p class="mention-prix">TVA non applicable, art. 293 B du CGI · Livraison en France métropolitaine : frais à confirmer</p>
+      <p><a class="bouton bouton--plein" href="/commande" data-libelle="Panier" data-panier-commander>Voir la commande</a></p>
+      <p class="tiroir-note">Panier de démonstration : aucune commande n’est passée.</p>
+    </div>
+  </div>
+</aside>
+<template data-panier-modele data-ajoute="Ajouté au panier : " data-retire="Retiré du panier : " data-quantite="Quantité" data-retirer="Retirer">
+  <li class="tiroir-ligne">
+    <a class="tiroir-ligne-image" data-ligne-lien tabindex="-1" aria-hidden="true"><img alt="" width="72" height="72"></a>
+    <div class="tiroir-ligne-corps">
+      <p class="tiroir-ligne-titre"><a data-ligne-lien></a></p>
+      <p class="tiroir-ligne-detail" data-ligne-detail></p>
+      <p class="tiroir-ligne-actions"><span data-ligne-quantite-texte></span> <button type="button" class="lien" data-ligne-retirer>Retirer</button></p>
+    </div>
+    <strong class="tiroir-ligne-prix" data-prix data-ligne-prix></strong>
+  </li>
+</template>
+<p class="visuellement-cache" aria-live="polite" data-annonce></p>
+<main id="contenu" tabindex="-1">
+<section class="scene scene--accueil ecran" id="debut" data-scene style="--nuit:#0e181d;--scene-x:64%;--scene-y:46%">
+  <div class="scene-fond"><figure class="media media--provisoire scene-mur" data-visuel data-provisoire="mur-nuit" role="img" aria-label="Mur de galerie dans la pénombre, éclairé par un projecteur"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+  <radialGradient id="fp2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sp2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
+  <radialGradient id="vp2" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp2)"/><path d="M782 0 L818 0 L1174.4 378 L425.59999999999997 378Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="800" cy="378" rx="416" ry="270" fill="url(#fp2)"/>
+  <rect y="846" width="1600" height="54.00000000000005" fill="url(#sp2)"/><rect y="846" width="1600" height="2" fill="#2a2219" opacity=".8"/>
+  <rect width="1600" height="900" fill="url(#vp2)"/></svg></figure></div>
+  <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
+  <div class="scene-zone" data-anime="gsap" data-scene-oeuvre>
+    <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/regard-de-minuit-800.webp" srcset="/assets/images/oeuvres/regard-de-minuit-640.webp 640w, /assets/images/oeuvres/regard-de-minuit-800.webp 800w" sizes="(max-width: 760px) 70vw, 36vw" alt="Regard de Minuit, Francesco Conte" width="800" height="448" fetchpriority="high" loading="eager" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div>
+  </div>
+  <div class="scene-texte">
+    <p class="surtitre" data-anime="gsap">Œuvres en éditions limitées · Certificat d’authenticité signé par l’artiste</p>
+    <h1 class="titre-hero" data-titre-hero data-superpose>
+      <span class="ligne-masque"><span class="ligne" data-anime="gsap">Des œuvres originales</span></span>
+      <span class="ligne-masque"><span class="ligne" data-anime="gsap">prêtes à sublimer</span></span>
+      <span class="ligne-masque"><span class="ligne ligne--laiton" data-anime="gsap"><em>vos espaces.</em></span></span>
+    </h1>
+    <p class="hero-sous" data-anime="gsap">Qualité · Impression fine art · Cadres premium</p>
+    <p class="hero-actions" data-anime="gsap">
+      <a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie" data-action-principale data-magnetique><span>Entrer dans la galerie</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="/chez-vous" class="bouton bouton--contour" data-libelle="Chez vous">Voir une œuvre chez vous</a>
+    </p>
+    <p class="hero-info" data-info-cle data-anime="gsap">42 œuvres de 3 artistes, éditions limitées à 20 ou 30 exemplaires</p>
+  </div>
+  <div class="scene-cartel" data-anime="gsap"><div class="cartel ">
+  <p class="cartel-titre"><a href="/oeuvres/regard-de-minuit" data-libelle="Regard de Minuit">Regard de Minuit</a></p>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Abstrait · 2021 · Édition de 30</p>
+</div></div>
+</section>
+<section class="salle ecran epingle" id="selection" data-entete-cache data-plein-ecran data-salle style="--nuit:#131816">
+  <div class="salle-fond" aria-hidden="true"><figure class="media media--provisoire salle-mur" data-visuel data-provisoire="salle-nuit" aria-hidden="true"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
+  <radialGradient id="fp3" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sp3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
+  <radialGradient id="vp3" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp3)"/><path d="M382 0 L418 0 L587.2 405 L212.79999999999998 405Z" fill="#f3d9a6" opacity=".035"/><path d="M782 0 L818 0 L987.2 405 L612.8 405Z" fill="#f3d9a6" opacity=".035"/><path d="M1182 0 L1218 0 L1387.2 405 L1012.8 405Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="400" cy="405" rx="208" ry="234" fill="url(#fp3)"/><ellipse cx="800" cy="405" rx="208" ry="234" fill="url(#fp3)"/><ellipse cx="1200" cy="405" rx="208" ry="234" fill="url(#fp3)"/>
+  <rect y="828" width="1600" height="71.99999999999996" fill="url(#sp3)"/><rect y="828" width="1600" height="2" fill="#2a2219" opacity=".8"/>
+  <rect width="1600" height="900" fill="url(#vp3)"/></svg></figure></div>
+  <div class="conteneur salle-tete">
+    <p class="surtitre" data-anime>Notre sélection du moment</p>
+    <h2 class="titre-section" data-titre-anime>L’esprit du studio</h2>
+    <p class="salle-texte" data-anime>Nous avons sélectionné pour vous ces trois œuvres emblématiques qui illustrent la diversité et la profondeur de notre catalogue. Chaque pièce est une exploration de la lumière, de la texture et de l’émotion, conçue pour apporter une touche d’exception à votre espace de vie.</p>
+  </div>
+  <div class="piste salle-piste" data-galerie tabindex="0" role="region" aria-label="Sélection du moment, trois œuvres">
+    <article class="salle-oeuvre" data-salle-oeuvre style="--nuit:#131816">
+      <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/eclosion-etheree" data-libelle="Éclosion Éthérée" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 892">
+  <picture>
+    <img src="/assets/images/oeuvres/eclosion-etheree-500.webp" srcset="/assets/images/oeuvres/eclosion-etheree-500.webp 500w" sizes="(max-width: 760px) 78vw, 40vw" alt="Éclosion Éthérée, Francesco Conte" width="500" height="892" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+      <div class="salle-cartel">
+        <p class="salle-numero" aria-hidden="true">01</p>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/eclosion-etheree" data-libelle="Éclosion Éthérée">Éclosion Éthérée</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Contemporain · 2022 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+        <p class="salle-accroche">L&#39;élégance d&#39;une floraison intemporelle.</p>
+      </div>
+    </article><article class="salle-oeuvre" data-salle-oeuvre style="--nuit:#0d1a1f">
+      <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/solitude-hivernale" data-libelle="Solitude Hivernale" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-blanche " style="--r:1.7857142857142858" data-cadre="caisse-blanche">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/solitude-hivernale-800.webp" srcset="/assets/images/oeuvres/solitude-hivernale-640.webp 640w, /assets/images/oeuvres/solitude-hivernale-800.webp 800w" sizes="(max-width: 760px) 78vw, 40vw" alt="Solitude Hivernale, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+      <div class="salle-cartel">
+        <p class="salle-numero" aria-hidden="true">02</p>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/solitude-hivernale" data-libelle="Solitude Hivernale">Solitude Hivernale</a></h3>
+  <p class="cartel-artiste">Darren Whitmore</p>
+  <p class="cartel-meta">Aquarelle · 2021 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+        <p class="salle-accroche">Une harmonie glaciale et poétique.</p>
+      </div>
+    </article><article class="salle-oeuvre" data-salle-oeuvre style="--nuit:#161715">
+      <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/rencontre-du-destin" data-libelle="Rencontre du Destin" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-noire " style="--r:1.6563146997929608" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 483">
+  <picture>
+    <img src="/assets/images/oeuvres/rencontre-du-destin-800.webp" srcset="/assets/images/oeuvres/rencontre-du-destin-640.webp 640w, /assets/images/oeuvres/rencontre-du-destin-800.webp 800w" sizes="(max-width: 760px) 78vw, 40vw" alt="Rencontre du Destin, Francesco Conte" width="800" height="483" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></a></div>
+      <div class="salle-cartel">
+        <p class="salle-numero" aria-hidden="true">03</p>
+        <div class="cartel ">
+  <h3 class="cartel-titre"><a href="/oeuvres/rencontre-du-destin" data-libelle="Rencontre du Destin">Rencontre du Destin</a></h3>
+  <p class="cartel-artiste">Francesco Conte</p>
+  <p class="cartel-meta">Ink-wash · 2026 · Édition de 30</p>
+  <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
+</div>
+        <p class="salle-accroche">Dialogue entre la force et la sérénité.</p>
+      </div>
+    </article>
+  </div>
+  <div class="salle-progres" aria-hidden="true"><span class="salle-progres-barre"><span></span></span><span class="salle-compteur" data-salle-compteur>1 / 3</span></div>
+</section>
+<section class="univers" id="univers" data-univers style="--nuit:#0c1c1f">
+  <div class="conteneur univers-grille">
+    <div class="univers-texte">
+      <div class="tete-section  ">
+  <p class="surtitre" data-anime>Nos univers</p>
+  <h2 class="titre-section" data-titre-anime>Choisir par univers</h2>
+</div>
+      <p class="univers-aide" data-anime><span class="si-souris">Survolez un univers pour l’éclairer, choisissez-le pour voir toutes ses œuvres.</span><span class="si-tactile">Touchez un univers pour voir toutes ses œuvres.</span></p>
+      <ul class="univers-liste" role="list">
+        <li data-anime>
+          <a class="univers-lien" href="/galerie?univers=paysage#oeuvres" data-libelle="Galerie" data-univers-choix="0" data-nuit="#0c1c1f" aria-current="true">
+            <span class="univers-nom">Paysages</span><span class="univers-nombre">13</span>
+            <span class="univers-desc">Des paysages contemporains à couper le souffle</span>
+          </a></li><li data-anime>
+          <a class="univers-lien" href="/galerie?univers=portraits#oeuvres" data-libelle="Galerie" data-univers-choix="1" data-nuit="#1f110c">
+            <span class="univers-nom">Portraits</span><span class="univers-nombre">7</span>
+            <span class="univers-desc">Découvrir les visages</span>
+          </a></li><li data-anime>
+          <a class="univers-lien" href="/galerie?univers=architecture#oeuvres" data-libelle="Galerie" data-univers-choix="2" data-nuit="#0c1d1f">
+            <span class="univers-nom">Architecture</span><span class="univers-nombre">6</span>
+            <span class="univers-desc">Trouver la pièce signature</span>
+          </a></li><li data-anime>
+          <a class="univers-lien" href="/galerie?univers=nature#oeuvres" data-libelle="Galerie" data-univers-choix="3" data-nuit="#1f0d0c">
+            <span class="univers-nom">Nature</span><span class="univers-nombre">4</span>
+            <span class="univers-desc">Le calme spectacle de la nature</span>
+          </a></li><li data-anime>
+          <a class="univers-lien" href="/galerie?univers=animaux#oeuvres" data-libelle="Galerie" data-univers-choix="4" data-nuit="#0c191f">
+            <span class="univers-nom">Animaux</span><span class="univers-nombre">7</span>
+            <span class="univers-desc">Ils nous fascinent, nous inspirent</span>
+          </a></li>
+      </ul>
+    </div>
+    <div class="univers-scene" data-univers-scene aria-hidden="true">
+      <canvas class="univers-canvas" data-univers-canvas width="10" height="10"></canvas>
+      <div class="univers-images">
+        <figure class="univers-image est-active" data-univers-image="0" data-src="/assets/images/oeuvres/harmonie-etheree-800.webp" style="--r:1.7857142857142858"><img src="/assets/images/oeuvres/harmonie-etheree-800.webp" alt="" width="800" height="448" loading="lazy" decoding="async"><figcaption>Harmonie Éthérée · Darren Whitmore</figcaption></figure><figure class="univers-image" data-univers-image="1" data-src="/assets/images/oeuvres/eclat-captivant-500.webp" style="--r:0.5605381165919282"><img src="/assets/images/oeuvres/eclat-captivant-500.webp" alt="" width="500" height="892" loading="lazy" decoding="async"><figcaption>Éclat Captivant · Darren Whitmore</figcaption></figure><figure class="univers-image" data-univers-image="2" data-src="/assets/images/oeuvres/oasis-chromatique-800.webp" style="--r:1.7897091722595078"><img src="/assets/images/oeuvres/oasis-chromatique-800.webp" alt="" width="800" height="447" loading="lazy" decoding="async"><figcaption>Oasis Chromatique · Darren Whitmore</figcaption></figure><figure class="univers-image" data-univers-image="3" data-src="/assets/images/oeuvres/arbre-de-coeur-florissant-800.webp" style="--r:1.7897091722595078"><img src="/assets/images/oeuvres/arbre-de-coeur-florissant-800.webp" alt="" width="800" height="447" loading="lazy" decoding="async"><figcaption>Arbre de Cœur Florissant · Francesco Conte</figcaption></figure><figure class="univers-image" data-univers-image="4" data-src="/assets/images/oeuvres/elan-sauvage-800.webp" style="--r:1.7857142857142858"><img src="/assets/images/oeuvres/elan-sauvage-800.webp" alt="" width="800" height="448" loading="lazy" decoding="async"><figcaption>Élan Sauvage · Francesco Conte</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="demo ecran epingle" id="chez-vous" data-entete-cache data-plein-ecran data-demo style="--nuit:#1f0f0c">
+  <div class="demo-grille">
+    <div class="demo-scene" data-demo-scene>
+      <figure class="media media--provisoire demo-interieur" data-visuel data-provisoire="salon-soir" style="aspect-ratio:500 / 281" role="img" aria-label="Salon contemporain le soir, mur vide au-dessus d’un canapé"><svg class="provisoire provisoire--interieur" viewBox="0 0 500 281" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="wp4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c0b0a"/><stop offset=".6" stop-color="#2b2620"/><stop offset="1" stop-color="#0e0c0a"/></linearGradient>
+  <radialGradient id="gp4" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#f1d6a2" stop-opacity=".26"/><stop offset=".6" stop-color="#c79f63" stop-opacity=".08"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
+  <radialGradient id="lp4" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd99a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd99a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="pp4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1610"/><stop offset="1" stop-color="#090706"/></linearGradient></defs><rect width="500" height="281" fill="url(#wp4)"/><ellipse cx="250" cy="105" rx="150" ry="95" fill="url(#gp4)"/>
+  <rect y="255" width="500" height="26" fill="url(#pp4)"/><rect y="255" width="500" height=".6" fill="#3a2c1d"/>
+  <circle cx="70" cy="150" r="70" fill="url(#lp4)"/><rect x="69" y="150" width="2" height="105" fill="#8a6d3e"/><path d="M54 150 h32 l-8 -22 h-16z" fill="#c9a66a"/><g fill="#cfc6b6"><rect x="140" y="173" width="220" height="44" rx="8" opacity=".92"/><rect x="140" y="209" width="220" height="34" rx="6"/><rect x="134" y="193" width="20" height="50" rx="8"/><rect x="346" y="193" width="20" height="50" rx="8"/></g><g fill="#5c5040"><rect x="150" y="243" width="4" height="12"/><rect x="346" y="243" width="4" height="12"/></g><ellipse cx="250" cy="261" rx="150" ry="5" fill="#000" opacity=".45"/><rect x="390" y="209" width="44" height="46" rx="4" fill="#b9a68a" opacity=".85"/></svg></figure>
+      <div class="demo-mur" data-demo-mur aria-hidden="true">
+        <div class="demo-oeuvre" data-demo-oeuvre style="--l:80;--h:45">
+          <div class="cadre cadre--toile " style="--r:1.7857142857142858" data-cadre="toile">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp" srcset="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-640.webp 640w, /assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp 800w" sizes="30vw" alt="" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div>
+          <span class="demo-cote demo-cote--l" data-demo-cote-l>80 cm</span>
+          <span class="demo-cote demo-cote--h" data-demo-cote-h>45 cm</span>
+        </div>
+      </div>
+    </div>
+    <div class="demo-texte">
+      <div class="tete-section  ">
+  <p class="surtitre" data-anime>Voir l’œuvre chez vous</p>
+  <h2 class="titre-section" data-titre-anime>Essayez avant d’accrocher</h2>
+</div>
+      <p class="demo-intro" data-anime>Sequoia Studio vous permet de visualiser chaque création directement dans votre espace à partir d’une simple photo. Projetez différentes œuvres sur un même mur, comparez les formats, ajustez l’agencement et trouvez l’équilibre idéal pour votre décoration.</p>
+      <div class="demo-panneau" role="group" aria-label="Démonstration des formats et finitions">
+        <p class="demo-oeuvre-nom">Lumières d&#39;Été Méditerranéen · Darren Whitmore</p>
+        <ol class="demo-etats">
+          <li><button type="button" class="demo-etat" data-demo-etat="0" data-finition="toile" data-l="80" data-h="45" data-lt="80" data-ht="45" aria-pressed="true">
+            <span class="demo-etat-format">80 × 45 cm</span><span class="demo-etat-finition">Toile insonorisée</span><strong class="demo-etat-prix" data-prix>120 €</strong>
+          </button></li><li><button type="button" class="demo-etat" data-demo-etat="1" data-finition="toile" data-l="110" data-h="62" data-lt="110" data-ht="62" aria-pressed="false">
+            <span class="demo-etat-format">110 × 62 cm</span><span class="demo-etat-finition">Toile insonorisée</span><strong class="demo-etat-prix" data-prix>210 €</strong>
+          </button></li><li><button type="button" class="demo-etat" data-demo-etat="2" data-finition="toile" data-l="120" data-h="70" data-lt="120" data-ht="70" aria-pressed="false">
+            <span class="demo-etat-format">120 × 70 cm</span><span class="demo-etat-finition">Toile insonorisée</span><strong class="demo-etat-prix" data-prix>230 €</strong>
+          </button></li><li><button type="button" class="demo-etat" data-demo-etat="3" data-finition="caisse-noire" data-l="120" data-h="70" data-lt="123.6" data-ht="73.6" aria-pressed="false">
+            <span class="demo-etat-format">120 × 70 cm</span><span class="demo-etat-finition">Caisse noire</span><strong class="demo-etat-prix" data-prix>450 €</strong>
+          </button></li><li><button type="button" class="demo-etat" data-demo-etat="4" data-finition="fineart" data-l="110" data-h="62" data-lt="126" data-ht="78" aria-pressed="false">
+            <span class="demo-etat-format">110 × 62 cm</span><span class="demo-etat-finition">FineArt encadré</span><strong class="demo-etat-prix" data-prix>540 €</strong>
+          </button></li>
+        </ol>
+        <p class="mention-prix">TVA non applicable, art. 293 B du CGI</p>
+      </div>
+      <p class="demo-actions"><a href="/chez-vous" class="bouton bouton--plein" data-libelle="Chez vous"><span>Essayer chez vous</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a class="lien-fleche" href="/oeuvres/lumieres-d-ete-mediterraneen" data-libelle="Lumières d&#39;Été Méditerranéen">Voir l’œuvre</a></p>
+    </div>
+  </div>
+</section>
+<section class="fabrication" id="fabrication" data-fabrication>
+  <div class="conteneur fabrication-grille">
+    <div class="fabrication-texte">
+      <div class="tete-section  ">
+  <p class="surtitre" data-anime>Fabrication premium</p>
+  <h2 class="titre-section" data-titre-anime>Une présence contemporaine, parfaitement maîtrisée</h2>
+</div>
+      <p data-anime>Les œuvres sont réalisées selon des standards d’impression et d’encadrement parmi les plus exigeants. L’impression directe UV sur aluminium en 7 couleurs révèle avec précision les nuances, les contrastes et la profondeur des images, tout en offrant une excellente stabilité dans le temps. Associée à une caisse américaine en bois de haute qualité, créant un léger retrait entre l’image et le cadre, elle confère à chaque œuvre une présence contemporaine, élégante et parfaitement maîtrisée.</p>
+      <p data-anime><a href="/cadres-et-finitions" class="bouton bouton--contour" data-libelle="Finitions">Voir la qualité des réalisations</a></p>
+    </div>
+    <div class="eclate" data-eclate aria-hidden="true">
+      <div class="eclate-pile" data-eclate-pile>
+        <div class="eclate-couche eclate-couche--dos"></div>
+        <div class="eclate-couche eclate-couche--cadre"></div>
+        <div class="eclate-couche eclate-couche--creux"></div>
+        <div class="eclate-couche eclate-couche--oeuvre"><img src="/assets/images/oeuvres/oasis-moderne-800.webp" alt="" width="800" height="400" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+    <ul class="eclate-legendes" data-eclate-legendes>
+      <li data-anime style="--i:0"><span class="eclate-puce" aria-hidden="true">1</span>Cadre en bois, 1 cm de face</li><li data-anime style="--i:1"><span class="eclate-puce" aria-hidden="true">2</span>Interstice visible de 8 mm</li><li data-anime style="--i:2"><span class="eclate-puce" aria-hidden="true">3</span>Alu Dibond 3 mm, impression directe</li><li data-anime style="--i:3"><span class="eclate-puce" aria-hidden="true">4</span>Hauteur du cadre 3,7 cm</li>
+    </ul>
+    <div class="fabrication-photo"><figure class="media media--provisoire " data-visuel data-provisoire="atelier-impression" style="aspect-ratio:16 / 10" role="img" aria-label="Atelier d’impression fine art la nuit, une feuille de papier coton sort de l’imprimante"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap5" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#3a3026"/><stop offset="1" stop-color="#070606"/></radialGradient><linearGradient id="pp5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf8f1"/><stop offset="1" stop-color="#cfc8ba"/></linearGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap5)"/><path d="M780 0 L840 0 L1180 900 L440 900Z" fill="#f3d9a6" opacity=".045"/>
+    <rect x="360" y="420" width="900" height="210" rx="18" fill="#141312"/><rect x="380" y="440" width="860" height="30" rx="6" fill="#1f1d1b"/><rect x="420" y="630" width="20" height="200" fill="#0e0d0c"/><rect x="1180" y="630" width="20" height="200" fill="#0e0d0c"/>
+    <path d="M500 470 L1120 470 L1180 640 L440 640Z" fill="url(#pp5)"/><path d="M440 640 L1180 640 L1160 652 L460 652Z" fill="#a9a293" opacity=".6"/>
+    <g fill="#2a2520"><rect x="1330" y="300" width="200" height="46" rx="23"/><rect x="1330" y="370" width="200" height="46" rx="23"/><rect x="1330" y="440" width="200" height="46" rx="23"/><rect x="1330" y="510" width="200" height="46" rx="23"/></g>
+    <rect x="80" y="260" width="200" height="300" fill="#2c2f31" opacity=".5"/><rect x="0" y="830" width="1600" height="70" fill="#060505"/></svg></figure></div>
+  </div>
+</section>
+<section class="rarete" id="certificat" data-rarete>
+  <div class="conteneur rarete-grille">
+    <div class="anneau" data-anneau aria-hidden="true">
+      <svg viewBox="0 0 400 400" class="anneau-svg">
+        <line class="anneau-trait" x1="200.0" y1="50.0" x2="200.0" y2="18.0" style="--i:0"/><line class="anneau-trait" x1="231.2" y1="53.3" x2="235.3" y2="33.7" style="--i:1"/><line class="anneau-trait" x1="261.0" y1="63.0" x2="269.1" y2="44.7" style="--i:2"/><line class="anneau-trait" x1="288.2" y1="78.6" x2="299.9" y2="62.5" style="--i:3"/><line class="anneau-trait" x1="311.5" y1="99.6" x2="326.3" y2="86.2" style="--i:4"/><line class="anneau-trait" x1="329.9" y1="125.0" x2="357.6" y2="109.0" style="--i:5"/><line class="anneau-trait" x1="342.7" y1="153.6" x2="361.7" y2="147.5" style="--i:6"/><line class="anneau-trait" x1="349.2" y1="184.3" x2="369.1" y2="182.2" style="--i:7"/><line class="anneau-trait" x1="349.2" y1="215.7" x2="369.1" y2="217.8" style="--i:8"/><line class="anneau-trait" x1="342.7" y1="246.4" x2="361.7" y2="252.5" style="--i:9"/><line class="anneau-trait" x1="329.9" y1="275.0" x2="357.6" y2="291.0" style="--i:10"/><line class="anneau-trait" x1="311.5" y1="300.4" x2="326.3" y2="313.8" style="--i:11"/><line class="anneau-trait" x1="288.2" y1="321.4" x2="299.9" y2="337.5" style="--i:12"/><line class="anneau-trait" x1="261.0" y1="337.0" x2="269.1" y2="355.3" style="--i:13"/><line class="anneau-trait" x1="231.2" y1="346.7" x2="235.3" y2="366.3" style="--i:14"/><line class="anneau-trait" x1="200.0" y1="350.0" x2="200.0" y2="382.0" style="--i:15"/><line class="anneau-trait" x1="168.8" y1="346.7" x2="164.7" y2="366.3" style="--i:16"/><line class="anneau-trait" x1="139.0" y1="337.0" x2="130.9" y2="355.3" style="--i:17"/><line class="anneau-trait" x1="111.8" y1="321.4" x2="100.1" y2="337.5" style="--i:18"/><line class="anneau-trait" x1="88.5" y1="300.4" x2="73.7" y2="313.8" style="--i:19"/><line class="anneau-trait" x1="70.1" y1="275.0" x2="42.4" y2="291.0" style="--i:20"/><line class="anneau-trait" x1="57.3" y1="246.4" x2="38.3" y2="252.5" style="--i:21"/><line class="anneau-trait" x1="50.8" y1="215.7" x2="30.9" y2="217.8" style="--i:22"/><line class="anneau-trait" x1="50.8" y1="184.3" x2="30.9" y2="182.2" style="--i:23"/><line class="anneau-trait" x1="57.3" y1="153.6" x2="38.3" y2="147.5" style="--i:24"/><line class="anneau-trait" x1="70.1" y1="125.0" x2="42.4" y2="109.0" style="--i:25"/><line class="anneau-trait" x1="88.5" y1="99.6" x2="73.7" y2="86.2" style="--i:26"/><line class="anneau-trait" x1="111.8" y1="78.6" x2="100.1" y2="62.5" style="--i:27"/><line class="anneau-trait" x1="139.0" y1="63.0" x2="130.9" y2="44.7" style="--i:28"/><line class="anneau-trait" x1="168.8" y1="53.3" x2="164.7" y2="33.7" style="--i:29"/>
+        <circle class="anneau-onde" cx="200" cy="200" r="70"/><circle class="anneau-onde anneau-onde--2" cx="200" cy="200" r="70"/>
+      </svg>
+      <div class="anneau-centre"><span class="anneau-n">1–30</span><span class="anneau-nfc">NFC</span></div>
+    </div>
+    <div class="rarete-texte">
+      <div class="tete-section  ">
+  <p class="surtitre" data-anime>Rareté et traçabilité</p>
+  <h2 class="titre-section" data-titre-anime>Œuvres numérotées et certifiées authentiques</h2>
+</div>
+      <p data-anime>Les œuvres sont proposées en tirage limité et numérotées, garantissant leur rareté. Elles sont accompagnées d’un certificat d’authenticité signé, intégrant un hologramme et une puce NFC permettant une vérification simple et fiable.</p>
+      <p class="rarete-note" data-anime>Chaque exemplaire porte son numéro : 1 à 30 au plus.</p>
+      <p data-anime><a href="/certificat" class="bouton bouton--contour" data-libelle="Certificat">La certification des œuvres</a></p>
+    </div>
+    <div class="rarete-photos">
+      <figure class="media rarete-photo rarete-photo--1" style="--cadrage:50% 60%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/certificat/hologramme-nfc-1280.webp" srcset="/assets/images/certificat/hologramme-nfc-640.webp 640w, /assets/images/certificat/hologramme-nfc-1280.webp 1280w, /assets/images/certificat/hologramme-nfc-1920.webp 1920w" sizes="(max-width: 760px) 70vw, 24vw" alt="Hologramme et étiquette NFC Sequoia Studio devant une œuvre encadrée" width="1280" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <figure class="media rarete-photo rarete-photo--2" style="--cadrage:50% 50%;aspect-ratio:1 / 1">
+  <picture>
+    <img src="/assets/images/certificat/verification-smartphone-1280.webp" srcset="/assets/images/certificat/verification-smartphone-640.webp 640w, /assets/images/certificat/verification-smartphone-1280.webp 1280w, /assets/images/certificat/verification-smartphone-1920.webp 1920w" sizes="(max-width: 760px) 60vw, 20vw" alt="Smartphone affichant la validation d’un certificat d’authenticité" width="1280" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    </div>
+  </div>
+</section>
+<section class="signatures" id="artistes">
+  <div class="conteneur">
+    <div class="tete-section tete-section--centre ">
+  <p class="surtitre" data-anime>Regards contemporains</p>
+  <h2 class="titre-section" data-titre-anime>Une sélection de signatures visuelles aux univers affirmés</h2>
+</div>
+    <ul class="signatures-liste" role="list">
+      <li class="signature" data-anime style="--nuit:#1f1c0c">
+        <a class="signature-lien" href="/artistes#darren-whitmore" data-libelle="Artistes">
+          <div class="zone-oeuvre zone-oeuvre--signature"><div class="cadre cadre--caisse-noire " style="--r:2" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 400">
+  <picture>
+    <img src="/assets/images/oeuvres/oasis-moderne-800.webp" srcset="/assets/images/oeuvres/oasis-moderne-640.webp 640w, /assets/images/oeuvres/oasis-moderne-800.webp 800w" sizes="(max-width: 760px) 80vw, 28vw" alt="Oasis Moderne, Darren Whitmore" width="800" height="400" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></div>
+          <h3 class="signature-nom">Darren Whitmore</h3>
+          <p class="signature-role">Photographe &amp; Créateur visuel</p>
+          <p class="signature-nombre">19 œuvres</p>
+        </a></li><li class="signature" data-anime style="--nuit:#0c1f1f">
+        <a class="signature-lien" href="/artistes#francesco-conte" data-libelle="Artistes">
+          <div class="zone-oeuvre zone-oeuvre--signature"><div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
+  <picture>
+    <img src="/assets/images/oeuvres/l-ephemere-rencontre-800.webp" srcset="/assets/images/oeuvres/l-ephemere-rencontre-640.webp 640w, /assets/images/oeuvres/l-ephemere-rencontre-800.webp 800w" sizes="(max-width: 760px) 80vw, 28vw" alt="L&#39;éphémère rencontre, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></div>
+          <h3 class="signature-nom">Francesco Conte</h3>
+          <p class="signature-role">Artiste contemporain de la nature</p>
+          <p class="signature-nombre">13 œuvres</p>
+        </a></li><li class="signature" data-anime style="--nuit:#1f160c">
+        <a class="signature-lien" href="/artistes#miyu-mori" data-libelle="Artistes">
+          <div class="zone-oeuvre zone-oeuvre--signature"><div class="cadre cadre--caisse-noire " style="--r:0.7656967840735069" data-cadre="caisse-noire">
+  <span class="cadre-ombre" aria-hidden="true"></span>
+  <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
+    <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 653">
+  <picture>
+    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 760px) 80vw, 28vw" alt="L&#39;Esprit Flottant, Miyu Mori" width="500" height="653" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div></div></div>
+</div></div>
+          <h3 class="signature-nom">Miyu Mori</h3>
+          <p class="signature-role">Artiste de l’image contemporaine</p>
+          <p class="signature-nombre">10 œuvres</p>
+        </a></li>
+    </ul>
+    <p class="centre" data-anime><a href="/artistes" class="bouton bouton--contour" data-libelle="Artistes">Découvrir les artistes</a></p>
+  </div>
+</section>
+<section class="fondateurs" id="fondateurs">
+  <div class="conteneur fondateurs-grille">
+    <figure class="media fondateurs-photo" style="--cadrage:50% 40%;aspect-ratio:1023 / 1537">
+  <picture>
+    <img src="/assets/images/equipe/freres-tost-showroom-1023.webp" srcset="/assets/images/equipe/freres-tost-showroom-640.webp 640w, /assets/images/equipe/freres-tost-showroom-1023.webp 1023w" sizes="(max-width: 760px) 100vw, 40vw" alt="Gilles et Frédéric TOST dans le showroom Sequoia Studio" width="1023" height="1537" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div class="fondateurs-texte">
+      <div class="tete-section  ">
+  <p class="surtitre" data-anime>Notre histoire</p>
+  <h2 class="titre-section" data-titre-anime>Deux regards complémentaires</h2>
+</div>
+      <p data-anime>Né de la complémentarité de Gilles et Frédéric TOST, frères jumeaux aux sensibilités distinctes, Sequoia Studio propose une sélection d’œuvres contemporaines choisies pour transcender vos espaces.</p>
+      <blockquote class="citation" data-anime><p>L’Art Digital me permet de traverser des univers multiples, de changer de registre, d’époque ou d’atmosphère, sans contrainte.</p><footer>Gilles TOST, créateur artistique</footer></blockquote>
+      <p data-anime><a href="/qui-sommes-nous" class="bouton bouton--contour" data-libelle="Le studio">Qui sommes-nous</a></p>
+    </div>
+  </div>
+</section>
+<section class="serenite" id="acheter">
+  <div class="conteneur serenite-grille">
+    <div class="serenite-texte">
+      <div class="tete-section  ">
+  <p class="surtitre" data-anime>Acheter sereinement</p>
+  <h2 class="titre-section" data-titre-anime>Prête à accrocher, livrée avec soin</h2>
+</div>
+      <ul class="engagements" role="list">
+        <li data-anime><svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="24" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" pathLength="1"/><path d="M6 19h36" stroke="currentColor" stroke-width="1.5" pathLength="1"/><path d="M12 29h8" stroke="currentColor" stroke-width="1.5" pathLength="1"/></svg><h3>Paiement sécurisé</h3><p>Par carte bancaire. Vos informations de paiement sont traitées avec un maximum de sécurité.</p>
+          <span class="logos logos--inline"><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></span></li>
+        <li data-anime><svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M5 14h24v18H5zM29 20h8l6 6v6H29z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" pathLength="1"/><circle cx="13" cy="34" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5" pathLength="1"/><circle cx="36" cy="34" r="3.5" fill="none" stroke="currentColor" stroke-width="1.5" pathLength="1"/></svg><h3>Livraison soignée</h3><p>En France métropolitaine. Commandes très souvent produites et expédiées en moins de 24 heures, dans des emballages sur mesure.</p>
+          <span class="logos logos--inline"><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></span></li>
+        <li data-anime><svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 18h17a9 9 0 0 1 0 18H18" fill="none" stroke="currentColor" stroke-width="1.5" pathLength="1"/><path d="M19 12l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" pathLength="1"/></svg><h3>14 jours pour changer d’avis</h3><p>Droit de rétractation de 14 jours pour les œuvres non personnalisées.</p></li>
+        <li data-anime><svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32v20H22l-8 6v-6H8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" pathLength="1"/><path d="M15 21h18M15 26h11" stroke="currentColor" stroke-width="1.5" pathLength="1"/></svg><h3>Un conseil ?</h3><p>Support par mail 7j/7. <a href="mailto:sequoia@tostunlimited.com">sequoia@tostunlimited.com</a></p></li>
+      </ul>
+      <p class="serenite-actions" data-anime><a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie"><span>Entrer dans la galerie</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a href="/cgv" class="lien-fleche" data-libelle="Conditions de vente">Conditions de vente</a></p>
+    </div>
+    <figure class="media media--provisoire serenite-photo" data-visuel data-provisoire="emballage" style="aspect-ratio:4 / 5" role="img" aria-label="Table d’emballage d’atelier : carton, papier kraft et protections d’angles"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap6" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#3b2e22"/><stop offset="1" stop-color="#080706"/></radialGradient></defs>
+    <rect width="1600" height="900" fill="url(#ap6)"/><path d="M770 0 h60 l320 900 h-700z" fill="#f3d9a6" opacity=".04"/>
+    <path d="M420 380 L1120 330 L1240 520 L520 580Z" fill="#a5794b"/><path d="M420 380 L520 580 L520 640 L420 440Z" fill="#7d5a36"/><path d="M520 580 L1240 520 L1240 580 L520 640Z" fill="#8c6640"/>
+    <path d="M470 400 L1110 356 L1190 500 L545 548Z" fill="#c9a77d"/>
+    <path d="M200 690 L760 640 L800 700 L240 760Z" fill="#b8915f" opacity=".9"/><g fill="#141414"><path d="M1260 640 l60 0 l0 60 l-20 0 l0 -40 l-40 0z"/><path d="M1340 700 l60 0 l0 60 l-20 0 l0 -40 l-40 0z"/></g>
+    <path d="M1000 640 L1360 610 L1380 640 L1020 670Z" fill="#f4efe6" opacity=".85"/></svg></figure>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div class="pied-marque">
+      <div class="pied-sequoia" aria-hidden="true"><img src="/assets/images/logo-nuit-256.webp" alt="" width="256" height="256" loading="lazy" decoding="async"></div>
+      <p class="pied-nom">Sequoia Studio</p>
+      <p class="pied-texte">Galerie d’art en ligne : œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité.</p>
+      <p><a class="lien-fleche" href="mailto:sequoia@tostunlimited.com"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>sequoia@tostunlimited.com</span></a></p>
+      <p><a class="lien-fleche" href="https://www.instagram.com/sequoiastudio.fr" target="_blank" rel="noopener" aria-label="Instagram de Sequoia Studio (nouvel onglet)"><span>Instagram @sequoiastudio.fr</span></a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p class="pied-titre">Sommaire</p>
+      <ul><li><a href="/" data-libelle="Accueil" aria-current="page">Accueil</a></li><li><a href="/galerie" data-libelle="Galerie">Galerie</a></li><li><a href="/artistes" data-libelle="Artistes">Artistes</a></li><li><a href="/chez-vous" data-libelle="Chez vous">Chez vous</a></li><li><a href="/cadres-et-finitions" data-libelle="Finitions">Finitions</a></li><li><a href="/certificat" data-libelle="Certificat">Certificat</a></li><li><a href="/journal" data-libelle="Journal">Journal</a></li><li><a href="/qui-sommes-nous" data-libelle="Le studio">Le studio</a></li><li><a href="/commande" data-libelle="Panier">Panier</a></li></ul>
+    </nav>
+    <div>
+      <p class="pied-titre">Informations légales</p>
+      <ul><li><a href="/mentions-legales" data-libelle="Mentions légales">Mentions légales</a></li><li><a href="/cgv" data-libelle="Conditions de vente">Conditions de vente</a></li><li><a href="/confidentialite" data-libelle="Confidentialité">Confidentialité</a></li></ul>
+      <p class="pied-titre pied-titre--espace">Paiement sécurisé par carte bancaire</p>
+      <ul class="logos" aria-label="Paiement sécurisé par carte bancaire">
+        <li><img src="/assets/images/logos/cb.svg" alt="CB" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/visa.svg" alt="Visa" width="34" height="24" loading="lazy"></li>
+        <li><img src="/assets/images/logos/mastercard.svg" alt="Mastercard" width="34" height="24" loading="lazy"></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pied-titre">Expédition</p>
+      <ul class="logos logos--transport" aria-label="Expédition">
+        <li><img src="/assets/images/logos/ups.svg" alt="UPS" width="21" height="25" loading="lazy"></li>
+        <li><img src="/assets/images/logos/dpd.svg" alt="DPD" width="50" height="21" loading="lazy"></li>
+        <li><img src="/assets/images/logos/colissimo.svg" alt="Colissimo" width="82" height="21" loading="lazy"></li>
+      </ul>
+      <p class="pied-titre pied-titre--espace">Confort</p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : panier et commande simulés, informations marquées « à compléter » à fournir par Sequoia Studio.</p><p>© 2018–2026 TOST Unlimited</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
+  <a class="bouton" href="/galerie" data-libelle="Galerie">Galerie</a>
+</div>
+</body>
+</html>
