@@ -1,7 +1,7 @@
 /* Compteurs [data-compteur="1300"] : le texte de la page contient le chiffre final (lisible sans JavaScript).
    La place du chiffre final est réservée avant de compter : rien autour ne bouge ni ne passe à la ligne.
    Au retour, en mode calme et en secours, le chiffre final s'affiche directement. */
-import { etat, quand } from './etat.js?v=1';
+import { etat, quand } from './etat.js?v=2';
 
 export function initCompteurs() {
   const liste = [...document.querySelectorAll('[data-compteur]')];

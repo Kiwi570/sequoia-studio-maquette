@@ -287,13 +287,14 @@
       "noir-gris": "Noirs et gris",
       "violet": "Violets"
     },
-    "chezVous": "Survolez une œuvre pour la voir chez quelqu’un.",
+    "chezVous": "Survolez une œuvre pour la voir mise en situation.",
     "chezVousTactile": "Touchez une œuvre pour l’ouvrir.",
     "raccourcis": "Explorer par univers",
     "finTitre": "Hésitez-vous entre deux formats ?",
     "finTexte": "Essayez les œuvres sur votre mur, à l’échelle, ou écrivez-nous : le support répond par mail 7j/7.",
     "finChezVous": "Voir chez vous",
-    "finAlt": "Trois œuvres Sequoia Studio accrochées au-dessus d’une console"
+    "finAlt": "Trois œuvres Sequoia Studio accrochées au-dessus d’une console",
+    "voirOeuvres": "Voir les {n} œuvres"
   },
   "oeuvre": {
     "retour": "Galerie",
@@ -330,7 +331,7 @@
     },
     "oeuvreTitre": "L’œuvre",
     "ambiance": "Ambiance",
-    "couleurs": "Couleurs dominantes",
+    "couleurs": "Nuancier relevé sur l’œuvre",
     "motsCles": "Mots-clés",
     "chezVousTitre": "Chez vous",
     "chezVousTexte": "Mise en situation réalisée par Sequoia Studio, puis essayez l’œuvre sur votre propre mur, à l’échelle.",
@@ -350,7 +351,10 @@
     "memeUnivers": "Dans le même univers",
     "specimen": "Spécimen",
     "barreTotal": "Total",
-    "selection": "Votre sélection"
+    "selection": "Votre sélection",
+    "finitionIndisponible": "{nom} : jusqu’à {max} cm, pas dans ce format.",
+    "finitionChangee": "{nom} n’existe pas dans ce format : finition passée en {nouvelle}.",
+    "couleursCitees": "couleurs citées"
   },
   "certificatCarte": {
     "titre": "Certificat d’authenticité",
@@ -393,10 +397,10 @@
     "a4Titre": "Mettre à l’échelle",
     "a4Aide": "Faites glisser les deux repères sur les bords gauche et droit de la feuille A4 (29,7 cm).",
     "a4Ok": "Échelle réglée",
-    "echelleSalon": "Échelle : canapé de 220 cm",
-    "echelleBureau": "Échelle : table de 240 cm",
-    "echelleChambre": "Échelle : lit de 160 cm",
-    "echelleSalle": "Échelle : table de 200 cm",
+    "echelleSalon": "Échelle : mur de 5 m, plafond à 2,50 m",
+    "echelleBureau": "Échelle : mur de 5,10 m, plafond à 2,50 m",
+    "echelleChambre": "Échelle : mur de 4,70 m, plafond à 2,50 m",
+    "echelleSalle": "Échelle : mur de 5,05 m, plafond à 2,50 m",
     "echellePhoto": "Échelle : feuille A4 de 29,7 cm",
     "ajouter": "Ajouter une œuvre",
     "choisirOeuvre": "Choisir une œuvre",
@@ -418,11 +422,12 @@
     "finTexte": "Chaque fiche œuvre propose trois formats et quatre finitions, avec les dimensions totales et le prix.",
     "finAction": "Choisir une œuvre",
     "a4Gauche": "Bord gauche de la feuille A4",
-    "a4Droit": "Bord droit de la feuille A4"
+    "a4Droit": "Bord droit de la feuille A4",
+    "photoVide": "Ajoutez une photo de votre mur avec une feuille A4 posée dessus : les œuvres s’y placeront à l’échelle."
   },
   "interieurs": {
     "salon-soir": "Salon, le soir",
-    "bureau-soir": "Bureau, le soir",
+    "bureau-soir": "Salle de réunion, le soir",
     "chambre-soir": "Chambre, le soir",
     "salle-a-manger-soir": "Salle à manger, le soir"
   },
@@ -446,7 +451,7 @@
     "titre": "Encadrement & finitions d’exception",
     "texte": "Le cadre n’est pas un simple accessoire : il prolonge l’œuvre et l’adapte à votre intérieur. Quatre finitions, choisies pour durer.",
     "action": "Comparer les finitions",
-    "info": "4 finitions · 3 formats par œuvre",
+    "info": "4 finitions · 2 ou 3 formats par œuvre",
     "alt": "Baguettes d’encadrement en bois noir, blanc et chêne sur un établi, éclairées de côté",
     "comparerTitre": "Quatre finitions",
     "support": "Support",
@@ -455,8 +460,8 @@
     "tailleMax": "Format maximal",
     "supplement": "Supplément",
     "supplementToile": "Prix de base du format",
-    "supplementCaisse": "+ 130 €, et 1,50 € par cm au-delà de 60 cm sur le grand côté",
-    "supplementFineart": "+ 240 €, et 1,80 € par cm au-delà de 60 cm sur le grand côté",
+    "supplementCaisse": "+ 130 €, et 1,50 € par cm au-delà de 60 cm sur le grand côté, arrondi à la dizaine supérieure",
+    "supplementFineart": "+ 240 €, et 1,80 € par cm au-delà de 60 cm sur le grand côté, arrondi à la dizaine supérieure",
     "plus": "En savoir plus",
     "caisseTitre": "La caisse américaine",
     "caisseSurtitre": "Effet flottant",
@@ -563,7 +568,8 @@
     "finTitre": "De la technique à vos murs",
     "finTexte": "Les œuvres du catalogue sont imprimées sur les supports présentés dans le journal.",
     "finAction": "Découvrir la galerie",
-    "finAlt": "Œuvre photographique contemporaine montée sur aluminium Dibond"
+    "finAlt": "Œuvre photographique contemporaine montée sur aluminium Dibond",
+    "commencer": "Commencer la lecture"
   },
   "studio": {
     "surtitre": "Qui sommes-nous",
@@ -631,7 +637,8 @@
     "envoyer": "Payer (simulation)",
     "envoye": "Commande simulée : rien n’a été vendu, payé ni envoyé. Votre panier a été vidé. Sur le site final, vous recevriez une confirmation par e-mail.",
     "retractation": "Droit de rétractation de 14 jours pour les œuvres non personnalisées (CGV, article 8).",
-    "cgvLien": "conditions générales de vente"
+    "cgvLien": "conditions générales de vente",
+    "retourGalerie": "Retour à la galerie"
   },
   "legal": {
     "maj": "Dernière mise à jour : {date}",

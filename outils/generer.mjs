@@ -149,9 +149,10 @@ function contexte(l, meta) {
     },
     /* Image en plusieurs tailles (assets/images/<nom>-<largeur>.webp), version téléphone (<nom>-mobile-<largeur>.webp),
        cadrage, mention « Illustration générée » pour les images Grok (dossier grok/). */
-    media({ nom, alt = '', cadrage = '50% 50%', cadrageMobile, sizes = '100vw', priorite = false, classe = '', ratio, legende } = {}) {
+    media({ nom, alt = '', cadrage = '50% 50%', cadrageMobile, sizes = '100vw', priorite = false, classe = '', ratio, legende, mobile = true } = {}) {
       const tailles = largeurs(nom);
-      const mobiles = largeurs(`${nom}-mobile`);
+      /* mobile: false : jamais la version téléphone (scènes à l'échelle calibrées sur l'image en largeur). */
+      const mobiles = mobile ? largeurs(`${nom}-mobile`) : [];
       /* Image générée pas encore reçue : emplacement gardé, visuel dessiné en code (jamais de cadre vide). */
       if (!tailles.length && provisoires && /(^|\/)grok\//.test(nom) && !['webp', 'jpg', 'png'].some((e) => existsSync(join(racine, `assets/images/${nom}.${e}`)))) {
         enAttente.add(nom);

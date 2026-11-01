@@ -21,7 +21,7 @@ export default (c) => {
   <div class="scene-fond scene-fond--plein">${c.media({ nom: 'grok/mur-galerie', alt: c.s('galerie.alt'), priorite: true, sizes: '100vw' })}</div>
   <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
   <div class="mur-ouverture" aria-hidden="true">
-    ${MUR.map((s, i) => { const o = oeuvre(c, s); return html`<span class="mur-case" style="--i:${i};--r:${o.px.l / o.px.h}" data-anime="gsap"><img src="/assets/images/${o.petit}" alt="" width="${o.px.l}" height="${o.px.h}" ${brut(i < 6 ? 'fetchpriority="high"' : 'loading="lazy"')} decoding="async"></span>`; })}
+    ${MUR.map((s, i) => { const o = oeuvre(c, s); return html`<span class="mur-case" style="--i:${i};--r:${o.px.l / o.px.h}" data-anime="gsap"><img src="/assets/images/${o.petit}" alt="" width="${o.px.l}" height="${o.px.h}" ${brut(i < 6 ? 'fetchpriority="high"' : 'loading="eager"')} decoding="async"></span>`; })}
   </div>
   <div class="scene-texte scene-texte--galerie">
     <p class="surtitre" data-anime="gsap">${c.t('galerie.surtitre')}</p>
@@ -66,6 +66,7 @@ export default (c) => {
         ${puce('couleur', '', c.t('galerie.toutes'), null, true)}${familles.map((f) => html`<label class="puce puce--couleur"><input type="radio" name="couleur" value="${f}"><span><i class="pastille pastille--${f}" aria-hidden="true"></i>${c.t('galerie.familles.' + f)} <small>${compte((o) => o.familles.includes(f))}</small></span></label>`)}
       </div></fieldset>
       <p class="filtres-pied"><button type="reset" class="lien" data-filtres-reinitialiser>${c.t('galerie.reinitialiser')}</button><span class="mention-prix">${c.t('commun.prixMentionListe')}</span></p>
+      <p class="filtres-voir"><button type="button" class="bouton bouton--plein" data-filtres-voir data-modele="${c.s('galerie.voirOeuvres')}">${c.t('galerie.voirOeuvres', { n: oeuvres.length })}</button></p>
     </div>
   </form>
   <div class="conteneur mur-oeuvres-zone">

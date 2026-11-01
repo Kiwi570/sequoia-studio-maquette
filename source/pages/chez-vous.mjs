@@ -1,7 +1,7 @@
 /* Voir l'œuvre chez vous : ouverture (une œuvre se pose sur le mur d'un salon), les trois gestes (feuille A4),
    l'outil (intérieurs à l'échelle ou photo du visiteur, jusqu'à trois œuvres, formats, finitions, prix), inspirations. */
 import { html, brut } from '../../outils/gabarit.mjs';
-import { oeuvre, cadre, tete, prix } from '../gabarits/elements.mjs';
+import { oeuvre, cadre, tete, prix, repereScene } from '../gabarits/elements.mjs';
 import { icone } from '../gabarits/commun.mjs';
 
 export const page = { cle: 'chez-vous', fichier: 'chez-vous', imagePartage: 'ambiances/salon-quatre-oeuvres-1920.webp', partageSous: 'À l’échelle grâce à une simple feuille A4' };
@@ -21,8 +21,8 @@ export default (c) => {
   };
   return html`
 <section class="scene scene--chez ecran" id="debut" data-scene style="--nuit:${o.couleur.nuit}">
-  <div class="chez-ouverture">
-    ${c.media({ nom: 'grok/salon-soir', alt: c.s('chezVous.alt'), priorite: true, sizes: '100vw', classe: 'chez-interieur', ratio: '500 / 281' })}
+  <div class="chez-ouverture" style="${repereScene(c)}">
+    ${c.media({ nom: 'grok/salon-soir', alt: c.s('chezVous.alt'), priorite: true, sizes: '100vw', classe: 'chez-interieur', ratio: '1168 / 784', mobile: false })}
     <div class="chez-pose" data-anime="gsap" data-scene-oeuvre style="--l:${62 + 2 * 1.8};--h:${110 + 2 * 1.8}">${cadre(c, o, { finition: 'caisse-blanche', priorite: true, sizes: '20vw', alt: `${o.titre}, ${o.artiste}` })}</div>
   </div>
   <div class="scene-texte scene-texte--chez">
@@ -53,8 +53,8 @@ export default (c) => {
   <div class="outil-grille conteneur">
     <div class="outil-scene" data-outil-scene role="group" aria-label="${c.s('chezVous.scene')}">
       <div class="outil-fonds">
-        ${interieurs.map((i, k) => html`<div class="outil-fond${k === 0 ? ' est-actif' : ''}" data-outil-fond="${i.id}">${c.media({ nom: i.image, alt: c.s('interieurs.' + i.id), sizes: '(max-width: 900px) 100vw, 62vw', ratio: `${i.largeurCm} / ${i.hauteurCm}` })}</div>`)}
-        <div class="outil-fond outil-fond--photo" data-outil-fond="photo" data-outil-photo-cadre data-alt="${c.s('chezVous.votrePhoto')}"></div>
+        ${interieurs.map((i, k) => html`<div class="outil-fond${k === 0 ? ' est-actif' : ''}" data-outil-fond="${i.id}">${c.media({ nom: i.image, alt: c.s('interieurs.' + i.id), sizes: '(max-width: 900px) 100vw, 62vw', ratio: `${i.largeurCm} / ${i.hauteurCm}`, mobile: false })}</div>`)}
+        <div class="outil-fond outil-fond--photo" data-outil-fond="photo" data-outil-photo-cadre data-alt="${c.s('chezVous.votrePhoto')}"><p class="outil-photo-vide" data-outil-photo-vide>${c.t('chezVous.photoVide')}</p></div>
       </div>
       <div class="outil-oeuvres" data-outil-oeuvres></div>
       <div class="outil-a4" data-outil-a4 hidden>

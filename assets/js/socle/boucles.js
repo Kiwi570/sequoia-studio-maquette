@@ -4,7 +4,7 @@
    Les boucles lourdes passent à une image sur deux pendant le défilement.
    Les animations CSS en boucle [data-boucle-css] sont mises en pause hors écran et en mode calme ;
    un bouton [data-pause-pour="id"] permet de les arrêter (obligatoire au-delà de 5 s de mouvement). */
-import { html, etat } from './etat.js?v=1';
+import { html, etat } from './etat.js?v=2';
 
 const boucles = new Set();
 let raf = 0, dernier = 0, defile = 0, impaire = false;

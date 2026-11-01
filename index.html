@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="1" data-page="accueil" data-curseur>
+<html lang="fr" data-v="2" data-page="accueil" data-curseur>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="Galerie d’art en ligne, œuvres contemporaines encadrées, finitions premium, éditions limitées avec certificat d’authenticité signé par l’artiste.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/">
-<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 65px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
 <script>(function () {
 var d = document.documentElement, ss = null, ls = null;
 try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1">
-<link rel="modulepreload" href="/assets/js/site.js?v=1">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=1"></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
 <meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -142,12 +142,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 <p class="visuellement-cache" aria-live="polite" data-annonce></p>
 <main id="contenu" tabindex="-1">
 <section class="scene scene--accueil ecran" id="debut" data-scene style="--nuit:#0e181d;--scene-x:64%;--scene-y:46%">
-  <div class="scene-fond"><figure class="media media--provisoire scene-mur" data-visuel data-provisoire="mur-nuit" role="img" aria-label="Mur de galerie dans la pénombre, éclairé par un projecteur"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
-  <radialGradient id="fp2" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-  <linearGradient id="sp2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
-  <radialGradient id="vp2" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp2)"/><path d="M782 0 L818 0 L1174.4 378 L425.59999999999997 378Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="800" cy="378" rx="416" ry="270" fill="url(#fp2)"/>
-  <rect y="846" width="1600" height="54.00000000000005" fill="url(#sp2)"/><rect y="846" width="1600" height="2" fill="#2a2219" opacity=".8"/>
-  <rect width="1600" height="900" fill="url(#vp2)"/></svg></figure></div>
+  <div class="scene-fond"><figure class="media scene-mur" data-grok style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/mur-nuit-mobile-640.webp 640w, /assets/images/grok/mur-nuit-mobile-784.webp 784w" sizes="140vw">
+    <img src="/assets/images/grok/mur-nuit-1168.webp" srcset="/assets/images/grok/mur-nuit-640.webp 640w, /assets/images/grok/mur-nuit-1168.webp 1168w" sizes="140vw" alt="Mur de galerie dans la pénombre, éclairé par un projecteur" width="1168" height="784" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div>
   <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
   <div class="scene-zone" data-anime="gsap" data-scene-oeuvre>
     <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
@@ -182,12 +181,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </div></div>
 </section>
 <section class="salle ecran epingle" id="selection" data-entete-cache data-plein-ecran data-salle style="--nuit:#131816">
-  <div class="salle-fond" aria-hidden="true"><figure class="media media--provisoire salle-mur" data-visuel data-provisoire="salle-nuit" aria-hidden="true"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
-  <radialGradient id="fp3" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-  <linearGradient id="sp3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
-  <radialGradient id="vp3" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp3)"/><path d="M382 0 L418 0 L587.2 405 L212.79999999999998 405Z" fill="#f3d9a6" opacity=".035"/><path d="M782 0 L818 0 L987.2 405 L612.8 405Z" fill="#f3d9a6" opacity=".035"/><path d="M1182 0 L1218 0 L1387.2 405 L1012.8 405Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="400" cy="405" rx="208" ry="234" fill="url(#fp3)"/><ellipse cx="800" cy="405" rx="208" ry="234" fill="url(#fp3)"/><ellipse cx="1200" cy="405" rx="208" ry="234" fill="url(#fp3)"/>
-  <rect y="828" width="1600" height="71.99999999999996" fill="url(#sp3)"/><rect y="828" width="1600" height="2" fill="#2a2219" opacity=".8"/>
-  <rect width="1600" height="900" fill="url(#vp3)"/></svg></figure></div>
+  <div class="salle-fond" aria-hidden="true"><figure class="media salle-mur" data-grok style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/salle-nuit-mobile-640.webp 640w, /assets/images/grok/salle-nuit-mobile-784.webp 784w" sizes="100vw">
+    <img src="/assets/images/grok/salle-nuit-1168.webp" srcset="/assets/images/grok/salle-nuit-640.webp 640w, /assets/images/grok/salle-nuit-1168.webp 1168w" sizes="100vw" alt="" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div>
   <div class="conteneur salle-tete">
     <p class="surtitre" data-anime>Notre sélection du moment</p>
     <h2 class="titre-section" data-titre-anime>L’esprit du studio</h2>
@@ -213,7 +211,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-meta">Contemporain · 2022 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
-        <p class="salle-accroche">L&#39;élégance d&#39;une floraison intemporelle.</p>
+        <p class="salle-accroche">L’élégance d’une floraison intemporelle.</p>
       </div>
     </article><article class="salle-oeuvre" data-salle-oeuvre style="--nuit:#0d1a1f">
       <div class="zone-oeuvre"><a class="zone-lien" href="/oeuvres/solitude-hivernale" data-libelle="Solitude Hivernale" tabindex="-1" aria-hidden="true"><div class="cadre cadre--caisse-blanche " style="--r:1.7857142857142858" data-cadre="caisse-blanche">
@@ -252,7 +250,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
         <div class="cartel ">
   <h3 class="cartel-titre"><a href="/oeuvres/rencontre-du-destin" data-libelle="Rencontre du Destin">Rencontre du Destin</a></h3>
   <p class="cartel-artiste">Francesco Conte</p>
-  <p class="cartel-meta">Ink-wash · 2026 · Édition de 30</p>
+  <p class="cartel-meta">Lavis d’encre · 2026 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
         <p class="salle-accroche">Dialogue entre la force et la sérénité.</p>
@@ -303,13 +301,12 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </section>
 <section class="demo ecran epingle" id="chez-vous" data-entete-cache data-plein-ecran data-demo style="--nuit:#1f0f0c">
   <div class="demo-grille">
-    <div class="demo-scene" data-demo-scene>
-      <figure class="media media--provisoire demo-interieur" data-visuel data-provisoire="salon-soir" style="aspect-ratio:500 / 281" role="img" aria-label="Salon contemporain le soir, mur vide au-dessus d’un canapé"><svg class="provisoire provisoire--interieur" viewBox="0 0 500 281" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="wp4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c0b0a"/><stop offset=".6" stop-color="#2b2620"/><stop offset="1" stop-color="#0e0c0a"/></linearGradient>
-  <radialGradient id="gp4" cx=".5" cy=".42" r=".5"><stop offset="0" stop-color="#f1d6a2" stop-opacity=".26"/><stop offset=".6" stop-color="#c79f63" stop-opacity=".08"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-  <radialGradient id="lp4" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd99a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd99a" stop-opacity="0"/></radialGradient>
-  <linearGradient id="pp4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1d1610"/><stop offset="1" stop-color="#090706"/></linearGradient></defs><rect width="500" height="281" fill="url(#wp4)"/><ellipse cx="250" cy="105" rx="150" ry="95" fill="url(#gp4)"/>
-  <rect y="255" width="500" height="26" fill="url(#pp4)"/><rect y="255" width="500" height=".6" fill="#3a2c1d"/>
-  <circle cx="70" cy="150" r="70" fill="url(#lp4)"/><rect x="69" y="150" width="2" height="105" fill="#8a6d3e"/><path d="M54 150 h32 l-8 -22 h-16z" fill="#c9a66a"/><g fill="#cfc6b6"><rect x="140" y="173" width="220" height="44" rx="8" opacity=".92"/><rect x="140" y="209" width="220" height="34" rx="6"/><rect x="134" y="193" width="20" height="50" rx="8"/><rect x="346" y="193" width="20" height="50" rx="8"/></g><g fill="#5c5040"><rect x="150" y="243" width="4" height="12"/><rect x="346" y="243" width="4" height="12"/></g><ellipse cx="250" cy="261" rx="150" ry="5" fill="#000" opacity=".45"/><rect x="390" y="209" width="44" height="46" rx="4" fill="#b9a68a" opacity=".85"/></svg></figure>
+    <div class="demo-scene" data-demo-scene style="--sl:501;--sh:336;--sb:159;--sc:245">
+      <figure class="media demo-interieur" data-grok style="--cadrage:50% 50%;aspect-ratio:1168 / 784">
+  <picture>
+    <img src="/assets/images/grok/salon-soir-1168.webp" srcset="/assets/images/grok/salon-soir-640.webp 640w, /assets/images/grok/salon-soir-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 64vw" alt="Salon contemporain le soir, mur vide au-dessus d’un canapé" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
       <div class="demo-mur" data-demo-mur aria-hidden="true">
         <div class="demo-oeuvre" data-demo-oeuvre style="--l:80;--h:45">
           <div class="cadre cadre--toile " style="--r:1.7857142857142858" data-cadre="toile">
@@ -334,7 +331,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </div>
       <p class="demo-intro" data-anime>Sequoia Studio vous permet de visualiser chaque création directement dans votre espace à partir d’une simple photo. Projetez différentes œuvres sur un même mur, comparez les formats, ajustez l’agencement et trouvez l’équilibre idéal pour votre décoration.</p>
       <div class="demo-panneau" role="group" aria-label="Démonstration des formats et finitions">
-        <p class="demo-oeuvre-nom">Lumières d&#39;Été Méditerranéen · Darren Whitmore</p>
+        <p class="demo-oeuvre-nom">Lumières d’Été Méditerranéen · Darren Whitmore</p>
         <ol class="demo-etats">
           <li><button type="button" class="demo-etat" data-demo-etat="0" data-finition="toile" data-l="80" data-h="45" data-lt="80" data-ht="45" aria-pressed="true">
             <span class="demo-etat-format">80 × 45 cm</span><span class="demo-etat-finition">Toile insonorisée</span><strong class="demo-etat-prix" data-prix>120 €</strong>
@@ -350,7 +347,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
         </ol>
         <p class="mention-prix">TVA non applicable, art. 293 B du CGI</p>
       </div>
-      <p class="demo-actions"><a href="/chez-vous" class="bouton bouton--plein" data-libelle="Chez vous"><span>Essayer chez vous</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a class="lien-fleche" href="/oeuvres/lumieres-d-ete-mediterraneen" data-libelle="Lumières d&#39;Été Méditerranéen">Voir l’œuvre</a></p>
+      <p class="demo-actions"><a href="/chez-vous" class="bouton bouton--plein" data-libelle="Chez vous"><span>Essayer chez vous</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a class="lien-fleche" href="/oeuvres/lumieres-d-ete-mediterraneen" data-libelle="Lumières d’Été Méditerranéen">Voir l’œuvre</a></p>
     </div>
   </div>
 </section>
@@ -375,12 +372,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <ul class="eclate-legendes" data-eclate-legendes>
       <li data-anime style="--i:0"><span class="eclate-puce" aria-hidden="true">1</span>Cadre en bois, 1 cm de face</li><li data-anime style="--i:1"><span class="eclate-puce" aria-hidden="true">2</span>Interstice visible de 8 mm</li><li data-anime style="--i:2"><span class="eclate-puce" aria-hidden="true">3</span>Alu Dibond 3 mm, impression directe</li><li data-anime style="--i:3"><span class="eclate-puce" aria-hidden="true">4</span>Hauteur du cadre 3,7 cm</li>
     </ul>
-    <div class="fabrication-photo"><figure class="media media--provisoire " data-visuel data-provisoire="atelier-impression" style="aspect-ratio:16 / 10" role="img" aria-label="Atelier d’impression fine art la nuit, une feuille de papier coton sort de l’imprimante"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap5" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#3a3026"/><stop offset="1" stop-color="#070606"/></radialGradient><linearGradient id="pp5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbf8f1"/><stop offset="1" stop-color="#cfc8ba"/></linearGradient></defs>
-    <rect width="1600" height="900" fill="url(#ap5)"/><path d="M780 0 L840 0 L1180 900 L440 900Z" fill="#f3d9a6" opacity=".045"/>
-    <rect x="360" y="420" width="900" height="210" rx="18" fill="#141312"/><rect x="380" y="440" width="860" height="30" rx="6" fill="#1f1d1b"/><rect x="420" y="630" width="20" height="200" fill="#0e0d0c"/><rect x="1180" y="630" width="20" height="200" fill="#0e0d0c"/>
-    <path d="M500 470 L1120 470 L1180 640 L440 640Z" fill="url(#pp5)"/><path d="M440 640 L1180 640 L1160 652 L460 652Z" fill="#a9a293" opacity=".6"/>
-    <g fill="#2a2520"><rect x="1330" y="300" width="200" height="46" rx="23"/><rect x="1330" y="370" width="200" height="46" rx="23"/><rect x="1330" y="440" width="200" height="46" rx="23"/><rect x="1330" y="510" width="200" height="46" rx="23"/></g>
-    <rect x="80" y="260" width="200" height="300" fill="#2c2f31" opacity=".5"/><rect x="0" y="830" width="1600" height="70" fill="#060505"/></svg></figure></div>
+    <div class="fabrication-photo"><figure class="media " data-grok style="--cadrage:50% 50%;aspect-ratio:16 / 10">
+  <picture>
+    <img src="/assets/images/grok/atelier-impression-1168.webp" srcset="/assets/images/grok/atelier-impression-640.webp 640w, /assets/images/grok/atelier-impression-1168.webp 1168w" sizes="100vw" alt="Atelier d’impression fine art la nuit, une feuille de papier coton sort de l’imprimante" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div>
   </div>
 </section>
 <section class="rarete" id="certificat" data-rarete>
@@ -444,7 +440,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
   <picture>
-    <img src="/assets/images/oeuvres/l-ephemere-rencontre-800.webp" srcset="/assets/images/oeuvres/l-ephemere-rencontre-640.webp 640w, /assets/images/oeuvres/l-ephemere-rencontre-800.webp 800w" sizes="(max-width: 760px) 80vw, 28vw" alt="L&#39;éphémère rencontre, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/l-ephemere-rencontre-800.webp" srcset="/assets/images/oeuvres/l-ephemere-rencontre-640.webp 640w, /assets/images/oeuvres/l-ephemere-rencontre-800.webp 800w" sizes="(max-width: 760px) 80vw, 28vw" alt="L’éphémère rencontre, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -459,7 +455,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 653">
   <picture>
-    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 760px) 80vw, 28vw" alt="L&#39;Esprit Flottant, Miyu Mori" width="500" height="653" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 760px) 80vw, 28vw" alt="L’Esprit Flottant, Miyu Mori" width="500" height="653" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -507,12 +503,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       </ul>
       <p class="serenite-actions" data-anime><a href="/galerie" class="bouton bouton--plein" data-libelle="Galerie"><span>Entrer dans la galerie</span><svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a> <a href="/cgv" class="lien-fleche" data-libelle="Conditions de vente">Conditions de vente</a></p>
     </div>
-    <figure class="media media--provisoire serenite-photo" data-visuel data-provisoire="emballage" style="aspect-ratio:4 / 5" role="img" aria-label="Table d’emballage d’atelier : carton, papier kraft et protections d’angles"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap6" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#3b2e22"/><stop offset="1" stop-color="#080706"/></radialGradient></defs>
-    <rect width="1600" height="900" fill="url(#ap6)"/><path d="M770 0 h60 l320 900 h-700z" fill="#f3d9a6" opacity=".04"/>
-    <path d="M420 380 L1120 330 L1240 520 L520 580Z" fill="#a5794b"/><path d="M420 380 L520 580 L520 640 L420 440Z" fill="#7d5a36"/><path d="M520 580 L1240 520 L1240 580 L520 640Z" fill="#8c6640"/>
-    <path d="M470 400 L1110 356 L1190 500 L545 548Z" fill="#c9a77d"/>
-    <path d="M200 690 L760 640 L800 700 L240 760Z" fill="#b8915f" opacity=".9"/><g fill="#141414"><path d="M1260 640 l60 0 l0 60 l-20 0 l0 -40 l-40 0z"/><path d="M1340 700 l60 0 l0 60 l-20 0 l0 -40 l-40 0z"/></g>
-    <path d="M1000 640 L1360 610 L1380 640 L1020 670Z" fill="#f4efe6" opacity=".85"/></svg></figure>
+    <figure class="media serenite-photo" data-grok style="--cadrage:50% 50%;aspect-ratio:4 / 5">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/emballage-mobile-640.webp 640w, /assets/images/grok/emballage-mobile-784.webp 784w" sizes="(max-width: 760px) 100vw, 44vw">
+    <img src="/assets/images/grok/emballage-1168.webp" srcset="/assets/images/grok/emballage-640.webp 640w, /assets/images/grok/emballage-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 44vw" alt="Table d’emballage d’atelier : carton, papier kraft et protections d’angles" width="1168" height="784" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
   </div>
 </section>
 </main>

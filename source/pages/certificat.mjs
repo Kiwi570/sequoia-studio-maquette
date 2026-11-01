@@ -84,7 +84,7 @@ export default (c) => {
       <p class="outil-note">${c.t('certificat.demoNote')}</p>
     </div>
   </div>
-  <div class="conteneur">${c.media({ nom: 'certificat/verification-smartphone', alt: c.s('certificat.verifAlt'), sizes: '(max-width: 760px) 100vw, 50vw', ratio: '16 / 9', cadrage: '50% 50%', classe: 'verification-photo' })}</div>
+  <div class="conteneur">${c.media({ nom: 'certificat/verification-smartphone', alt: c.s('certificat.verifAlt'), sizes: '(max-width: 760px) 100vw, 640px', ratio: '1 / 1', classe: 'verification-photo' })}</div>
 </section>
 
 <section class="transmission" id="transmission">

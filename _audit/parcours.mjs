@@ -27,6 +27,9 @@ export default async function ({ contexte, attendrePret, attendre, BASE, R, T })
     if (att !== dit) R.echec('prix', `${o.slug} ${fo.largeur}×${fo.hauteur} ${f} : ${dit} au lieu de ${att}`, { page: `/oeuvres/${o.slug}` });
   }
 
+  /* Chaque format proposé a au moins un prix (sinon « NaN € » dans la fiche, le panier et l'outil). */
+  for (const o of oeuvres) for (const fo of o.formats) if (!Object.keys(fo.prix).length) R.echec('prix', `${o.slug} ${fo.largeur}×${fo.hauteur} : format sans aucun prix`, { page: `/oeuvres/${o.slug}` });
+
   const ordi = await contexte({ taille: T('1440×900') });
   try {
     const { ctx, page } = ordi;
@@ -153,6 +156,32 @@ export default async function ({ contexte, attendrePret, attendre, BASE, R, T })
     const vis2 = await page.evaluate(() => ({ ferme: document.querySelector('[data-visionneuse]').hidden, focus: document.activeElement?.matches('[data-visionneuse-ouvrir]') }));
     if (!vis2.ferme) R.echec('visionneuse', 'Échap ne ferme pas la visionneuse', { page: chemin });
     if (!vis2.focus) R.regarder('visionneuse', 'le focus ne revient pas sur « Agrandir l’œuvre »', { page: chemin });
+
+    /* « Essayer sur mon mur » : l'outil démarre avec le format et la finition choisis sur la fiche. */
+    {
+      const fo = o.formats[0];
+      await page.goto(BASE + `${chemin}?format=${fo.id}&finition=toile`, { waitUntil: 'load' });
+      await attendrePret(page);
+      const href = await page.evaluate(() => document.querySelector('[data-config-essayer]').getAttribute('href'));
+      await page.goto(BASE + href, { waitUntil: 'load' });
+      await attendrePret(page);
+      const ligne = await page.evaluate(() => { const l = document.querySelector('[data-outil-liste] li'); return l ? l.textContent : ''; });
+      const total = await page.evaluate(() => document.querySelector('[data-outil-total]').textContent);
+      if (nombre(total) !== prixFormule(fo, 'toile')) R.echec('chez-vous', `depuis la fiche (${fo.largeur}×${fo.hauteur}, toile) : total ${total} au lieu de ${prixFormule(fo, 'toile')} €`, { page: href });
+    }
+
+    /* Recherche validée par Entrée : la galerie s'ouvre sur les œuvres trouvées. */
+    await page.goto(BASE + '/', { waitUntil: 'load' });
+    await attendrePret(page);
+    await page.locator('header [data-recherche-bouton]').click();
+    await attendre(300);
+    await page.keyboard.type('miyu');
+    await page.keyboard.press('Enter');
+    await page.waitForURL(/\/galerie\?q=miyu/, { timeout: 8000 }).catch(() => {});
+    await attendrePret(page);
+    await attendre(900);
+    const arrivee = await page.evaluate(() => { const r = document.querySelector('#oeuvres').getBoundingClientRect(); return { top: r.top, url: location.pathname + location.search }; });
+    if (!arrivee.url.startsWith('/galerie?q=miyu') || arrivee.top > 200 || arrivee.top < -40) R.echec('recherche', `Entrée : arrivée sur ${arrivee.url}, section des œuvres à ${Math.round(arrivee.top)} px du haut`, { page: '/' });
 
     /* 7. Outil « Chez vous » : ajout d'une seconde œuvre, total = somme des lignes, ajout au panier. */
     await page.evaluate(() => localStorage.removeItem('sequoia:panier'));

@@ -1,8 +1,8 @@
 /* Défilement : natif sur Mac, iPhone, iPad et tout écran tactile (déjà fluide).
    Adouci seulement à la molette de souris sous Windows et Linux, jamais en mode calme.
    Le défilement natif reste la référence : on ne fait qu'animer window.scrollTo. */
-import { html, etat } from './etat.js?v=1';
-import { mesures } from './mesures.js?v=1';
+import { html, etat } from './etat.js?v=2';
+import { mesures } from './mesures.js?v=2';
 
 let adouci = false;
 let cible = 0, courant = 0, anime = false, dernier = 0;

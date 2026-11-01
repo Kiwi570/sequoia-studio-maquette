@@ -17,11 +17,13 @@ Adresse prévue : https://sequoia-studio-maquette.vercel.app
 
 Ne jamais modifier à la main les pages `.html` : elles sont réécrites par `generer.mjs`.
 
-## Images en attente
+## Images générées
 
-20 emplacements attendent les images générées (Grok). Pour l'instant, un visuel dessiné en code les remplace : mur-nuit, mur-galerie, salle-nuit, mur-vide-404, salon-soir, bureau-soir, chambre-soir, salle-a-manger-soir, atelier-impression, atelier-nuit, atelier-baguettes, atelier-gants, mousse-melamine, emballage, journal-table, journal-pigments, texture-hologramme, mentions-archives, cgv-cartels, confidentialite-porte.
+Les 20 images générées (Grok) sont en place dans `assets/images/grok/` (versions téléphone en `-mobile-`), toutes avec la mention « Illustration générée ». Les trois textures (papier, aluminium, toile) sont converties mais pas encore utilisées.
 
-Dès qu'une image est convertie dans `assets/images/grok/<nom>-<largeur>.webp` (version téléphone : `<nom>-mobile-<largeur>.webp`) et que les pages sont régénérées, elle prend la place du dessin, avec la mention « Illustration générée ». Les quatre intérieurs (salon, bureau, chambre, salle à manger) servent à l'essai à l'échelle : après leur arrivée, mesurer le canapé, la table ou le lit en pixels et reporter l'échelle dans `donnees/interieurs.json`.
+Pour remplacer une image : la convertir avec `outils/images.py` (lot JSON, modèle `outils/lot.exemple.json`, option `mobileSource` pour la version téléphone) sous le même nom dans `assets/images/grok/`, puis `node outils/generer.mjs`. Les fichiers reçus (`recu/`) restent hors du zip. Si on enlève une image, un dessin fait en code reprend sa place (`source/gabarits/provisoires.mjs`).
+
+Les quatre intérieurs de « Chez vous » sont calibrés dans `donnees/interieurs.json` (plafond à 2,50 m mesuré sur chaque image : largeur et hauteur du mur visibles en cm, ligne du bas des œuvres, centre). Une nouvelle image d'intérieur demande une nouvelle mesure.
 
 ## À retirer à la mise en ligne définitive
 

@@ -9,7 +9,7 @@
    Couleur suivie : attribut data-gouttiere="#…" du panneau s'il existe, sinon sa couleur de fond
    (si elle est transparente, par exemple une image ou un dégradé : --voile-fond).
    Sans bande réservée (téléphone, tablette, Mac avec pavé tactile), rien n'est fait. */
-import { html } from './etat.js?v=1';
+import { html } from './etat.js?v=2';
 
 const suivis = new Map(); /* panneau -> fin du suivi image par image (ms) ; Infinity jusqu'à lacher() */
 let boucle = 0;

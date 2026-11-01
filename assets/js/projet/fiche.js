@@ -1,9 +1,9 @@
 /* Fiche œuvre : configurateur (format × finition), prix et dimensions en direct, cadre qui change autour
    de l'œuvre, finitions impossibles grisées, choix gardé dans l'adresse (lien partageable), ajout au panier ;
    visionneuse avec loupe (souris ou doigt), Échap, focus gardé puis rendu. */
-import { bloquerDefilement, debloquerDefilement, suivre, lacher, etat } from '../socle/index.js?v=1';
-import { $, $$, euros, cm, garderFocus, souris } from './outils.js?v=1';
-import { ajouter, ouvrirTiroir } from './panier.js?v=1';
+import { bloquerDefilement, debloquerDefilement, suivre, lacher, etat } from '../socle/index.js?v=2';
+import { $, $$, euros, cm, garderFocus, souris } from './outils.js?v=2';
+import { ajouter, ouvrirTiroir } from './panier.js?v=2';
 
 export function initFiche() {
   const fiche = $('[data-fiche]');
@@ -20,10 +20,19 @@ export function initFiche() {
   const maj = (ecrireAdresse) => {
     /* Finitions impossibles pour ce format (taille maximale) : grisées ; on bascule si besoin. */
     $$('input[name="finition"]', form).forEach((i) => { i.disabled = format.prix[i.value] == null; });
-    if (format.prix[finition] == null) finition = format.prix['caisse-noire'] != null ? 'caisse-noire' : 'toile';
+    /* Une finition impossible dans ce format est expliquée ; si elle était choisie, la bascule est dite. */
+    const note = $('[data-config-note]'), messages = [];
+    const avant = finition;
+    if (format.prix[finition] == null) finition = format.prix['caisse-noire'] != null ? 'caisse-noire' : Object.keys(format.prix)[0];
+    if (avant !== finition && ecrireAdresse) messages.push(((note && note.dataset.changee) || '').replace('{nom}', fin[avant].court).replace('{nouvelle}', fin[finition].court.toLowerCase()));
+    d.finitions.filter((x) => format.prix[x.id] == null && x.id !== avant).forEach((x) => messages.push(((note && note.dataset.indisponible) || '').replace('{nom}', x.court).replace('{max}', `${x.maxLong} × ${x.maxCourt}`)));
+    if (note) note.textContent = messages.join(' ');
     $(`input[name="format"][value="${format.id}"]`, form).checked = true;
     $(`input[name="finition"][value="${finition}"]`, form).checked = true;
     const f = fin[finition], p = format.prix[finition];
+    /* « Essayer sur mon mur » emporte le format et la finition choisis. */
+    $$('[data-config-essayer]').forEach((a) => { const u = new URL(a.href, location.href); u.searchParams.set('format', format.id); u.searchParams.set('finition', finition); a.href = u.pathname + u.search + u.hash; });
+    $$('[data-config-ajouter]').forEach((b) => { b.disabled = !(p > 0); });
     $$('[data-config-prix], [data-config-prix-barre]').forEach((e) => { e.textContent = euros(p); });
     $$('[data-config-choix-barre]').forEach((e) => { e.textContent = `${format.l} × ${format.h} cm · ${f.court}`; });
     $('[data-config-dims]').textContent = `${cm(format.l + 2 * f.marge)} × ${cm(format.h + 2 * f.marge)} × ${cm(f.epaisseur)} cm`;

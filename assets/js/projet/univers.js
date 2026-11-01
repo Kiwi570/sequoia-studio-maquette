@@ -1,9 +1,9 @@
 /* Accueil, « Choisir par univers » : survoler, focaliser ou toucher un univers l'éclaire ; l'œuvre change
    par un balayage de lumière (WebGL pendant le passage seulement), le fond se teinte. Un appui ou un clic ouvre
    l'univers dans la galerie. Mode calme ou sans WebGL : changement en fondu. */
-import { etat } from '../socle/index.js?v=1';
-import { $, $$ } from './outils.js?v=1';
-import { creerBalayage } from './balayage.js?v=1';
+import { etat } from '../socle/index.js?v=2';
+import { $, $$ } from './outils.js?v=2';
+import { creerBalayage } from './balayage.js?v=2';
 
 export function initUnivers() {
   const bloc = $('[data-univers]');

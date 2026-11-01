@@ -1,8 +1,8 @@
 /* Panier simulé : une seule source (localStorage), identique dans tous les onglets (événement storage),
    donnée abîmée nettoyée sans bloquer le site. Tiroir accessible (Échap, focus gardé puis rendu),
    page Commande (quantités, totaux), panier vidé après la commande simulée. */
-import { bloquerDefilement, debloquerDefilement, suivre, lacher } from '../socle/index.js?v=1';
-import { $, $$, euros, annoncer, garderFocus } from './outils.js?v=1';
+import { bloquerDefilement, debloquerDefilement, suivre, lacher } from '../socle/index.js?v=2';
+import { $, $$, euros, annoncer, garderFocus } from './outils.js?v=2';
 
 const CLE = 'sequoia:panier';
 /* Libellés écrits dans la page (gabarit commun), jamais dans le script. */
@@ -144,5 +144,14 @@ export function initPanier() {
   });
   /* Commande simulée : le message s'affiche (socle), le panier est vidé. */
   const msg = $('[data-commande-form] [data-message-envoi]');
-  if (msg) new MutationObserver(() => { if (!msg.hidden && lignes.length) vider(); }).observe(msg, { attributes: true, attributeFilter: ['hidden'] });
+  /* Commande simulée envoyée : le panier est vidé, le formulaire laisse place à la confirmation, montrée en haut. */
+  if (msg) new MutationObserver(() => {
+    if (msg.hidden) return;
+    if (lignes.length) vider();
+    const section = msg.closest('[data-commande]');
+    if (section && !section.classList.contains('commande-faite')) {
+      section.classList.add('commande-faite');
+      requestAnimationFrame(() => { section.scrollIntoView({ block: 'start' }); msg.focus({ preventScroll: true }); });
+    }
+  }).observe(msg, { attributes: true, attributeFilter: ['hidden'] });
 }

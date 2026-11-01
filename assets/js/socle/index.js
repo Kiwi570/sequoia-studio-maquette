@@ -1,6 +1,6 @@
 /* Socle commun à toutes les maquettes. Usage dans assets/js/site.js :
 
-   import { demarrer } from './socle/index.js?v=1';
+   import { demarrer } from './socle/index.js?v=2';
    demarrer({
      preparer() { ... },   // effets du projet : ScrollTrigger, SplitText, boucles (états de départ posés ici)
      jouer() { return gsap.timeline()... },   // intro complète, moins de 3 s
@@ -11,25 +11,25 @@
 
    Ordre : mesures, défilement, en-tête et menu, mode calme, transitions, boucles, formulaires,
    puis préparation du projet, puis ouverture (intro, voile, retour, calme ou secours). */
-import { html, etat } from './etat.js?v=1';
-import { initMesures, rafraichir } from './mesures.js?v=1';
-import { initDefilement } from './defilement.js?v=1';
-import { initEntete } from './entete.js?v=1';
-import { initCalme } from './calme.js?v=1';
-import { initTransitions } from './transitions.js?v=1';
-import { initBoucles } from './boucles.js?v=1';
-import { initFormulaires } from './formulaires.js?v=1';
-import { initLecture } from './lecture.js?v=1';
-import { initCompteurs } from './compteurs.js?v=1';
-import { initCurseur } from './curseur.js?v=1';
-import { ouvrir } from './ouverture.js?v=1';
+import { html, etat } from './etat.js?v=2';
+import { initMesures, rafraichir } from './mesures.js?v=2';
+import { initDefilement } from './defilement.js?v=2';
+import { initEntete } from './entete.js?v=2';
+import { initCalme } from './calme.js?v=2';
+import { initTransitions } from './transitions.js?v=2';
+import { initBoucles } from './boucles.js?v=2';
+import { initFormulaires } from './formulaires.js?v=2';
+import { initLecture } from './lecture.js?v=2';
+import { initCompteurs } from './compteurs.js?v=2';
+import { initCurseur } from './curseur.js?v=2';
+import { ouvrir } from './ouverture.js?v=2';
 
 export { etat, rafraichir };
-export { boucle } from './boucles.js?v=1';
-export { aller, bloquerDefilement, debloquerDefilement } from './defilement.js?v=1';
-export { allerAncre, partir } from './transitions.js?v=1';
-export { quand, emettre } from './etat.js?v=1';
-export { suivre, lacher } from './gouttiere.js?v=1';
+export { boucle } from './boucles.js?v=2';
+export { aller, bloquerDefilement, debloquerDefilement } from './defilement.js?v=2';
+export { allerAncre, partir } from './transitions.js?v=2';
+export { quand, emettre } from './etat.js?v=2';
+export { suivre, lacher } from './gouttiere.js?v=2';
 
 export async function demarrer(o = {}) {
   /* Le JavaScript prend la main : le délai de secours ne se déclenchera plus. */

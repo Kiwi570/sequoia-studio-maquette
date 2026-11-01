@@ -184,7 +184,7 @@ function barre(c) {
   if (c.page.barre === false) return '';
   return html`<div data-barre-fixe>
   <a class="bouton bouton--contour" href="mailto:${c.site.contact.email}" aria-label="${c.s('commun.ecrireLibelle')}">${icone.mail}<span>${c.t('commun.ecrire')}</span></a>
-  ${c.page.cle === 'galerie' ? html`<a class="bouton" href="${c.url('commande')}" data-panier-bouton data-libelle="${c.libelle('commande')}">${icone.panier}<span>${c.t('commun.actionEntete')}</span></a>`
+  ${c.page.cle === 'galerie' ? html`<a class="bouton" href="${c.url('commande')}" data-panier-bouton data-libelle="${c.libelle('commande')}">${icone.panier}<span>${c.t('commun.actionEntete')}</span><span class="panier-nombre" data-panier-nombre></span></a>`
     : html`<a class="bouton" href="${c.url('galerie')}" data-libelle="${c.libelle('galerie')}">${c.t('commun.galerie')}</a>`}
 </div>`;
 }

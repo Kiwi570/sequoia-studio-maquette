@@ -1,20 +1,43 @@
 {
-  "nom": "Sequoia Studio",
-  "adresse": "https://sequoia-studio-maquette.vercel.app",
-  "siteActuel": "sequoiastudio.fr",
-  "version": 1,
-  "langues": ["fr"],
-  "navigation": ["accueil", "galerie", "artistes", "chez-vous", "cadres-et-finitions", "certificat", "journal", "qui-sommes-nous"],
-  "actionEntete": { "page": "commande" },
-  "couleurs": { "fond": "#0b0b0c", "texte": "#f2ede4", "voile": "#070708", "ouverture": "#050506", "menu": "#0b0b0c", "theme": "#0b0b0c" },
-  "contact": {
-    "email": "sequoia@tostunlimited.com",
-    "instagram": "https://www.instagram.com/sequoiastudio.fr",
-    "instagramNom": "@sequoiastudio.fr",
-    "societe": "TOST Unlimited",
-    "adresse": "4 Clos Henri Becquerel, 31170 Tournefeuille"
-  },
-  "polices": ["/assets/polices/instrument-serif.woff2", "/assets/polices/geist.woff2"],
-  "imagePartage": "oeuvres/regard-de-minuit-800.webp",
-  "curseur": true
+ "nom": "Sequoia Studio",
+ "adresse": "https://sequoia-studio-maquette.vercel.app",
+ "siteActuel": "sequoiastudio.fr",
+ "version": 2,
+ "langues": [
+  "fr"
+ ],
+ "navigation": [
+  "accueil",
+  "galerie",
+  "artistes",
+  "chez-vous",
+  "cadres-et-finitions",
+  "certificat",
+  "journal",
+  "qui-sommes-nous"
+ ],
+ "actionEntete": {
+  "page": "commande"
+ },
+ "couleurs": {
+  "fond": "#0b0b0c",
+  "texte": "#f2ede4",
+  "voile": "#070708",
+  "ouverture": "#050506",
+  "menu": "#0b0b0c",
+  "theme": "#0b0b0c"
+ },
+ "contact": {
+  "email": "sequoia@tostunlimited.com",
+  "instagram": "https://www.instagram.com/sequoiastudio.fr",
+  "instagramNom": "@sequoiastudio.fr",
+  "societe": "TOST Unlimited",
+  "adresse": "4 Clos Henri Becquerel, 31170 Tournefeuille"
+ },
+ "polices": [
+  "/assets/polices/instrument-serif.woff2",
+  "/assets/polices/geist.woff2"
+ ],
+ "imagePartage": "oeuvres/regard-de-minuit-800.webp",
+ "curseur": true
 }

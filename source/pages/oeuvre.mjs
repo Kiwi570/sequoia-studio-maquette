@@ -37,7 +37,7 @@ export default (c) => {
   const config = {
     slug: o.slug, titre: o.titre, artiste: o.artiste, image: o.petit, r: o.px.l / o.px.h, nuit: o.couleur.nuit, url: urlOeuvre(c, o),
     formats: o.formats.map((f) => ({ id: f.id, l: f.largeur, h: f.hauteur, prix: f.prix })),
-    finitions: finitions.map((f) => ({ id: f.id, court: f.court, nom: f.nom, marge: f.marge, epaisseur: f.epaisseur })),
+    finitions: finitions.map((f) => ({ id: f.id, court: f.court, nom: f.nom, marge: f.marge, epaisseur: f.epaisseur, maxLong: f.maxLong, maxCourt: f.maxCourt })),
     defaut: { format: fmt.id, finition: defFinition },
   };
   const dims = (f, fi) => `${+(f.largeur + 2 * fi.marge).toFixed(1)} × ${+(f.hauteur + 2 * fi.marge).toFixed(1)} × ${fi.epaisseur} cm`.replace(/\./g, ',');
@@ -67,11 +67,12 @@ export default (c) => {
       <fieldset class="config-groupe"><legend>${c.t('oeuvre.finition')}</legend><div class="config-choix config-choix--finitions">
         ${finitions.map((fi) => html`<label class="choix choix--finition"><input type="radio" name="finition" value="${fi.id}"${fi.id === defFinition ? brut(' checked') : ''}${fmt.prix[fi.id] == null ? brut(' disabled') : ''}><span><img src="/assets/images/${fi.echantillon}-${fi.id === 'fineart' ? 640 : fi.id === 'toile' ? 512 : 359}.webp" alt="" width="48" height="36" loading="lazy">${fi.court}</span></label>`)}
       </div></fieldset>
+      <p class="config-note" data-config-note aria-live="polite" data-indisponible="${c.s('oeuvre.finitionIndisponible')}" data-changee="${c.s('oeuvre.finitionChangee')}"></p>
       <p class="config-dims">${c.t('oeuvre.dimensions')} <small>(${c.t('oeuvre.dimensionsAide')})</small> <strong data-config-dims>${dims(fmt, fin)}</strong></p>
       <p class="config-detail" data-config-detail>${fin.support} · ${fin.cadre}</p>
     </form>
     <ul class="badges" role="list" data-anime="gsap">${['b1', 'b2', 'b3', 'b4'].map((b) => html`<li>${c.t('oeuvre.badges.' + b)}</li>`)}</ul>
-    <p class="fiche-liens" data-anime="gsap">${c.lien('chez-vous', { params: `oeuvre=${o.slug}`, ancre: 'outil', classe: 'lien-fleche', texte: c.t('oeuvre.chezVousAction') })}</p>
+    <p class="fiche-liens" data-anime="gsap">${c.lien('chez-vous', { params: `oeuvre=${o.slug}&format=${fmt.id}&finition=${defFinition}`, ancre: 'outil', classe: 'lien-fleche', texte: c.t('oeuvre.chezVousAction'), attrs: 'data-config-essayer' })}</p>
   </div>
   <script type="application/json" data-config-donnees>${brut(JSON.stringify(config).replace(/</g, '\\u003c'))}</script>
 </section>
@@ -92,10 +93,10 @@ export default (c) => {
       </dl>
     </div>
     <figure class="nuancier" data-anime>
-      <svg viewBox="0 0 500 300" class="nuancier-svg" role="img" aria-label="${c.s('oeuvre.couleurs')} : ${o.couleursNommees.join(', ')}">
+      <svg viewBox="0 0 500 300" class="nuancier-svg" role="img" aria-label="${c.s('oeuvre.couleurs')}">
         ${o.couleur.palette.map((h, i) => brut(`<rect class="nuancier-bande" x="${i * 100}" y="0" width="100" height="300" fill="${h}" style="--i:${i}"/>`))}
       </svg>
-      <figcaption>${c.t('oeuvre.couleurs')} : ${o.couleursNommees.join(', ')}</figcaption>
+      <figcaption>${c.t('oeuvre.couleurs')} · ${c.t('oeuvre.couleursCitees')} : ${o.couleursNommees.join(', ')}</figcaption>
     </figure>
   </div>
 </section>
@@ -105,7 +106,7 @@ export default (c) => {
     ${c.media({ nom: o.miseEnSituation, alt: c.s('oeuvre.miseAlt', { titre: o.titre }), sizes: '(max-width: 760px) 100vw, 50vw', ratio: '1 / 1', classe: 'fiche-mise' })}
     <div>
       ${tete(c, { titre: c.t('oeuvre.chezVousTitre'), texte: c.t('oeuvre.chezVousTexte') })}
-      <p data-anime>${c.lien('chez-vous', { params: `oeuvre=${o.slug}`, ancre: 'outil', classe: 'bouton bouton--plein', texte: html`<span>${c.t('oeuvre.chezVousAction')}</span>${icone.fleche}` })}</p>
+      <p data-anime>${c.lien('chez-vous', { params: `oeuvre=${o.slug}&format=${fmt.id}&finition=${defFinition}`, ancre: 'outil', classe: 'bouton bouton--plein', texte: html`<span>${c.t('oeuvre.chezVousAction')}</span>${icone.fleche}`, attrs: 'data-config-essayer' })}</p>
     </div>
   </div>
 </section>

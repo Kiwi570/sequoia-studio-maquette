@@ -1,7 +1,7 @@
 /* Mode calme : actif tout seul quand l'appareil demande de réduire les animations,
    ou choisi avec un bouton [data-calme-bascule] (pied de page et menu, ou en-tête pour les spectacles).
    Après le rechargement, la page revient à la section où l'on était. */
-import { html, etat, stockage } from './etat.js?v=1';
+import { html, etat, stockage } from './etat.js?v=2';
 
 let sectionCourante = null;
 

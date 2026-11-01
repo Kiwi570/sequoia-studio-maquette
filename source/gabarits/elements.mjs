@@ -87,3 +87,10 @@ export const picto = {
   retour: brut('<svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 18h17a9 9 0 0 1 0 18H18" fill="none" stroke="currentColor" stroke-width="1.5" pathLength="1"/><path d="M19 12l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" pathLength="1"/></svg>'),
   bulle: brut('<svg class="picto" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32v20H22l-8 6v-6H8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" pathLength="1"/><path d="M15 21h18M15 26h11" stroke="currentColor" stroke-width="1.5" pathLength="1"/></svg>'),
 };
+
+/* Repère en cm de l'intérieur « salon le soir » (image Grok calibrée : plafond à 2,50 m) : largeur, hauteur,
+   distance du bas de l'image au bas des œuvres, centre. Lu par le CSS de la démonstration et de l'ouverture « Chez vous ». */
+export function repereScene(c, id = 'salon-soir') {
+  const i = c.donnees.interieurs.find((x) => x.id === id);
+  return `--sl:${i.largeurCm};--sh:${i.hauteurCm};--sb:${i.hauteurCm - i.baseCm};--sc:${i.centreCm}`;
+}

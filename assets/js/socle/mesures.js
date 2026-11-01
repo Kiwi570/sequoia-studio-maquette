@@ -1,7 +1,7 @@
 /* Mesures : hauteur réelle de l'en-tête et des barres fixes (variables CSS --entete-h et --barres-h),
    recalcul des positions liées au défilement quand la hauteur de la page change.
    Aucune lecture de mise en page pendant le défilement : tout est mesuré ici, puis gardé. */
-import { html, emettre } from './etat.js?v=1';
+import { html, emettre } from './etat.js?v=2';
 
 export const mesures = { enteteH: 72, barresH: 0, pageH: 0, vueH: window.innerHeight };
 

@@ -2,8 +2,8 @@
    ou dérive doucement sur écran tactile ; les ombres des cadres partent à l'opposé de la lumière.
    Fond de la page teinté par la couleur de l'œuvre de la section visible. Mode calme : tout reste fixe.
    Positions mesurées au chargement et au redimensionnement seulement (rien n'est lu pendant le défilement). */
-import { boucle, etat } from '../socle/index.js?v=1';
-import { $, $$, souris, lisser } from './outils.js?v=1';
+import { boucle, etat } from '../socle/index.js?v=2';
+import { $, $$, souris, lisser } from './outils.js?v=2';
 
 const scenes = [];
 
@@ -12,7 +12,6 @@ export function initScenes() {
     const halo = $('.projecteur-halo', s);
     const ref = halo ? halo.closest('.projecteur').parentElement : s;
     const oeuvre = $('[data-scene-oeuvre]', s);
-    if (halo) halo.classList.add('pilote');
     const sc = { s, ref, halo, oeuvre, ombres: $$('.cadre-ombre', s), x: 0, y: 0, cx: 0, cy: 0, echelle: 1, souris: false, w: 0, h: 0, ox: 0, oy: 0, haut: 0, gauche: 0 };
     const mesurer = () => {
       const r = ref.getBoundingClientRect();
@@ -22,6 +21,9 @@ export function initScenes() {
         sc.ox = o.left - r.left + o.width / 2; sc.oy = o.top - r.top + o.height / 2;
       } else { sc.ox = r.width / 2; sc.oy = r.height * 0.46; }
       if (!sc.souris) { sc.x = sc.cx = sc.ox; sc.y = sc.cy = sc.oy; }
+      /* Le halo garde sa position CSS (left/top) : le JavaScript ne fait que le décaler par transform,
+         aucun déplacement de mise en page au chargement. */
+      if (halo) { const cs = getComputedStyle(halo); sc.x0 = parseFloat(cs.left) || 0; sc.y0 = parseFloat(cs.top) || 0; }
       poser(sc);
     };
     sc.mesurer = mesurer;
@@ -58,7 +60,7 @@ export function initScenes() {
 }
 
 export function poser(sc) {
-  if (sc.halo) sc.halo.style.transform = `translate3d(${sc.x.toFixed(1)}px, ${sc.y.toFixed(1)}px, 0) scale(${sc.echelle.toFixed(3)})`;
+  if (sc.halo) sc.halo.style.transform = `translate3d(${(sc.x - (sc.x0 || 0)).toFixed(1)}px, ${(sc.y - (sc.y0 || 0)).toFixed(1)}px, 0) scale(${sc.echelle.toFixed(3)})`;
   if (!sc.ombres.length) return;
   /* Ombre portée à l'opposé de la lumière, bornée. */
   const dx = sc.ox - sc.x, dy = sc.oy - sc.y;

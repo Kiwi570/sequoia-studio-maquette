@@ -2,8 +2,8 @@
    nuancier, courbe d'absorption, fil de la double étiquette, séquoia du pied de page qui pousse, reflet
    holographique du certificat qui suit la lumière, démonstration NFC, boutons magnétiques, thèmes du journal,
    recherche dans l'en-tête. Tout est coupé en mode calme (état final directement). */
-import { etat, bloquerDefilement, debloquerDefilement, suivre, lacher } from '../socle/index.js?v=1';
-import { $, $$, souris, mots, garderFocus, euros } from './outils.js?v=1';
+import { etat, bloquerDefilement, debloquerDefilement, suivre, lacher, partir } from '../socle/index.js?v=2';
+import { $, $$, souris, mots, garderFocus, euros } from './outils.js?v=2';
 
 /* Ajoute une classe quand l'élément entre dans l'écran (une seule fois). */
 function quandVisible(els, classe = 'vu', marge = '0px 0px -12% 0px') {
@@ -132,6 +132,9 @@ export function initRecherche() {
     if (e.target.closest('[data-recherche-fermer]')) fermer();
   }, true);
   document.addEventListener('keydown', (e) => { if (!ouvert) return; if (e.key === 'Escape') { e.preventDefault(); fermer(); } else garderFocus(fen, e); });
+  /* Entrée : la galerie s'ouvre directement sur les œuvres trouvées. */
+  const formRech = champ.closest('form');
+  if (formRech) formRech.addEventListener('submit', (e) => { const q = champ.value.trim(); if (!q) return; e.preventDefault(); fermer(); partir(new URL(`/galerie?q=${encodeURIComponent(q)}#oeuvres`, location.href), statut.dataset.galerie || ''); });
   const modele = statut.dataset;
   let attente = 0;
   champ.addEventListener('input', () => {

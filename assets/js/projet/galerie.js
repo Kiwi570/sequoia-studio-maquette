@@ -1,8 +1,8 @@
 /* Galerie : filtres (univers, artiste, format, couleur), tri et recherche gardés dans l'adresse ;
    passage en fondu sans moment vide ; rubriques vides grisées ; positions recalculées après filtrage ;
    cartes qui s'inclinent et lumière qui suit la souris. */
-import { rafraichir, etat } from '../socle/index.js?v=1';
-import { $, $$, mots, souris } from './outils.js?v=1';
+import { rafraichir, etat, quand, aller } from '../socle/index.js?v=2';
+import { $, $$, mots, souris } from './outils.js?v=2';
 
 export function initGalerie() {
   const form = $('[data-filtres]');
@@ -55,6 +55,7 @@ export function initGalerie() {
       if (ok && etaitCachee && !premier && !etat.calme) { c.classList.add('entre'); requestAnimationFrame(() => requestAnimationFrame(() => c.classList.remove('entre'))); }
     });
     nombre.textContent = modeleNombre.replace('{n}', n);
+    $$('[data-filtres-voir]').forEach((b) => { b.textContent = (b.dataset.modele || '').replace('{n}', n); });
     vide.hidden = n > 0;
     /* Rubriques vides grisées : nombre d'œuvres de chaque choix, compte tenu des autres filtres. */
     GROUPES.forEach((g) => $$(`input[name="${g}"]`, form).forEach((i) => {
@@ -62,6 +63,7 @@ export function initGalerie() {
       const k = cartes.filter((c) => correspond(c, { ...v, [g]: i.value }, null)).length;
       const small = i.nextElementSibling.querySelector('small'); if (small) small.textContent = k;
       i.closest('.puce').classList.toggle('est-vide', k === 0);
+      i.disabled = k === 0 && !i.checked;
     }));
     const actifs = GROUPES.filter((g) => v[g]).length + (v.q ? 1 : 0);
     const compte = $('[data-filtres-compte]'); if (compte) compte.textContent = actifs ? String(actifs) : '';
@@ -93,6 +95,15 @@ export function initGalerie() {
   /* Téléphone : les filtres s'ouvrent depuis leur bouton. */
   const bouton = $('[data-filtres-ouvrir]'), panneau = $('[data-filtres-panneau]');
   if (bouton) bouton.addEventListener('click', () => { const o = !panneau.classList.contains('est-ouvert'); panneau.classList.toggle('est-ouvert', o); bouton.setAttribute('aria-expanded', String(o)); rafraichir(); });
+  /* « Voir les n œuvres » : referme les filtres et mène au mur. */
+  $$('[data-filtres-voir]').forEach((b) => b.addEventListener('click', () => {
+    panneau.classList.remove('est-ouvert'); if (bouton) { bouton.setAttribute('aria-expanded', 'false'); }
+    rafraichir();
+    mur.scrollIntoView({ behavior: etat.calme ? 'auto' : 'smooth', block: 'start' });
+  }));
+  /* Arrivée avec une recherche ou un filtre dans l'adresse (recherche validée par Entrée) : directement au mur. */
+  const p0 = new URLSearchParams(location.search);
+  if (!location.hash && ['q', 'univers', 'artiste', 'format', 'couleur'].some((k) => p0.get(k))) quand('pret', () => aller($('#oeuvres'), { instant: true }));
 
   /* Lien d'univers sur la même page : filtre sans recharger. */
   $$('[data-univers-lien]').forEach((a) => a.addEventListener('click', (e) => {

@@ -1,6 +1,6 @@
 /* Style critique : copié en ligne dans le head de chaque page par outils/generer.mjs.
    Les couleurs --fond, --texte et --voile-fond sont ajoutées devant, depuis donnees/site.json. */
-:root { --entete-h: 72px; --barres-h: 0px; }
+:root { --entete-h: 65px; --barres-h: 0px; }
 html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; }
 body { margin: 0; background: var(--fond); }
 

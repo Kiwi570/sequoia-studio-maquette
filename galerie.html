@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="1" data-page="galerie" data-curseur>
+<html lang="fr" data-v="2" data-page="galerie" data-curseur>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="Parcourez la galerie Sequoia Studio et découvrez des œuvres d’art contemporaines prêtes à installer dans un salon, bureau ou intérieur premium.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/galerie">
-<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 65px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
 <script>(function () {
 var d = document.documentElement, ss = null, ls = null;
 try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1">
-<link rel="modulepreload" href="/assets/js/site.js?v=1">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=1"></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
 <meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -141,15 +141,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 <p class="visuellement-cache" aria-live="polite" data-annonce></p>
 <main id="contenu" tabindex="-1">
 <section class="scene scene--galerie ecran" id="debut" data-scene style="--nuit:#0f0d0c">
-  <div class="scene-fond scene-fond--plein"><figure class="media media--provisoire " data-visuel data-provisoire="mur-galerie" role="img" aria-label="Grand mur de galerie éclairé par une rampe de projecteurs"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp24" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
-  <radialGradient id="fp24" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-  <linearGradient id="sp24" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
-  <radialGradient id="vp24" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp24)"/><path d="M206.00000000000003 0 L242.00000000000003 0 L382.40000000000003 270 L65.60000000000002 270Z" fill="#f3d9a6" opacity=".035"/><path d="M206.00000000000003 0 L242.00000000000003 0 L382.40000000000003 594 L65.60000000000002 594Z" fill="#f3d9a6" opacity=".035"/><path d="M590 0 L626 0 L766.4 270 L449.6 270Z" fill="#f3d9a6" opacity=".035"/><path d="M590 0 L626 0 L766.4 594 L449.6 594Z" fill="#f3d9a6" opacity=".035"/><path d="M974 0 L1010 0 L1150.4 270 L833.6 270Z" fill="#f3d9a6" opacity=".035"/><path d="M974 0 L1010 0 L1150.4 594 L833.6 594Z" fill="#f3d9a6" opacity=".035"/><path d="M1358 0 L1394 0 L1534.4 270 L1217.6 270Z" fill="#f3d9a6" opacity=".035"/><path d="M1358 0 L1394 0 L1534.4 594 L1217.6 594Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="224.00000000000003" cy="270" rx="176" ry="180" fill="url(#fp24)"/><ellipse cx="224.00000000000003" cy="594" rx="176" ry="180" fill="url(#fp24)"/><ellipse cx="608" cy="270" rx="176" ry="180" fill="url(#fp24)"/><ellipse cx="608" cy="594" rx="176" ry="180" fill="url(#fp24)"/><ellipse cx="992" cy="270" rx="176" ry="180" fill="url(#fp24)"/><ellipse cx="992" cy="594" rx="176" ry="180" fill="url(#fp24)"/><ellipse cx="1376" cy="270" rx="176" ry="180" fill="url(#fp24)"/><ellipse cx="1376" cy="594" rx="176" ry="180" fill="url(#fp24)"/><rect x="0" y="31.500000000000004" width="1600" height="6" fill="#050505"/><rect x="215.00000000000003" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/><rect x="215.00000000000003" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/><rect x="599" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/><rect x="599" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/><rect x="983" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/><rect x="983" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/><rect x="1367" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/><rect x="1367" y="31.500000000000004" width="18" height="26" rx="4" fill="#0a0a0a"/>
-  <rect y="855" width="1600" height="45.00000000000004" fill="url(#sp24)"/><rect y="855" width="1600" height="2" fill="#2a2219" opacity=".8"/>
-  <rect width="1600" height="900" fill="url(#vp24)"/></svg></figure></div>
+  <div class="scene-fond scene-fond--plein"><figure class="media " data-grok style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/mur-galerie-mobile-640.webp 640w, /assets/images/grok/mur-galerie-mobile-784.webp 784w" sizes="100vw">
+    <img src="/assets/images/grok/mur-galerie-1168.webp" srcset="/assets/images/grok/mur-galerie-640.webp 640w, /assets/images/grok/mur-galerie-1168.webp 1168w" sizes="100vw" alt="Grand mur de galerie éclairé par une rampe de projecteurs" width="1168" height="784" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div>
   <div class="projecteur" data-projecteur aria-hidden="true" data-audit-ignorer><span class="projecteur-halo"></span></div>
   <div class="mur-ouverture" aria-hidden="true">
-    <span class="mur-case" style="--i:0;--r:1.7857142857142858" data-anime="gsap"><img src="/assets/images/oeuvres/regard-de-minuit-640.webp" alt="" width="800" height="448" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:1;--r:0.5605381165919282" data-anime="gsap"><img src="/assets/images/oeuvres/serenite-turquoise-500.webp" alt="" width="500" height="892" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:2;--r:2" data-anime="gsap"><img src="/assets/images/oeuvres/oasis-moderne-640.webp" alt="" width="800" height="400" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:3;--r:0.5263157894736842" data-anime="gsap"><img src="/assets/images/oeuvres/eclat-du-japon-500.webp" alt="" width="500" height="950" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:4;--r:1.7857142857142858" data-anime="gsap"><img src="/assets/images/oeuvres/harmonie-etheree-640.webp" alt="" width="800" height="448" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:5;--r:1" data-anime="gsap"><img src="/assets/images/oeuvres/felin-prisma-640.webp" alt="" width="800" height="800" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:6;--r:0.5605381165919282" data-anime="gsap"><img src="/assets/images/oeuvres/promenade-provencale-500.webp" alt="" width="500" height="892" loading="lazy" decoding="async"></span><span class="mur-case" style="--i:7;--r:1.7897091722595078" data-anime="gsap"><img src="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-640.webp" alt="" width="800" height="447" loading="lazy" decoding="async"></span><span class="mur-case" style="--i:8;--r:0.7541478129713424" data-anime="gsap"><img src="/assets/images/oeuvres/evasion-crepusculaire-500.webp" alt="" width="500" height="663" loading="lazy" decoding="async"></span><span class="mur-case" style="--i:9;--r:1.7897091722595078" data-anime="gsap"><img src="/assets/images/oeuvres/reflexions-sylvestres-640.webp" alt="" width="800" height="447" loading="lazy" decoding="async"></span><span class="mur-case" style="--i:10;--r:0.5714285714285714" data-anime="gsap"><img src="/assets/images/oeuvres/danse-aquatique-500.webp" alt="" width="500" height="875" loading="lazy" decoding="async"></span><span class="mur-case" style="--i:11;--r:1.7897091722595078" data-anime="gsap"><img src="/assets/images/oeuvres/l-indien-du-canyon-640.webp" alt="" width="800" height="447" loading="lazy" decoding="async"></span>
+    <span class="mur-case" style="--i:0;--r:1.7857142857142858" data-anime="gsap"><img src="/assets/images/oeuvres/regard-de-minuit-640.webp" alt="" width="800" height="448" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:1;--r:0.5605381165919282" data-anime="gsap"><img src="/assets/images/oeuvres/serenite-turquoise-500.webp" alt="" width="500" height="892" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:2;--r:2" data-anime="gsap"><img src="/assets/images/oeuvres/oasis-moderne-640.webp" alt="" width="800" height="400" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:3;--r:0.5263157894736842" data-anime="gsap"><img src="/assets/images/oeuvres/eclat-du-japon-500.webp" alt="" width="500" height="950" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:4;--r:1.7857142857142858" data-anime="gsap"><img src="/assets/images/oeuvres/harmonie-etheree-640.webp" alt="" width="800" height="448" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:5;--r:1" data-anime="gsap"><img src="/assets/images/oeuvres/felin-prisma-640.webp" alt="" width="800" height="800" fetchpriority="high" decoding="async"></span><span class="mur-case" style="--i:6;--r:0.5605381165919282" data-anime="gsap"><img src="/assets/images/oeuvres/promenade-provencale-500.webp" alt="" width="500" height="892" loading="eager" decoding="async"></span><span class="mur-case" style="--i:7;--r:1.7897091722595078" data-anime="gsap"><img src="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-640.webp" alt="" width="800" height="447" loading="eager" decoding="async"></span><span class="mur-case" style="--i:8;--r:0.7541478129713424" data-anime="gsap"><img src="/assets/images/oeuvres/evasion-crepusculaire-500.webp" alt="" width="500" height="663" loading="eager" decoding="async"></span><span class="mur-case" style="--i:9;--r:1.7897091722595078" data-anime="gsap"><img src="/assets/images/oeuvres/reflexions-sylvestres-640.webp" alt="" width="800" height="447" loading="eager" decoding="async"></span><span class="mur-case" style="--i:10;--r:0.5714285714285714" data-anime="gsap"><img src="/assets/images/oeuvres/danse-aquatique-500.webp" alt="" width="500" height="875" loading="eager" decoding="async"></span><span class="mur-case" style="--i:11;--r:1.7897091722595078" data-anime="gsap"><img src="/assets/images/oeuvres/l-indien-du-canyon-640.webp" alt="" width="800" height="447" loading="eager" decoding="async"></span>
   </div>
   <div class="scene-texte scene-texte--galerie">
     <p class="surtitre" data-anime="gsap">Œuvres contemporaines encadrées</p>
@@ -193,20 +192,21 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
         <label class="puce"><input type="radio" name="couleur" value="" checked><span>Toutes</span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="bleu"><span><i class="pastille pastille--bleu" aria-hidden="true"></i>Bleus <small>39</small></span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="vert"><span><i class="pastille pastille--vert" aria-hidden="true"></i>Verts <small>16</small></span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="rouge-rose"><span><i class="pastille pastille--rouge-rose" aria-hidden="true"></i>Rouges et roses <small>20</small></span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="orange-ocre"><span><i class="pastille pastille--orange-ocre" aria-hidden="true"></i>Orangés et ocres <small>20</small></span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="jaune-or"><span><i class="pastille pastille--jaune-or" aria-hidden="true"></i>Jaunes et ors <small>12</small></span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="blanc-beige"><span><i class="pastille pastille--blanc-beige" aria-hidden="true"></i>Blancs et beiges <small>22</small></span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="noir-gris"><span><i class="pastille pastille--noir-gris" aria-hidden="true"></i>Noirs et gris <small>17</small></span></label><label class="puce puce--couleur"><input type="radio" name="couleur" value="violet"><span><i class="pastille pastille--violet" aria-hidden="true"></i>Violets <small>2</small></span></label>
       </div></fieldset>
       <p class="filtres-pied"><button type="reset" class="lien" data-filtres-reinitialiser>Tout réinitialiser</button><span class="mention-prix">Prix en euros, TVA non applicable, art. 293 B du CGI.</span></p>
+      <p class="filtres-voir"><button type="button" class="bouton bouton--plein" data-filtres-voir data-modele="Voir les {n} œuvres">Voir les 42 œuvres</button></p>
     </div>
   </form>
   <div class="conteneur mur-oeuvres-zone">
-    <p class="mur-aide"><span class="si-souris">Survolez une œuvre pour la voir chez quelqu’un.</span><span class="si-tactile">Touchez une œuvre pour l’ouvrir.</span></p>
+    <p class="mur-aide"><span class="si-souris">Survolez une œuvre pour la voir mise en situation.</span><span class="si-tactile">Touchez une œuvre pour l’ouvrir.</span></p>
     <div class="mur-oeuvres" data-mur>
-      <article class="carte-oeuvre" data-oeuvre="l-ephemere-rencontre" data-univers="nature" data-artiste="francesco-conte" data-orientation="paysage" data-familles="bleu blanc-beige" data-des="120" data-ajout="2026-08-19" data-titre="L&#39;éphémère rencontre" data-recherche="l&#39;ephemere rencontre francesco conte aerien nature turquoise sable blanc plage vagues sable fusion de l&#39;eau et du sable, sublime harmonie." style="--nuit:#0c1f1f;--accent-oeuvre:#037273">
-  <a class="carte-lien" href="/oeuvres/l-ephemere-rencontre" data-libelle="L&#39;éphémère rencontre">
+      <article class="carte-oeuvre" data-oeuvre="l-ephemere-rencontre" data-univers="nature" data-artiste="francesco-conte" data-orientation="paysage" data-familles="bleu blanc-beige" data-des="120" data-ajout="2026-08-19" data-titre="L’éphémère rencontre" data-recherche="l’ephemere rencontre francesco conte aerien nature turquoise sable blanc plage vagues sable fusion de l’eau et du sable, sublime harmonie." style="--nuit:#0c1f1f;--accent-oeuvre:#037273">
+  <a class="carte-lien" href="/oeuvres/l-ephemere-rencontre" data-libelle="L’éphémère rencontre">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
   <picture>
-    <img src="/assets/images/oeuvres/l-ephemere-rencontre-800.webp" srcset="/assets/images/oeuvres/l-ephemere-rencontre-640.webp 640w, /assets/images/oeuvres/l-ephemere-rencontre-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L&#39;éphémère rencontre, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/l-ephemere-rencontre-800.webp" srcset="/assets/images/oeuvres/l-ephemere-rencontre-640.webp 640w, /assets/images/oeuvres/l-ephemere-rencontre-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L’éphémère rencontre, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -214,7 +214,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/l-ephemere-rencontre-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">L&#39;éphémère rencontre</h3>
+  <h3 class="cartel-titre">L’éphémère rencontre</h3>
   <p class="cartel-artiste">Francesco Conte</p>
   <p class="cartel-meta">Aérien · 2026 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
@@ -242,7 +242,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>90 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="reflexions-aquatiques" data-univers="contemporain" data-artiste="miyu-mori" data-orientation="carre" data-familles="bleu orange-ocre vert rouge-rose" data-des="90" data-ajout="2026-06-16" data-titre="Réflexions Aquatiques" data-recherche="reflexions aquatiques miyu mori surrealisme contemporain bleu orange vert rouge femme poissons lunettes ode a la fusion de l&#39;humain et du reve." style="--nuit:#1f150c;--accent-oeuvre:#e89c5c">
+</article><article class="carte-oeuvre" data-oeuvre="reflexions-aquatiques" data-univers="contemporain" data-artiste="miyu-mori" data-orientation="carre" data-familles="bleu orange-ocre vert rouge-rose" data-des="90" data-ajout="2026-06-16" data-titre="Réflexions Aquatiques" data-recherche="reflexions aquatiques miyu mori surrealisme contemporain bleu orange vert rouge femme poissons lunettes ode a la fusion de l’humain et du reve." style="--nuit:#1f150c;--accent-oeuvre:#e89c5c">
   <a class="carte-lien" href="/oeuvres/reflexions-aquatiques" data-libelle="Réflexions Aquatiques">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1" data-cadre="caisse-noire">
@@ -264,15 +264,15 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>90 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="l-indien-du-canyon" data-univers="paysage" data-artiste="francesco-conte" data-orientation="paysage" data-familles="orange-ocre bleu vert" data-des="120" data-ajout="2026-06-13" data-titre="L&#39;indien du canyon" data-recherche="l&#39;indien du canyon francesco conte photographie paysages ocre bleu vert orange paysage nature riviere un horizon sculpte par le temps." style="--nuit:#1f120c;--accent-oeuvre:#c26f48">
-  <a class="carte-lien" href="/oeuvres/l-indien-du-canyon" data-libelle="L&#39;indien du canyon">
+</article><article class="carte-oeuvre" data-oeuvre="l-indien-du-canyon" data-univers="paysage" data-artiste="francesco-conte" data-orientation="paysage" data-familles="orange-ocre bleu vert" data-des="120" data-ajout="2026-06-13" data-titre="L’indien du canyon" data-recherche="l’indien du canyon francesco conte photographie paysages ocre bleu vert orange paysage nature riviere un horizon sculpte par le temps." style="--nuit:#1f120c;--accent-oeuvre:#c26f48">
+  <a class="carte-lien" href="/oeuvres/l-indien-du-canyon" data-libelle="L’indien du canyon">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
   <picture>
-    <img src="/assets/images/oeuvres/l-indien-du-canyon-800.webp" srcset="/assets/images/oeuvres/l-indien-du-canyon-640.webp 640w, /assets/images/oeuvres/l-indien-du-canyon-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L&#39;indien du canyon, Francesco Conte" width="800" height="447" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/l-indien-du-canyon-800.webp" srcset="/assets/images/oeuvres/l-indien-du-canyon-640.webp 640w, /assets/images/oeuvres/l-indien-du-canyon-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L’indien du canyon, Francesco Conte" width="800" height="447" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -280,21 +280,21 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/l-indien-du-canyon-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">L&#39;indien du canyon</h3>
+  <h3 class="cartel-titre">L’indien du canyon</h3>
   <p class="cartel-artiste">Francesco Conte</p>
   <p class="cartel-meta">Photographie · 2026 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="lueur-d-aurore-sur-l-ocean" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu jaune-or vert rouge-rose" data-des="120" data-ajout="2026-06-12" data-titre="Lueur d&#39;Aurore sur l&#39;Océan" data-recherche="lueur d&#39;aurore sur l&#39;ocean darren whitmore impressionnisme paysages turquoise dore emeraude rose pale lever de soleil ocean serenite harmonie evanescente et lumineuse." style="--nuit:#1d160e;--accent-oeuvre:#dccbb8">
-  <a class="carte-lien" href="/oeuvres/lueur-d-aurore-sur-l-ocean" data-libelle="Lueur d&#39;Aurore sur l&#39;Océan">
+</article><article class="carte-oeuvre" data-oeuvre="lueur-d-aurore-sur-l-ocean" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu jaune-or vert rouge-rose" data-des="120" data-ajout="2026-06-12" data-titre="Lueur d’Aurore sur l’Océan" data-recherche="lueur d’aurore sur l’ocean darren whitmore impressionnisme paysages turquoise dore emeraude rose pale lever de soleil ocean serenite harmonie evanescente et lumineuse." style="--nuit:#1d160e;--accent-oeuvre:#dccbb8">
+  <a class="carte-lien" href="/oeuvres/lueur-d-aurore-sur-l-ocean" data-libelle="Lueur d’Aurore sur l’Océan">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 447">
   <picture>
-    <img src="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-800.webp" srcset="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-640.webp 640w, /assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Lueur d&#39;Aurore sur l&#39;Océan, Darren Whitmore" width="800" height="447" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-800.webp" srcset="/assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-640.webp 640w, /assets/images/oeuvres/lueur-d-aurore-sur-l-ocean-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Lueur d’Aurore sur l’Océan, Darren Whitmore" width="800" height="447" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -302,7 +302,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/lueur-d-aurore-sur-l-ocean-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">Lueur d&#39;Aurore sur l&#39;Océan</h3>
+  <h3 class="cartel-titre">Lueur d’Aurore sur l’Océan</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
   <p class="cartel-meta">Impressionnisme · 2026 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
@@ -330,7 +330,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="fugue-en-musique" data-univers="paysage" data-artiste="miyu-mori" data-orientation="portrait" data-familles="rouge-rose noir-gris blanc-beige" data-des="120" data-ajout="2026-05-08" data-titre="Fugue en musique" data-recherche="fugue en musique miyu mori surrealiste paysages rose gris blanc noir onirique montagne surrealisme une rencontre entre reve et realite." style="--nuit:#1c0f13;--accent-oeuvre:#7b4355">
+</article><article class="carte-oeuvre" data-oeuvre="fugue-en-musique" data-univers="paysage" data-artiste="miyu-mori" data-orientation="portrait" data-familles="rouge-rose noir-gris blanc-beige" data-des="120" data-ajout="2026-05-08" data-titre="Fugue en musique" data-recherche="fugue en musique miyu mori surrealisme paysages rose gris blanc noir onirique montagne surrealisme une rencontre entre reve et realite." style="--nuit:#1c0f13;--accent-oeuvre:#7b4355">
   <a class="carte-lien" href="/oeuvres/fugue-en-musique" data-libelle="Fugue en musique">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
@@ -348,11 +348,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Fugue en musique</h3>
   <p class="cartel-artiste">Miyu Mori</p>
-  <p class="cartel-meta">Surréaliste · 2022 · Édition de 20</p>
+  <p class="cartel-meta">Surréalisme · 2022 · Édition de 20</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="oasis-chromatique" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu rouge-rose orange-ocre blanc-beige" data-des="120" data-ajout="2026-05-08" data-titre="Oasis Chromatique" data-recherche="oasis chromatique darren whitmore surrealiste architecture bleu rose orange blanc architecture design futuriste lorsque la modernite rencontre l&#39;irreel." style="--nuit:#0c1d1f;--accent-oeuvre:#25dbfb">
+</article><article class="carte-oeuvre" data-oeuvre="oasis-chromatique" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu rouge-rose orange-ocre blanc-beige" data-des="120" data-ajout="2026-05-08" data-titre="Oasis Chromatique" data-recherche="oasis chromatique darren whitmore surrealisme architecture bleu rose orange blanc architecture design futuriste lorsque la modernite rencontre l’irreel." style="--nuit:#0c1d1f;--accent-oeuvre:#25dbfb">
   <a class="carte-lien" href="/oeuvres/oasis-chromatique" data-libelle="Oasis Chromatique">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
@@ -370,11 +370,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Oasis Chromatique</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
-  <p class="cartel-meta">Surréaliste · 2024 · Édition de 30</p>
+  <p class="cartel-meta">Surréalisme · 2024 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="symbiose-sauvage" data-univers="animaux" data-artiste="francesco-conte" data-orientation="portrait" data-familles="orange-ocre blanc-beige bleu noir-gris" data-des="120" data-ajout="2026-04-27" data-titre="Symbiose Sauvage" data-recherche="symbiose sauvage francesco conte double-exposition animaux orange blanc bleu gris loup foret automne quand la nature s&#39;unit a l&#39;instinct sauvage." style="--nuit:#1f120c;--accent-oeuvre:#a86143">
+</article><article class="carte-oeuvre" data-oeuvre="symbiose-sauvage" data-univers="animaux" data-artiste="francesco-conte" data-orientation="portrait" data-familles="orange-ocre blanc-beige bleu noir-gris" data-des="120" data-ajout="2026-04-27" data-titre="Symbiose Sauvage" data-recherche="symbiose sauvage francesco conte double-exposition animaux orange blanc bleu gris loup foret automne quand la nature s’unit a l’instinct sauvage." style="--nuit:#1f120c;--accent-oeuvre:#a86143">
   <a class="carte-lien" href="/oeuvres/symbiose-sauvage" data-libelle="Symbiose Sauvage">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.5599104143337066" data-cadre="caisse-noire">
@@ -396,7 +396,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="arbre-de-coeur-florissant" data-univers="nature" data-artiste="francesco-conte" data-orientation="paysage" data-familles="rouge-rose bleu blanc-beige" data-des="120" data-ajout="2026-04-25" data-titre="Arbre de Cœur Florissant" data-recherche="arbre de coeur florissant francesco conte surrealisme nature rouge bleu blanc nature coquelicots amour l&#39;harmonie de la nature exprimee en poesie visuelle." style="--nuit:#1f0d0c;--accent-oeuvre:#ad342e">
+</article><article class="carte-oeuvre" data-oeuvre="arbre-de-coeur-florissant" data-univers="nature" data-artiste="francesco-conte" data-orientation="paysage" data-familles="rouge-rose bleu blanc-beige" data-des="120" data-ajout="2026-04-25" data-titre="Arbre de Cœur Florissant" data-recherche="arbre de coeur florissant francesco conte surrealisme nature rouge bleu blanc nature coquelicots amour l’harmonie de la nature exprimee en poesie visuelle." style="--nuit:#1f0d0c;--accent-oeuvre:#ad342e">
   <a class="carte-lien" href="/oeuvres/arbre-de-coeur-florissant" data-libelle="Arbre de Cœur Florissant">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
@@ -418,7 +418,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="harmonie-etheree" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu rouge-rose vert noir-gris" data-des="120" data-ajout="2026-04-25" data-titre="Harmonie Éthérée" data-recherche="harmonie etheree darren whitmore surrealisme paysages bleu rouge vert gris paysage surrealisme nature un passage vibrant vers l&#39;imaginaire." style="--nuit:#0c1c1f;--accent-oeuvre:#17788c">
+</article><article class="carte-oeuvre" data-oeuvre="harmonie-etheree" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu rouge-rose vert noir-gris" data-des="120" data-ajout="2026-04-25" data-titre="Harmonie Éthérée" data-recherche="harmonie etheree darren whitmore surrealisme paysages bleu rouge vert gris paysage surrealisme nature un passage vibrant vers l’imaginaire." style="--nuit:#0c1c1f;--accent-oeuvre:#17788c">
   <a class="carte-lien" href="/oeuvres/harmonie-etheree" data-libelle="Harmonie Éthérée">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
@@ -440,7 +440,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="reflets-serenes" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu orange-ocre vert noir-gris" data-des="120" data-ajout="2026-04-25" data-titre="Reflets Sérénes" data-recherche="reflets serenes darren whitmore realiste paysages bleu orange vert gris nature eau reflet une harmonie naturelle capturee." style="--nuit:#0c1b1f;--accent-oeuvre:#1e6175">
+</article><article class="carte-oeuvre" data-oeuvre="reflets-serenes" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu orange-ocre vert noir-gris" data-des="120" data-ajout="2026-04-25" data-titre="Reflets Sérénes" data-recherche="reflets serenes darren whitmore realisme paysages bleu orange vert gris nature eau reflet une harmonie naturelle capturee." style="--nuit:#0c1b1f;--accent-oeuvre:#1e6175">
   <a class="carte-lien" href="/oeuvres/reflets-serenes" data-libelle="Reflets Sérénes">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
@@ -458,11 +458,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Reflets Sérénes</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
-  <p class="cartel-meta">Réaliste · 2021 · Édition de 30</p>
+  <p class="cartel-meta">Réalisme · 2021 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="reflexions-sylvestres" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu orange-ocre vert" data-des="120" data-ajout="2026-04-25" data-titre="Réflexions Sylvestres" data-recherche="reflexions sylvestres darren whitmore realiste paysages bleu orange vert brun paysage reflet nature quand la nature dialogue avec l&#39;eau." style="--nuit:#0c1d1f;--accent-oeuvre:#0e808f">
+</article><article class="carte-oeuvre" data-oeuvre="reflexions-sylvestres" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu orange-ocre vert" data-des="120" data-ajout="2026-04-25" data-titre="Réflexions Sylvestres" data-recherche="reflexions sylvestres darren whitmore realisme paysages bleu orange vert brun paysage reflet nature quand la nature dialogue avec l’eau." style="--nuit:#0c1d1f;--accent-oeuvre:#0e808f">
   <a class="carte-lien" href="/oeuvres/reflexions-sylvestres" data-libelle="Réflexions Sylvestres">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7897091722595078" data-cadre="caisse-noire">
@@ -480,7 +480,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Réflexions Sylvestres</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
-  <p class="cartel-meta">Réaliste · 2025 · Édition de 30</p>
+  <p class="cartel-meta">Réalisme · 2025 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
@@ -506,7 +506,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="danse-aquatique" data-univers="animaux" data-artiste="miyu-mori" data-orientation="portrait" data-familles="bleu rouge-rose blanc-beige jaune-or" data-des="120" data-ajout="2026-04-11" data-titre="Danse Aquatique" data-recherche="danse aquatique miyu mori illustratif animaux turquoise rouge blanc jaune carpe aquatique mouvement un voyage vibrant dans le monde aquatique." style="--nuit:#1f0c0e;--accent-oeuvre:#9e2131">
+</article><article class="carte-oeuvre" data-oeuvre="danse-aquatique" data-univers="animaux" data-artiste="miyu-mori" data-orientation="portrait" data-familles="bleu rouge-rose blanc-beige jaune-or" data-des="120" data-ajout="2026-04-11" data-titre="Danse Aquatique" data-recherche="danse aquatique miyu mori illustration animaux turquoise rouge blanc jaune carpe aquatique mouvement un voyage vibrant dans le monde aquatique." style="--nuit:#1f0c0e;--accent-oeuvre:#9e2131">
   <a class="carte-lien" href="/oeuvres/danse-aquatique" data-libelle="Danse Aquatique">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.5714285714285714" data-cadre="caisse-noire">
@@ -524,7 +524,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Danse Aquatique</h3>
   <p class="cartel-artiste">Miyu Mori</p>
-  <p class="cartel-meta">Illustratif · 2021 · Édition de 20</p>
+  <p class="cartel-meta">Illustration · 2021 · Édition de 20</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
@@ -550,7 +550,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="echos-de-serenite" data-univers="nature" data-artiste="francesco-conte" data-orientation="carre" data-familles="rouge-rose vert orange-ocre bleu" data-des="90" data-ajout="2026-04-11" data-titre="Échos de Sérénité" data-recherche="echos de serenite francesco conte surrealiste nature rose vert orange bleu verre bocal printemps un univers miniature d&#39;elegance intemporelle." style="--nuit:#1e0f0e;--accent-oeuvre:#954a44">
+</article><article class="carte-oeuvre" data-oeuvre="echos-de-serenite" data-univers="nature" data-artiste="francesco-conte" data-orientation="carre" data-familles="rouge-rose vert orange-ocre bleu" data-des="90" data-ajout="2026-04-11" data-titre="Échos de Sérénité" data-recherche="echos de serenite francesco conte surrealisme nature rose vert orange bleu verre bocal printemps un univers miniature d’elegance intemporelle." style="--nuit:#1e0f0e;--accent-oeuvre:#954a44">
   <a class="carte-lien" href="/oeuvres/echos-de-serenite" data-libelle="Échos de Sérénité">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1" data-cadre="caisse-noire">
@@ -568,7 +568,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Échos de Sérénité</h3>
   <p class="cartel-artiste">Francesco Conte</p>
-  <p class="cartel-meta">Surréaliste · 2020 · Édition de 30</p>
+  <p class="cartel-meta">Surréalisme · 2020 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>90 €</strong></p>
 </div>
   </a>
@@ -616,7 +616,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="eclat-du-japon" data-univers="portraits" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu rouge-rose noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Éclat du Japon" data-recherche="eclat du japon miyu mori contemporain portraits orange bleu rouge noir japonais kimono fleurs l&#39;art du contraste vibrant." style="--nuit:#1f120c;--accent-oeuvre:#f27a45">
+</article><article class="carte-oeuvre" data-oeuvre="eclat-du-japon" data-univers="portraits" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu rouge-rose noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Éclat du Japon" data-recherche="eclat du japon miyu mori contemporain portraits orange bleu rouge noir japonais kimono fleurs l’art du contraste vibrant." style="--nuit:#1f120c;--accent-oeuvre:#f27a45">
   <a class="carte-lien" href="/oeuvres/eclat-du-japon" data-libelle="Éclat du Japon">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.5263157894736842" data-cadre="caisse-noire">
@@ -638,7 +638,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="eclosion-etheree" data-univers="floral" data-artiste="francesco-conte" data-orientation="portrait" data-familles="bleu jaune-or blanc-beige noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Éclosion Éthérée" data-recherche="eclosion etheree francesco conte contemporain floral bleu or blanc gris fleur nature elegance l&#39;elegance d&#39;une floraison intemporelle." style="--nuit:#131816;--accent-oeuvre:#d2dbd8">
+</article><article class="carte-oeuvre" data-oeuvre="eclosion-etheree" data-univers="floral" data-artiste="francesco-conte" data-orientation="portrait" data-familles="bleu jaune-or blanc-beige noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Éclosion Éthérée" data-recherche="eclosion etheree francesco conte contemporain floral bleu or blanc gris fleur nature elegance l’elegance d’une floraison intemporelle." style="--nuit:#131816;--accent-oeuvre:#d2dbd8">
   <a class="carte-lien" href="/oeuvres/eclosion-etheree" data-libelle="Éclosion Éthérée">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
@@ -682,7 +682,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="elegance-eternelle" data-univers="animaux" data-artiste="miyu-mori" data-orientation="portrait" data-familles="bleu noir-gris rouge-rose blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="Élégance Éternelle" data-recherche="elegance eternelle miyu mori minimalisme animaux bleu gris rouge beige grues nature reflexion reflet poetique d&#39;une danse silencieuse." style="--nuit:#1a1811;--accent-oeuvre:#dedace">
+</article><article class="carte-oeuvre" data-oeuvre="elegance-eternelle" data-univers="animaux" data-artiste="miyu-mori" data-orientation="portrait" data-familles="bleu noir-gris rouge-rose blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="Élégance Éternelle" data-recherche="elegance eternelle miyu mori minimalisme animaux bleu gris rouge beige grues nature reflexion reflet poetique d’une danse silencieuse." style="--nuit:#1a1811;--accent-oeuvre:#dedace">
   <a class="carte-lien" href="/oeuvres/elegance-eternelle" data-libelle="Élégance Éternelle">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.5549389567147613" data-cadre="caisse-noire">
@@ -704,7 +704,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="evasion-crepusculaire" data-univers="paysage" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu noir-gris blanc-beige" data-des="80" data-ajout="2026-04-11" data-titre="Évasion Crépusculaire" data-recherche="evasion crepusculaire miyu mori minimaliste paysages orange bleu noir blanc crepusculaire mystique architecture une exploration onirique entre terre et ciel." style="--nuit:#1f0f0c;--accent-oeuvre:#e05b40">
+</article><article class="carte-oeuvre" data-oeuvre="evasion-crepusculaire" data-univers="paysage" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu noir-gris blanc-beige" data-des="80" data-ajout="2026-04-11" data-titre="Évasion Crépusculaire" data-recherche="evasion crepusculaire miyu mori minimalisme paysages orange bleu noir blanc crepusculaire mystique architecture une exploration onirique entre terre et ciel." style="--nuit:#1f0f0c;--accent-oeuvre:#e05b40">
   <a class="carte-lien" href="/oeuvres/evasion-crepusculaire" data-libelle="Évasion Crépusculaire">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.7541478129713424" data-cadre="caisse-noire">
@@ -722,7 +722,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Évasion Crépusculaire</h3>
   <p class="cartel-artiste">Miyu Mori</p>
-  <p class="cartel-meta">Minimaliste · 2025 · Édition de 20</p>
+  <p class="cartel-meta">Minimalisme · 2025 · Édition de 20</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
 </div>
   </a>
@@ -792,15 +792,15 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>190 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="l-avenement-cosmique-du-taureau" data-univers="animaux" data-artiste="francesco-conte" data-orientation="paysage" data-familles="bleu noir-gris blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="L&#39;Avènement Cosmique du Taureau" data-recherche="l&#39;avenement cosmique du taureau francesco conte surrealisme animaux bleu gris beige blanc taureau fusion cosmique entre terre et cosmos, un equilibre majestueux." style="--nuit:#1e160d;--accent-oeuvre:#cfb193">
-  <a class="carte-lien" href="/oeuvres/l-avenement-cosmique-du-taureau" data-libelle="L&#39;Avènement Cosmique du Taureau">
+</article><article class="carte-oeuvre" data-oeuvre="l-avenement-cosmique-du-taureau" data-univers="animaux" data-artiste="francesco-conte" data-orientation="paysage" data-familles="bleu noir-gris blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="L’Avènement Cosmique du Taureau" data-recherche="l’avenement cosmique du taureau francesco conte surrealisme animaux bleu gris beige blanc taureau fusion cosmique entre terre et cosmos, un equilibre majestueux." style="--nuit:#1e160d;--accent-oeuvre:#cfb193">
+  <a class="carte-lien" href="/oeuvres/l-avenement-cosmique-du-taureau" data-libelle="L’Avènement Cosmique du Taureau">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
   <picture>
-    <img src="/assets/images/oeuvres/l-avenement-cosmique-du-taureau-800.webp" srcset="/assets/images/oeuvres/l-avenement-cosmique-du-taureau-640.webp 640w, /assets/images/oeuvres/l-avenement-cosmique-du-taureau-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L&#39;Avènement Cosmique du Taureau, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/l-avenement-cosmique-du-taureau-800.webp" srcset="/assets/images/oeuvres/l-avenement-cosmique-du-taureau-640.webp 640w, /assets/images/oeuvres/l-avenement-cosmique-du-taureau-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L’Avènement Cosmique du Taureau, Francesco Conte" width="800" height="448" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -808,21 +808,21 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/l-avenement-cosmique-du-taureau-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">L&#39;Avènement Cosmique du Taureau</h3>
+  <h3 class="cartel-titre">L’Avènement Cosmique du Taureau</h3>
   <p class="cartel-artiste">Francesco Conte</p>
   <p class="cartel-meta">Surréalisme · 2020 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="l-esprit-flottant" data-univers="portraits" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu rouge-rose vert" data-des="80" data-ajout="2026-04-11" data-titre="L&#39;Esprit Flottant" data-recherche="l&#39;esprit flottant miyu mori illustration portraits orange bleu rouge vert portrait art contemporain illustration une symphonie de couleurs et de reves." style="--nuit:#1f160c;--accent-oeuvre:#e19a54">
-  <a class="carte-lien" href="/oeuvres/l-esprit-flottant" data-libelle="L&#39;Esprit Flottant">
+</article><article class="carte-oeuvre" data-oeuvre="l-esprit-flottant" data-univers="portraits" data-artiste="miyu-mori" data-orientation="portrait" data-familles="orange-ocre bleu rouge-rose vert" data-des="80" data-ajout="2026-04-11" data-titre="L’Esprit Flottant" data-recherche="l’esprit flottant miyu mori illustration portraits orange bleu rouge vert portrait art contemporain illustration une symphonie de couleurs et de reves." style="--nuit:#1f160c;--accent-oeuvre:#e19a54">
+  <a class="carte-lien" href="/oeuvres/l-esprit-flottant" data-libelle="L’Esprit Flottant">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.7656967840735069" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:500 / 653">
   <picture>
-    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L&#39;Esprit Flottant, Miyu Mori" width="500" height="653" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/l-esprit-flottant-500.webp" srcset="/assets/images/oeuvres/l-esprit-flottant-500.webp 500w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="L’Esprit Flottant, Miyu Mori" width="500" height="653" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -830,21 +830,21 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/l-esprit-flottant-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">L&#39;Esprit Flottant</h3>
+  <h3 class="cartel-titre">L’Esprit Flottant</h3>
   <p class="cartel-artiste">Miyu Mori</p>
   <p class="cartel-meta">Illustration · 2023 · Édition de 20</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="lumieres-d-ete-mediterraneen" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu blanc-beige vert orange-ocre" data-des="120" data-ajout="2026-04-11" data-titre="Lumières d&#39;Été Méditerranéen" data-recherche="lumieres d&#39;ete mediterraneen darren whitmore modernisme architecture bleu blanc vert orange architecture mediterranee villa evasion architecturale vers un reve ensoleille." style="--nuit:#1f0f0c;--accent-oeuvre:#e0a79b">
-  <a class="carte-lien" href="/oeuvres/lumieres-d-ete-mediterraneen" data-libelle="Lumières d&#39;Été Méditerranéen">
+</article><article class="carte-oeuvre" data-oeuvre="lumieres-d-ete-mediterraneen" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu blanc-beige vert orange-ocre" data-des="120" data-ajout="2026-04-11" data-titre="Lumières d’Été Méditerranéen" data-recherche="lumieres d’ete mediterraneen darren whitmore modernisme architecture bleu blanc vert orange architecture mediterranee villa evasion architecturale vers un reve ensoleille." style="--nuit:#1f0f0c;--accent-oeuvre:#e0a79b">
+  <a class="carte-lien" href="/oeuvres/lumieres-d-ete-mediterraneen" data-libelle="Lumières d’Été Méditerranéen">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
   <picture>
-    <img src="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp" srcset="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-640.webp 640w, /assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Lumières d&#39;Été Méditerranéen, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp" srcset="/assets/images/oeuvres/lumieres-d-ete-mediterraneen-640.webp 640w, /assets/images/oeuvres/lumieres-d-ete-mediterraneen-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Lumières d’Été Méditerranéen, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -852,21 +852,21 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/lumieres-d-ete-mediterraneen-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">Lumières d&#39;Été Méditerranéen</h3>
+  <h3 class="cartel-titre">Lumières d’Été Méditerranéen</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
   <p class="cartel-meta">Modernisme · 2021 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="melange-d-or-et-de-mystere" data-univers="portraits" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="jaune-or bleu vert" data-des="120" data-ajout="2026-04-11" data-titre="Mélange d&#39;Or et de Mystère" data-recherche="melange d&#39;or et de mystere darren whitmore surrealisme portraits dore bleu vert jaune portrait surrealisme dore lumiere et enigme en symbiose" style="--nuit:#1f1b0c;--accent-oeuvre:#d0b54d">
-  <a class="carte-lien" href="/oeuvres/melange-d-or-et-de-mystere" data-libelle="Mélange d&#39;Or et de Mystère">
+</article><article class="carte-oeuvre" data-oeuvre="melange-d-or-et-de-mystere" data-univers="portraits" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="jaune-or bleu vert" data-des="120" data-ajout="2026-04-11" data-titre="Mélange d’Or et de Mystère" data-recherche="melange d’or et de mystere darren whitmore surrealisme portraits dore bleu vert jaune portrait surrealisme dore lumiere et enigme en symbiose" style="--nuit:#1f1b0c;--accent-oeuvre:#d0b54d">
+  <a class="carte-lien" href="/oeuvres/melange-d-or-et-de-mystere" data-libelle="Mélange d’Or et de Mystère">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 448">
   <picture>
-    <img src="/assets/images/oeuvres/melange-d-or-et-de-mystere-800.webp" srcset="/assets/images/oeuvres/melange-d-or-et-de-mystere-640.webp 640w, /assets/images/oeuvres/melange-d-or-et-de-mystere-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Mélange d&#39;Or et de Mystère, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/melange-d-or-et-de-mystere-800.webp" srcset="/assets/images/oeuvres/melange-d-or-et-de-mystere-640.webp 640w, /assets/images/oeuvres/melange-d-or-et-de-mystere-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Mélange d’Or et de Mystère, Darren Whitmore" width="800" height="448" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -874,7 +874,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/melange-d-or-et-de-mystere-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">Mélange d&#39;Or et de Mystère</h3>
+  <h3 class="cartel-titre">Mélange d’Or et de Mystère</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
   <p class="cartel-meta">Surréalisme · 2025 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
@@ -902,7 +902,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="oasis-moderne" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu orange-ocre blanc-beige vert" data-des="190" data-ajout="2026-04-11" data-titre="Oasis Moderne" data-recherche="oasis moderne darren whitmore moderne architecture bleu-vert orange beige vert architecture oasis piscine l&#39;evasion architecturale sublimee." style="--nuit:#1f1c0c;--accent-oeuvre:#ece2b6">
+</article><article class="carte-oeuvre" data-oeuvre="oasis-moderne" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu orange-ocre blanc-beige vert" data-des="190" data-ajout="2026-04-11" data-titre="Oasis Moderne" data-recherche="oasis moderne darren whitmore modernisme architecture bleu-vert orange beige vert architecture oasis piscine l’evasion architecturale sublimee." style="--nuit:#1f1c0c;--accent-oeuvre:#ece2b6">
   <a class="carte-lien" href="/oeuvres/oasis-moderne" data-libelle="Oasis Moderne">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:2" data-cadre="caisse-noire">
@@ -920,7 +920,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Oasis Moderne</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
-  <p class="cartel-meta">Moderne · 2024 · Édition de 30</p>
+  <p class="cartel-meta">Modernisme · 2024 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>190 €</strong></p>
 </div>
   </a>
@@ -946,7 +946,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="regard-de-minuit" data-univers="nature" data-artiste="francesco-conte" data-orientation="paysage" data-familles="bleu jaune-or noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Regard de Minuit" data-recherche="regard de minuit francesco conte abstrait nature bleu or noir gris felin art luxueux elegance sauvage transcendee par l&#39;art." style="--nuit:#0e181d;--accent-oeuvre:#213844">
+</article><article class="carte-oeuvre" data-oeuvre="regard-de-minuit" data-univers="nature" data-artiste="francesco-conte" data-orientation="paysage" data-familles="bleu jaune-or noir-gris" data-des="120" data-ajout="2026-04-11" data-titre="Regard de Minuit" data-recherche="regard de minuit francesco conte abstrait nature bleu or noir gris felin art luxueux elegance sauvage transcendee par l’art." style="--nuit:#0e181d;--accent-oeuvre:#213844">
   <a class="carte-lien" href="/oeuvres/regard-de-minuit" data-libelle="Regard de Minuit">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.7857142857142858" data-cadre="caisse-noire">
@@ -968,7 +968,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="rencontre-du-destin" data-univers="portraits" data-artiste="francesco-conte" data-orientation="paysage" data-familles="noir-gris blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="Rencontre du Destin" data-recherche="rencontre du destin francesco conte ink-wash portraits noir blanc gris ivoire rencontre feminite force dialogue entre la force et la serenite." style="--nuit:#161715;--accent-oeuvre:#d5d6d2">
+</article><article class="carte-oeuvre" data-oeuvre="rencontre-du-destin" data-univers="portraits" data-artiste="francesco-conte" data-orientation="paysage" data-familles="noir-gris blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="Rencontre du Destin" data-recherche="rencontre du destin francesco conte lavis d’encre portraits noir blanc gris ivoire rencontre feminite force dialogue entre la force et la serenite." style="--nuit:#161715;--accent-oeuvre:#d5d6d2">
   <a class="carte-lien" href="/oeuvres/rencontre-du-destin" data-libelle="Rencontre du Destin">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.6563146997929608" data-cadre="caisse-noire">
@@ -986,11 +986,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Rencontre du Destin</h3>
   <p class="cartel-artiste">Francesco Conte</p>
-  <p class="cartel-meta">Ink-wash · 2026 · Édition de 30</p>
+  <p class="cartel-meta">Lavis d’encre · 2026 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="reverie-mediterraneenne" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu rouge-rose blanc-beige vert" data-des="80" data-ajout="2026-04-11" data-titre="Rêverie Méditerranéenne" data-recherche="reverie mediterraneenne darren whitmore surrealiste architecture bleu rose blanc vert architecture paysage mediterranee un voyage intemporel aux couleurs d&#39;azur." style="--nuit:#0c1b1f;--accent-oeuvre:#1887a8">
+</article><article class="carte-oeuvre" data-oeuvre="reverie-mediterraneenne" data-univers="architecture" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="bleu rouge-rose blanc-beige vert" data-des="80" data-ajout="2026-04-11" data-titre="Rêverie Méditerranéenne" data-recherche="reverie mediterraneenne darren whitmore surrealisme architecture bleu rose blanc vert architecture paysage mediterranee un voyage intemporel aux couleurs d’azur." style="--nuit:#0c1b1f;--accent-oeuvre:#1887a8">
   <a class="carte-lien" href="/oeuvres/reverie-mediterraneenne" data-libelle="Rêverie Méditerranéenne">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.5473887814313345" data-cadre="caisse-noire">
@@ -1008,19 +1008,19 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="cartel ">
   <h3 class="cartel-titre">Rêverie Méditerranéenne</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
-  <p class="cartel-meta">Surréaliste · 2024 · Édition de 30</p>
+  <p class="cartel-meta">Surréalisme · 2024 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>80 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="reverie-venitienne" data-univers="portraits" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="noir-gris blanc-beige rouge-rose" data-des="120" data-ajout="2026-04-11" data-titre="Réverie Vénitienne" data-recherche="reverie venitienne darren whitmore illustration portraits gris blanc noir rouge femme venise canal une elegance intemporelle au bord de l&#39;eau." style="--nuit:#1a1111;--accent-oeuvre:#302020">
-  <a class="carte-lien" href="/oeuvres/reverie-venitienne" data-libelle="Réverie Vénitienne">
+</article><article class="carte-oeuvre" data-oeuvre="reverie-venitienne" data-univers="portraits" data-artiste="darren-whitmore" data-orientation="paysage" data-familles="noir-gris blanc-beige rouge-rose" data-des="120" data-ajout="2026-04-11" data-titre="Rêverie Vénitienne" data-recherche="reverie venitienne darren whitmore illustration portraits gris blanc noir rouge femme venise canal une elegance intemporelle au bord de l’eau." style="--nuit:#1a1111;--accent-oeuvre:#302020">
+  <a class="carte-lien" href="/oeuvres/reverie-venitienne" data-libelle="Rêverie Vénitienne">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:1.8140589569160999" data-cadre="caisse-noire">
   <span class="cadre-ombre" aria-hidden="true"></span>
   <div class="cadre-bord"><div class="cadre-creux"><div class="cadre-oeuvre">
     <figure class="media oeuvre-image" style="--cadrage:50% 50%;aspect-ratio:800 / 441">
   <picture>
-    <img src="/assets/images/oeuvres/reverie-venitienne-800.webp" srcset="/assets/images/oeuvres/reverie-venitienne-640.webp 640w, /assets/images/oeuvres/reverie-venitienne-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Réverie Vénitienne, Darren Whitmore" width="800" height="441" loading="lazy" decoding="async">
+    <img src="/assets/images/oeuvres/reverie-venitienne-800.webp" srcset="/assets/images/oeuvres/reverie-venitienne-640.webp 640w, /assets/images/oeuvres/reverie-venitienne-800.webp 800w" sizes="(max-width: 520px) 88vw, (max-width: 1100px) 45vw, 30vw" alt="Rêverie Vénitienne, Darren Whitmore" width="800" height="441" loading="lazy" decoding="async">
   </picture>
 </figure>
   </div></div></div>
@@ -1028,7 +1028,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <div class="carte-mise" aria-hidden="true"><img src="/assets/images/mises/reverie-venitienne-640.webp" alt="" width="640" height="640" loading="lazy" decoding="async"></div>
     </div>
     <div class="cartel ">
-  <h3 class="cartel-titre">Réverie Vénitienne</h3>
+  <h3 class="cartel-titre">Rêverie Vénitienne</h3>
   <p class="cartel-artiste">Darren Whitmore</p>
   <p class="cartel-meta">Illustration · 2022 · Édition de 30</p>
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
@@ -1056,7 +1056,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <p class="cartel-prix"><span>dès</span> <strong data-prix>120 €</strong></p>
 </div>
   </a>
-</article><article class="carte-oeuvre" data-oeuvre="serenite-turquoise" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="portrait" data-familles="rouge-rose bleu blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="Sérénité turquoise" data-recherche="serenite turquoise darren whitmore surrealisme paysages rose turquoise blanc rouge evanescent tranquille nature un souffle de reve et d&#39;horizons intangibles." style="--nuit:#0c1f1e;--accent-oeuvre:#3ab0a9">
+</article><article class="carte-oeuvre" data-oeuvre="serenite-turquoise" data-univers="paysage" data-artiste="darren-whitmore" data-orientation="portrait" data-familles="rouge-rose bleu blanc-beige" data-des="120" data-ajout="2026-04-11" data-titre="Sérénité turquoise" data-recherche="serenite turquoise darren whitmore surrealisme paysages rose turquoise blanc rouge evanescent tranquille nature un souffle de reve et d’horizons intangibles." style="--nuit:#0c1f1e;--accent-oeuvre:#3ab0a9">
   <a class="carte-lien" href="/oeuvres/serenite-turquoise" data-libelle="Sérénité turquoise">
     <div class="carte-scene">
       <div class="cadre cadre--caisse-noire " style="--r:0.5605381165919282" data-cadre="caisse-noire">
@@ -1205,7 +1205,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </footer>
 <div data-barre-fixe>
   <a class="bouton bouton--contour" href="mailto:sequoia@tostunlimited.com" aria-label="Écrire à Sequoia Studio"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Écrire</span></a>
-  <a class="bouton" href="/commande" data-panier-bouton data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span></a>
+  <a class="bouton" href="/commande" data-panier-bouton data-libelle="Panier"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 8h14l-1.2 12H6.2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><span>Panier</span><span class="panier-nombre" data-panier-nombre></span></a>
 </div>
 </body>
 </html>

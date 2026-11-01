@@ -2,7 +2,7 @@
    - Choix déjà fait selon le bouton d'où l'on vient : paramètre dans l'adresse (?sujet=visite).
    - Vérification des champs, erreurs à côté du champ, lues par les lecteurs d'écran.
    - Bouton désactivé après le premier envoi (pas de double envoi). */
-import { etat } from './etat.js?v=1';
+import { etat } from './etat.js?v=2';
 
 const textes = {
   fr: { requis: 'Ce champ est à remplir.', email: 'Adresse e-mail à vérifier (exemple : nom@domaine.fr).', tel: 'Numéro à vérifier (10 chiffres).', envoye: 'Demande simulée : rien n’a été envoyé. Sur le site final, elle partira vers le client.' },

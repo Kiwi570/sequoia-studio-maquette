@@ -2,7 +2,7 @@
    chez vous (formats et finitions au défilement), fabrication (vue éclatée), certificat (anneau d'édition),
    artistes, fondateurs, acheter sereinement. */
 import { html, brut } from '../../outils/gabarit.mjs';
-import { oeuvre, cadre, cartel, prix, tete, urlOeuvre, picto } from '../gabarits/elements.mjs';
+import { oeuvre, cadre, cartel, prix, tete, urlOeuvre, picto, repereScene } from '../gabarits/elements.mjs';
 import { icone } from '../gabarits/commun.mjs';
 
 export const page = { cle: 'accueil', fichier: 'index', imagePartage: 'oeuvres/regard-de-minuit-800.webp', partageSous: 'Œuvres en éditions limitées, certificat d’authenticité signé par l’artiste' };
@@ -91,8 +91,8 @@ export default (c) => {
 
 <section class="demo ecran epingle" id="chez-vous" data-entete-cache data-plein-ecran data-demo style="--nuit:${demo.couleur.nuit}">
   <div class="demo-grille">
-    <div class="demo-scene" data-demo-scene>
-      ${c.media({ nom: 'grok/salon-soir', alt: c.s('accueil.chezVous.alt'), sizes: '(max-width: 760px) 100vw, 64vw', classe: 'demo-interieur', ratio: '500 / 281' })}
+    <div class="demo-scene" data-demo-scene style="${repereScene(c)}">
+      ${c.media({ nom: 'grok/salon-soir', alt: c.s('accueil.chezVous.alt'), sizes: '(max-width: 760px) 100vw, 64vw', classe: 'demo-interieur', ratio: '1168 / 784', mobile: false })}
       <div class="demo-mur" data-demo-mur aria-hidden="true">
         <div class="demo-oeuvre" data-demo-oeuvre style="--l:${etats[0].lt};--h:${etats[0].ht}">
           ${cadre(c, demo, { finition: 'toile', sizes: '30vw', alt: '' })}
@@ -136,7 +136,7 @@ export default (c) => {
     <ul class="eclate-legendes" data-eclate-legendes>
       ${['c1', 'c2', 'c3', 'c4'].map((k, i) => html`<li data-anime style="--i:${i}"><span class="eclate-puce" aria-hidden="true">${i + 1}</span>${c.t('accueil.fabrication.' + k)}</li>`)}
     </ul>
-    <div class="fabrication-photo">${c.media({ nom: 'grok/atelier-impression', alt: c.s('accueil.fabrication.alt'), sizes: '(max-width: 760px) 100vw, 40vw', ratio: '16 / 10' })}</div>
+    <div class="fabrication-photo">${c.media({ nom: 'grok/atelier-impression', alt: c.s('accueil.fabrication.alt'), sizes: '100vw', ratio: '16 / 10' })}</div>
   </div>
 </section>
 

@@ -34,7 +34,7 @@ export default (c) => {
       <h1 class="article-h1" data-anime="gsap">${a.titre}</h1>
       <p class="article-meta" data-anime="gsap" data-info-cle><time datetime="${a.date}">${a.dateTexte}</time> · ${c.t('journal.minutes', { n: minutes(a) })}</p>
       <p class="article-chapo article-chapo--tete" data-anime="gsap">${a.chapo}</p>
-      <p data-anime="gsap"><a class="bouton bouton--plein" href="#lecture" data-action-principale>${c.t('journal.lire')}${icone.fleche}</a></p>
+      <p data-anime="gsap"><a class="bouton bouton--plein" href="#lecture" data-action-principale>${c.t('journal.commencer')}${icone.fleche}</a></p>
     </div>
     ${c.media({ nom: a.couverture, alt: a.couvertureAlt, cadrage: a.couvertureCadrage, priorite: true, sizes: '(max-width: 760px) 100vw, 50vw', ratio: '4 / 3', classe: 'article-couverture' })}
   </div>

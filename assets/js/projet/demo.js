@@ -1,8 +1,8 @@
-/* Accueil, « Essayez avant d'accrocher » : l'œuvre posée à l'échelle sur le mur d'un salon (canapé de 220 cm).
+/* Accueil, « Essayez avant d'accrocher » : l'œuvre posée à l'échelle sur le mur d'un salon (image calibrée : plafond à 2,50 m).
    Sur ordinateur : la section s'épingle et le défilement fait passer les formats puis les finitions ;
    partout : les boutons choisissent un état. Changement de taille animé par transform (FLIP), cotes en cm. */
-import { etat } from '../socle/index.js?v=1';
-import { $, $$ } from './outils.js?v=1';
+import { etat } from '../socle/index.js?v=2';
+import { $, $$ } from './outils.js?v=2';
 
 export function initDemo() {
   const bloc = $('[data-demo]');

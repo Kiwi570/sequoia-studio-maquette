@@ -1,6 +1,6 @@
 /* Curseur personnalisé, seulement avec une souris : un seul à l'écran, invisible jusqu'au premier mouvement,
    remplacé par le curseur natif dans les champs de saisie. Activé par l'attribut data-curseur sur <html>. */
-import { html, etat } from './etat.js?v=1';
+import { html, etat } from './etat.js?v=2';
 
 export function initCurseur() {
   if (!html.hasAttribute('data-curseur') || etat.calme) return;

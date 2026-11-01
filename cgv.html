@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="1" data-page="cgv" data-curseur>
+<html lang="fr" data-v="2" data-page="cgv" data-curseur>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="Conditions générales de vente Sequoia Studio : commande, paiement, livraison, retours et garanties des œuvres encadrées.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/cgv">
-<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 65px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
 <script>(function () {
 var d = document.documentElement, ss = null, ls = null;
 try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1">
-<link rel="modulepreload" href="/assets/js/site.js?v=1">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=1"></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
 <meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -148,12 +148,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <p class="legal-maj" data-anime="gsap">Dernière mise à jour : 23 février 2026</p>
       <nav class="legal-sommaire" data-sommaire aria-label="Sommaire" data-anime="gsap"><ul><li><a href="#vendeur" data-sans-transition>1. Identité du vendeur</a></li><li><a href="#champ" data-sans-transition>2. Champ d’application</a></li><li><a href="#nature" data-sans-transition>3. Nature des œuvres et caractéristiques</a></li><li><a href="#prix" data-sans-transition>4. Prix</a></li><li><a href="#commande" data-sans-transition>5. Commande</a></li><li><a href="#paiement" data-sans-transition>6. Paiement</a></li><li><a href="#livraison" data-sans-transition>7. Livraison des œuvres</a></li><li><a href="#retractation" data-sans-transition>8. Droit de rétractation</a></li><li><a href="#remboursement" data-sans-transition>9. Remboursement</a></li><li><a href="#garanties" data-sans-transition>10. Garanties légales</a></li><li><a href="#responsabilite" data-sans-transition>11. Responsabilité</a></li><li><a href="#propriete" data-sans-transition>12. Propriété intellectuelle</a></li><li><a href="#donnees" data-sans-transition>13. Données personnelles</a></li><li><a href="#droit" data-sans-transition>14. Droit applicable – compétence territoriale</a></li><li><a href="#acceptation" data-sans-transition>15. Acceptation des CGV</a></li></ul></nav>
     </div>
-    <figure class="media media--provisoire legal-image" data-visuel data-provisoire="cgv-cartels" style="aspect-ratio:16 / 10" role="img" aria-label="Rangée de cartels de musée vierges sur un mur sombre"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><linearGradient id="mp16" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0c0b"/><stop offset=".55" stop-color="#1a1816"/><stop offset="1" stop-color="#0c0b0a"/></linearGradient>
-  <radialGradient id="fp16" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f3d9a6" stop-opacity=".42"/><stop offset=".35" stop-color="#d9b77c" stop-opacity=".24"/><stop offset=".7" stop-color="#a7834d" stop-opacity=".07"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
-  <linearGradient id="sp16" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#17120d"/><stop offset="1" stop-color="#070605"/></linearGradient>
-  <radialGradient id="vp16" cx=".5" cy=".45" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".7"/></radialGradient></defs><rect width="1600" height="900" fill="url(#mp16)"/><path d="M782 0 L818 0 L1404.8000000000002 432 L195.19999999999993 432Z" fill="#f3d9a6" opacity=".035"/><ellipse cx="800" cy="432" rx="672" ry="288" fill="url(#fp16)"/>
-  <rect y="846" width="1600" height="54.00000000000005" fill="url(#sp16)"/><rect y="846" width="1600" height="2" fill="#2a2219" opacity=".8"/>
-  <rect width="1600" height="900" fill="url(#vp16)"/><rect x="420" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.54"/><rect x="436" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="580" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.72"/><rect x="596" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="740" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.9"/><rect x="756" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="900" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.72"/><rect x="916" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/><rect x="1060" y="410" width="110" height="70" rx="2" fill="#efe8db" opacity="0.54"/><rect x="1076" y="428" width="60" height="4" fill="#cfc5b3" opacity=".6"/></svg></figure>
+    <figure class="media legal-image" data-grok style="--cadrage:50% 50%;aspect-ratio:16 / 10">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/cgv-cartels-mobile-640.webp 640w, /assets/images/grok/cgv-cartels-mobile-784.webp 784w" sizes="(max-width: 760px) 100vw, 40vw">
+    <img src="/assets/images/grok/cgv-cartels-1168.webp" srcset="/assets/images/grok/cgv-cartels-640.webp 640w, /assets/images/grok/cgv-cartels-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 40vw" alt="Rangée de cartels de musée vierges sur un mur sombre" width="1168" height="784" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
   </div>
 </section>
 <div class="texte-long conteneur" data-sans-visuel>
@@ -169,7 +168,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   </section><section id="prix" data-sans-visuel class="legal-section">
     <h2>4. Prix</h2>
     <p>Les prix sont indiqués en euros (€), TVA non applicable (article 293 B du CGI), hors frais de livraison. Les frais de livraison sont calculés en fonction du format, du poids de l’œuvre et de la destination, et sont indiqués au client avant la validation définitive de la commande. Ils sont récapitulés dans le résumé de commande.</p><p>TOST Unlimited se réserve le droit de modifier ses prix à tout moment. Le prix applicable est celui affiché au moment de la validation de la commande.</p>
-    <p class="note-client"><strong>Note pour le client :</strong> Texte adapté pour la maquette : les CGV actuelles indiquent des prix « toutes taxes comprises », alors que la société n’applique pas la TVA (article 293 B du CGI). À valider par Sequoia Studio.</p>
+    <p class="note-client"><strong>Note pour le client :</strong> Texte adapté pour la maquette : la société n’applique pas la TVA (article 293 B du CGI), la mention des prix a été mise en accord. À valider par Sequoia Studio.</p>
   </section><section id="commande" data-sans-visuel class="legal-section">
     <h2>5. Commande</h2>
     <p>Le client sélectionne l’œuvre de son choix, vérifie le récapitulatif de commande, puis valide définitivement sa commande après acceptation des CGV.</p><p>La vente est considérée comme ferme après : validation du paiement, envoi de la confirmation de commande par e-mail.</p><p>TOST Unlimited se réserve le droit de refuser toute commande en cas de litige antérieur ou de suspicion de fraude.</p>

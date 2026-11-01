@@ -1,8 +1,8 @@
 /* Apparitions au défilement des éléments [data-anime] (hors data-anime="gsap", animés par le projet).
    Ils sont cachés par le style critique jusqu'à la classe .vu, qui les fait apparaître une fois,
    sans jamais les recacher. En mode calme, en secours et au retour : tout est affiché directement. */
-import { html } from './etat.js?v=1';
-import { mesures } from './mesures.js?v=1';
+import { html } from './etat.js?v=2';
+import { mesures } from './mesures.js?v=2';
 
 let io = null;
 

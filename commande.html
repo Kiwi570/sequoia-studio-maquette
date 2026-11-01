@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="1" data-page="commande" data-curseur>
+<html lang="fr" data-v="2" data-page="commande" data-curseur>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,7 +7,7 @@
 <meta name="description" content="Récapitulatif de votre sélection d’œuvres Sequoia Studio et commande simulée.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://sequoia-studio-maquette.vercel.app/commande">
-<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<style>:root{--fond:#0b0b0c;--texte:#f2ede4;--voile-fond:#070708;--ouverture-fond:#050506;--menu-fond:#0b0b0c}:root { --entete-h: 65px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
 <script>(function () {
 var d = document.documentElement, ss = null, ls = null;
 try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
@@ -41,14 +41,14 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/geist.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1">
-<link rel="modulepreload" href="/assets/js/site.js?v=1">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=1"></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
 <meta name="theme-color" content="#0b0b0c">
 <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -149,12 +149,11 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <p class="hero-actions" data-anime="gsap"><a class="bouton bouton--plein" href="#coordonnees" data-action-principale>Finaliser la commande<svg class="icone icone--fleche" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
       <p class="hero-info" data-info-cle data-anime="gsap">Commande simulée : rien n’est vendu ni envoyé.</p>
     </div>
-    <figure class="media media--provisoire " data-visuel data-provisoire="emballage" style="aspect-ratio:16 / 10" role="img" aria-label="Table d’emballage d’atelier : carton, papier kraft et protections d’angles"><svg class="provisoire " viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><defs><radialGradient id="ap22" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#3b2e22"/><stop offset="1" stop-color="#080706"/></radialGradient></defs>
-    <rect width="1600" height="900" fill="url(#ap22)"/><path d="M770 0 h60 l320 900 h-700z" fill="#f3d9a6" opacity=".04"/>
-    <path d="M420 380 L1120 330 L1240 520 L520 580Z" fill="#a5794b"/><path d="M420 380 L520 580 L520 640 L420 440Z" fill="#7d5a36"/><path d="M520 580 L1240 520 L1240 580 L520 640Z" fill="#8c6640"/>
-    <path d="M470 400 L1110 356 L1190 500 L545 548Z" fill="#c9a77d"/>
-    <path d="M200 690 L760 640 L800 700 L240 760Z" fill="#b8915f" opacity=".9"/><g fill="#141414"><path d="M1260 640 l60 0 l0 60 l-20 0 l0 -40 l-40 0z"/><path d="M1340 700 l60 0 l0 60 l-20 0 l0 -40 l-40 0z"/></g>
-    <path d="M1000 640 L1360 610 L1380 640 L1020 670Z" fill="#f4efe6" opacity=".85"/></svg></figure>
+    <figure class="media " data-grok style="--cadrage:50% 50%;aspect-ratio:16 / 10">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/emballage-mobile-640.webp 640w, /assets/images/grok/emballage-mobile-784.webp 784w" sizes="(max-width: 760px) 100vw, 40vw">
+    <img src="/assets/images/grok/emballage-1168.webp" srcset="/assets/images/grok/emballage-640.webp 640w, /assets/images/grok/emballage-1168.webp 1168w" sizes="(max-width: 760px) 100vw, 40vw" alt="Table d’emballage d’atelier : carton, papier kraft et protections d’angles" width="1168" height="784" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
   </div>
 </section>
 <section class="commande" id="recapitulatif" data-commande data-sans-visuel>
@@ -162,7 +161,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <div class="commande-recap">
       <h2 class="titre-section titre-section--petit">Récapitulatif</h2>
       <ul class="commande-liste" data-commande-liste aria-live="polite"></ul>
-      <div class="commande-vide" data-commande-vide hidden><p>Votre panier est vide pour le moment.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Choisir une œuvre</a></p></div>
+      <div class="commande-vide" data-commande-vide><p>Votre panier est vide pour le moment.</p><p><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Choisir une œuvre</a></p></div>
       <noscript><p>Le panier a besoin de JavaScript pour s’afficher.</p></noscript>
       <dl class="commande-totaux">
         <div><dt>Œuvres</dt><dd data-prix data-commande-sous-total>0 €</dd></div>
@@ -194,6 +193,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
       <p class="mention-donnees">Vos données servent uniquement à traiter la commande et la livraison. Voir la <a href="/confidentialite">politique de confidentialité</a> (à compléter).</p>
       <button type="submit" class="bouton bouton--plein" data-commande-payer>Payer (simulation)</button>
       <p data-message-envoi data-texte="Commande simulée : rien n’a été vendu, payé ni envoyé. Votre panier a été vidé. Sur le site final, vous recevriez une confirmation par e-mail." role="status" tabindex="-1" hidden></p>
+      <p class="commande-suite"><a href="/galerie" class="bouton bouton--contour" data-libelle="Galerie">Retour à la galerie</a></p>
     </form>
   </div>
   <template data-commande-ligne-modele>

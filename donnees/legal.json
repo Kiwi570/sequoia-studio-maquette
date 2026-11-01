@@ -11,7 +11,7 @@
      "Frais de livraison : offerts (fiche produit) ou calculés selon le format (CGV) ?",
      "Moyens de paiement réellement acceptés (CGV : carte bancaire seule)",
      "Fichiers des œuvres en haute définition (aujourd’hui 800 px au plus)",
-     "Confirmation de l’identité des trois artistes et de leurs portraits"
+     "Confirmation de l’identité des trois artistes"
    ] },
    { "id": "editeur", "titre": "Éditeur du site", "lignes": [
      "Dénomination sociale : TOST Unlimited (SAS)",
@@ -73,7 +73,7 @@
    { "id": "prix", "titre": "4. Prix", "texte": [
      "Les prix sont indiqués en euros (€), TVA non applicable (article 293 B du CGI), hors frais de livraison. Les frais de livraison sont calculés en fonction du format, du poids de l’œuvre et de la destination, et sont indiqués au client avant la validation définitive de la commande. Ils sont récapitulés dans le résumé de commande.",
      "TOST Unlimited se réserve le droit de modifier ses prix à tout moment. Le prix applicable est celui affiché au moment de la validation de la commande."
-   ], "note": "Texte adapté pour la maquette : les CGV actuelles indiquent des prix « toutes taxes comprises », alors que la société n’applique pas la TVA (article 293 B du CGI). À valider par Sequoia Studio." },
+   ], "note": "Texte adapté pour la maquette : la société n’applique pas la TVA (article 293 B du CGI), la mention des prix a été mise en accord. À valider par Sequoia Studio." },
    { "id": "commande", "titre": "5. Commande", "texte": [
      "Le client sélectionne l’œuvre de son choix, vérifie le récapitulatif de commande, puis valide définitivement sa commande après acceptation des CGV.",
      "La vente est considérée comme ferme après : validation du paiement, envoi de la confirmation de commande par e-mail.",

@@ -72,7 +72,7 @@ button.lien { color: inherit; font: inherit; min-height: 44px; }
 .petit-titre { font: 500 .8rem/1.4 var(--police-texte); letter-spacing: .16em; text-transform: uppercase; color: var(--laiton-clair); margin: 1.6em 0 .5em; }
 
 /* ---------- Titres de section ---------- */
-.surtitre { font: 500 .78rem/1.5 var(--police-texte); letter-spacing: .18em; text-transform: uppercase; color: var(--laiton-clair); margin: 0 0 1rem; }
+.surtitre { font: 500 .78rem/1.5 var(--police-texte); letter-spacing: .18em; text-transform: uppercase; color: var(--laiton-clair); margin: 0 0 1rem; text-wrap: balance; }
 .titre-section { font-size: clamp(2.2rem, min(5.2vw, 8.6vh), 4.6rem); line-height: 1.02; margin: 0 0 .45em; }
 .titre-section--petit { font-size: clamp(1.8rem, 3vw, 2.6rem); }
 .tete-section { max-width: 46rem; margin-bottom: clamp(24px, 4vw, 48px); }
@@ -80,7 +80,7 @@ button.lien { color: inherit; font: inherit; min-height: 44px; }
 .tete-texte { color: var(--texte-doux); font-size: clamp(1rem, .95rem + .25vw, 1.15rem); max-width: 40rem; }
 .tete-section--centre .tete-texte { margin-inline: auto; }
 [data-titre-anime] { overflow-wrap: break-word; }
-.split-ligne { display: block; overflow: hidden; padding-block: .12em; margin-block: -.12em; }
+.split-ligne { display: block; }
 
 /* ---------- En-tête ---------- */
 [data-entete] { background: rgba(9, 9, 10, .97); border-bottom: 1px solid var(--ligne); }
@@ -104,7 +104,12 @@ html.menu-ouvert .bouton-menu-traits { transform: scaleY(0); }
 @media (max-width: 1240px) { .entete-icone-texte { display: none; } }
 @media (max-width: 520px) {
   .entete-logo span { font-size: 1.15rem; }
-  .entete-actions .bouton--entete { display: none; }
+  /* Téléphone : le panier reste dans l'en-tête, en icône avec pastille du nombre d'œuvres. */
+  .entete-actions .bouton--entete { display: inline-flex; position: relative; min-width: 44px; padding: 0; justify-content: center; border-color: transparent; background: none; color: var(--ivoire); }
+  .entete-actions .bouton--entete > span:not(.panier-nombre) { display: none; }
+  .entete-actions .bouton--entete .icone { width: 20px; height: 20px; }
+  .entete-actions .bouton--entete .panier-nombre:not(:empty) { position: absolute; top: 4px; right: 2px; min-width: 18px; height: 18px; padding: 0 4px; border-radius: 9px; background: var(--laiton-clair); color: var(--noir); font: 600 12px/18px var(--police-texte); text-align: center; }
+  .entete-actions .bouton--entete .panier-nombre::before, .entete-actions .bouton--entete .panier-nombre::after { content: none; }
 }
 @media (max-width: 380px) { .entete-logo span { display: none; } }
 
@@ -164,7 +169,9 @@ html.menu-ouvert .bouton-menu-traits { transform: scaleY(0); }
 /* ---------- Scènes d'ouverture (murs au projecteur) ---------- */
 .scene { position: relative; overflow: hidden; isolation: isolate; background: transparent; }
 .scene.ecran { padding-bottom: calc(var(--barres-h) + 24px); }
-.scene-fond { position: absolute; top: 0; bottom: 0; left: calc(var(--scene-x, 50%) - 70%); width: 140%; z-index: -3; }
+/* Fond et projecteur sans z-index négatif (ordre du document : fond, puis projecteur, puis contenu) : la mention
+   « Illustration générée » du fond peut ainsi passer au-dessus de la pénombre du projecteur. */
+.scene-fond { position: absolute; top: 0; bottom: 0; left: calc(var(--scene-x, 50%) - 70%); width: 140%; }
 .scene-fond--plein { left: 0; width: 100%; }
 /* Lisibilité du texte posé sur une image plein écran (visuel provisoire ou image générée) : voile fixe à gauche et en bas. */
 .scene-fond--plein::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(8, 7, 6, .92) 0, rgba(8, 7, 6, .78) 36%, rgba(8, 7, 6, .35) 56%, rgba(8, 7, 6, 0) 72%), linear-gradient(0deg, rgba(8, 7, 6, .8) 0, rgba(8, 7, 6, 0) 45%); }
@@ -172,7 +179,7 @@ html.menu-ouvert .bouton-menu-traits { transform: scaleY(0); }
 @media (max-width: 760px), (max-aspect-ratio: 4/5) { .scene-fond--plein::after { background: linear-gradient(0deg, rgba(8, 7, 6, .95) 0, rgba(8, 7, 6, .85) 45%, rgba(8, 7, 6, .2) 75%); } }
 .scene-fond .media, .scene-fond .media--provisoire { height: 100%; border-radius: 0; background: #0d0c0b; }
 .scene-fond .provisoire { width: 100%; height: 100%; }
-.projecteur { position: absolute; inset: 0; z-index: -2; overflow: hidden; pointer-events: none; }
+.projecteur { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
 .projecteur-halo {
   position: absolute; left: var(--scene-x, 50%); top: var(--scene-y, 46%); width: 320vmax; height: 320vmax; margin: -160vmax 0 0 -160vmax;
   background: radial-gradient(circle, rgba(6, 6, 7, 0) 0, rgba(6, 6, 7, 0) 4.5%, rgba(6, 6, 7, .38) 9%, rgba(6, 6, 7, .74) 16%, rgba(6, 6, 7, .9) 30%);
@@ -229,7 +236,7 @@ html.lignes-posees .ligne-masque, html.calme .ligne-masque, html:not(.js) .ligne
 .scene-texte--centre .hero-sous--texte { margin-inline: auto; }
 .scene-texte--centre .hero-actions { justify-content: center; }
 .scene-texte--galerie { margin-top: auto; padding-bottom: clamp(16px, 5vh, 56px); }
-.mur-ouverture { position: absolute; inset: calc(var(--entete-h) + 3vh) 4vw auto auto; width: min(54vw, 980px); height: min(58svh, 640px); display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 2.2vmin 2.6vmin; z-index: -1; }
+.mur-ouverture { position: absolute; inset: calc(var(--entete-h) + 3vh) 4vw auto auto; width: min(54vw, 980px); height: min(58svh, 640px); display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(3, 1fr); gap: 2.2vmin 2.6vmin; z-index: auto; }
 .mur-case { display: grid; place-items: center; min-height: 0; container-type: size; }
 .mur-case img { width: min(100cqw, 100cqh * var(--r)); height: auto; aspect-ratio: var(--r); object-fit: cover; box-shadow: 0 0 0 3px #0c0c0c, 0 0 0 4px rgba(255, 255, 255, .06), 6px 10px 18px rgba(0, 0, 0, .6); }
 @media (max-width: 900px), (max-aspect-ratio: 1/1) {
@@ -249,13 +256,13 @@ html.lignes-posees .ligne-masque, html.calme .ligne-masque, html:not(.js) .ligne
 .chez-ouverture { position: absolute; inset: 0; z-index: -1; display: grid; }
 .chez-ouverture > .media { position: absolute; inset: 0; height: 100%; border-radius: 0; aspect-ratio: auto !important; }
 .chez-ouverture .provisoire { width: 100%; height: 100%; }
-.chez-pose { position: absolute; left: calc((250 - var(--l) / 2) / 500 * 100%); bottom: calc(131 / 281 * 100%); width: calc(var(--l) / 500 * 100%); }
-.scene--chez .chez-ouverture { inset: auto; left: 50%; top: 50%; width: max(100%, calc(100svh * 500 / 281)); height: max(100%, calc(100vw * 281 / 500)); transform: translate(-50%, -50%); }
+.chez-pose { position: absolute; left: calc((var(--sc) - var(--l) / 2) / var(--sl) * 100%); bottom: calc(var(--sb) / var(--sh) * 100%); width: calc(var(--l) / var(--sl) * 100%); }
+.scene--chez .chez-ouverture { inset: auto; left: 50%; top: 50%; width: max(100%, calc(100svh * 1168 / 784)); height: max(100%, calc(100vw * 784 / 1168)); transform: translate(-50%, -50%); }
 .scene-texte--chez { margin-top: auto; padding-top: calc(var(--entete-h) + 24px); padding-bottom: clamp(16px, 5vh, 56px); }
 .scene-texte--chez > * { max-width: 30rem; }
 .scene--chez::after { content: ''; position: absolute; inset: 0; z-index: 0; background: linear-gradient(90deg, rgba(8, 7, 6, .94) 0, rgba(8, 7, 6, .78) 34%, rgba(8, 7, 6, .35) 52%, rgba(8, 7, 6, 0) 66%); pointer-events: none; }
 @media (max-width: 760px), (max-aspect-ratio: 4/5) {
-  .scene--chez .chez-ouverture { height: 52svh; width: auto; aspect-ratio: 500 / 281; top: calc(var(--entete-h) + 26svh); left: 38%; }
+  .scene--chez .chez-ouverture { height: 52svh; width: auto; aspect-ratio: 1168 / 784; top: calc(var(--entete-h) + 26svh); left: 38%; }
   .scene--chez::after { background: linear-gradient(0deg, rgba(8, 7, 6, .96) 0, rgba(8, 7, 6, .9) 42%, rgba(8, 7, 6, 0) 62%); }
   .scene-texte--chez { padding-top: 54svh; }
 }
@@ -371,11 +378,11 @@ html.calme .artiste-oeuvre, html:not(.js) .artiste-oeuvre { height: min(62svh, 5
 .demo.ecran { padding-top: calc(var(--entete-h) + 8px); }
 html.scene-sans-entete .demo.ecran { padding-top: 16px; }
 .demo-grille { flex: 1 1 auto; min-height: 0; display: grid; grid-template-columns: 1.6fr 1fr; gap: clamp(20px, 3vw, 48px); align-items: center; padding-inline: var(--gouttiere); max-width: calc(var(--largeur) + 2 * var(--gouttiere)); margin-inline: auto; width: 100%; }
-.demo-scene { position: relative; width: 100%; max-height: 100%; aspect-ratio: 500 / 281; align-self: center; container-type: inline-size; }
+.demo-scene { position: relative; width: 100%; max-height: 100%; aspect-ratio: 1168 / 784; align-self: center; container-type: inline-size; }
 .demo-scene > .media { position: absolute; inset: 0; height: 100%; border-radius: 0; }
 .demo-scene .provisoire { width: 100%; height: 100%; }
 .demo-mur { position: absolute; inset: 0; }
-.demo-oeuvre { position: absolute; left: calc((250 - var(--l) / 2) / 500 * 100%); bottom: calc(131 / 281 * 100%); width: calc(var(--l) / 500 * 100%); transform-origin: 50% 100%; }
+.demo-oeuvre { position: absolute; left: calc((var(--sc) - var(--l) / 2) / var(--sl) * 100%); bottom: calc(var(--sb) / var(--sh) * 100%); width: calc(var(--l) / var(--sl) * 100%); transform-origin: 50% 100%; }
 .demo-cote { position: absolute; font: 500 12px/1 var(--police-texte); color: var(--laiton-clair); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .demo-cote--l { left: 0; right: 0; top: -22px; text-align: center; border-top: 1px solid rgba(212, 188, 134, .6); padding-top: 4px; transform: translateY(-4px); }
 .demo-cote--h { top: 0; bottom: 0; right: -14px; transform: translateX(100%); display: flex; align-items: center; padding-left: 6px; border-left: 1px solid rgba(212, 188, 134, .6); }
@@ -530,9 +537,11 @@ html.js:not(.calme):not(.secours):not([data-arrivee='retour']) [data-anime]:not(
 .carte-oeuvre.est-masquee { display: none; }
 .carte-oeuvre.entre { opacity: 0; transform: translateY(14px); }
 .carte-lien { display: block; text-decoration: none; }
-.carte-scene { position: relative; aspect-ratio: 4 / 5; display: grid; place-items: center; padding: 11% 12% 13%; container-type: size; background: radial-gradient(ellipse 70% 60% at var(--lx, 50%) var(--ly, 40%), rgba(212, 188, 134, .1), rgba(255, 255, 255, .02) 60%, transparent 80%), var(--carte); overflow: hidden; margin-bottom: 14px; }
+.carte-scene { position: relative; aspect-ratio: 4 / 5; display: grid; place-items: center; padding: 7% 8% 9%; container-type: size; background: radial-gradient(ellipse 70% 60% at var(--lx, 50%) var(--ly, 40%), rgba(212, 188, 134, .1), rgba(255, 255, 255, .02) 60%, transparent 80%), var(--carte); overflow: hidden; margin-bottom: 14px; }
 .carte-scene .cadre { width: min(100cqw, calc(100cqh / ((1 - 2 * var(--a)) / var(--r) + 2 * var(--a)))); transition: transform .7s var(--courbe); }
-.carte-mise { position: absolute; inset: 0; opacity: 0; transition: opacity .6s var(--courbe); }
+.carte-mise { position: absolute; inset: 0; opacity: 0; transition: opacity .8s var(--courbe-douce, ease); }
+/* Mise en situation au survol : voilée de nuit pour ne jamais éclater en blanc dans la galerie sombre. */
+.carte-mise::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8, 7, 6, .35), rgba(8, 7, 6, .55)); pointer-events: none; }
 .carte-mise img { width: 100%; height: 100%; object-fit: cover; }
 @media (hover: hover) and (pointer: fine) {
   .carte-lien:hover .carte-mise, .carte-lien:focus-visible .carte-mise { opacity: 1; }
@@ -598,7 +607,7 @@ html.js:not(.calme):not(.secours):not([data-arrivee='retour']) [data-anime]:not(
 @media (max-width: 900px), (max-aspect-ratio: 1/1) {
   .fiche { grid-template-columns: 1fr; padding-top: var(--entete-h); }
   .fiche-scene { position: relative; top: auto; height: 38svh; }
-  .fiche-zone { inset: 5% 8% 14%; }
+  .fiche-zone { inset: 44px 8% 60px; }
   .fiche-agrandir { bottom: 8px; }
   .fiche-panneau { max-width: none; padding: 16px var(--gouttiere) 32px; }
   .fiche-titre { font-size: clamp(2rem, min(9vw, 5.4svh), 3.4rem); }
@@ -718,7 +727,7 @@ html.js:not(.calme):not(.secours):not([data-arrivee='retour']) .nuancier:not(.vu
 .etapes-liste p { margin: 0; color: var(--texte-doux); font-size: .93rem; }
 .outil { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid var(--ligne); }
 .outil-grille { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(300px, 1fr); gap: clamp(20px, 3vw, 48px); align-items: start; }
-.outil-scene { position: sticky; top: calc(var(--entete-h) + 16px); aspect-ratio: 500 / 281; background: #111; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; }
+.outil-scene { position: sticky; top: calc(var(--entete-h) + 16px); aspect-ratio: 1168 / 784; background: #111; overflow: hidden; touch-action: none; user-select: none; -webkit-user-select: none; }
 .outil-fonds, .outil-fond { position: absolute; inset: 0; }
 .outil-fond { opacity: 0; transition: opacity .5s; }
 .outil-fond.est-actif { opacity: 1; }
@@ -760,7 +769,8 @@ html.js:not(.calme):not(.secours):not([data-arrivee='retour']) .nuancier:not(.vu
 .outil-total strong { font: 400 1.8rem/1 var(--police-titres); font-variant-numeric: tabular-nums; }
 @media (max-width: 900px) {
   .outil-grille, .etapes-grille { grid-template-columns: 1fr; }
-  .outil-scene { position: relative; top: auto; }
+  /* Téléphone : la scène reste visible en haut pendant qu'on règle format et finition. */
+  .outil-scene { position: sticky; top: var(--entete-h); z-index: 3; box-shadow: 0 12px 24px rgba(0, 0, 0, .5); }
 }
 .inspirations { padding-block: clamp(56px, 9vw, 112px); border-top: 1px solid var(--ligne); }
 .inspirations-grille { display: grid; grid-template-columns: repeat(6, 1fr); gap: clamp(12px, 2vw, 24px); }
@@ -830,7 +840,7 @@ html.js:not(.calme):not(.secours):not([data-arrivee='retour']) .courbe:not(.vu) 
 /* ---------- Certificat (carte spécimen dessinée en code) ---------- */
 .certificat { position: relative; container-type: inline-size; overflow: hidden; padding: 5.5cqw 6cqw 4.5cqw; background: linear-gradient(170deg, #fbf9f4, #efeae0); color: #1b1916; box-shadow: 0 0 0 1px rgba(0, 0, 0, .25), 24px 34px 60px rgba(0, 0, 0, .6); font-size: clamp(12px, 2.3cqw, 17px); line-height: 1.35; }
 .certificat::before { content: ''; position: absolute; inset: 2.2cqw; border: 1px solid #b9b0a0; pointer-events: none; }
-.certificat-titre { margin: 0 0 4cqw; text-align: center; font: 400 clamp(1.25rem, 5.6cqw, 2.4rem)/1.05 var(--police-titres); letter-spacing: .04em; text-transform: uppercase; }
+.certificat-titre { margin: 0 0 4cqw; text-align: center; white-space: nowrap; font: 400 min(2.4rem, 5.2cqw)/1.05 var(--police-titres); letter-spacing: .04em; text-transform: uppercase; }
 .certificat-grille { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4cqw 4cqw; margin: 0 38% 3cqw 0; }
 .certificat-grille div { border-bottom: 1px solid #d3cbbd; padding-bottom: 1cqw; }
 .certificat-grille dt { font-size: .78em; color: #5f584d; letter-spacing: .03em; }
@@ -839,7 +849,7 @@ html.js:not(.calme):not(.secours):not([data-arrivee='retour']) .courbe:not(.vu) 
 .certificat-oeuvre dd { font: italic 400 1.6em/1.1 var(--police-titres); }
 .certificat-signature { grid-column: 1 / -1; }
 .certificat-ligne { display: block; height: 1.8em; }
-.certificat-vignette { position: absolute; right: 6cqw; top: 15cqw; width: 30%; }
+.certificat-vignette { position: absolute; right: 6cqw; top: 17.5cqw; width: 30%; }
 .certificat-vignette img { width: 100%; height: auto; box-shadow: 0 0 0 1px #c8bfae; }
 .certificat-texte { margin: 0 0 2.4cqw; font-size: .78em; color: #4a443b; }
 .certificat-pied { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0; font-size: .85em; }
@@ -890,7 +900,7 @@ html.js:not(.calme):not(.secours):not([data-arrivee='retour']) .double:not(.vu-f
 .demo-nfc-etapes li { opacity: .25; transition: opacity .3s; }
 .demo-nfc-etapes li.est-faite { opacity: 1; }
 .demo-nfc-etapes li.est-faite:last-child { color: #2d6a3e; font-weight: 600; }
-.verification-photo { margin-top: clamp(24px, 4vw, 48px); }
+.verification-photo { margin: clamp(24px, 4vw, 48px) auto 0; max-width: 640px; }
 
 /* ---------- Journal et articles ---------- */
 .journal { padding-block: clamp(48px, 8vw, 96px); }
@@ -1044,7 +1054,6 @@ html:not(.js) .filtres-panneau { display: grid; }
 .courbe-zone svg { width: 100%; height: 100%; }
 .courbe-point-html { position: absolute; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%; background: var(--noir); box-shadow: 0 0 0 2px var(--laiton-clair); }
 
-.projecteur-halo.pilote { left: 0; top: 0; }
 /* Titres de section : cachés jusqu'au découpage en lignes (jamais visibles avant leur animation). */
 html.js:not(.calme):not(.secours):not([data-arrivee='retour']) [data-titre-anime]:not(.titre-pret) { visibility: hidden; }
 
@@ -1102,11 +1111,104 @@ html.calme .demo.ecran, html:not(.js) .demo.ecran { height: auto; min-height: 0;
 .outil-oeuvre { box-sizing: content-box; padding: 4px; margin: -4px; }
 
 /* Téléphone : le certificat de l'ouverture laisse la place au titre, au bouton et au repère. */
-@media (max-width: 760px) { .scene--certificat .certificat-ouverture { width: min(56vw, 260px); margin: 4px auto 8px; } }
+@media (max-width: 760px) { .scene--certificat .certificat-ouverture { width: min(48vw, 220px); margin: 4px auto 8px; } }
 @media (max-width: 760px) and (max-height: 640px) {
   .scene--accueil .scene-zone { --zh: 25svh; top: calc(var(--entete-h) + 6px + 12.5svh); }
   .scene--accueil .scene-texte { margin-top: calc(26svh + 6px); }
   .fiche-panneau .fil, .fiche-meta { display: none; }
   .article-tete-texte .fil, .article-chapo--tete { display: none; }
 }
-@media (max-width: 760px) and (max-height: 600px) { .scene--accueil .hero-actions .bouton:not(.bouton--plein) { display: none; } }
+@media (max-width: 760px) and (max-height: 700px) { .scene--accueil .hero-actions .bouton:not(.bouton--plein) { display: none; } .scene--accueil .scene-zone { --zh: 24svh; top: calc(var(--entete-h) + 34px + 12svh); } .scene--accueil .scene-texte { margin-top: calc(25svh + 34px); } }
+
+/* Mention « Illustration générée » des fonds plein écran : toujours dans la partie visible, au-dessus de la pénombre
+   et de la barre du téléphone. Fond large de 140 % centré sur l'œuvre : décalée vers le bord visible de l'écran. */
+.scene-fond .mention-ia { z-index: 3; bottom: calc(var(--barres-h, 0px) + 12px); }
+.scene-fond:not(.scene-fond--plein) .mention-ia { right: max(12px, calc((var(--scene-x, 50%) - 30%) / 1.4 + 12px)); }
+.salle-fond .mention-ia { top: 12px; bottom: auto; }
+.chez-ouverture .mention-ia { right: max(12px, calc((100% - 100vw) / 2 + 16px)); bottom: calc((100% - 100svh) / 2 + var(--barres-h, 0px) + 12px); z-index: 3; }
+@media (max-width: 760px), (max-aspect-ratio: 4/5) {
+  .chez-ouverture .mention-ia { top: 8px; bottom: auto; right: max(12px, calc(50% - 62vw + 12px)); }
+}
+@media (max-width: 760px), (max-aspect-ratio: 4/5) { .scene-fond .mention-ia { top: 69px; bottom: auto; } }
+/* Outil Chez vous : la mention de l'image en haut à droite (la consigne « Faites glisser » reste en bas). */
+.outil-fond .mention-ia { top: 10px; bottom: auto; }
+/* Fiche : la mention du mur généré reste dans un coin libre, jamais sur l'œuvre vendue. */
+.fiche-scene .scene-fond .mention-ia { top: 10px; bottom: auto; right: max(10px, calc((var(--scene-x, 50%) - 30%) / 1.4 + 10px)); }
+.outil-photo-vide { position: absolute; inset: 0; display: grid; place-items: center; margin: 0; padding: 12% 16%; text-align: center; color: var(--texte-doux); font-size: .95rem; background: repeating-linear-gradient(135deg, #121110 0 14px, #161514 14px 28px); }
+.filtres-voir { display: none; grid-column: 1 / -1; margin: 0; }
+@media (max-width: 760px) { .filtres-voir { display: block; } .filtres-voir .bouton { width: 100%; justify-content: center; } }
+.config-note { margin: 0; font-size: .85rem; color: var(--laiton-clair); }
+.config-note:empty { display: none; }
+/* Après la commande simulée : seule la confirmation reste, en grand, avec le retour à la galerie. */
+.commande-suite { display: none; margin: 16px 0 0; }
+.commande-faite .commande-recap { display: none; }
+.commande-faite .commande-grille { grid-template-columns: minmax(0, 1fr); }
+.commande-faite .commande-form > :not([data-message-envoi]):not(.commande-suite) { display: none; }
+.commande-faite .commande-suite { display: block; }
+.commande-faite [data-message-envoi] { font: 400 clamp(1.4rem, 1.1rem + 1.2vw, 2rem)/1.3 var(--police-titres); color: var(--ivoire); max-width: 36rem; }
+/* Téléphone et tablette en portrait : une bande de 30 px sous l'en-tête porte la mention « Illustration générée »
+   du fond ; l'œuvre, le mur de la galerie, le triptyque et le certificat de l'ouverture commencent dessous. */
+@media (max-width: 760px), (max-aspect-ratio: 4/5) {
+  .scene-fond .mention-ia { top: 69px; }
+  .scene--accueil .scene-zone { top: calc(var(--entete-h) + 36px + 16svh); }
+  .scene--accueil .scene-texte { margin-top: calc(34svh + 36px); }
+  .mur-ouverture { top: calc(var(--entete-h) + 34px) !important; }
+  .triptyque { top: calc(var(--entete-h) + 34px); }
+}
+@media (max-width: 760px) { .scene--certificat .certificat-ouverture { margin-top: 34px; } }
+@media (max-width: 760px) and (max-height: 640px) {
+  .scene--accueil .scene-zone { top: calc(var(--entete-h) + 32px + 12.5svh); }
+  .scene--accueil .scene-texte { margin-top: calc(26svh + 32px); }
+}
+@media (max-width: 760px) { .scene--certificat .certificat-ouverture { display: none; } }
+
+/* Démonstration épinglée : tient dans les écrans bas (liste plus serrée, texte d'introduction retiré sous 620 px). */
+@media (min-width: 761px) and (max-height: 820px) {
+  .demo-etats { gap: 4px; }
+  .demo-etat { min-height: 44px; padding: 4px 12px; }
+  .demo-texte .titre-section { font-size: clamp(1.8rem, min(3.4vw, 6vh), 3rem); }
+  .demo-scene { max-height: calc(100svh - var(--entete-h) - 48px); }
+}
+@media (min-width: 761px) and (max-height: 620px) { .demo-texte .tete-texte { display: none; } }
+/* Lisibilité sur les images générées : nom des artistes et code 404. */
+.triptyque-nom { padding: 3px 10px; border-radius: 999px; background: rgba(8, 7, 6, .72); color: var(--ivoire); }
+.scene--introuvable .scene-fond--plein::after { background: radial-gradient(ellipse 60% 55% at 50% 58%, rgba(8, 7, 6, .82), rgba(8, 7, 6, .45) 70%, rgba(8, 7, 6, .2)); }
+/* Titres de section : place pour les jambages avant le bloc suivant. */
+.titre-section { padding-bottom: .12em; }
+/* Petits téléphones (jusqu'à 700 px de haut) : titre, bouton et repère dans le premier écran. */
+@media (max-width: 760px) and (max-height: 700px) {
+  .scene .hero-sous--texte, .scene .surtitre { display: none; }
+  .titre-hero--moyen { font-size: clamp(1.9rem, 9vw, 2.3rem); }
+  .fiche-scene { height: 24svh; }
+  .fiche-panneau .fil, .fiche-meta { display: none; }
+  .article-tete-texte .fil, .article-chapo--tete { display: none; }
+  .article-couverture, .article-couverture img { max-height: 22svh; height: 22svh; }
+  .article-h1 { font-size: 1.6rem; }
+  .studio-photo { max-height: 30svh; }
+}
+/* Écrans très bas (téléphone à l'horizontale) : l'essentiel seulement dans l'ouverture. */
+@media (max-height: 500px) {
+  .scene .hero-sous--texte, .scene .surtitre, .scene .hero-info + .hero-info { display: none; }
+  .titre-hero--moyen, .titre-hero--court { font-size: clamp(1.8rem, 6vh + 1rem, 2.4rem); }
+}
+html:not(.js) [data-commande-vide] { display: none; }
+.salle-fond picture, .salle-fond img { display: block; height: 100%; }
+[data-titre-anime] { padding-bottom: .12em; }
+/* Téléphone : l'œuvre de l'accueil laisse la place au repère sous les boutons. */
+@media (max-width: 760px), (max-aspect-ratio: 4/5) {
+  .scene--accueil .scene-zone { --zh: 28svh; top: calc(var(--entete-h) + 36px + 14svh); }
+  .scene--accueil .scene-texte { margin-top: calc(30svh + 36px); }
+}
+@media (max-width: 760px) { .scene-texte--certificat { margin-top: auto; } }
+@media (max-height: 500px) {
+  .scene--certificat .certificat-ouverture { display: none; }
+  .scene-texte--certificat { margin-top: auto; }
+  .article-chapo--tete, .article-tete-texte .fil { display: none; }
+  .article-h1 { font-size: 1.5rem; }
+}
+@media (max-width: 760px) {
+  .article-chapo--tete { display: none; }
+  .article-couverture, .article-couverture img { max-height: 26svh; }
+  .article-couverture img { width: 100%; height: 26svh; object-fit: cover; }
+}
+@media (max-width: 760px) and (max-height: 600px) { .scene--accueil .scene-zone { --zh: 19svh; top: calc(var(--entete-h) + 32px + 9.5svh); } .scene--accueil .scene-texte { margin-top: calc(20svh + 32px); } .scene--accueil .hero-info { font-size: .82rem; } }

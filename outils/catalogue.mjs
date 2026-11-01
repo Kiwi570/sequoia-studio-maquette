@@ -101,6 +101,21 @@ const oeuvres = galerie.map((o) => {
   };
 });
 
+/* Mise au propre (v2) : formats sans aucune finition possible retirés (notés dans les écarts), styles harmonisés,
+   apostrophes et guillemets typographiques, prix « dès » recalculés. Le texte FineArt de donnees/finitions.json a été
+   corrigé à la main (vocabulaire « photo » du site d'origine) : à reporter si ce script est relancé. */
+const STYLES = { 'Surréaliste': 'Surréalisme', 'Minimaliste': 'Minimalisme', 'Ink-wash': 'Lavis d’encre', 'Moderne': 'Modernisme', 'Réaliste': 'Réalisme', 'Illustratif': 'Illustration' };
+const typo = (t) => (typeof t === 'string' ? t.replace(/'/g, '’').replace(/"([^"]+)"/g, (_, x) => `«\u202f${x.trim()}\u202f»`) : t);
+for (const o of oeuvres) {
+  const sans = o.formats.filter((f) => !Object.keys(f.prix).length);
+  if (sans.length) ecarts.push({ type: 'formatsSansPrix', oeuvre: o.titre, formats: sans.map((f) => `${f.largeur}×${f.hauteur} cm`) });
+  o.formats = o.formats.filter((f) => Object.keys(f.prix).length);
+  o.des = Math.min(...o.formats.flatMap((f) => Object.values(f.prix)));
+  o.style = STYLES[o.style] || o.style;
+  for (const k of ['titre', 'accroche', 'texte', 'ambiance', 'projection']) if (k in o) o[k] = typo(o[k]);
+  if (o.titre === 'Réverie Vénitienne') o.titre = 'Rêverie Vénitienne';
+}
+
 const univers = Object.entries(UNIVERS).map(([cle, nom]) => ({ cle, nom, nombre: oeuvres.filter((o) => o.univers === cle).length })).filter((u) => u.nombre);
 writeFileSync(join(racine, 'donnees/oeuvres.json'), JSON.stringify(oeuvres, null, 1) + '\n');
 writeFileSync(join(racine, 'donnees/finitions.json'), JSON.stringify(finitions, null, 1) + '\n');

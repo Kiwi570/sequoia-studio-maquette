@@ -3,9 +3,9 @@
    l'œuvre (le faisceau s'ouvre) ; le titre monte ligne à ligne ; le reste du premier écran se pose.
    Arrivée par le voile : même mouvement, plus court. État final : tout en place, faisceau ouvert.
    Les titres de section (data-titre-anime) montent ligne à ligne en entrant dans l'écran (SplitText). */
-import { etat } from '../socle/index.js?v=1';
-import { $, $$ } from './outils.js?v=1';
-import { echelleFaisceau } from './scene.js?v=1';
+import { etat } from '../socle/index.js?v=2';
+import { $, $$ } from './outils.js?v=2';
+import { echelleFaisceau } from './scene.js?v=2';
 
 const gsap = () => window.gsap;
 /* Lignes du titre en place : les masques ne rognent plus rien. */
@@ -39,8 +39,8 @@ export function jouer() {
     .fromTo(faisceau, { v: 0.08 }, { v: 1, duration: 1.05, ease: 'power2.out', onUpdate: () => echelleFaisceau(faisceau.v) }, 0.62);
   if (p.oeuvre.length) tl.fromTo(p.oeuvre, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.85 }, 0.7);
   if (p.cases.length) tl.fromTo(p.cases, { opacity: 0 }, { opacity: 1, duration: 0.5, stagger: { each: 0.05, from: 'random' } }, 0.7);
-  if (p.lignes.length) tl.fromTo(p.lignes, { yPercent: 108, opacity: 1 }, { yPercent: 0, opacity: 1, duration: 0.8, stagger: 0.09 }, 1.0);
-  if (p.autres.length) tl.fromTo(p.autres, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, stagger: 0.06 }, 1.3);
+  if (p.lignes.length) tl.fromTo(p.lignes, { yPercent: 108, opacity: 1 }, { yPercent: 0, opacity: 1, duration: 0.75, stagger: 0.08 }, 0.85);
+  if (p.autres.length) tl.fromTo(p.autres, { y: 16, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.05 }, 1.1);
   tl.set(panneau, { clearProps: 'opacity' });
   tl.call(poserLignes);
   return tl;
@@ -90,9 +90,11 @@ export function titres() {
     liste.forEach((t) => {
       try {
         /* Découpé une fois ; à la fin de la montée, le découpage est retiré (aucun masque ne reste pour rogner le texte). */
-        const sp = window.SplitText.create(t, { type: 'lines', mask: 'lines', linesClass: 'split-ligne' });
+        /* Chaque ligne se découvre de bas en haut (clip-path) en montant de quelques pixels : aucune ligne n'est
+           déplacée loin de sa place, donc jamais sur le texte qui suit, même pendant l'animation. */
+        const sp = window.SplitText.create(t, { type: 'lines', linesClass: 'split-ligne' });
         t.classList.add('titre-pret');
-        t.__montee = g.fromTo(sp.lines, { yPercent: 105 }, { yPercent: 0, duration: 0.9, stagger: 0.08, ease: 'power3.out', paused: true, onComplete: () => sp.revert() });
+        t.__montee = g.fromTo(sp.lines, { y: 10, clipPath: 'inset(0% 0% 100% 0%)' }, { y: 0, clipPath: 'inset(-20% -5% -25% -5%)', duration: 0.9, stagger: 0.08, ease: 'power3.out', paused: true, onComplete: () => sp.revert() });
         io.observe(t);
       } catch (err) { console.warn(err); t.classList.add('titre-pret'); }
     });

@@ -2,8 +2,8 @@
    Sur ordinateur et tablette : la salle s'épingle, la piste glisse à l'horizontale au défilement, barre de progression,
    compteur, l'œuvre au centre s'éclaire et teinte le fond. Téléphone, mode calme, sans JavaScript : la piste défile
    à l'horizontale au doigt ou au clavier (tabindex, rôle region) ; rien n'est inaccessible. */
-import { etat } from '../socle/index.js?v=1';
-import { $, $$ } from './outils.js?v=1';
+import { etat } from '../socle/index.js?v=2';
+import { $, $$ } from './outils.js?v=2';
 
 export function initSalles() {
   const gsap = window.gsap, ST = window.ScrollTrigger;

@@ -25,7 +25,7 @@ export default (c) => html`
     <div class="commande-recap">
       <h2 class="titre-section titre-section--petit">${c.t('commande.recapTitre')}</h2>
       <ul class="commande-liste" data-commande-liste aria-live="polite"></ul>
-      <div class="commande-vide" data-commande-vide hidden><p>${c.t('commande.vide')}</p><p>${c.lien('galerie', { classe: 'bouton bouton--contour', texte: c.t('commande.videAction') })}</p></div>
+      <div class="commande-vide" data-commande-vide><p>${c.t('commande.vide')}</p><p>${c.lien('galerie', { classe: 'bouton bouton--contour', texte: c.t('commande.videAction') })}</p></div>
       <noscript><p>${c.t('commande.sansJs')}</p></noscript>
       <dl class="commande-totaux">
         <div><dt>${c.t('commande.sousTotal')}</dt><dd data-prix data-commande-sous-total>0 €</dd></div>
@@ -57,6 +57,7 @@ export default (c) => html`
       <p class="mention-donnees">${c.tb('commande.donnees')}</p>
       <button type="submit" class="bouton bouton--plein" data-commande-payer>${c.t('commande.envoyer')}</button>
       <p data-message-envoi data-texte="${c.s('commande.envoye')}" role="status" tabindex="-1" hidden></p>
+      <p class="commande-suite">${c.lien('galerie', { classe: 'bouton bouton--contour', texte: c.t('commande.retourGalerie') })}</p>
     </form>
   </div>
   <template data-commande-ligne-modele>
